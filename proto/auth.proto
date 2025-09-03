@@ -1,0 +1,15 @@
+syntax = "proto3";
+package auth;
+
+//클라이언트 -> 로그인/로비 서버 로그인 요청
+message C2S_Login{
+	string user_id =1; //유저 아이디
+	string nickname = 2;//유저 닉네임
+	string password = 3; // 비밀번호
+}
+//서버 -> 클라이언트 로그인 응답
+message S2C_Login{
+	bool success = 1;//로그인 성공 여부
+	string user_id = 2;//성공 시 발급/반환되는 유저 ID
+	string message = 3;//응답 결과에 따른 메시지
+}

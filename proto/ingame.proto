@@ -1,0 +1,117 @@
+syntax = "proto3";
+
+package ingame;
+
+//거인 기본 스탯
+message GiantStats {
+	float attack_speed = 1;     // 공격 속도 (기본값 + 유전자 보너스)
+	float move_speed = 2;       // 이동 속도 (기본값 + 유전자 보너스)
+	float attack_range = 3;     // 공격 범위 (기본값 + 유전자 보너스)
+	int32 max_health = 4;       //최대 체력 (기본값 + 유전자 보너스)
+	float size = 5;             //크기 (기본값 + 유전자 보너스)
+}
+
+//플레이어 종족 상태
+message PlayerRaceState{
+	string user_id = 1;
+	RaceType current_race = 2;            //현재 종족 상태
+	map<int32,int32> gene_collection = 3; //<GeneType,count> 유전자 타입을 추가해도 수정필요 x
+	int32 totla_genes_collected = 4;      //총 모은 유전자 수
+	bool transform_giant = 5;             //진화 가능 여부
+	GiantStats giant_stats = 6;           //거인 스탯(거인으로 진화한 경우에만 유효한 스탯)
+}
+
+//클라 -> 서버 : 거인 변환 요청
+message C2S_Transform {
+	string user_id = 1;
+}
+
+//서버 -> 클라 : 거인 변환 결과
+message S2C_Transform {
+	string user_id = 1;
+	bool success = 2;         //변환 성공 여부
+	RaceType new_race = 3;    //변환 후 플레이어의 새 종족 타입
+	GiantStats new_stats = 4; //변환 후 플레이어의 새 스탯 정보
+	string message = 5;       //
+}
+
+//클라 -> 서버 : 플레이어 이동
+message C2S_PlayerMove {
+	string user_id = 1;
+	float x = 2;
+	float y = 3;
+	float dir = 4; //방향 (0~360)
+}
+
+//서버 -> 클라 : 플레이어 이동 브로드캐스트
+message S2C_PlayerMove{
+
+	string user_id = 1;
+	float x = 2;
+	float y = 3;
+	float dir = 4;
+}
+
+//클라 -> 서버 : 플레이어 공격 요청
+message C2S_PlayerAttack {
+	string user_id = 1;
+	AttackType attack_type = 2; //Enum으로 공격 타입 구분 (일반유저 or 거인)
+}
+
+//서버 -> 클라 : 공격 이벤트 브로드캐스트
+message S2C_PlayerAttack {
+	string user_id = 1;
+	AttackType attack_type = 2;
+	int32 base_damage = 3;  //평타 데미지
+	int32 skill_damage = 4; //스킬 데미지
+	bool hit = 5 ;          //공격 성공 여부
+}
+
+// 서버 -> 클라 : 게임 상태 동기화 (주기적으로 전체 상태 push)
+message S2C_GameState {
+  message PlayerState {
+    string user_id = 1;
+    float x = 2;
+    float y = 3;
+    float dir = 4;
+    int32 hp = 5;
+  }
+  repeated PlayerState players = 1;
+}
+
+
+//플레이어 종족 상태 (인간 OR 거인)
+enum RaceType {
+	RACE_UNKNOWN = 0;
+	RACE_HUMAN = 1;          //인간 상태
+	RACE_ATTACK_GIANT = 2;   //공격 특화 거인
+    RACE_SPEED_GIANT = 3;    //속도 특화 거인
+	RACE_RANGE_GIANT = 4;    //공격범위 특화 거인
+	RACE_HEALTH_GIANT = 5;   //체력 특화 거인
+	RACE_SIZE_GIANT = 6;     //크기 특화 거인
+	RACE_NOT_HUMAN = 7;      //거인은 아니지만 거인판정으로 인간한테 공격받는 인간(왕관 획득시 10초간 이 상태)
+}
+
+//유전자 타입 (일반 5개 히든 5개 예시)
+enum GeneType {
+	UNKNOWN_GENE = 0;
+	//기본 유전자
+	NORMAL_ATTACK_SPEED_GENE = 1; //공격속도
+	NORMAL_MOVE_SPEED_GENE = 2;   //이동속도
+	NORMAL_ATTACK_RANGE_GENE = 3; //공격범위
+	NORMAL_HEALTH_GENE = 4;       //체력증가
+	NORMAL_SIZE_GENE = 5;         //거인 크기 증가
+	//히든 유전자
+	HIDDEN_SWORD_GENE = 6;        //검기사용
+	HIDDEN_SHIELD_GENE = 7;       //실드생성
+	HIDDEN_REGENERATION_GENE = 8; //체력재생
+	HIDDEN_SUMMONER_GENE = 9;     //몬스터 소환
+	HIDDEN_FLASH_GENE = 10;       //점멸
+
+}
+//플레이어 공격 타입
+enum AttackType {
+  UNKNOWN_ATTACK = 0;
+  NORMAL_ATTACK = 1;    // 일반 유저 공격
+  GIANT_ATTACK = 2;     // 거인 공격
+}

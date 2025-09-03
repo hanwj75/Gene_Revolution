@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package center;
+
+import "auth.proto";
+import "lobby.proto";
+import "ingame.proto";
+
+//클라 <-> 서버 모든 패킷의 최상위 메시지
+
+message GamePacket {
+	oneof payload {
+	auth.C2S_Login c2s_login = 1; //클라 -> 로그인/로비 서버 로그인 요청
+	auth.S2C_Login s2c_login = 2; //서버 -> 클라 로그인 응답
+
+	lobby.C2S_EnterLobby c2s_enter_lobby = 3; //클라 -> 로비 서버 로비 입장 요청
+	lobby.S2C_EnterLobby s2c_enter_lobby = 4; //서버 -> 클라 로비 입장 응답
+
+	lobby.C2S_GameStart c2s_game_start = 5; //클라 -> 로비 서버 게임 시작 요청
+	lobby.S2C_GameStart s2c_game_start = 6; //서버 -> 클라 게임 시작 응답
+
+	ingame.C2S_PlayerMove c2s_player_move = 7; //클라 -> 인게임 서버 플레이어 이동 요청
+	ingame.S2C_PlayerMove s2c_player_move = 8; //서버 -> 클라 플레이어 이동 응답
+
+	ingame.C2S_PlayerAttack c2s_player_attack = 9; //클라 -> 인게임 서버 플레이어 공격 요청
+    ingame.S2C_PlayerAttack s2c_player_attack = 10; //서버 -> 클라 플레이어 공격 응답
+	}
+}
