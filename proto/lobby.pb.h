@@ -28,6 +28,10 @@
 #include "google/protobuf/message_lite.h"
 #include "google/protobuf/repeated_field.h"  // IWYU pragma: export
 #include "google/protobuf/extension_set.h"  // IWYU pragma: export
+#include "google/protobuf/map.h"  // IWYU pragma: export
+#include "google/protobuf/map_entry.h"
+#include "google/protobuf/map_field_inl.h"
+#include "google/protobuf/generated_enum_reflection.h"
 #include "google/protobuf/unknown_field_set.h"
 // @@protoc_insertion_point(includes)
 
@@ -37,1092 +41,4553 @@
 #define PROTOBUF_INTERNAL_EXPORT_lobby_2eproto
 
 namespace google {
-	namespace protobuf {
-		namespace internal {
-			template <typename T>
-			::absl::string_view GetAnyMessageName();
-		}  // namespace internal
-	}  // namespace protobuf
+namespace protobuf {
+namespace internal {
+template <typename T>
+::absl::string_view GetAnyMessageName();
+}  // namespace internal
+}  // namespace protobuf
 }  // namespace google
 
 // Internal implementation detail -- do not use these members.
 struct TableStruct_lobby_2eproto {
-	static const ::uint32_t offsets[];
+  static const ::uint32_t offsets[];
 };
 extern const ::google::protobuf::internal::DescriptorTable
-descriptor_table_lobby_2eproto;
+    descriptor_table_lobby_2eproto;
 namespace lobby {
-	class C2S_EnterLobby;
-	struct C2S_EnterLobbyDefaultTypeInternal;
-	extern C2S_EnterLobbyDefaultTypeInternal _C2S_EnterLobby_default_instance_;
-	class C2S_GameStart;
-	struct C2S_GameStartDefaultTypeInternal;
-	extern C2S_GameStartDefaultTypeInternal _C2S_GameStart_default_instance_;
-	class S2C_EnterLobby;
-	struct S2C_EnterLobbyDefaultTypeInternal;
-	extern S2C_EnterLobbyDefaultTypeInternal _S2C_EnterLobby_default_instance_;
-	class S2C_GameStart;
-	struct S2C_GameStartDefaultTypeInternal;
-	extern S2C_GameStartDefaultTypeInternal _S2C_GameStart_default_instance_;
-	class S2C_LobbyUserList;
-	struct S2C_LobbyUserListDefaultTypeInternal;
-	extern S2C_LobbyUserListDefaultTypeInternal _S2C_LobbyUserList_default_instance_;
+class BoxReward;
+struct BoxRewardDefaultTypeInternal;
+extern BoxRewardDefaultTypeInternal _BoxReward_default_instance_;
+class C2S_BuyAndOpenRandomBox;
+struct C2S_BuyAndOpenRandomBoxDefaultTypeInternal;
+extern C2S_BuyAndOpenRandomBoxDefaultTypeInternal _C2S_BuyAndOpenRandomBox_default_instance_;
+class C2S_BuyItem;
+struct C2S_BuyItemDefaultTypeInternal;
+extern C2S_BuyItemDefaultTypeInternal _C2S_BuyItem_default_instance_;
+class C2S_EnterLobby;
+struct C2S_EnterLobbyDefaultTypeInternal;
+extern C2S_EnterLobbyDefaultTypeInternal _C2S_EnterLobby_default_instance_;
+class C2S_EquipCostume;
+struct C2S_EquipCostumeDefaultTypeInternal;
+extern C2S_EquipCostumeDefaultTypeInternal _C2S_EquipCostume_default_instance_;
+class C2S_GameStart;
+struct C2S_GameStartDefaultTypeInternal;
+extern C2S_GameStartDefaultTypeInternal _C2S_GameStart_default_instance_;
+class C2S_InventoryRequest;
+struct C2S_InventoryRequestDefaultTypeInternal;
+extern C2S_InventoryRequestDefaultTypeInternal _C2S_InventoryRequest_default_instance_;
+class C2S_ShopRequest;
+struct C2S_ShopRequestDefaultTypeInternal;
+extern C2S_ShopRequestDefaultTypeInternal _C2S_ShopRequest_default_instance_;
+class LobbyUser;
+struct LobbyUserDefaultTypeInternal;
+extern LobbyUserDefaultTypeInternal _LobbyUser_default_instance_;
+class S2C_BuyAndOpenRandomBoxResult;
+struct S2C_BuyAndOpenRandomBoxResultDefaultTypeInternal;
+extern S2C_BuyAndOpenRandomBoxResultDefaultTypeInternal _S2C_BuyAndOpenRandomBoxResult_default_instance_;
+class S2C_BuyResult;
+struct S2C_BuyResultDefaultTypeInternal;
+extern S2C_BuyResultDefaultTypeInternal _S2C_BuyResult_default_instance_;
+class S2C_EnterLobby;
+struct S2C_EnterLobbyDefaultTypeInternal;
+extern S2C_EnterLobbyDefaultTypeInternal _S2C_EnterLobby_default_instance_;
+class S2C_EquipCostumeResult;
+struct S2C_EquipCostumeResultDefaultTypeInternal;
+extern S2C_EquipCostumeResultDefaultTypeInternal _S2C_EquipCostumeResult_default_instance_;
+class S2C_GameStart;
+struct S2C_GameStartDefaultTypeInternal;
+extern S2C_GameStartDefaultTypeInternal _S2C_GameStart_default_instance_;
+class S2C_InventoryResponse;
+struct S2C_InventoryResponseDefaultTypeInternal;
+extern S2C_InventoryResponseDefaultTypeInternal _S2C_InventoryResponse_default_instance_;
+class S2C_InventoryResponse_InventoryItem;
+struct S2C_InventoryResponse_InventoryItemDefaultTypeInternal;
+extern S2C_InventoryResponse_InventoryItemDefaultTypeInternal _S2C_InventoryResponse_InventoryItem_default_instance_;
+class S2C_LobbyUserList;
+struct S2C_LobbyUserListDefaultTypeInternal;
+extern S2C_LobbyUserListDefaultTypeInternal _S2C_LobbyUserList_default_instance_;
+class S2C_ShopResponse;
+struct S2C_ShopResponseDefaultTypeInternal;
+extern S2C_ShopResponseDefaultTypeInternal _S2C_ShopResponse_default_instance_;
+class S2C_ShopResponse_ShopItem;
+struct S2C_ShopResponse_ShopItemDefaultTypeInternal;
+extern S2C_ShopResponse_ShopItemDefaultTypeInternal _S2C_ShopResponse_ShopItem_default_instance_;
+class S2C_ShopResponse_ShopItem_TierProbabilitiesEntry_DoNotUse;
+struct S2C_ShopResponse_ShopItem_TierProbabilitiesEntry_DoNotUseDefaultTypeInternal;
+extern S2C_ShopResponse_ShopItem_TierProbabilitiesEntry_DoNotUseDefaultTypeInternal _S2C_ShopResponse_ShopItem_TierProbabilitiesEntry_DoNotUse_default_instance_;
 }  // namespace lobby
 namespace google {
-	namespace protobuf {
-	}  // namespace protobuf
+namespace protobuf {
+}  // namespace protobuf
 }  // namespace google
 
 namespace lobby {
-	// ===================================================================
+enum ItemType : int {
+  ITEM_UNKNOWN = 0,
+  ITEM_RANDOM_BOX = 1,
+  ITEM_COSTUME = 2,
+  ItemType_INT_MIN_SENTINEL_DO_NOT_USE_ =
+      std::numeric_limits<::int32_t>::min(),
+  ItemType_INT_MAX_SENTINEL_DO_NOT_USE_ =
+      std::numeric_limits<::int32_t>::max(),
+};
 
-	// -------------------------------------------------------------------
+bool ItemType_IsValid(int value);
+extern const uint32_t ItemType_internal_data_[];
+constexpr ItemType ItemType_MIN = static_cast<ItemType>(0);
+constexpr ItemType ItemType_MAX = static_cast<ItemType>(2);
+constexpr int ItemType_ARRAYSIZE = 2 + 1;
+const ::google::protobuf::EnumDescriptor*
+ItemType_descriptor();
+template <typename T>
+const std::string& ItemType_Name(T value) {
+  static_assert(std::is_same<T, ItemType>::value ||
+                    std::is_integral<T>::value,
+                "Incorrect type passed to ItemType_Name().");
+  return ItemType_Name(static_cast<ItemType>(value));
+}
+template <>
+inline const std::string& ItemType_Name(ItemType value) {
+  return ::google::protobuf::internal::NameOfDenseEnum<ItemType_descriptor,
+                                                 0, 2>(
+      static_cast<int>(value));
+}
+inline bool ItemType_Parse(absl::string_view name, ItemType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ItemType>(
+      ItemType_descriptor(), name, value);
+}
+enum ItemTier : int {
+  TIER_UNKNOWN = 0,
+  TIER_NORMAL = 1,
+  TIER_RARE = 2,
+  TIER_EPIC = 3,
+  TIER_UNIQUE = 4,
+  TIER_LEGENDARY = 5,
+  ItemTier_INT_MIN_SENTINEL_DO_NOT_USE_ =
+      std::numeric_limits<::int32_t>::min(),
+  ItemTier_INT_MAX_SENTINEL_DO_NOT_USE_ =
+      std::numeric_limits<::int32_t>::max(),
+};
 
-	class S2C_LobbyUserList final : public ::google::protobuf::Message
-		/* @@protoc_insertion_point(class_definition:lobby.S2C_LobbyUserList) */ {
-	public:
-		inline S2C_LobbyUserList() : S2C_LobbyUserList(nullptr) {}
-		~S2C_LobbyUserList() PROTOBUF_FINAL;
+bool ItemTier_IsValid(int value);
+extern const uint32_t ItemTier_internal_data_[];
+constexpr ItemTier ItemTier_MIN = static_cast<ItemTier>(0);
+constexpr ItemTier ItemTier_MAX = static_cast<ItemTier>(5);
+constexpr int ItemTier_ARRAYSIZE = 5 + 1;
+const ::google::protobuf::EnumDescriptor*
+ItemTier_descriptor();
+template <typename T>
+const std::string& ItemTier_Name(T value) {
+  static_assert(std::is_same<T, ItemTier>::value ||
+                    std::is_integral<T>::value,
+                "Incorrect type passed to ItemTier_Name().");
+  return ItemTier_Name(static_cast<ItemTier>(value));
+}
+template <>
+inline const std::string& ItemTier_Name(ItemTier value) {
+  return ::google::protobuf::internal::NameOfDenseEnum<ItemTier_descriptor,
+                                                 0, 5>(
+      static_cast<int>(value));
+}
+inline bool ItemTier_Parse(absl::string_view name, ItemTier* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ItemTier>(
+      ItemTier_descriptor(), name, value);
+}
+
+// ===================================================================
+
+
+// -------------------------------------------------------------------
+
+class S2C_ShopResponse_ShopItem_TierProbabilitiesEntry_DoNotUse final
+    : public ::google::protobuf::internal::MapEntry<
+          ::int32_t, float,
+          ::google::protobuf::internal::WireFormatLite::TYPE_INT32,
+          ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT> {
+ public:
+  using SuperType = ::google::protobuf::internal::MapEntry<
+      ::int32_t, float,
+      ::google::protobuf::internal::WireFormatLite::TYPE_INT32,
+      ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>;
+  S2C_ShopResponse_ShopItem_TierProbabilitiesEntry_DoNotUse();
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_ShopResponse_ShopItem_TierProbabilitiesEntry_DoNotUse(
+      ::google::protobuf::internal::ConstantInitialized);
+  explicit S2C_ShopResponse_ShopItem_TierProbabilitiesEntry_DoNotUse(::google::protobuf::Arena* arena);
+  static const S2C_ShopResponse_ShopItem_TierProbabilitiesEntry_DoNotUse* internal_default_instance() {
+    return reinterpret_cast<const S2C_ShopResponse_ShopItem_TierProbabilitiesEntry_DoNotUse*>(
+        &_S2C_ShopResponse_ShopItem_TierProbabilitiesEntry_DoNotUse_default_instance_);
+  }
+
+
+ private:
+  friend class ::google::protobuf::MessageLite;
+  friend struct ::TableStruct_lobby_2eproto;
+
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      1, 2, 0,
+      0, 2>
+      _table_;
+
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+};
+// -------------------------------------------------------------------
+
+class S2C_LobbyUserList final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.S2C_LobbyUserList) */ {
+ public:
+  inline S2C_LobbyUserList() : S2C_LobbyUserList(nullptr) {}
+  ~S2C_LobbyUserList() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-		void operator delete(S2C_LobbyUserList* msg, std::destroying_delete_t) {
-			SharedDtor(*msg);
-			::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_LobbyUserList));
-		}
+  void operator delete(S2C_LobbyUserList* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_LobbyUserList));
+  }
 #endif
 
-		template <typename = void>
-		explicit PROTOBUF_CONSTEXPR S2C_LobbyUserList(
-			::google::protobuf::internal::ConstantInitialized);
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_LobbyUserList(
+      ::google::protobuf::internal::ConstantInitialized);
 
-		inline S2C_LobbyUserList(const S2C_LobbyUserList& from) : S2C_LobbyUserList(nullptr, from) {}
-		inline S2C_LobbyUserList(S2C_LobbyUserList&& from) noexcept
-			: S2C_LobbyUserList(nullptr, std::move(from)) {
-		}
-		inline S2C_LobbyUserList& operator=(const S2C_LobbyUserList& from) {
-			CopyFrom(from);
-			return *this;
-		}
-		inline S2C_LobbyUserList& operator=(S2C_LobbyUserList&& from) noexcept {
-			if (this == &from) return *this;
-			if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-				InternalSwap(&from);
-			}
-			else {
-				CopyFrom(from);
-			}
-			return *this;
-		}
+  inline S2C_LobbyUserList(const S2C_LobbyUserList& from) : S2C_LobbyUserList(nullptr, from) {}
+  inline S2C_LobbyUserList(S2C_LobbyUserList&& from) noexcept
+      : S2C_LobbyUserList(nullptr, std::move(from)) {}
+  inline S2C_LobbyUserList& operator=(const S2C_LobbyUserList& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline S2C_LobbyUserList& operator=(S2C_LobbyUserList&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
 
-		inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-			ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		  return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-		}
-			inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-			ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		  return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-		}
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
 
-			static const ::google::protobuf::Descriptor* descriptor() {
-			return GetDescriptor();
-		}
-		static const ::google::protobuf::Descriptor* GetDescriptor() {
-			return default_instance().GetMetadata().descriptor;
-		}
-		static const ::google::protobuf::Reflection* GetReflection() {
-			return default_instance().GetMetadata().reflection;
-		}
-		static const S2C_LobbyUserList& default_instance() {
-			return *internal_default_instance();
-		}
-		static inline const S2C_LobbyUserList* internal_default_instance() {
-			return reinterpret_cast<const S2C_LobbyUserList*>(
-				&_S2C_LobbyUserList_default_instance_);
-		}
-		static constexpr int kIndexInFileMessages = 2;
-		friend void swap(S2C_LobbyUserList& a, S2C_LobbyUserList& b) { a.Swap(&b); }
-		inline void Swap(S2C_LobbyUserList* other) {
-			if (other == this) return;
-			if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-				InternalSwap(other);
-			}
-			else {
-				::google::protobuf::internal::GenericSwap(this, other);
-			}
-		}
-		void UnsafeArenaSwap(S2C_LobbyUserList* other) {
-			if (other == this) return;
-			ABSL_DCHECK(GetArena() == other->GetArena());
-			InternalSwap(other);
-		}
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const S2C_LobbyUserList& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const S2C_LobbyUserList* internal_default_instance() {
+    return reinterpret_cast<const S2C_LobbyUserList*>(
+        &_S2C_LobbyUserList_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 2;
+  friend void swap(S2C_LobbyUserList& a, S2C_LobbyUserList& b) { a.Swap(&b); }
+  inline void Swap(S2C_LobbyUserList* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(S2C_LobbyUserList* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
 
-		// implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-		S2C_LobbyUserList* New(::google::protobuf::Arena* arena = nullptr) const {
-			return ::google::protobuf::Message::DefaultConstruct<S2C_LobbyUserList>(arena);
-		}
-		using ::google::protobuf::Message::CopyFrom;
-		void CopyFrom(const S2C_LobbyUserList& from);
-		using ::google::protobuf::Message::MergeFrom;
-		void MergeFrom(const S2C_LobbyUserList& from) { S2C_LobbyUserList::MergeImpl(*this, from); }
+  S2C_LobbyUserList* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<S2C_LobbyUserList>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const S2C_LobbyUserList& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const S2C_LobbyUserList& from) { S2C_LobbyUserList::MergeImpl(*this, from); }
 
-	private:
-		static void MergeImpl(
-			::google::protobuf::MessageLite& to_msg,
-			const ::google::protobuf::MessageLite& from_msg);
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
 
-	public:
-		bool IsInitialized() const {
-			return true;
-		}
-		ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-	private:
-		static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
-		static ::uint8_t* _InternalSerialize(
-			const MessageLite& msg, ::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream);
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
 
-	public:
-		::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
-		::uint8_t* _InternalSerialize(
-			::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream) const {
-			return _InternalSerialize(*this, target, stream);
-		}
-#else   // PROTOBUF_CUSTOM_VTABLE
-		::size_t ByteSizeLong() const final;
-		::uint8_t* _InternalSerialize(
-			::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream) const final;
-#endif  // PROTOBUF_CUSTOM_VTABLE
-		int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
 
-	private:
-		void SharedCtor(::google::protobuf::Arena* arena);
-		static void SharedDtor(MessageLite& self);
-		void InternalSwap(S2C_LobbyUserList* other);
-	private:
-		template <typename T>
-		friend ::absl::string_view(
-			::google::protobuf::internal::GetAnyMessageName)();
-		static ::absl::string_view FullMessageName() { return "lobby.S2C_LobbyUserList"; }
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(S2C_LobbyUserList* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.S2C_LobbyUserList"; }
 
-	protected:
-		explicit S2C_LobbyUserList(::google::protobuf::Arena* arena);
-		S2C_LobbyUserList(::google::protobuf::Arena* arena, const S2C_LobbyUserList& from);
-		S2C_LobbyUserList(::google::protobuf::Arena* arena, S2C_LobbyUserList&& from) noexcept
-			: S2C_LobbyUserList(arena) {
-			*this = ::std::move(from);
-		}
-		const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
-		static void* PlacementNew_(const void*, void* mem,
-			::google::protobuf::Arena* arena);
-		static constexpr auto InternalNewImpl_();
-		static const ::google::protobuf::internal::ClassDataFull _class_data_;
+ protected:
+  explicit S2C_LobbyUserList(::google::protobuf::Arena* arena);
+  S2C_LobbyUserList(::google::protobuf::Arena* arena, const S2C_LobbyUserList& from);
+  S2C_LobbyUserList(::google::protobuf::Arena* arena, S2C_LobbyUserList&& from) noexcept
+      : S2C_LobbyUserList(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
 
-	public:
-		::google::protobuf::Metadata GetMetadata() const;
-		// nested types ----------------------------------------------------
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
 
-		// accessors -------------------------------------------------------
-		enum : int {
-			kUsersFieldNumber = 1,
-		};
-		// repeated string users = 1;
-		int users_size() const;
-	private:
-		int _internal_users_size() const;
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUsersFieldNumber = 1,
+  };
+  // repeated string users = 1;
+  int users_size() const;
+  private:
+  int _internal_users_size() const;
 
-	public:
-		void clear_users();
-		const std::string& users(int index) const;
-		std::string* mutable_users(int index);
-		template <typename Arg_ = const std::string&, typename... Args_>
-		void set_users(int index, Arg_&& value, Args_... args);
-		std::string* add_users();
-		template <typename Arg_ = const std::string&, typename... Args_>
-		void add_users(Arg_&& value, Args_... args);
-		const ::google::protobuf::RepeatedPtrField<std::string>& users() const;
-		::google::protobuf::RepeatedPtrField<std::string>* mutable_users();
+  public:
+  void clear_users() ;
+  const std::string& users(int index) const;
+  std::string* mutable_users(int index);
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_users(int index, Arg_&& value, Args_... args);
+  std::string* add_users();
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void add_users(Arg_&& value, Args_... args);
+  const ::google::protobuf::RepeatedPtrField<std::string>& users() const;
+  ::google::protobuf::RepeatedPtrField<std::string>* mutable_users();
 
-	private:
-		const ::google::protobuf::RepeatedPtrField<std::string>& _internal_users() const;
-		::google::protobuf::RepeatedPtrField<std::string>* _internal_mutable_users();
+  private:
+  const ::google::protobuf::RepeatedPtrField<std::string>& _internal_users() const;
+  ::google::protobuf::RepeatedPtrField<std::string>* _internal_mutable_users();
 
-	public:
-		// @@protoc_insertion_point(class_scope:lobby.S2C_LobbyUserList)
-	private:
-		class _Internal;
-		friend class ::google::protobuf::internal::TcParser;
-		static const ::google::protobuf::internal::TcParseTable<
-			0, 1, 0,
-			37, 2>
-			_table_;
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.S2C_LobbyUserList)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      37, 2>
+      _table_;
 
-		friend class ::google::protobuf::MessageLite;
-		friend class ::google::protobuf::Arena;
-		template <typename T>
-		friend class ::google::protobuf::Arena::InternalHelper;
-		using InternalArenaConstructable_ = void;
-		using DestructorSkippable_ = void;
-		struct Impl_ {
-			inline explicit constexpr Impl_(
-				::google::protobuf::internal::ConstantInitialized) noexcept;
-			inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-				::google::protobuf::Arena* arena);
-			inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-				::google::protobuf::Arena* arena, const Impl_& from,
-				const S2C_LobbyUserList& from_msg);
-			::google::protobuf::RepeatedPtrField<std::string> users_;
-			::google::protobuf::internal::CachedSize _cached_size_;
-			PROTOBUF_TSAN_DECLARE_MEMBER
-		};
-		union { Impl_ _impl_; };
-		friend struct ::TableStruct_lobby_2eproto;
-	};
-	// -------------------------------------------------------------------
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const S2C_LobbyUserList& from_msg);
+    ::google::protobuf::RepeatedPtrField<std::string> users_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
 
-	class S2C_GameStart final : public ::google::protobuf::Message
-		/* @@protoc_insertion_point(class_definition:lobby.S2C_GameStart) */ {
-	public:
-		inline S2C_GameStart() : S2C_GameStart(nullptr) {}
-		~S2C_GameStart() PROTOBUF_FINAL;
+class S2C_InventoryResponse_InventoryItem final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.S2C_InventoryResponse.InventoryItem) */ {
+ public:
+  inline S2C_InventoryResponse_InventoryItem() : S2C_InventoryResponse_InventoryItem(nullptr) {}
+  ~S2C_InventoryResponse_InventoryItem() PROTOBUF_FINAL;
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-		void operator delete(S2C_GameStart* msg, std::destroying_delete_t) {
-			SharedDtor(*msg);
-			::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_GameStart));
-		}
+  void operator delete(S2C_InventoryResponse_InventoryItem* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_InventoryResponse_InventoryItem));
+  }
 #endif
 
-		template <typename = void>
-		explicit PROTOBUF_CONSTEXPR S2C_GameStart(
-			::google::protobuf::internal::ConstantInitialized);
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_InventoryResponse_InventoryItem(
+      ::google::protobuf::internal::ConstantInitialized);
 
-		inline S2C_GameStart(const S2C_GameStart& from) : S2C_GameStart(nullptr, from) {}
-		inline S2C_GameStart(S2C_GameStart&& from) noexcept
-			: S2C_GameStart(nullptr, std::move(from)) {
-		}
-		inline S2C_GameStart& operator=(const S2C_GameStart& from) {
-			CopyFrom(from);
-			return *this;
-		}
-		inline S2C_GameStart& operator=(S2C_GameStart&& from) noexcept {
-			if (this == &from) return *this;
-			if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-				InternalSwap(&from);
-			}
-			else {
-				CopyFrom(from);
-			}
-			return *this;
-		}
+  inline S2C_InventoryResponse_InventoryItem(const S2C_InventoryResponse_InventoryItem& from) : S2C_InventoryResponse_InventoryItem(nullptr, from) {}
+  inline S2C_InventoryResponse_InventoryItem(S2C_InventoryResponse_InventoryItem&& from) noexcept
+      : S2C_InventoryResponse_InventoryItem(nullptr, std::move(from)) {}
+  inline S2C_InventoryResponse_InventoryItem& operator=(const S2C_InventoryResponse_InventoryItem& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline S2C_InventoryResponse_InventoryItem& operator=(S2C_InventoryResponse_InventoryItem&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
 
-		inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-			ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		  return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-		}
-			inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-			ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		  return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-		}
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
 
-			static const ::google::protobuf::Descriptor* descriptor() {
-			return GetDescriptor();
-		}
-		static const ::google::protobuf::Descriptor* GetDescriptor() {
-			return default_instance().GetMetadata().descriptor;
-		}
-		static const ::google::protobuf::Reflection* GetReflection() {
-			return default_instance().GetMetadata().reflection;
-		}
-		static const S2C_GameStart& default_instance() {
-			return *internal_default_instance();
-		}
-		static inline const S2C_GameStart* internal_default_instance() {
-			return reinterpret_cast<const S2C_GameStart*>(
-				&_S2C_GameStart_default_instance_);
-		}
-		static constexpr int kIndexInFileMessages = 4;
-		friend void swap(S2C_GameStart& a, S2C_GameStart& b) { a.Swap(&b); }
-		inline void Swap(S2C_GameStart* other) {
-			if (other == this) return;
-			if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-				InternalSwap(other);
-			}
-			else {
-				::google::protobuf::internal::GenericSwap(this, other);
-			}
-		}
-		void UnsafeArenaSwap(S2C_GameStart* other) {
-			if (other == this) return;
-			ABSL_DCHECK(GetArena() == other->GetArena());
-			InternalSwap(other);
-		}
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const S2C_InventoryResponse_InventoryItem& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const S2C_InventoryResponse_InventoryItem* internal_default_instance() {
+    return reinterpret_cast<const S2C_InventoryResponse_InventoryItem*>(
+        &_S2C_InventoryResponse_InventoryItem_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 16;
+  friend void swap(S2C_InventoryResponse_InventoryItem& a, S2C_InventoryResponse_InventoryItem& b) { a.Swap(&b); }
+  inline void Swap(S2C_InventoryResponse_InventoryItem* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(S2C_InventoryResponse_InventoryItem* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
 
-		// implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-		S2C_GameStart* New(::google::protobuf::Arena* arena = nullptr) const {
-			return ::google::protobuf::Message::DefaultConstruct<S2C_GameStart>(arena);
-		}
-		using ::google::protobuf::Message::CopyFrom;
-		void CopyFrom(const S2C_GameStart& from);
-		using ::google::protobuf::Message::MergeFrom;
-		void MergeFrom(const S2C_GameStart& from) { S2C_GameStart::MergeImpl(*this, from); }
+  S2C_InventoryResponse_InventoryItem* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<S2C_InventoryResponse_InventoryItem>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const S2C_InventoryResponse_InventoryItem& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const S2C_InventoryResponse_InventoryItem& from) { S2C_InventoryResponse_InventoryItem::MergeImpl(*this, from); }
 
-	private:
-		static void MergeImpl(
-			::google::protobuf::MessageLite& to_msg,
-			const ::google::protobuf::MessageLite& from_msg);
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
 
-	public:
-		bool IsInitialized() const {
-			return true;
-		}
-		ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(S2C_InventoryResponse_InventoryItem* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.S2C_InventoryResponse.InventoryItem"; }
+
+ protected:
+  explicit S2C_InventoryResponse_InventoryItem(::google::protobuf::Arena* arena);
+  S2C_InventoryResponse_InventoryItem(::google::protobuf::Arena* arena, const S2C_InventoryResponse_InventoryItem& from);
+  S2C_InventoryResponse_InventoryItem(::google::protobuf::Arena* arena, S2C_InventoryResponse_InventoryItem&& from) noexcept
+      : S2C_InventoryResponse_InventoryItem(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kItemIdFieldNumber = 1,
+    kNameFieldNumber = 2,
+    kItemTypeFieldNumber = 3,
+    kTierFieldNumber = 4,
+    kQuantityFieldNumber = 5,
+    kIsEquippedFieldNumber = 6,
+  };
+  // string item_id = 1;
+  void clear_item_id() ;
+  const std::string& item_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_item_id(Arg_&& arg, Args_... args);
+  std::string* mutable_item_id();
+  PROTOBUF_NODISCARD std::string* release_item_id();
+  void set_allocated_item_id(std::string* value);
+
+  private:
+  const std::string& _internal_item_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_item_id(
+      const std::string& value);
+  std::string* _internal_mutable_item_id();
+
+  public:
+  // string name = 2;
+  void clear_name() ;
+  const std::string& name() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_name(Arg_&& arg, Args_... args);
+  std::string* mutable_name();
+  PROTOBUF_NODISCARD std::string* release_name();
+  void set_allocated_name(std::string* value);
+
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(
+      const std::string& value);
+  std::string* _internal_mutable_name();
+
+  public:
+  // .lobby.ItemType item_type = 3;
+  void clear_item_type() ;
+  ::lobby::ItemType item_type() const;
+  void set_item_type(::lobby::ItemType value);
+
+  private:
+  ::lobby::ItemType _internal_item_type() const;
+  void _internal_set_item_type(::lobby::ItemType value);
+
+  public:
+  // .lobby.ItemTier tier = 4;
+  void clear_tier() ;
+  ::lobby::ItemTier tier() const;
+  void set_tier(::lobby::ItemTier value);
+
+  private:
+  ::lobby::ItemTier _internal_tier() const;
+  void _internal_set_tier(::lobby::ItemTier value);
+
+  public:
+  // int32 quantity = 5;
+  void clear_quantity() ;
+  ::int32_t quantity() const;
+  void set_quantity(::int32_t value);
+
+  private:
+  ::int32_t _internal_quantity() const;
+  void _internal_set_quantity(::int32_t value);
+
+  public:
+  // bool is_equipped = 6;
+  void clear_is_equipped() ;
+  bool is_equipped() const;
+  void set_is_equipped(bool value);
+
+  private:
+  bool _internal_is_equipped() const;
+  void _internal_set_is_equipped(bool value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.S2C_InventoryResponse.InventoryItem)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      3, 6, 0,
+      61, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const S2C_InventoryResponse_InventoryItem& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr item_id_;
+    ::google::protobuf::internal::ArenaStringPtr name_;
+    int item_type_;
+    int tier_;
+    ::int32_t quantity_;
+    bool is_equipped_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class S2C_GameStart final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.S2C_GameStart) */ {
+ public:
+  inline S2C_GameStart() : S2C_GameStart(nullptr) {}
+  ~S2C_GameStart() PROTOBUF_FINAL;
+
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-	private:
-		static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
-		static ::uint8_t* _InternalSerialize(
-			const MessageLite& msg, ::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream);
-
-	public:
-		::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
-		::uint8_t* _InternalSerialize(
-			::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream) const {
-			return _InternalSerialize(*this, target, stream);
-		}
-#else   // PROTOBUF_CUSTOM_VTABLE
-		::size_t ByteSizeLong() const final;
-		::uint8_t* _InternalSerialize(
-			::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream) const final;
-#endif  // PROTOBUF_CUSTOM_VTABLE
-		int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-	private:
-		void SharedCtor(::google::protobuf::Arena* arena);
-		static void SharedDtor(MessageLite& self);
-		void InternalSwap(S2C_GameStart* other);
-	private:
-		template <typename T>
-		friend ::absl::string_view(
-			::google::protobuf::internal::GetAnyMessageName)();
-		static ::absl::string_view FullMessageName() { return "lobby.S2C_GameStart"; }
-
-	protected:
-		explicit S2C_GameStart(::google::protobuf::Arena* arena);
-		S2C_GameStart(::google::protobuf::Arena* arena, const S2C_GameStart& from);
-		S2C_GameStart(::google::protobuf::Arena* arena, S2C_GameStart&& from) noexcept
-			: S2C_GameStart(arena) {
-			*this = ::std::move(from);
-		}
-		const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
-		static void* PlacementNew_(const void*, void* mem,
-			::google::protobuf::Arena* arena);
-		static constexpr auto InternalNewImpl_();
-		static const ::google::protobuf::internal::ClassDataFull _class_data_;
-
-	public:
-		::google::protobuf::Metadata GetMetadata() const;
-		// nested types ----------------------------------------------------
-
-		// accessors -------------------------------------------------------
-		enum : int {
-			kRoomIdFieldNumber = 2,
-			kMessageFieldNumber = 3,
-			kSuccessFieldNumber = 1,
-		};
-		// string room_id = 2;
-		void clear_room_id();
-		const std::string& room_id() const;
-		template <typename Arg_ = const std::string&, typename... Args_>
-		void set_room_id(Arg_&& arg, Args_... args);
-		std::string* mutable_room_id();
-		PROTOBUF_NODISCARD std::string* release_room_id();
-		void set_allocated_room_id(std::string* value);
-
-	private:
-		const std::string& _internal_room_id() const;
-		inline PROTOBUF_ALWAYS_INLINE void _internal_set_room_id(
-			const std::string& value);
-		std::string* _internal_mutable_room_id();
-
-	public:
-		// string message = 3;
-		void clear_message();
-		const std::string& message() const;
-		template <typename Arg_ = const std::string&, typename... Args_>
-		void set_message(Arg_&& arg, Args_... args);
-		std::string* mutable_message();
-		PROTOBUF_NODISCARD std::string* release_message();
-		void set_allocated_message(std::string* value);
-
-	private:
-		const std::string& _internal_message() const;
-		inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(
-			const std::string& value);
-		std::string* _internal_mutable_message();
-
-	public:
-		// bool success = 1;
-		void clear_success();
-		bool success() const;
-		void set_success(bool value);
-
-	private:
-		bool _internal_success() const;
-		void _internal_set_success(bool value);
-
-	public:
-		// @@protoc_insertion_point(class_scope:lobby.S2C_GameStart)
-	private:
-		class _Internal;
-		friend class ::google::protobuf::internal::TcParser;
-		static const ::google::protobuf::internal::TcParseTable<
-			2, 3, 0,
-			42, 2>
-			_table_;
-
-		friend class ::google::protobuf::MessageLite;
-		friend class ::google::protobuf::Arena;
-		template <typename T>
-		friend class ::google::protobuf::Arena::InternalHelper;
-		using InternalArenaConstructable_ = void;
-		using DestructorSkippable_ = void;
-		struct Impl_ {
-			inline explicit constexpr Impl_(
-				::google::protobuf::internal::ConstantInitialized) noexcept;
-			inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-				::google::protobuf::Arena* arena);
-			inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-				::google::protobuf::Arena* arena, const Impl_& from,
-				const S2C_GameStart& from_msg);
-			::google::protobuf::internal::ArenaStringPtr room_id_;
-			::google::protobuf::internal::ArenaStringPtr message_;
-			bool success_;
-			::google::protobuf::internal::CachedSize _cached_size_;
-			PROTOBUF_TSAN_DECLARE_MEMBER
-		};
-		union { Impl_ _impl_; };
-		friend struct ::TableStruct_lobby_2eproto;
-	};
-	// -------------------------------------------------------------------
-
-	class S2C_EnterLobby final : public ::google::protobuf::Message
-		/* @@protoc_insertion_point(class_definition:lobby.S2C_EnterLobby) */ {
-	public:
-		inline S2C_EnterLobby() : S2C_EnterLobby(nullptr) {}
-		~S2C_EnterLobby() PROTOBUF_FINAL;
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-		void operator delete(S2C_EnterLobby* msg, std::destroying_delete_t) {
-			SharedDtor(*msg);
-			::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_EnterLobby));
-		}
+  void operator delete(S2C_GameStart* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_GameStart));
+  }
 #endif
 
-		template <typename = void>
-		explicit PROTOBUF_CONSTEXPR S2C_EnterLobby(
-			::google::protobuf::internal::ConstantInitialized);
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_GameStart(
+      ::google::protobuf::internal::ConstantInitialized);
 
-		inline S2C_EnterLobby(const S2C_EnterLobby& from) : S2C_EnterLobby(nullptr, from) {}
-		inline S2C_EnterLobby(S2C_EnterLobby&& from) noexcept
-			: S2C_EnterLobby(nullptr, std::move(from)) {
-		}
-		inline S2C_EnterLobby& operator=(const S2C_EnterLobby& from) {
-			CopyFrom(from);
-			return *this;
-		}
-		inline S2C_EnterLobby& operator=(S2C_EnterLobby&& from) noexcept {
-			if (this == &from) return *this;
-			if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-				InternalSwap(&from);
-			}
-			else {
-				CopyFrom(from);
-			}
-			return *this;
-		}
+  inline S2C_GameStart(const S2C_GameStart& from) : S2C_GameStart(nullptr, from) {}
+  inline S2C_GameStart(S2C_GameStart&& from) noexcept
+      : S2C_GameStart(nullptr, std::move(from)) {}
+  inline S2C_GameStart& operator=(const S2C_GameStart& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline S2C_GameStart& operator=(S2C_GameStart&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
 
-		inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-			ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		  return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-		}
-			inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-			ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		  return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-		}
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
 
-			static const ::google::protobuf::Descriptor* descriptor() {
-			return GetDescriptor();
-		}
-		static const ::google::protobuf::Descriptor* GetDescriptor() {
-			return default_instance().GetMetadata().descriptor;
-		}
-		static const ::google::protobuf::Reflection* GetReflection() {
-			return default_instance().GetMetadata().reflection;
-		}
-		static const S2C_EnterLobby& default_instance() {
-			return *internal_default_instance();
-		}
-		static inline const S2C_EnterLobby* internal_default_instance() {
-			return reinterpret_cast<const S2C_EnterLobby*>(
-				&_S2C_EnterLobby_default_instance_);
-		}
-		static constexpr int kIndexInFileMessages = 1;
-		friend void swap(S2C_EnterLobby& a, S2C_EnterLobby& b) { a.Swap(&b); }
-		inline void Swap(S2C_EnterLobby* other) {
-			if (other == this) return;
-			if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-				InternalSwap(other);
-			}
-			else {
-				::google::protobuf::internal::GenericSwap(this, other);
-			}
-		}
-		void UnsafeArenaSwap(S2C_EnterLobby* other) {
-			if (other == this) return;
-			ABSL_DCHECK(GetArena() == other->GetArena());
-			InternalSwap(other);
-		}
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const S2C_GameStart& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const S2C_GameStart* internal_default_instance() {
+    return reinterpret_cast<const S2C_GameStart*>(
+        &_S2C_GameStart_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 5;
+  friend void swap(S2C_GameStart& a, S2C_GameStart& b) { a.Swap(&b); }
+  inline void Swap(S2C_GameStart* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(S2C_GameStart* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
 
-		// implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-		S2C_EnterLobby* New(::google::protobuf::Arena* arena = nullptr) const {
-			return ::google::protobuf::Message::DefaultConstruct<S2C_EnterLobby>(arena);
-		}
-		using ::google::protobuf::Message::CopyFrom;
-		void CopyFrom(const S2C_EnterLobby& from);
-		using ::google::protobuf::Message::MergeFrom;
-		void MergeFrom(const S2C_EnterLobby& from) { S2C_EnterLobby::MergeImpl(*this, from); }
+  S2C_GameStart* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<S2C_GameStart>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const S2C_GameStart& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const S2C_GameStart& from) { S2C_GameStart::MergeImpl(*this, from); }
 
-	private:
-		static void MergeImpl(
-			::google::protobuf::MessageLite& to_msg,
-			const ::google::protobuf::MessageLite& from_msg);
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
 
-	public:
-		bool IsInitialized() const {
-			return true;
-		}
-		ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(S2C_GameStart* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.S2C_GameStart"; }
+
+ protected:
+  explicit S2C_GameStart(::google::protobuf::Arena* arena);
+  S2C_GameStart(::google::protobuf::Arena* arena, const S2C_GameStart& from);
+  S2C_GameStart(::google::protobuf::Arena* arena, S2C_GameStart&& from) noexcept
+      : S2C_GameStart(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kRoomIdFieldNumber = 2,
+    kServerIpFieldNumber = 3,
+    kMessageFieldNumber = 5,
+    kSuccessFieldNumber = 1,
+    kServerPortFieldNumber = 4,
+  };
+  // string room_id = 2;
+  void clear_room_id() ;
+  const std::string& room_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_room_id(Arg_&& arg, Args_... args);
+  std::string* mutable_room_id();
+  PROTOBUF_NODISCARD std::string* release_room_id();
+  void set_allocated_room_id(std::string* value);
+
+  private:
+  const std::string& _internal_room_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_room_id(
+      const std::string& value);
+  std::string* _internal_mutable_room_id();
+
+  public:
+  // string server_ip = 3;
+  void clear_server_ip() ;
+  const std::string& server_ip() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_server_ip(Arg_&& arg, Args_... args);
+  std::string* mutable_server_ip();
+  PROTOBUF_NODISCARD std::string* release_server_ip();
+  void set_allocated_server_ip(std::string* value);
+
+  private:
+  const std::string& _internal_server_ip() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_server_ip(
+      const std::string& value);
+  std::string* _internal_mutable_server_ip();
+
+  public:
+  // string message = 5;
+  void clear_message() ;
+  const std::string& message() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_message(Arg_&& arg, Args_... args);
+  std::string* mutable_message();
+  PROTOBUF_NODISCARD std::string* release_message();
+  void set_allocated_message(std::string* value);
+
+  private:
+  const std::string& _internal_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(
+      const std::string& value);
+  std::string* _internal_mutable_message();
+
+  public:
+  // bool success = 1;
+  void clear_success() ;
+  bool success() const;
+  void set_success(bool value);
+
+  private:
+  bool _internal_success() const;
+  void _internal_set_success(bool value);
+
+  public:
+  // int32 server_port = 4;
+  void clear_server_port() ;
+  ::int32_t server_port() const;
+  void set_server_port(::int32_t value);
+
+  private:
+  ::int32_t _internal_server_port() const;
+  void _internal_set_server_port(::int32_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.S2C_GameStart)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      3, 5, 0,
+      51, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const S2C_GameStart& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr room_id_;
+    ::google::protobuf::internal::ArenaStringPtr server_ip_;
+    ::google::protobuf::internal::ArenaStringPtr message_;
+    bool success_;
+    ::int32_t server_port_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class S2C_EquipCostumeResult final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.S2C_EquipCostumeResult) */ {
+ public:
+  inline S2C_EquipCostumeResult() : S2C_EquipCostumeResult(nullptr) {}
+  ~S2C_EquipCostumeResult() PROTOBUF_FINAL;
+
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-	private:
-		static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
-		static ::uint8_t* _InternalSerialize(
-			const MessageLite& msg, ::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream);
-
-	public:
-		::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
-		::uint8_t* _InternalSerialize(
-			::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream) const {
-			return _InternalSerialize(*this, target, stream);
-		}
-#else   // PROTOBUF_CUSTOM_VTABLE
-		::size_t ByteSizeLong() const final;
-		::uint8_t* _InternalSerialize(
-			::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream) const final;
-#endif  // PROTOBUF_CUSTOM_VTABLE
-		int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-	private:
-		void SharedCtor(::google::protobuf::Arena* arena);
-		static void SharedDtor(MessageLite& self);
-		void InternalSwap(S2C_EnterLobby* other);
-	private:
-		template <typename T>
-		friend ::absl::string_view(
-			::google::protobuf::internal::GetAnyMessageName)();
-		static ::absl::string_view FullMessageName() { return "lobby.S2C_EnterLobby"; }
-
-	protected:
-		explicit S2C_EnterLobby(::google::protobuf::Arena* arena);
-		S2C_EnterLobby(::google::protobuf::Arena* arena, const S2C_EnterLobby& from);
-		S2C_EnterLobby(::google::protobuf::Arena* arena, S2C_EnterLobby&& from) noexcept
-			: S2C_EnterLobby(arena) {
-			*this = ::std::move(from);
-		}
-		const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
-		static void* PlacementNew_(const void*, void* mem,
-			::google::protobuf::Arena* arena);
-		static constexpr auto InternalNewImpl_();
-		static const ::google::protobuf::internal::ClassDataFull _class_data_;
-
-	public:
-		::google::protobuf::Metadata GetMetadata() const;
-		// nested types ----------------------------------------------------
-
-		// accessors -------------------------------------------------------
-		enum : int {
-			kMessageFieldNumber = 2,
-			kSuccessFieldNumber = 1,
-		};
-		// string message = 2;
-		void clear_message();
-		const std::string& message() const;
-		template <typename Arg_ = const std::string&, typename... Args_>
-		void set_message(Arg_&& arg, Args_... args);
-		std::string* mutable_message();
-		PROTOBUF_NODISCARD std::string* release_message();
-		void set_allocated_message(std::string* value);
-
-	private:
-		const std::string& _internal_message() const;
-		inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(
-			const std::string& value);
-		std::string* _internal_mutable_message();
-
-	public:
-		// bool success = 1;
-		void clear_success();
-		bool success() const;
-		void set_success(bool value);
-
-	private:
-		bool _internal_success() const;
-		void _internal_set_success(bool value);
-
-	public:
-		// @@protoc_insertion_point(class_scope:lobby.S2C_EnterLobby)
-	private:
-		class _Internal;
-		friend class ::google::protobuf::internal::TcParser;
-		static const ::google::protobuf::internal::TcParseTable<
-			1, 2, 0,
-			36, 2>
-			_table_;
-
-		friend class ::google::protobuf::MessageLite;
-		friend class ::google::protobuf::Arena;
-		template <typename T>
-		friend class ::google::protobuf::Arena::InternalHelper;
-		using InternalArenaConstructable_ = void;
-		using DestructorSkippable_ = void;
-		struct Impl_ {
-			inline explicit constexpr Impl_(
-				::google::protobuf::internal::ConstantInitialized) noexcept;
-			inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-				::google::protobuf::Arena* arena);
-			inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-				::google::protobuf::Arena* arena, const Impl_& from,
-				const S2C_EnterLobby& from_msg);
-			::google::protobuf::internal::ArenaStringPtr message_;
-			bool success_;
-			::google::protobuf::internal::CachedSize _cached_size_;
-			PROTOBUF_TSAN_DECLARE_MEMBER
-		};
-		union { Impl_ _impl_; };
-		friend struct ::TableStruct_lobby_2eproto;
-	};
-	// -------------------------------------------------------------------
-
-	class C2S_GameStart final : public ::google::protobuf::Message
-		/* @@protoc_insertion_point(class_definition:lobby.C2S_GameStart) */ {
-	public:
-		inline C2S_GameStart() : C2S_GameStart(nullptr) {}
-		~C2S_GameStart() PROTOBUF_FINAL;
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-		void operator delete(C2S_GameStart* msg, std::destroying_delete_t) {
-			SharedDtor(*msg);
-			::google::protobuf::internal::SizedDelete(msg, sizeof(C2S_GameStart));
-		}
+  void operator delete(S2C_EquipCostumeResult* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_EquipCostumeResult));
+  }
 #endif
 
-		template <typename = void>
-		explicit PROTOBUF_CONSTEXPR C2S_GameStart(
-			::google::protobuf::internal::ConstantInitialized);
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_EquipCostumeResult(
+      ::google::protobuf::internal::ConstantInitialized);
 
-		inline C2S_GameStart(const C2S_GameStart& from) : C2S_GameStart(nullptr, from) {}
-		inline C2S_GameStart(C2S_GameStart&& from) noexcept
-			: C2S_GameStart(nullptr, std::move(from)) {
-		}
-		inline C2S_GameStart& operator=(const C2S_GameStart& from) {
-			CopyFrom(from);
-			return *this;
-		}
-		inline C2S_GameStart& operator=(C2S_GameStart&& from) noexcept {
-			if (this == &from) return *this;
-			if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-				InternalSwap(&from);
-			}
-			else {
-				CopyFrom(from);
-			}
-			return *this;
-		}
+  inline S2C_EquipCostumeResult(const S2C_EquipCostumeResult& from) : S2C_EquipCostumeResult(nullptr, from) {}
+  inline S2C_EquipCostumeResult(S2C_EquipCostumeResult&& from) noexcept
+      : S2C_EquipCostumeResult(nullptr, std::move(from)) {}
+  inline S2C_EquipCostumeResult& operator=(const S2C_EquipCostumeResult& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline S2C_EquipCostumeResult& operator=(S2C_EquipCostumeResult&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
 
-		inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-			ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		  return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-		}
-			inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-			ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		  return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-		}
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
 
-			static const ::google::protobuf::Descriptor* descriptor() {
-			return GetDescriptor();
-		}
-		static const ::google::protobuf::Descriptor* GetDescriptor() {
-			return default_instance().GetMetadata().descriptor;
-		}
-		static const ::google::protobuf::Reflection* GetReflection() {
-			return default_instance().GetMetadata().reflection;
-		}
-		static const C2S_GameStart& default_instance() {
-			return *internal_default_instance();
-		}
-		static inline const C2S_GameStart* internal_default_instance() {
-			return reinterpret_cast<const C2S_GameStart*>(
-				&_C2S_GameStart_default_instance_);
-		}
-		static constexpr int kIndexInFileMessages = 3;
-		friend void swap(C2S_GameStart& a, C2S_GameStart& b) { a.Swap(&b); }
-		inline void Swap(C2S_GameStart* other) {
-			if (other == this) return;
-			if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-				InternalSwap(other);
-			}
-			else {
-				::google::protobuf::internal::GenericSwap(this, other);
-			}
-		}
-		void UnsafeArenaSwap(C2S_GameStart* other) {
-			if (other == this) return;
-			ABSL_DCHECK(GetArena() == other->GetArena());
-			InternalSwap(other);
-		}
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const S2C_EquipCostumeResult& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const S2C_EquipCostumeResult* internal_default_instance() {
+    return reinterpret_cast<const S2C_EquipCostumeResult*>(
+        &_S2C_EquipCostumeResult_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 19;
+  friend void swap(S2C_EquipCostumeResult& a, S2C_EquipCostumeResult& b) { a.Swap(&b); }
+  inline void Swap(S2C_EquipCostumeResult* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(S2C_EquipCostumeResult* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
 
-		// implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-		C2S_GameStart* New(::google::protobuf::Arena* arena = nullptr) const {
-			return ::google::protobuf::Message::DefaultConstruct<C2S_GameStart>(arena);
-		}
-		using ::google::protobuf::Message::CopyFrom;
-		void CopyFrom(const C2S_GameStart& from);
-		using ::google::protobuf::Message::MergeFrom;
-		void MergeFrom(const C2S_GameStart& from) { C2S_GameStart::MergeImpl(*this, from); }
+  S2C_EquipCostumeResult* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<S2C_EquipCostumeResult>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const S2C_EquipCostumeResult& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const S2C_EquipCostumeResult& from) { S2C_EquipCostumeResult::MergeImpl(*this, from); }
 
-	private:
-		static void MergeImpl(
-			::google::protobuf::MessageLite& to_msg,
-			const ::google::protobuf::MessageLite& from_msg);
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
 
-	public:
-		bool IsInitialized() const {
-			return true;
-		}
-		ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(S2C_EquipCostumeResult* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.S2C_EquipCostumeResult"; }
+
+ protected:
+  explicit S2C_EquipCostumeResult(::google::protobuf::Arena* arena);
+  S2C_EquipCostumeResult(::google::protobuf::Arena* arena, const S2C_EquipCostumeResult& from);
+  S2C_EquipCostumeResult(::google::protobuf::Arena* arena, S2C_EquipCostumeResult&& from) noexcept
+      : S2C_EquipCostumeResult(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kCostumeIdFieldNumber = 2,
+    kMessageFieldNumber = 4,
+    kSuccessFieldNumber = 1,
+    kIsEquippedFieldNumber = 3,
+  };
+  // string costume_id = 2;
+  void clear_costume_id() ;
+  const std::string& costume_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_costume_id(Arg_&& arg, Args_... args);
+  std::string* mutable_costume_id();
+  PROTOBUF_NODISCARD std::string* release_costume_id();
+  void set_allocated_costume_id(std::string* value);
+
+  private:
+  const std::string& _internal_costume_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_costume_id(
+      const std::string& value);
+  std::string* _internal_mutable_costume_id();
+
+  public:
+  // string message = 4;
+  void clear_message() ;
+  const std::string& message() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_message(Arg_&& arg, Args_... args);
+  std::string* mutable_message();
+  PROTOBUF_NODISCARD std::string* release_message();
+  void set_allocated_message(std::string* value);
+
+  private:
+  const std::string& _internal_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(
+      const std::string& value);
+  std::string* _internal_mutable_message();
+
+  public:
+  // bool success = 1;
+  void clear_success() ;
+  bool success() const;
+  void set_success(bool value);
+
+  private:
+  bool _internal_success() const;
+  void _internal_set_success(bool value);
+
+  public:
+  // bool is_equipped = 3;
+  void clear_is_equipped() ;
+  bool is_equipped() const;
+  void set_is_equipped(bool value);
+
+  private:
+  bool _internal_is_equipped() const;
+  void _internal_set_is_equipped(bool value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.S2C_EquipCostumeResult)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 4, 0,
+      54, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const S2C_EquipCostumeResult& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr costume_id_;
+    ::google::protobuf::internal::ArenaStringPtr message_;
+    bool success_;
+    bool is_equipped_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class S2C_EnterLobby final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.S2C_EnterLobby) */ {
+ public:
+  inline S2C_EnterLobby() : S2C_EnterLobby(nullptr) {}
+  ~S2C_EnterLobby() PROTOBUF_FINAL;
+
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-	private:
-		static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
-		static ::uint8_t* _InternalSerialize(
-			const MessageLite& msg, ::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream);
-
-	public:
-		::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
-		::uint8_t* _InternalSerialize(
-			::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream) const {
-			return _InternalSerialize(*this, target, stream);
-		}
-#else   // PROTOBUF_CUSTOM_VTABLE
-		::size_t ByteSizeLong() const final;
-		::uint8_t* _InternalSerialize(
-			::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream) const final;
-#endif  // PROTOBUF_CUSTOM_VTABLE
-		int GetCachedSize() const { return _impl_._cached_size_.Get(); }
-
-	private:
-		void SharedCtor(::google::protobuf::Arena* arena);
-		static void SharedDtor(MessageLite& self);
-		void InternalSwap(C2S_GameStart* other);
-	private:
-		template <typename T>
-		friend ::absl::string_view(
-			::google::protobuf::internal::GetAnyMessageName)();
-		static ::absl::string_view FullMessageName() { return "lobby.C2S_GameStart"; }
-
-	protected:
-		explicit C2S_GameStart(::google::protobuf::Arena* arena);
-		C2S_GameStart(::google::protobuf::Arena* arena, const C2S_GameStart& from);
-		C2S_GameStart(::google::protobuf::Arena* arena, C2S_GameStart&& from) noexcept
-			: C2S_GameStart(arena) {
-			*this = ::std::move(from);
-		}
-		const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
-		static void* PlacementNew_(const void*, void* mem,
-			::google::protobuf::Arena* arena);
-		static constexpr auto InternalNewImpl_();
-		static const ::google::protobuf::internal::ClassDataFull _class_data_;
-
-	public:
-		::google::protobuf::Metadata GetMetadata() const;
-		// nested types ----------------------------------------------------
-
-		// accessors -------------------------------------------------------
-		enum : int {
-			kUserIdFieldNumber = 1,
-		};
-		// string user_id = 1;
-		void clear_user_id();
-		const std::string& user_id() const;
-		template <typename Arg_ = const std::string&, typename... Args_>
-		void set_user_id(Arg_&& arg, Args_... args);
-		std::string* mutable_user_id();
-		PROTOBUF_NODISCARD std::string* release_user_id();
-		void set_allocated_user_id(std::string* value);
-
-	private:
-		const std::string& _internal_user_id() const;
-		inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(
-			const std::string& value);
-		std::string* _internal_mutable_user_id();
-
-	public:
-		// @@protoc_insertion_point(class_scope:lobby.C2S_GameStart)
-	private:
-		class _Internal;
-		friend class ::google::protobuf::internal::TcParser;
-		static const ::google::protobuf::internal::TcParseTable<
-			0, 1, 0,
-			35, 2>
-			_table_;
-
-		friend class ::google::protobuf::MessageLite;
-		friend class ::google::protobuf::Arena;
-		template <typename T>
-		friend class ::google::protobuf::Arena::InternalHelper;
-		using InternalArenaConstructable_ = void;
-		using DestructorSkippable_ = void;
-		struct Impl_ {
-			inline explicit constexpr Impl_(
-				::google::protobuf::internal::ConstantInitialized) noexcept;
-			inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-				::google::protobuf::Arena* arena);
-			inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-				::google::protobuf::Arena* arena, const Impl_& from,
-				const C2S_GameStart& from_msg);
-			::google::protobuf::internal::ArenaStringPtr user_id_;
-			::google::protobuf::internal::CachedSize _cached_size_;
-			PROTOBUF_TSAN_DECLARE_MEMBER
-		};
-		union { Impl_ _impl_; };
-		friend struct ::TableStruct_lobby_2eproto;
-	};
-	// -------------------------------------------------------------------
-
-	class C2S_EnterLobby final : public ::google::protobuf::Message
-		/* @@protoc_insertion_point(class_definition:lobby.C2S_EnterLobby) */ {
-	public:
-		inline C2S_EnterLobby() : C2S_EnterLobby(nullptr) {}
-		~C2S_EnterLobby() PROTOBUF_FINAL;
-
-#if defined(PROTOBUF_CUSTOM_VTABLE)
-		void operator delete(C2S_EnterLobby* msg, std::destroying_delete_t) {
-			SharedDtor(*msg);
-			::google::protobuf::internal::SizedDelete(msg, sizeof(C2S_EnterLobby));
-		}
+  void operator delete(S2C_EnterLobby* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_EnterLobby));
+  }
 #endif
 
-		template <typename = void>
-		explicit PROTOBUF_CONSTEXPR C2S_EnterLobby(
-			::google::protobuf::internal::ConstantInitialized);
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_EnterLobby(
+      ::google::protobuf::internal::ConstantInitialized);
 
-		inline C2S_EnterLobby(const C2S_EnterLobby& from) : C2S_EnterLobby(nullptr, from) {}
-		inline C2S_EnterLobby(C2S_EnterLobby&& from) noexcept
-			: C2S_EnterLobby(nullptr, std::move(from)) {
-		}
-		inline C2S_EnterLobby& operator=(const C2S_EnterLobby& from) {
-			CopyFrom(from);
-			return *this;
-		}
-		inline C2S_EnterLobby& operator=(C2S_EnterLobby&& from) noexcept {
-			if (this == &from) return *this;
-			if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
-				InternalSwap(&from);
-			}
-			else {
-				CopyFrom(from);
-			}
-			return *this;
-		}
+  inline S2C_EnterLobby(const S2C_EnterLobby& from) : S2C_EnterLobby(nullptr, from) {}
+  inline S2C_EnterLobby(S2C_EnterLobby&& from) noexcept
+      : S2C_EnterLobby(nullptr, std::move(from)) {}
+  inline S2C_EnterLobby& operator=(const S2C_EnterLobby& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline S2C_EnterLobby& operator=(S2C_EnterLobby&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
 
-		inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
-			ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		  return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
-		}
-			inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
-			ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		  return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
-		}
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
 
-			static const ::google::protobuf::Descriptor* descriptor() {
-			return GetDescriptor();
-		}
-		static const ::google::protobuf::Descriptor* GetDescriptor() {
-			return default_instance().GetMetadata().descriptor;
-		}
-		static const ::google::protobuf::Reflection* GetReflection() {
-			return default_instance().GetMetadata().reflection;
-		}
-		static const C2S_EnterLobby& default_instance() {
-			return *internal_default_instance();
-		}
-		static inline const C2S_EnterLobby* internal_default_instance() {
-			return reinterpret_cast<const C2S_EnterLobby*>(
-				&_C2S_EnterLobby_default_instance_);
-		}
-		static constexpr int kIndexInFileMessages = 0;
-		friend void swap(C2S_EnterLobby& a, C2S_EnterLobby& b) { a.Swap(&b); }
-		inline void Swap(C2S_EnterLobby* other) {
-			if (other == this) return;
-			if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
-				InternalSwap(other);
-			}
-			else {
-				::google::protobuf::internal::GenericSwap(this, other);
-			}
-		}
-		void UnsafeArenaSwap(C2S_EnterLobby* other) {
-			if (other == this) return;
-			ABSL_DCHECK(GetArena() == other->GetArena());
-			InternalSwap(other);
-		}
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const S2C_EnterLobby& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const S2C_EnterLobby* internal_default_instance() {
+    return reinterpret_cast<const S2C_EnterLobby*>(
+        &_S2C_EnterLobby_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 1;
+  friend void swap(S2C_EnterLobby& a, S2C_EnterLobby& b) { a.Swap(&b); }
+  inline void Swap(S2C_EnterLobby* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(S2C_EnterLobby* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
 
-		// implements Message ----------------------------------------------
+  // implements Message ----------------------------------------------
 
-		C2S_EnterLobby* New(::google::protobuf::Arena* arena = nullptr) const {
-			return ::google::protobuf::Message::DefaultConstruct<C2S_EnterLobby>(arena);
-		}
-		using ::google::protobuf::Message::CopyFrom;
-		void CopyFrom(const C2S_EnterLobby& from);
-		using ::google::protobuf::Message::MergeFrom;
-		void MergeFrom(const C2S_EnterLobby& from) { C2S_EnterLobby::MergeImpl(*this, from); }
+  S2C_EnterLobby* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<S2C_EnterLobby>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const S2C_EnterLobby& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const S2C_EnterLobby& from) { S2C_EnterLobby::MergeImpl(*this, from); }
 
-	private:
-		static void MergeImpl(
-			::google::protobuf::MessageLite& to_msg,
-			const ::google::protobuf::MessageLite& from_msg);
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
 
-	public:
-		bool IsInitialized() const {
-			return true;
-		}
-		ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(S2C_EnterLobby* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.S2C_EnterLobby"; }
+
+ protected:
+  explicit S2C_EnterLobby(::google::protobuf::Arena* arena);
+  S2C_EnterLobby(::google::protobuf::Arena* arena, const S2C_EnterLobby& from);
+  S2C_EnterLobby(::google::protobuf::Arena* arena, S2C_EnterLobby&& from) noexcept
+      : S2C_EnterLobby(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kMessageFieldNumber = 2,
+    kSuccessFieldNumber = 1,
+    kGoldFieldNumber = 3,
+  };
+  // string message = 2;
+  void clear_message() ;
+  const std::string& message() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_message(Arg_&& arg, Args_... args);
+  std::string* mutable_message();
+  PROTOBUF_NODISCARD std::string* release_message();
+  void set_allocated_message(std::string* value);
+
+  private:
+  const std::string& _internal_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(
+      const std::string& value);
+  std::string* _internal_mutable_message();
+
+  public:
+  // bool success = 1;
+  void clear_success() ;
+  bool success() const;
+  void set_success(bool value);
+
+  private:
+  bool _internal_success() const;
+  void _internal_set_success(bool value);
+
+  public:
+  // int32 gold = 3;
+  void clear_gold() ;
+  ::int32_t gold() const;
+  void set_gold(::int32_t value);
+
+  private:
+  ::int32_t _internal_gold() const;
+  void _internal_set_gold(::int32_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.S2C_EnterLobby)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 3, 0,
+      36, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const S2C_EnterLobby& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr message_;
+    bool success_;
+    ::int32_t gold_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class S2C_BuyResult final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.S2C_BuyResult) */ {
+ public:
+  inline S2C_BuyResult() : S2C_BuyResult(nullptr) {}
+  ~S2C_BuyResult() PROTOBUF_FINAL;
+
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-	private:
-		static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
-		static ::uint8_t* _InternalSerialize(
-			const MessageLite& msg, ::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream);
+  void operator delete(S2C_BuyResult* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_BuyResult));
+  }
+#endif
 
-	public:
-		::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
-		::uint8_t* _InternalSerialize(
-			::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream) const {
-			return _InternalSerialize(*this, target, stream);
-		}
-#else   // PROTOBUF_CUSTOM_VTABLE
-		::size_t ByteSizeLong() const final;
-		::uint8_t* _InternalSerialize(
-			::uint8_t* target,
-			::google::protobuf::io::EpsCopyOutputStream* stream) const final;
-#endif  // PROTOBUF_CUSTOM_VTABLE
-		int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_BuyResult(
+      ::google::protobuf::internal::ConstantInitialized);
 
-	private:
-		void SharedCtor(::google::protobuf::Arena* arena);
-		static void SharedDtor(MessageLite& self);
-		void InternalSwap(C2S_EnterLobby* other);
-	private:
-		template <typename T>
-		friend ::absl::string_view(
-			::google::protobuf::internal::GetAnyMessageName)();
-		static ::absl::string_view FullMessageName() { return "lobby.C2S_EnterLobby"; }
+  inline S2C_BuyResult(const S2C_BuyResult& from) : S2C_BuyResult(nullptr, from) {}
+  inline S2C_BuyResult(S2C_BuyResult&& from) noexcept
+      : S2C_BuyResult(nullptr, std::move(from)) {}
+  inline S2C_BuyResult& operator=(const S2C_BuyResult& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline S2C_BuyResult& operator=(S2C_BuyResult&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
 
-	protected:
-		explicit C2S_EnterLobby(::google::protobuf::Arena* arena);
-		C2S_EnterLobby(::google::protobuf::Arena* arena, const C2S_EnterLobby& from);
-		C2S_EnterLobby(::google::protobuf::Arena* arena, C2S_EnterLobby&& from) noexcept
-			: C2S_EnterLobby(arena) {
-			*this = ::std::move(from);
-		}
-		const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
-		static void* PlacementNew_(const void*, void* mem,
-			::google::protobuf::Arena* arena);
-		static constexpr auto InternalNewImpl_();
-		static const ::google::protobuf::internal::ClassDataFull _class_data_;
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
 
-	public:
-		::google::protobuf::Metadata GetMetadata() const;
-		// nested types ----------------------------------------------------
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const S2C_BuyResult& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const S2C_BuyResult* internal_default_instance() {
+    return reinterpret_cast<const S2C_BuyResult*>(
+        &_S2C_BuyResult_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 11;
+  friend void swap(S2C_BuyResult& a, S2C_BuyResult& b) { a.Swap(&b); }
+  inline void Swap(S2C_BuyResult* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(S2C_BuyResult* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
 
-		// accessors -------------------------------------------------------
-		enum : int {
-			kUserIdFieldNumber = 1,
-		};
-		// string user_id = 1;
-		void clear_user_id();
-		const std::string& user_id() const;
-		template <typename Arg_ = const std::string&, typename... Args_>
-		void set_user_id(Arg_&& arg, Args_... args);
-		std::string* mutable_user_id();
-		PROTOBUF_NODISCARD std::string* release_user_id();
-		void set_allocated_user_id(std::string* value);
+  // implements Message ----------------------------------------------
 
-	private:
-		const std::string& _internal_user_id() const;
-		inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(
-			const std::string& value);
-		std::string* _internal_mutable_user_id();
+  S2C_BuyResult* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<S2C_BuyResult>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const S2C_BuyResult& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const S2C_BuyResult& from) { S2C_BuyResult::MergeImpl(*this, from); }
 
-	public:
-		// @@protoc_insertion_point(class_scope:lobby.C2S_EnterLobby)
-	private:
-		class _Internal;
-		friend class ::google::protobuf::internal::TcParser;
-		static const ::google::protobuf::internal::TcParseTable<
-			0, 1, 0,
-			36, 2>
-			_table_;
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
 
-		friend class ::google::protobuf::MessageLite;
-		friend class ::google::protobuf::Arena;
-		template <typename T>
-		friend class ::google::protobuf::Arena::InternalHelper;
-		using InternalArenaConstructable_ = void;
-		using DestructorSkippable_ = void;
-		struct Impl_ {
-			inline explicit constexpr Impl_(
-				::google::protobuf::internal::ConstantInitialized) noexcept;
-			inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-				::google::protobuf::Arena* arena);
-			inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
-				::google::protobuf::Arena* arena, const Impl_& from,
-				const C2S_EnterLobby& from_msg);
-			::google::protobuf::internal::ArenaStringPtr user_id_;
-			::google::protobuf::internal::CachedSize _cached_size_;
-			PROTOBUF_TSAN_DECLARE_MEMBER
-		};
-		union { Impl_ _impl_; };
-		friend struct ::TableStruct_lobby_2eproto;
-	};
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
 
-	// ===================================================================
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
 
-	// ===================================================================
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(S2C_BuyResult* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.S2C_BuyResult"; }
+
+ protected:
+  explicit S2C_BuyResult(::google::protobuf::Arena* arena);
+  S2C_BuyResult(::google::protobuf::Arena* arena, const S2C_BuyResult& from);
+  S2C_BuyResult(::google::protobuf::Arena* arena, S2C_BuyResult&& from) noexcept
+      : S2C_BuyResult(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kItemIdFieldNumber = 2,
+    kMessageFieldNumber = 5,
+    kSuccessFieldNumber = 1,
+    kQuantityFieldNumber = 3,
+    kRemainingGoldFieldNumber = 4,
+  };
+  // string item_id = 2;
+  void clear_item_id() ;
+  const std::string& item_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_item_id(Arg_&& arg, Args_... args);
+  std::string* mutable_item_id();
+  PROTOBUF_NODISCARD std::string* release_item_id();
+  void set_allocated_item_id(std::string* value);
+
+  private:
+  const std::string& _internal_item_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_item_id(
+      const std::string& value);
+  std::string* _internal_mutable_item_id();
+
+  public:
+  // string message = 5;
+  void clear_message() ;
+  const std::string& message() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_message(Arg_&& arg, Args_... args);
+  std::string* mutable_message();
+  PROTOBUF_NODISCARD std::string* release_message();
+  void set_allocated_message(std::string* value);
+
+  private:
+  const std::string& _internal_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(
+      const std::string& value);
+  std::string* _internal_mutable_message();
+
+  public:
+  // bool success = 1;
+  void clear_success() ;
+  bool success() const;
+  void set_success(bool value);
+
+  private:
+  bool _internal_success() const;
+  void _internal_set_success(bool value);
+
+  public:
+  // int32 quantity = 3;
+  void clear_quantity() ;
+  ::int32_t quantity() const;
+  void set_quantity(::int32_t value);
+
+  private:
+  ::int32_t _internal_quantity() const;
+  void _internal_set_quantity(::int32_t value);
+
+  public:
+  // int32 remaining_gold = 4;
+  void clear_remaining_gold() ;
+  ::int32_t remaining_gold() const;
+  void set_remaining_gold(::int32_t value);
+
+  private:
+  ::int32_t _internal_remaining_gold() const;
+  void _internal_set_remaining_gold(::int32_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.S2C_BuyResult)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      3, 5, 0,
+      42, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const S2C_BuyResult& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr item_id_;
+    ::google::protobuf::internal::ArenaStringPtr message_;
+    bool success_;
+    ::int32_t quantity_;
+    ::int32_t remaining_gold_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LobbyUser final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.LobbyUser) */ {
+ public:
+  inline LobbyUser() : LobbyUser(nullptr) {}
+  ~LobbyUser() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(LobbyUser* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(LobbyUser));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR LobbyUser(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline LobbyUser(const LobbyUser& from) : LobbyUser(nullptr, from) {}
+  inline LobbyUser(LobbyUser&& from) noexcept
+      : LobbyUser(nullptr, std::move(from)) {}
+  inline LobbyUser& operator=(const LobbyUser& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LobbyUser& operator=(LobbyUser&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const LobbyUser& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const LobbyUser* internal_default_instance() {
+    return reinterpret_cast<const LobbyUser*>(
+        &_LobbyUser_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 3;
+  friend void swap(LobbyUser& a, LobbyUser& b) { a.Swap(&b); }
+  inline void Swap(LobbyUser* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LobbyUser* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  LobbyUser* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<LobbyUser>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const LobbyUser& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const LobbyUser& from) { LobbyUser::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(LobbyUser* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.LobbyUser"; }
+
+ protected:
+  explicit LobbyUser(::google::protobuf::Arena* arena);
+  LobbyUser(::google::protobuf::Arena* arena, const LobbyUser& from);
+  LobbyUser(::google::protobuf::Arena* arena, LobbyUser&& from) noexcept
+      : LobbyUser(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kNicknameFieldNumber = 2,
+    kIsReadyFieldNumber = 3,
+  };
+  // string user_id = 1;
+  void clear_user_id() ;
+  const std::string& user_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* value);
+
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(
+      const std::string& value);
+  std::string* _internal_mutable_user_id();
+
+  public:
+  // string nickname = 2;
+  void clear_nickname() ;
+  const std::string& nickname() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_nickname(Arg_&& arg, Args_... args);
+  std::string* mutable_nickname();
+  PROTOBUF_NODISCARD std::string* release_nickname();
+  void set_allocated_nickname(std::string* value);
+
+  private:
+  const std::string& _internal_nickname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_nickname(
+      const std::string& value);
+  std::string* _internal_mutable_nickname();
+
+  public:
+  // bool is_ready = 3;
+  void clear_is_ready() ;
+  bool is_ready() const;
+  void set_is_ready(bool value);
+
+  private:
+  bool _internal_is_ready() const;
+  void _internal_set_is_ready(bool value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.LobbyUser)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 3, 0,
+      39, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const LobbyUser& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::google::protobuf::internal::ArenaStringPtr nickname_;
+    bool is_ready_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class C2S_ShopRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.C2S_ShopRequest) */ {
+ public:
+  inline C2S_ShopRequest() : C2S_ShopRequest(nullptr) {}
+  ~C2S_ShopRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(C2S_ShopRequest* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(C2S_ShopRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR C2S_ShopRequest(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline C2S_ShopRequest(const C2S_ShopRequest& from) : C2S_ShopRequest(nullptr, from) {}
+  inline C2S_ShopRequest(C2S_ShopRequest&& from) noexcept
+      : C2S_ShopRequest(nullptr, std::move(from)) {}
+  inline C2S_ShopRequest& operator=(const C2S_ShopRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline C2S_ShopRequest& operator=(C2S_ShopRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const C2S_ShopRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const C2S_ShopRequest* internal_default_instance() {
+    return reinterpret_cast<const C2S_ShopRequest*>(
+        &_C2S_ShopRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 6;
+  friend void swap(C2S_ShopRequest& a, C2S_ShopRequest& b) { a.Swap(&b); }
+  inline void Swap(C2S_ShopRequest* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(C2S_ShopRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  C2S_ShopRequest* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<C2S_ShopRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const C2S_ShopRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const C2S_ShopRequest& from) { C2S_ShopRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(C2S_ShopRequest* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.C2S_ShopRequest"; }
+
+ protected:
+  explicit C2S_ShopRequest(::google::protobuf::Arena* arena);
+  C2S_ShopRequest(::google::protobuf::Arena* arena, const C2S_ShopRequest& from);
+  C2S_ShopRequest(::google::protobuf::Arena* arena, C2S_ShopRequest&& from) noexcept
+      : C2S_ShopRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUserIdFieldNumber = 1,
+  };
+  // string user_id = 1;
+  void clear_user_id() ;
+  const std::string& user_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* value);
+
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(
+      const std::string& value);
+  std::string* _internal_mutable_user_id();
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.C2S_ShopRequest)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      37, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const C2S_ShopRequest& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class C2S_InventoryRequest final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.C2S_InventoryRequest) */ {
+ public:
+  inline C2S_InventoryRequest() : C2S_InventoryRequest(nullptr) {}
+  ~C2S_InventoryRequest() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(C2S_InventoryRequest* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(C2S_InventoryRequest));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR C2S_InventoryRequest(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline C2S_InventoryRequest(const C2S_InventoryRequest& from) : C2S_InventoryRequest(nullptr, from) {}
+  inline C2S_InventoryRequest(C2S_InventoryRequest&& from) noexcept
+      : C2S_InventoryRequest(nullptr, std::move(from)) {}
+  inline C2S_InventoryRequest& operator=(const C2S_InventoryRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline C2S_InventoryRequest& operator=(C2S_InventoryRequest&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const C2S_InventoryRequest& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const C2S_InventoryRequest* internal_default_instance() {
+    return reinterpret_cast<const C2S_InventoryRequest*>(
+        &_C2S_InventoryRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 15;
+  friend void swap(C2S_InventoryRequest& a, C2S_InventoryRequest& b) { a.Swap(&b); }
+  inline void Swap(C2S_InventoryRequest* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(C2S_InventoryRequest* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  C2S_InventoryRequest* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<C2S_InventoryRequest>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const C2S_InventoryRequest& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const C2S_InventoryRequest& from) { C2S_InventoryRequest::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(C2S_InventoryRequest* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.C2S_InventoryRequest"; }
+
+ protected:
+  explicit C2S_InventoryRequest(::google::protobuf::Arena* arena);
+  C2S_InventoryRequest(::google::protobuf::Arena* arena, const C2S_InventoryRequest& from);
+  C2S_InventoryRequest(::google::protobuf::Arena* arena, C2S_InventoryRequest&& from) noexcept
+      : C2S_InventoryRequest(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUserIdFieldNumber = 1,
+  };
+  // string user_id = 1;
+  void clear_user_id() ;
+  const std::string& user_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* value);
+
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(
+      const std::string& value);
+  std::string* _internal_mutable_user_id();
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.C2S_InventoryRequest)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      42, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const C2S_InventoryRequest& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class C2S_GameStart final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.C2S_GameStart) */ {
+ public:
+  inline C2S_GameStart() : C2S_GameStart(nullptr) {}
+  ~C2S_GameStart() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(C2S_GameStart* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(C2S_GameStart));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR C2S_GameStart(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline C2S_GameStart(const C2S_GameStart& from) : C2S_GameStart(nullptr, from) {}
+  inline C2S_GameStart(C2S_GameStart&& from) noexcept
+      : C2S_GameStart(nullptr, std::move(from)) {}
+  inline C2S_GameStart& operator=(const C2S_GameStart& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline C2S_GameStart& operator=(C2S_GameStart&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const C2S_GameStart& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const C2S_GameStart* internal_default_instance() {
+    return reinterpret_cast<const C2S_GameStart*>(
+        &_C2S_GameStart_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 4;
+  friend void swap(C2S_GameStart& a, C2S_GameStart& b) { a.Swap(&b); }
+  inline void Swap(C2S_GameStart* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(C2S_GameStart* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  C2S_GameStart* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<C2S_GameStart>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const C2S_GameStart& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const C2S_GameStart& from) { C2S_GameStart::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(C2S_GameStart* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.C2S_GameStart"; }
+
+ protected:
+  explicit C2S_GameStart(::google::protobuf::Arena* arena);
+  C2S_GameStart(::google::protobuf::Arena* arena, const C2S_GameStart& from);
+  C2S_GameStart(::google::protobuf::Arena* arena, C2S_GameStart&& from) noexcept
+      : C2S_GameStart(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUserIdFieldNumber = 1,
+  };
+  // string user_id = 1;
+  void clear_user_id() ;
+  const std::string& user_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* value);
+
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(
+      const std::string& value);
+  std::string* _internal_mutable_user_id();
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.C2S_GameStart)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      35, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const C2S_GameStart& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class C2S_EquipCostume final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.C2S_EquipCostume) */ {
+ public:
+  inline C2S_EquipCostume() : C2S_EquipCostume(nullptr) {}
+  ~C2S_EquipCostume() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(C2S_EquipCostume* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(C2S_EquipCostume));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR C2S_EquipCostume(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline C2S_EquipCostume(const C2S_EquipCostume& from) : C2S_EquipCostume(nullptr, from) {}
+  inline C2S_EquipCostume(C2S_EquipCostume&& from) noexcept
+      : C2S_EquipCostume(nullptr, std::move(from)) {}
+  inline C2S_EquipCostume& operator=(const C2S_EquipCostume& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline C2S_EquipCostume& operator=(C2S_EquipCostume&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const C2S_EquipCostume& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const C2S_EquipCostume* internal_default_instance() {
+    return reinterpret_cast<const C2S_EquipCostume*>(
+        &_C2S_EquipCostume_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 18;
+  friend void swap(C2S_EquipCostume& a, C2S_EquipCostume& b) { a.Swap(&b); }
+  inline void Swap(C2S_EquipCostume* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(C2S_EquipCostume* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  C2S_EquipCostume* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<C2S_EquipCostume>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const C2S_EquipCostume& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const C2S_EquipCostume& from) { C2S_EquipCostume::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(C2S_EquipCostume* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.C2S_EquipCostume"; }
+
+ protected:
+  explicit C2S_EquipCostume(::google::protobuf::Arena* arena);
+  C2S_EquipCostume(::google::protobuf::Arena* arena, const C2S_EquipCostume& from);
+  C2S_EquipCostume(::google::protobuf::Arena* arena, C2S_EquipCostume&& from) noexcept
+      : C2S_EquipCostume(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kCostumeIdFieldNumber = 2,
+    kEquipFieldNumber = 3,
+  };
+  // string user_id = 1;
+  void clear_user_id() ;
+  const std::string& user_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* value);
+
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(
+      const std::string& value);
+  std::string* _internal_mutable_user_id();
+
+  public:
+  // string costume_id = 2;
+  void clear_costume_id() ;
+  const std::string& costume_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_costume_id(Arg_&& arg, Args_... args);
+  std::string* mutable_costume_id();
+  PROTOBUF_NODISCARD std::string* release_costume_id();
+  void set_allocated_costume_id(std::string* value);
+
+  private:
+  const std::string& _internal_costume_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_costume_id(
+      const std::string& value);
+  std::string* _internal_mutable_costume_id();
+
+  public:
+  // bool equip = 3;
+  void clear_equip() ;
+  bool equip() const;
+  void set_equip(bool value);
+
+  private:
+  bool _internal_equip() const;
+  void _internal_set_equip(bool value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.C2S_EquipCostume)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 3, 0,
+      48, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const C2S_EquipCostume& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::google::protobuf::internal::ArenaStringPtr costume_id_;
+    bool equip_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class C2S_EnterLobby final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.C2S_EnterLobby) */ {
+ public:
+  inline C2S_EnterLobby() : C2S_EnterLobby(nullptr) {}
+  ~C2S_EnterLobby() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(C2S_EnterLobby* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(C2S_EnterLobby));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR C2S_EnterLobby(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline C2S_EnterLobby(const C2S_EnterLobby& from) : C2S_EnterLobby(nullptr, from) {}
+  inline C2S_EnterLobby(C2S_EnterLobby&& from) noexcept
+      : C2S_EnterLobby(nullptr, std::move(from)) {}
+  inline C2S_EnterLobby& operator=(const C2S_EnterLobby& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline C2S_EnterLobby& operator=(C2S_EnterLobby&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const C2S_EnterLobby& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const C2S_EnterLobby* internal_default_instance() {
+    return reinterpret_cast<const C2S_EnterLobby*>(
+        &_C2S_EnterLobby_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 0;
+  friend void swap(C2S_EnterLobby& a, C2S_EnterLobby& b) { a.Swap(&b); }
+  inline void Swap(C2S_EnterLobby* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(C2S_EnterLobby* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  C2S_EnterLobby* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<C2S_EnterLobby>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const C2S_EnterLobby& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const C2S_EnterLobby& from) { C2S_EnterLobby::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(C2S_EnterLobby* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.C2S_EnterLobby"; }
+
+ protected:
+  explicit C2S_EnterLobby(::google::protobuf::Arena* arena);
+  C2S_EnterLobby(::google::protobuf::Arena* arena, const C2S_EnterLobby& from);
+  C2S_EnterLobby(::google::protobuf::Arena* arena, C2S_EnterLobby&& from) noexcept
+      : C2S_EnterLobby(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUserIdFieldNumber = 1,
+  };
+  // string user_id = 1;
+  void clear_user_id() ;
+  const std::string& user_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* value);
+
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(
+      const std::string& value);
+  std::string* _internal_mutable_user_id();
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.C2S_EnterLobby)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 0,
+      36, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const C2S_EnterLobby& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class C2S_BuyItem final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.C2S_BuyItem) */ {
+ public:
+  inline C2S_BuyItem() : C2S_BuyItem(nullptr) {}
+  ~C2S_BuyItem() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(C2S_BuyItem* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(C2S_BuyItem));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR C2S_BuyItem(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline C2S_BuyItem(const C2S_BuyItem& from) : C2S_BuyItem(nullptr, from) {}
+  inline C2S_BuyItem(C2S_BuyItem&& from) noexcept
+      : C2S_BuyItem(nullptr, std::move(from)) {}
+  inline C2S_BuyItem& operator=(const C2S_BuyItem& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline C2S_BuyItem& operator=(C2S_BuyItem&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const C2S_BuyItem& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const C2S_BuyItem* internal_default_instance() {
+    return reinterpret_cast<const C2S_BuyItem*>(
+        &_C2S_BuyItem_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 10;
+  friend void swap(C2S_BuyItem& a, C2S_BuyItem& b) { a.Swap(&b); }
+  inline void Swap(C2S_BuyItem* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(C2S_BuyItem* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  C2S_BuyItem* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<C2S_BuyItem>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const C2S_BuyItem& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const C2S_BuyItem& from) { C2S_BuyItem::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(C2S_BuyItem* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.C2S_BuyItem"; }
+
+ protected:
+  explicit C2S_BuyItem(::google::protobuf::Arena* arena);
+  C2S_BuyItem(::google::protobuf::Arena* arena, const C2S_BuyItem& from);
+  C2S_BuyItem(::google::protobuf::Arena* arena, C2S_BuyItem&& from) noexcept
+      : C2S_BuyItem(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kItemIdFieldNumber = 2,
+    kQuantityFieldNumber = 3,
+  };
+  // string user_id = 1;
+  void clear_user_id() ;
+  const std::string& user_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* value);
+
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(
+      const std::string& value);
+  std::string* _internal_mutable_user_id();
+
+  public:
+  // string item_id = 2;
+  void clear_item_id() ;
+  const std::string& item_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_item_id(Arg_&& arg, Args_... args);
+  std::string* mutable_item_id();
+  PROTOBUF_NODISCARD std::string* release_item_id();
+  void set_allocated_item_id(std::string* value);
+
+  private:
+  const std::string& _internal_item_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_item_id(
+      const std::string& value);
+  std::string* _internal_mutable_item_id();
+
+  public:
+  // int32 quantity = 3;
+  void clear_quantity() ;
+  ::int32_t quantity() const;
+  void set_quantity(::int32_t value);
+
+  private:
+  ::int32_t _internal_quantity() const;
+  void _internal_set_quantity(::int32_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.C2S_BuyItem)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 3, 0,
+      40, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const C2S_BuyItem& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::google::protobuf::internal::ArenaStringPtr item_id_;
+    ::int32_t quantity_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class C2S_BuyAndOpenRandomBox final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.C2S_BuyAndOpenRandomBox) */ {
+ public:
+  inline C2S_BuyAndOpenRandomBox() : C2S_BuyAndOpenRandomBox(nullptr) {}
+  ~C2S_BuyAndOpenRandomBox() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(C2S_BuyAndOpenRandomBox* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(C2S_BuyAndOpenRandomBox));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR C2S_BuyAndOpenRandomBox(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline C2S_BuyAndOpenRandomBox(const C2S_BuyAndOpenRandomBox& from) : C2S_BuyAndOpenRandomBox(nullptr, from) {}
+  inline C2S_BuyAndOpenRandomBox(C2S_BuyAndOpenRandomBox&& from) noexcept
+      : C2S_BuyAndOpenRandomBox(nullptr, std::move(from)) {}
+  inline C2S_BuyAndOpenRandomBox& operator=(const C2S_BuyAndOpenRandomBox& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline C2S_BuyAndOpenRandomBox& operator=(C2S_BuyAndOpenRandomBox&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const C2S_BuyAndOpenRandomBox& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const C2S_BuyAndOpenRandomBox* internal_default_instance() {
+    return reinterpret_cast<const C2S_BuyAndOpenRandomBox*>(
+        &_C2S_BuyAndOpenRandomBox_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 12;
+  friend void swap(C2S_BuyAndOpenRandomBox& a, C2S_BuyAndOpenRandomBox& b) { a.Swap(&b); }
+  inline void Swap(C2S_BuyAndOpenRandomBox* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(C2S_BuyAndOpenRandomBox* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  C2S_BuyAndOpenRandomBox* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<C2S_BuyAndOpenRandomBox>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const C2S_BuyAndOpenRandomBox& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const C2S_BuyAndOpenRandomBox& from) { C2S_BuyAndOpenRandomBox::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(C2S_BuyAndOpenRandomBox* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.C2S_BuyAndOpenRandomBox"; }
+
+ protected:
+  explicit C2S_BuyAndOpenRandomBox(::google::protobuf::Arena* arena);
+  C2S_BuyAndOpenRandomBox(::google::protobuf::Arena* arena, const C2S_BuyAndOpenRandomBox& from);
+  C2S_BuyAndOpenRandomBox(::google::protobuf::Arena* arena, C2S_BuyAndOpenRandomBox&& from) noexcept
+      : C2S_BuyAndOpenRandomBox(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kBoxIdFieldNumber = 2,
+    kQuantityFieldNumber = 3,
+  };
+  // string user_id = 1;
+  void clear_user_id() ;
+  const std::string& user_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* value);
+
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(
+      const std::string& value);
+  std::string* _internal_mutable_user_id();
+
+  public:
+  // string box_id = 2;
+  void clear_box_id() ;
+  const std::string& box_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_box_id(Arg_&& arg, Args_... args);
+  std::string* mutable_box_id();
+  PROTOBUF_NODISCARD std::string* release_box_id();
+  void set_allocated_box_id(std::string* value);
+
+  private:
+  const std::string& _internal_box_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_box_id(
+      const std::string& value);
+  std::string* _internal_mutable_box_id();
+
+  public:
+  // int32 quantity = 3;
+  void clear_quantity() ;
+  ::int32_t quantity() const;
+  void set_quantity(::int32_t value);
+
+  private:
+  ::int32_t _internal_quantity() const;
+  void _internal_set_quantity(::int32_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.C2S_BuyAndOpenRandomBox)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 3, 0,
+      51, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const C2S_BuyAndOpenRandomBox& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::google::protobuf::internal::ArenaStringPtr box_id_;
+    ::int32_t quantity_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class BoxReward final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.BoxReward) */ {
+ public:
+  inline BoxReward() : BoxReward(nullptr) {}
+  ~BoxReward() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(BoxReward* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(BoxReward));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR BoxReward(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline BoxReward(const BoxReward& from) : BoxReward(nullptr, from) {}
+  inline BoxReward(BoxReward&& from) noexcept
+      : BoxReward(nullptr, std::move(from)) {}
+  inline BoxReward& operator=(const BoxReward& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline BoxReward& operator=(BoxReward&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const BoxReward& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const BoxReward* internal_default_instance() {
+    return reinterpret_cast<const BoxReward*>(
+        &_BoxReward_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 14;
+  friend void swap(BoxReward& a, BoxReward& b) { a.Swap(&b); }
+  inline void Swap(BoxReward* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(BoxReward* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  BoxReward* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<BoxReward>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const BoxReward& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const BoxReward& from) { BoxReward::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(BoxReward* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.BoxReward"; }
+
+ protected:
+  explicit BoxReward(::google::protobuf::Arena* arena);
+  BoxReward(::google::protobuf::Arena* arena, const BoxReward& from);
+  BoxReward(::google::protobuf::Arena* arena, BoxReward&& from) noexcept
+      : BoxReward(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kItemIdFieldNumber = 1,
+    kNameFieldNumber = 2,
+    kTierFieldNumber = 3,
+    kQuantityFieldNumber = 4,
+    kIsNewFieldNumber = 5,
+  };
+  // string item_id = 1;
+  void clear_item_id() ;
+  const std::string& item_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_item_id(Arg_&& arg, Args_... args);
+  std::string* mutable_item_id();
+  PROTOBUF_NODISCARD std::string* release_item_id();
+  void set_allocated_item_id(std::string* value);
+
+  private:
+  const std::string& _internal_item_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_item_id(
+      const std::string& value);
+  std::string* _internal_mutable_item_id();
+
+  public:
+  // string name = 2;
+  void clear_name() ;
+  const std::string& name() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_name(Arg_&& arg, Args_... args);
+  std::string* mutable_name();
+  PROTOBUF_NODISCARD std::string* release_name();
+  void set_allocated_name(std::string* value);
+
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(
+      const std::string& value);
+  std::string* _internal_mutable_name();
+
+  public:
+  // .lobby.ItemTier tier = 3;
+  void clear_tier() ;
+  ::lobby::ItemTier tier() const;
+  void set_tier(::lobby::ItemTier value);
+
+  private:
+  ::lobby::ItemTier _internal_tier() const;
+  void _internal_set_tier(::lobby::ItemTier value);
+
+  public:
+  // int32 quantity = 4;
+  void clear_quantity() ;
+  ::int32_t quantity() const;
+  void set_quantity(::int32_t value);
+
+  private:
+  ::int32_t _internal_quantity() const;
+  void _internal_set_quantity(::int32_t value);
+
+  public:
+  // bool is_new = 5;
+  void clear_is_new() ;
+  bool is_new() const;
+  void set_is_new(bool value);
+
+  private:
+  bool _internal_is_new() const;
+  void _internal_set_is_new(bool value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.BoxReward)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      3, 5, 0,
+      35, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const BoxReward& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr item_id_;
+    ::google::protobuf::internal::ArenaStringPtr name_;
+    int tier_;
+    ::int32_t quantity_;
+    bool is_new_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class S2C_ShopResponse_ShopItem final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.S2C_ShopResponse.ShopItem) */ {
+ public:
+  inline S2C_ShopResponse_ShopItem() : S2C_ShopResponse_ShopItem(nullptr) {}
+  ~S2C_ShopResponse_ShopItem() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(S2C_ShopResponse_ShopItem* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_ShopResponse_ShopItem));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_ShopResponse_ShopItem(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline S2C_ShopResponse_ShopItem(const S2C_ShopResponse_ShopItem& from) : S2C_ShopResponse_ShopItem(nullptr, from) {}
+  inline S2C_ShopResponse_ShopItem(S2C_ShopResponse_ShopItem&& from) noexcept
+      : S2C_ShopResponse_ShopItem(nullptr, std::move(from)) {}
+  inline S2C_ShopResponse_ShopItem& operator=(const S2C_ShopResponse_ShopItem& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline S2C_ShopResponse_ShopItem& operator=(S2C_ShopResponse_ShopItem&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const S2C_ShopResponse_ShopItem& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const S2C_ShopResponse_ShopItem* internal_default_instance() {
+    return reinterpret_cast<const S2C_ShopResponse_ShopItem*>(
+        &_S2C_ShopResponse_ShopItem_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 8;
+  friend void swap(S2C_ShopResponse_ShopItem& a, S2C_ShopResponse_ShopItem& b) { a.Swap(&b); }
+  inline void Swap(S2C_ShopResponse_ShopItem* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(S2C_ShopResponse_ShopItem* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  S2C_ShopResponse_ShopItem* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<S2C_ShopResponse_ShopItem>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const S2C_ShopResponse_ShopItem& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const S2C_ShopResponse_ShopItem& from) { S2C_ShopResponse_ShopItem::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(S2C_ShopResponse_ShopItem* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.S2C_ShopResponse.ShopItem"; }
+
+ protected:
+  explicit S2C_ShopResponse_ShopItem(::google::protobuf::Arena* arena);
+  S2C_ShopResponse_ShopItem(::google::protobuf::Arena* arena, const S2C_ShopResponse_ShopItem& from);
+  S2C_ShopResponse_ShopItem(::google::protobuf::Arena* arena, S2C_ShopResponse_ShopItem&& from) noexcept
+      : S2C_ShopResponse_ShopItem(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kTierProbabilitiesFieldNumber = 8,
+    kItemIdFieldNumber = 1,
+    kNameFieldNumber = 2,
+    kDescriptionFieldNumber = 3,
+    kPriceFieldNumber = 4,
+    kItemTypeFieldNumber = 5,
+    kMinTierFieldNumber = 6,
+    kMaxTierFieldNumber = 7,
+  };
+  // map<int32, float> tier_probabilities = 8;
+  int tier_probabilities_size() const;
+  private:
+  int _internal_tier_probabilities_size() const;
+
+  public:
+  void clear_tier_probabilities() ;
+  const ::google::protobuf::Map<::int32_t, float>& tier_probabilities() const;
+  ::google::protobuf::Map<::int32_t, float>* mutable_tier_probabilities();
+
+  private:
+  const ::google::protobuf::Map<::int32_t, float>& _internal_tier_probabilities() const;
+  ::google::protobuf::Map<::int32_t, float>* _internal_mutable_tier_probabilities();
+
+  public:
+  // string item_id = 1;
+  void clear_item_id() ;
+  const std::string& item_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_item_id(Arg_&& arg, Args_... args);
+  std::string* mutable_item_id();
+  PROTOBUF_NODISCARD std::string* release_item_id();
+  void set_allocated_item_id(std::string* value);
+
+  private:
+  const std::string& _internal_item_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_item_id(
+      const std::string& value);
+  std::string* _internal_mutable_item_id();
+
+  public:
+  // string name = 2;
+  void clear_name() ;
+  const std::string& name() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_name(Arg_&& arg, Args_... args);
+  std::string* mutable_name();
+  PROTOBUF_NODISCARD std::string* release_name();
+  void set_allocated_name(std::string* value);
+
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(
+      const std::string& value);
+  std::string* _internal_mutable_name();
+
+  public:
+  // string description = 3;
+  void clear_description() ;
+  const std::string& description() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_description(Arg_&& arg, Args_... args);
+  std::string* mutable_description();
+  PROTOBUF_NODISCARD std::string* release_description();
+  void set_allocated_description(std::string* value);
+
+  private:
+  const std::string& _internal_description() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_description(
+      const std::string& value);
+  std::string* _internal_mutable_description();
+
+  public:
+  // int32 price = 4;
+  void clear_price() ;
+  ::int32_t price() const;
+  void set_price(::int32_t value);
+
+  private:
+  ::int32_t _internal_price() const;
+  void _internal_set_price(::int32_t value);
+
+  public:
+  // .lobby.ItemType item_type = 5;
+  void clear_item_type() ;
+  ::lobby::ItemType item_type() const;
+  void set_item_type(::lobby::ItemType value);
+
+  private:
+  ::lobby::ItemType _internal_item_type() const;
+  void _internal_set_item_type(::lobby::ItemType value);
+
+  public:
+  // .lobby.ItemTier min_tier = 6;
+  void clear_min_tier() ;
+  ::lobby::ItemTier min_tier() const;
+  void set_min_tier(::lobby::ItemTier value);
+
+  private:
+  ::lobby::ItemTier _internal_min_tier() const;
+  void _internal_set_min_tier(::lobby::ItemTier value);
+
+  public:
+  // .lobby.ItemTier max_tier = 7;
+  void clear_max_tier() ;
+  ::lobby::ItemTier max_tier() const;
+  void set_max_tier(::lobby::ItemTier value);
+
+  private:
+  ::lobby::ItemTier _internal_max_tier() const;
+  void _internal_set_max_tier(::lobby::ItemTier value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.S2C_ShopResponse.ShopItem)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      3, 8, 1,
+      70, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const S2C_ShopResponse_ShopItem& from_msg);
+    ::google::protobuf::internal::MapField<S2C_ShopResponse_ShopItem_TierProbabilitiesEntry_DoNotUse, ::int32_t, float,
+                      ::google::protobuf::internal::WireFormatLite::TYPE_INT32,
+                      ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>
+        tier_probabilities_;
+    ::google::protobuf::internal::ArenaStringPtr item_id_;
+    ::google::protobuf::internal::ArenaStringPtr name_;
+    ::google::protobuf::internal::ArenaStringPtr description_;
+    ::int32_t price_;
+    int item_type_;
+    int min_tier_;
+    int max_tier_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class S2C_InventoryResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.S2C_InventoryResponse) */ {
+ public:
+  inline S2C_InventoryResponse() : S2C_InventoryResponse(nullptr) {}
+  ~S2C_InventoryResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(S2C_InventoryResponse* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_InventoryResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_InventoryResponse(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline S2C_InventoryResponse(const S2C_InventoryResponse& from) : S2C_InventoryResponse(nullptr, from) {}
+  inline S2C_InventoryResponse(S2C_InventoryResponse&& from) noexcept
+      : S2C_InventoryResponse(nullptr, std::move(from)) {}
+  inline S2C_InventoryResponse& operator=(const S2C_InventoryResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline S2C_InventoryResponse& operator=(S2C_InventoryResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const S2C_InventoryResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const S2C_InventoryResponse* internal_default_instance() {
+    return reinterpret_cast<const S2C_InventoryResponse*>(
+        &_S2C_InventoryResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 17;
+  friend void swap(S2C_InventoryResponse& a, S2C_InventoryResponse& b) { a.Swap(&b); }
+  inline void Swap(S2C_InventoryResponse* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(S2C_InventoryResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  S2C_InventoryResponse* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<S2C_InventoryResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const S2C_InventoryResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const S2C_InventoryResponse& from) { S2C_InventoryResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(S2C_InventoryResponse* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.S2C_InventoryResponse"; }
+
+ protected:
+  explicit S2C_InventoryResponse(::google::protobuf::Arena* arena);
+  S2C_InventoryResponse(::google::protobuf::Arena* arena, const S2C_InventoryResponse& from);
+  S2C_InventoryResponse(::google::protobuf::Arena* arena, S2C_InventoryResponse&& from) noexcept
+      : S2C_InventoryResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+  using InventoryItem = S2C_InventoryResponse_InventoryItem;
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kItemsFieldNumber = 1,
+  };
+  // repeated .lobby.S2C_InventoryResponse.InventoryItem items = 1;
+  int items_size() const;
+  private:
+  int _internal_items_size() const;
+
+  public:
+  void clear_items() ;
+  ::lobby::S2C_InventoryResponse_InventoryItem* mutable_items(int index);
+  ::google::protobuf::RepeatedPtrField<::lobby::S2C_InventoryResponse_InventoryItem>* mutable_items();
+
+  private:
+  const ::google::protobuf::RepeatedPtrField<::lobby::S2C_InventoryResponse_InventoryItem>& _internal_items() const;
+  ::google::protobuf::RepeatedPtrField<::lobby::S2C_InventoryResponse_InventoryItem>* _internal_mutable_items();
+  public:
+  const ::lobby::S2C_InventoryResponse_InventoryItem& items(int index) const;
+  ::lobby::S2C_InventoryResponse_InventoryItem* add_items();
+  const ::google::protobuf::RepeatedPtrField<::lobby::S2C_InventoryResponse_InventoryItem>& items() const;
+  // @@protoc_insertion_point(class_scope:lobby.S2C_InventoryResponse)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 1,
+      0, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const S2C_InventoryResponse& from_msg);
+    ::google::protobuf::RepeatedPtrField< ::lobby::S2C_InventoryResponse_InventoryItem > items_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class S2C_BuyAndOpenRandomBoxResult final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.S2C_BuyAndOpenRandomBoxResult) */ {
+ public:
+  inline S2C_BuyAndOpenRandomBoxResult() : S2C_BuyAndOpenRandomBoxResult(nullptr) {}
+  ~S2C_BuyAndOpenRandomBoxResult() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(S2C_BuyAndOpenRandomBoxResult* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_BuyAndOpenRandomBoxResult));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_BuyAndOpenRandomBoxResult(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline S2C_BuyAndOpenRandomBoxResult(const S2C_BuyAndOpenRandomBoxResult& from) : S2C_BuyAndOpenRandomBoxResult(nullptr, from) {}
+  inline S2C_BuyAndOpenRandomBoxResult(S2C_BuyAndOpenRandomBoxResult&& from) noexcept
+      : S2C_BuyAndOpenRandomBoxResult(nullptr, std::move(from)) {}
+  inline S2C_BuyAndOpenRandomBoxResult& operator=(const S2C_BuyAndOpenRandomBoxResult& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline S2C_BuyAndOpenRandomBoxResult& operator=(S2C_BuyAndOpenRandomBoxResult&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const S2C_BuyAndOpenRandomBoxResult& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const S2C_BuyAndOpenRandomBoxResult* internal_default_instance() {
+    return reinterpret_cast<const S2C_BuyAndOpenRandomBoxResult*>(
+        &_S2C_BuyAndOpenRandomBoxResult_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 13;
+  friend void swap(S2C_BuyAndOpenRandomBoxResult& a, S2C_BuyAndOpenRandomBoxResult& b) { a.Swap(&b); }
+  inline void Swap(S2C_BuyAndOpenRandomBoxResult* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(S2C_BuyAndOpenRandomBoxResult* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  S2C_BuyAndOpenRandomBoxResult* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<S2C_BuyAndOpenRandomBoxResult>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const S2C_BuyAndOpenRandomBoxResult& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const S2C_BuyAndOpenRandomBoxResult& from) { S2C_BuyAndOpenRandomBoxResult::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(S2C_BuyAndOpenRandomBoxResult* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.S2C_BuyAndOpenRandomBoxResult"; }
+
+ protected:
+  explicit S2C_BuyAndOpenRandomBoxResult(::google::protobuf::Arena* arena);
+  S2C_BuyAndOpenRandomBoxResult(::google::protobuf::Arena* arena, const S2C_BuyAndOpenRandomBoxResult& from);
+  S2C_BuyAndOpenRandomBoxResult(::google::protobuf::Arena* arena, S2C_BuyAndOpenRandomBoxResult&& from) noexcept
+      : S2C_BuyAndOpenRandomBoxResult(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kRewardsFieldNumber = 6,
+    kBoxIdFieldNumber = 2,
+    kMessageFieldNumber = 7,
+    kSuccessFieldNumber = 1,
+    kQuantityFieldNumber = 3,
+    kTotalPriceFieldNumber = 4,
+    kRemainingGoldFieldNumber = 5,
+  };
+  // repeated .lobby.BoxReward rewards = 6;
+  int rewards_size() const;
+  private:
+  int _internal_rewards_size() const;
+
+  public:
+  void clear_rewards() ;
+  ::lobby::BoxReward* mutable_rewards(int index);
+  ::google::protobuf::RepeatedPtrField<::lobby::BoxReward>* mutable_rewards();
+
+  private:
+  const ::google::protobuf::RepeatedPtrField<::lobby::BoxReward>& _internal_rewards() const;
+  ::google::protobuf::RepeatedPtrField<::lobby::BoxReward>* _internal_mutable_rewards();
+  public:
+  const ::lobby::BoxReward& rewards(int index) const;
+  ::lobby::BoxReward* add_rewards();
+  const ::google::protobuf::RepeatedPtrField<::lobby::BoxReward>& rewards() const;
+  // string box_id = 2;
+  void clear_box_id() ;
+  const std::string& box_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_box_id(Arg_&& arg, Args_... args);
+  std::string* mutable_box_id();
+  PROTOBUF_NODISCARD std::string* release_box_id();
+  void set_allocated_box_id(std::string* value);
+
+  private:
+  const std::string& _internal_box_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_box_id(
+      const std::string& value);
+  std::string* _internal_mutable_box_id();
+
+  public:
+  // string message = 7;
+  void clear_message() ;
+  const std::string& message() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_message(Arg_&& arg, Args_... args);
+  std::string* mutable_message();
+  PROTOBUF_NODISCARD std::string* release_message();
+  void set_allocated_message(std::string* value);
+
+  private:
+  const std::string& _internal_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(
+      const std::string& value);
+  std::string* _internal_mutable_message();
+
+  public:
+  // bool success = 1;
+  void clear_success() ;
+  bool success() const;
+  void set_success(bool value);
+
+  private:
+  bool _internal_success() const;
+  void _internal_set_success(bool value);
+
+  public:
+  // int32 quantity = 3;
+  void clear_quantity() ;
+  ::int32_t quantity() const;
+  void set_quantity(::int32_t value);
+
+  private:
+  ::int32_t _internal_quantity() const;
+  void _internal_set_quantity(::int32_t value);
+
+  public:
+  // int32 total_price = 4;
+  void clear_total_price() ;
+  ::int32_t total_price() const;
+  void set_total_price(::int32_t value);
+
+  private:
+  ::int32_t _internal_total_price() const;
+  void _internal_set_total_price(::int32_t value);
+
+  public:
+  // int32 remaining_gold = 5;
+  void clear_remaining_gold() ;
+  ::int32_t remaining_gold() const;
+  void set_remaining_gold(::int32_t value);
+
+  private:
+  ::int32_t _internal_remaining_gold() const;
+  void _internal_set_remaining_gold(::int32_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:lobby.S2C_BuyAndOpenRandomBoxResult)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      3, 7, 1,
+      57, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const S2C_BuyAndOpenRandomBoxResult& from_msg);
+    ::google::protobuf::RepeatedPtrField< ::lobby::BoxReward > rewards_;
+    ::google::protobuf::internal::ArenaStringPtr box_id_;
+    ::google::protobuf::internal::ArenaStringPtr message_;
+    bool success_;
+    ::int32_t quantity_;
+    ::int32_t total_price_;
+    ::int32_t remaining_gold_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+// -------------------------------------------------------------------
+
+class S2C_ShopResponse final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:lobby.S2C_ShopResponse) */ {
+ public:
+  inline S2C_ShopResponse() : S2C_ShopResponse(nullptr) {}
+  ~S2C_ShopResponse() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(S2C_ShopResponse* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_ShopResponse));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_ShopResponse(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline S2C_ShopResponse(const S2C_ShopResponse& from) : S2C_ShopResponse(nullptr, from) {}
+  inline S2C_ShopResponse(S2C_ShopResponse&& from) noexcept
+      : S2C_ShopResponse(nullptr, std::move(from)) {}
+  inline S2C_ShopResponse& operator=(const S2C_ShopResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline S2C_ShopResponse& operator=(S2C_ShopResponse&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const S2C_ShopResponse& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const S2C_ShopResponse* internal_default_instance() {
+    return reinterpret_cast<const S2C_ShopResponse*>(
+        &_S2C_ShopResponse_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 9;
+  friend void swap(S2C_ShopResponse& a, S2C_ShopResponse& b) { a.Swap(&b); }
+  inline void Swap(S2C_ShopResponse* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(S2C_ShopResponse* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  S2C_ShopResponse* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<S2C_ShopResponse>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const S2C_ShopResponse& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const S2C_ShopResponse& from) { S2C_ShopResponse::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(S2C_ShopResponse* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "lobby.S2C_ShopResponse"; }
+
+ protected:
+  explicit S2C_ShopResponse(::google::protobuf::Arena* arena);
+  S2C_ShopResponse(::google::protobuf::Arena* arena, const S2C_ShopResponse& from);
+  S2C_ShopResponse(::google::protobuf::Arena* arena, S2C_ShopResponse&& from) noexcept
+      : S2C_ShopResponse(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+  using ShopItem = S2C_ShopResponse_ShopItem;
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kItemsFieldNumber = 1,
+  };
+  // repeated .lobby.S2C_ShopResponse.ShopItem items = 1;
+  int items_size() const;
+  private:
+  int _internal_items_size() const;
+
+  public:
+  void clear_items() ;
+  ::lobby::S2C_ShopResponse_ShopItem* mutable_items(int index);
+  ::google::protobuf::RepeatedPtrField<::lobby::S2C_ShopResponse_ShopItem>* mutable_items();
+
+  private:
+  const ::google::protobuf::RepeatedPtrField<::lobby::S2C_ShopResponse_ShopItem>& _internal_items() const;
+  ::google::protobuf::RepeatedPtrField<::lobby::S2C_ShopResponse_ShopItem>* _internal_mutable_items();
+  public:
+  const ::lobby::S2C_ShopResponse_ShopItem& items(int index) const;
+  ::lobby::S2C_ShopResponse_ShopItem* add_items();
+  const ::google::protobuf::RepeatedPtrField<::lobby::S2C_ShopResponse_ShopItem>& items() const;
+  // @@protoc_insertion_point(class_scope:lobby.S2C_ShopResponse)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      0, 1, 1,
+      0, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const S2C_ShopResponse& from_msg);
+    ::google::protobuf::RepeatedPtrField< ::lobby::S2C_ShopResponse_ShopItem > items_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_lobby_2eproto;
+};
+
+// ===================================================================
+
+
+
+
+// ===================================================================
+
 
 #ifdef __GNUC__
 #pragma GCC diagnostic push
@@ -1133,375 +4598,2352 @@ namespace lobby {
 // C2S_EnterLobby
 
 // string user_id = 1;
-	inline void C2S_EnterLobby::clear_user_id() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.user_id_.ClearToEmpty();
-	}
-	inline const std::string& C2S_EnterLobby::user_id() const
-		ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		// @@protoc_insertion_point(field_get:lobby.C2S_EnterLobby.user_id)
-		return _internal_user_id();
-	}
-		template <typename Arg_, typename... Args_>
-	inline PROTOBUF_ALWAYS_INLINE void C2S_EnterLobby::set_user_id(Arg_&& arg,
-		Args_... args) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-		// @@protoc_insertion_point(field_set:lobby.C2S_EnterLobby.user_id)
-	}
-	inline std::string* C2S_EnterLobby::mutable_user_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-		std::string* _s = _internal_mutable_user_id();
-		// @@protoc_insertion_point(field_mutable:lobby.C2S_EnterLobby.user_id)
-		return _s;
-	}
-	inline const std::string& C2S_EnterLobby::_internal_user_id() const {
-		::google::protobuf::internal::TSanRead(&_impl_);
-		return _impl_.user_id_.Get();
-	}
-	inline void C2S_EnterLobby::_internal_set_user_id(const std::string& value) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.user_id_.Set(value, GetArena());
-	}
-	inline std::string* C2S_EnterLobby::_internal_mutable_user_id() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		return _impl_.user_id_.Mutable(GetArena());
-	}
-	inline std::string* C2S_EnterLobby::release_user_id() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		// @@protoc_insertion_point(field_release:lobby.C2S_EnterLobby.user_id)
-		return _impl_.user_id_.Release();
-	}
-	inline void C2S_EnterLobby::set_allocated_user_id(std::string* value) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.user_id_.SetAllocated(value, GetArena());
-		if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
-			_impl_.user_id_.Set("", GetArena());
-		}
-		// @@protoc_insertion_point(field_set_allocated:lobby.C2S_EnterLobby.user_id)
-	}
+inline void C2S_EnterLobby::clear_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.ClearToEmpty();
+}
+inline const std::string& C2S_EnterLobby::user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.C2S_EnterLobby.user_id)
+  return _internal_user_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void C2S_EnterLobby::set_user_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.C2S_EnterLobby.user_id)
+}
+inline std::string* C2S_EnterLobby::mutable_user_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:lobby.C2S_EnterLobby.user_id)
+  return _s;
+}
+inline const std::string& C2S_EnterLobby::_internal_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.user_id_.Get();
+}
+inline void C2S_EnterLobby::_internal_set_user_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(value, GetArena());
+}
+inline std::string* C2S_EnterLobby::_internal_mutable_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.user_id_.Mutable( GetArena());
+}
+inline std::string* C2S_EnterLobby::release_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.C2S_EnterLobby.user_id)
+  return _impl_.user_id_.Release();
+}
+inline void C2S_EnterLobby::set_allocated_user_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.C2S_EnterLobby.user_id)
+}
 
-	// -------------------------------------------------------------------
+// -------------------------------------------------------------------
 
-	// S2C_EnterLobby
+// S2C_EnterLobby
 
-	// bool success = 1;
-	inline void S2C_EnterLobby::clear_success() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.success_ = false;
-	}
-	inline bool S2C_EnterLobby::success() const {
-		// @@protoc_insertion_point(field_get:lobby.S2C_EnterLobby.success)
-		return _internal_success();
-	}
-	inline void S2C_EnterLobby::set_success(bool value) {
-		_internal_set_success(value);
-		// @@protoc_insertion_point(field_set:lobby.S2C_EnterLobby.success)
-	}
-	inline bool S2C_EnterLobby::_internal_success() const {
-		::google::protobuf::internal::TSanRead(&_impl_);
-		return _impl_.success_;
-	}
-	inline void S2C_EnterLobby::_internal_set_success(bool value) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.success_ = value;
-	}
+// bool success = 1;
+inline void S2C_EnterLobby::clear_success() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_ = false;
+}
+inline bool S2C_EnterLobby::success() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_EnterLobby.success)
+  return _internal_success();
+}
+inline void S2C_EnterLobby::set_success(bool value) {
+  _internal_set_success(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_EnterLobby.success)
+}
+inline bool S2C_EnterLobby::_internal_success() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.success_;
+}
+inline void S2C_EnterLobby::_internal_set_success(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_ = value;
+}
 
-	// string message = 2;
-	inline void S2C_EnterLobby::clear_message() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.message_.ClearToEmpty();
-	}
-	inline const std::string& S2C_EnterLobby::message() const
-		ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		// @@protoc_insertion_point(field_get:lobby.S2C_EnterLobby.message)
-		return _internal_message();
-	}
-		template <typename Arg_, typename... Args_>
-	inline PROTOBUF_ALWAYS_INLINE void S2C_EnterLobby::set_message(Arg_&& arg,
-		Args_... args) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.message_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-		// @@protoc_insertion_point(field_set:lobby.S2C_EnterLobby.message)
-	}
-	inline std::string* S2C_EnterLobby::mutable_message() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-		std::string* _s = _internal_mutable_message();
-		// @@protoc_insertion_point(field_mutable:lobby.S2C_EnterLobby.message)
-		return _s;
-	}
-	inline const std::string& S2C_EnterLobby::_internal_message() const {
-		::google::protobuf::internal::TSanRead(&_impl_);
-		return _impl_.message_.Get();
-	}
-	inline void S2C_EnterLobby::_internal_set_message(const std::string& value) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.message_.Set(value, GetArena());
-	}
-	inline std::string* S2C_EnterLobby::_internal_mutable_message() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		return _impl_.message_.Mutable(GetArena());
-	}
-	inline std::string* S2C_EnterLobby::release_message() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		// @@protoc_insertion_point(field_release:lobby.S2C_EnterLobby.message)
-		return _impl_.message_.Release();
-	}
-	inline void S2C_EnterLobby::set_allocated_message(std::string* value) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.message_.SetAllocated(value, GetArena());
-		if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.message_.IsDefault()) {
-			_impl_.message_.Set("", GetArena());
-		}
-		// @@protoc_insertion_point(field_set_allocated:lobby.S2C_EnterLobby.message)
-	}
+// string message = 2;
+inline void S2C_EnterLobby::clear_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.ClearToEmpty();
+}
+inline const std::string& S2C_EnterLobby::message() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_EnterLobby.message)
+  return _internal_message();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_EnterLobby::set_message(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_EnterLobby.message)
+}
+inline std::string* S2C_EnterLobby::mutable_message() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_EnterLobby.message)
+  return _s;
+}
+inline const std::string& S2C_EnterLobby::_internal_message() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.message_.Get();
+}
+inline void S2C_EnterLobby::_internal_set_message(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.Set(value, GetArena());
+}
+inline std::string* S2C_EnterLobby::_internal_mutable_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.message_.Mutable( GetArena());
+}
+inline std::string* S2C_EnterLobby::release_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_EnterLobby.message)
+  return _impl_.message_.Release();
+}
+inline void S2C_EnterLobby::set_allocated_message(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.message_.IsDefault()) {
+    _impl_.message_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_EnterLobby.message)
+}
 
-	// -------------------------------------------------------------------
+// int32 gold = 3;
+inline void S2C_EnterLobby::clear_gold() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.gold_ = 0;
+}
+inline ::int32_t S2C_EnterLobby::gold() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_EnterLobby.gold)
+  return _internal_gold();
+}
+inline void S2C_EnterLobby::set_gold(::int32_t value) {
+  _internal_set_gold(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_EnterLobby.gold)
+}
+inline ::int32_t S2C_EnterLobby::_internal_gold() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.gold_;
+}
+inline void S2C_EnterLobby::_internal_set_gold(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.gold_ = value;
+}
 
-	// S2C_LobbyUserList
+// -------------------------------------------------------------------
 
-	// repeated string users = 1;
-	inline int S2C_LobbyUserList::_internal_users_size() const {
-		return _internal_users().size();
-	}
-	inline int S2C_LobbyUserList::users_size() const {
-		return _internal_users_size();
-	}
-	inline void S2C_LobbyUserList::clear_users() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.users_.Clear();
-	}
-	inline std::string* S2C_LobbyUserList::add_users() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		std::string* _s = _internal_mutable_users()->Add();
-		// @@protoc_insertion_point(field_add_mutable:lobby.S2C_LobbyUserList.users)
-		return _s;
-	}
-	inline const std::string& S2C_LobbyUserList::users(int index) const
-		ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		// @@protoc_insertion_point(field_get:lobby.S2C_LobbyUserList.users)
-		return _internal_users().Get(index);
-	}
-		inline std::string* S2C_LobbyUserList::mutable_users(int index)
-		ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		// @@protoc_insertion_point(field_mutable:lobby.S2C_LobbyUserList.users)
-		return _internal_mutable_users()->Mutable(index);
-	}
-		template <typename Arg_, typename... Args_>
-	inline void S2C_LobbyUserList::set_users(int index, Arg_&& value, Args_... args) {
-		::google::protobuf::internal::AssignToString(
-			*_internal_mutable_users()->Mutable(index),
-			std::forward<Arg_>(value), args...);
-		// @@protoc_insertion_point(field_set:lobby.S2C_LobbyUserList.users)
-	}
-	template <typename Arg_, typename... Args_>
-	inline void S2C_LobbyUserList::add_users(Arg_&& value, Args_... args) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		::google::protobuf::internal::AddToRepeatedPtrField(*_internal_mutable_users(),
-			std::forward<Arg_>(value),
-			args...);
-		// @@protoc_insertion_point(field_add:lobby.S2C_LobbyUserList.users)
-	}
-	inline const ::google::protobuf::RepeatedPtrField<std::string>&
-		S2C_LobbyUserList::users() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-		// @@protoc_insertion_point(field_list:lobby.S2C_LobbyUserList.users)
-		return _internal_users();
-	}
-	inline ::google::protobuf::RepeatedPtrField<std::string>*
-		S2C_LobbyUserList::mutable_users() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-		// @@protoc_insertion_point(field_mutable_list:lobby.S2C_LobbyUserList.users)
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		return _internal_mutable_users();
-	}
-	inline const ::google::protobuf::RepeatedPtrField<std::string>&
-		S2C_LobbyUserList::_internal_users() const {
-		::google::protobuf::internal::TSanRead(&_impl_);
-		return _impl_.users_;
-	}
-	inline ::google::protobuf::RepeatedPtrField<std::string>*
-		S2C_LobbyUserList::_internal_mutable_users() {
-		::google::protobuf::internal::TSanRead(&_impl_);
-		return &_impl_.users_;
-	}
+// S2C_LobbyUserList
 
-	// -------------------------------------------------------------------
+// repeated string users = 1;
+inline int S2C_LobbyUserList::_internal_users_size() const {
+  return _internal_users().size();
+}
+inline int S2C_LobbyUserList::users_size() const {
+  return _internal_users_size();
+}
+inline void S2C_LobbyUserList::clear_users() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.users_.Clear();
+}
+inline std::string* S2C_LobbyUserList::add_users() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  std::string* _s = _internal_mutable_users()->Add();
+  // @@protoc_insertion_point(field_add_mutable:lobby.S2C_LobbyUserList.users)
+  return _s;
+}
+inline const std::string& S2C_LobbyUserList::users(int index) const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_LobbyUserList.users)
+  return _internal_users().Get(index);
+}
+inline std::string* S2C_LobbyUserList::mutable_users(int index)
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_LobbyUserList.users)
+  return _internal_mutable_users()->Mutable(index);
+}
+template <typename Arg_, typename... Args_>
+inline void S2C_LobbyUserList::set_users(int index, Arg_&& value, Args_... args) {
+  ::google::protobuf::internal::AssignToString(
+      *_internal_mutable_users()->Mutable(index),
+      std::forward<Arg_>(value), args... );
+  // @@protoc_insertion_point(field_set:lobby.S2C_LobbyUserList.users)
+}
+template <typename Arg_, typename... Args_>
+inline void S2C_LobbyUserList::add_users(Arg_&& value, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::google::protobuf::internal::AddToRepeatedPtrField(*_internal_mutable_users(),
+                               std::forward<Arg_>(value),
+                               args... );
+  // @@protoc_insertion_point(field_add:lobby.S2C_LobbyUserList.users)
+}
+inline const ::google::protobuf::RepeatedPtrField<std::string>&
+S2C_LobbyUserList::users() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:lobby.S2C_LobbyUserList.users)
+  return _internal_users();
+}
+inline ::google::protobuf::RepeatedPtrField<std::string>*
+S2C_LobbyUserList::mutable_users() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable_list:lobby.S2C_LobbyUserList.users)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _internal_mutable_users();
+}
+inline const ::google::protobuf::RepeatedPtrField<std::string>&
+S2C_LobbyUserList::_internal_users() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.users_;
+}
+inline ::google::protobuf::RepeatedPtrField<std::string>*
+S2C_LobbyUserList::_internal_mutable_users() {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return &_impl_.users_;
+}
 
-	// C2S_GameStart
+// -------------------------------------------------------------------
 
-	// string user_id = 1;
-	inline void C2S_GameStart::clear_user_id() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.user_id_.ClearToEmpty();
-	}
-	inline const std::string& C2S_GameStart::user_id() const
-		ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		// @@protoc_insertion_point(field_get:lobby.C2S_GameStart.user_id)
-		return _internal_user_id();
-	}
-		template <typename Arg_, typename... Args_>
-	inline PROTOBUF_ALWAYS_INLINE void C2S_GameStart::set_user_id(Arg_&& arg,
-		Args_... args) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-		// @@protoc_insertion_point(field_set:lobby.C2S_GameStart.user_id)
-	}
-	inline std::string* C2S_GameStart::mutable_user_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-		std::string* _s = _internal_mutable_user_id();
-		// @@protoc_insertion_point(field_mutable:lobby.C2S_GameStart.user_id)
-		return _s;
-	}
-	inline const std::string& C2S_GameStart::_internal_user_id() const {
-		::google::protobuf::internal::TSanRead(&_impl_);
-		return _impl_.user_id_.Get();
-	}
-	inline void C2S_GameStart::_internal_set_user_id(const std::string& value) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.user_id_.Set(value, GetArena());
-	}
-	inline std::string* C2S_GameStart::_internal_mutable_user_id() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		return _impl_.user_id_.Mutable(GetArena());
-	}
-	inline std::string* C2S_GameStart::release_user_id() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		// @@protoc_insertion_point(field_release:lobby.C2S_GameStart.user_id)
-		return _impl_.user_id_.Release();
-	}
-	inline void C2S_GameStart::set_allocated_user_id(std::string* value) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.user_id_.SetAllocated(value, GetArena());
-		if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
-			_impl_.user_id_.Set("", GetArena());
-		}
-		// @@protoc_insertion_point(field_set_allocated:lobby.C2S_GameStart.user_id)
-	}
+// LobbyUser
 
-	// -------------------------------------------------------------------
+// string user_id = 1;
+inline void LobbyUser::clear_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.ClearToEmpty();
+}
+inline const std::string& LobbyUser::user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.LobbyUser.user_id)
+  return _internal_user_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void LobbyUser::set_user_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.LobbyUser.user_id)
+}
+inline std::string* LobbyUser::mutable_user_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:lobby.LobbyUser.user_id)
+  return _s;
+}
+inline const std::string& LobbyUser::_internal_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.user_id_.Get();
+}
+inline void LobbyUser::_internal_set_user_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(value, GetArena());
+}
+inline std::string* LobbyUser::_internal_mutable_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.user_id_.Mutable( GetArena());
+}
+inline std::string* LobbyUser::release_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.LobbyUser.user_id)
+  return _impl_.user_id_.Release();
+}
+inline void LobbyUser::set_allocated_user_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.LobbyUser.user_id)
+}
 
-	// S2C_GameStart
+// string nickname = 2;
+inline void LobbyUser::clear_nickname() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nickname_.ClearToEmpty();
+}
+inline const std::string& LobbyUser::nickname() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.LobbyUser.nickname)
+  return _internal_nickname();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void LobbyUser::set_nickname(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nickname_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.LobbyUser.nickname)
+}
+inline std::string* LobbyUser::mutable_nickname() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_nickname();
+  // @@protoc_insertion_point(field_mutable:lobby.LobbyUser.nickname)
+  return _s;
+}
+inline const std::string& LobbyUser::_internal_nickname() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.nickname_.Get();
+}
+inline void LobbyUser::_internal_set_nickname(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nickname_.Set(value, GetArena());
+}
+inline std::string* LobbyUser::_internal_mutable_nickname() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.nickname_.Mutable( GetArena());
+}
+inline std::string* LobbyUser::release_nickname() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.LobbyUser.nickname)
+  return _impl_.nickname_.Release();
+}
+inline void LobbyUser::set_allocated_nickname(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nickname_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.nickname_.IsDefault()) {
+    _impl_.nickname_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.LobbyUser.nickname)
+}
 
-	// bool success = 1;
-	inline void S2C_GameStart::clear_success() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.success_ = false;
-	}
-	inline bool S2C_GameStart::success() const {
-		// @@protoc_insertion_point(field_get:lobby.S2C_GameStart.success)
-		return _internal_success();
-	}
-	inline void S2C_GameStart::set_success(bool value) {
-		_internal_set_success(value);
-		// @@protoc_insertion_point(field_set:lobby.S2C_GameStart.success)
-	}
-	inline bool S2C_GameStart::_internal_success() const {
-		::google::protobuf::internal::TSanRead(&_impl_);
-		return _impl_.success_;
-	}
-	inline void S2C_GameStart::_internal_set_success(bool value) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.success_ = value;
-	}
+// bool is_ready = 3;
+inline void LobbyUser::clear_is_ready() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.is_ready_ = false;
+}
+inline bool LobbyUser::is_ready() const {
+  // @@protoc_insertion_point(field_get:lobby.LobbyUser.is_ready)
+  return _internal_is_ready();
+}
+inline void LobbyUser::set_is_ready(bool value) {
+  _internal_set_is_ready(value);
+  // @@protoc_insertion_point(field_set:lobby.LobbyUser.is_ready)
+}
+inline bool LobbyUser::_internal_is_ready() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.is_ready_;
+}
+inline void LobbyUser::_internal_set_is_ready(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.is_ready_ = value;
+}
 
-	// string room_id = 2;
-	inline void S2C_GameStart::clear_room_id() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.room_id_.ClearToEmpty();
-	}
-	inline const std::string& S2C_GameStart::room_id() const
-		ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		// @@protoc_insertion_point(field_get:lobby.S2C_GameStart.room_id)
-		return _internal_room_id();
-	}
-		template <typename Arg_, typename... Args_>
-	inline PROTOBUF_ALWAYS_INLINE void S2C_GameStart::set_room_id(Arg_&& arg,
-		Args_... args) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.room_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-		// @@protoc_insertion_point(field_set:lobby.S2C_GameStart.room_id)
-	}
-	inline std::string* S2C_GameStart::mutable_room_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-		std::string* _s = _internal_mutable_room_id();
-		// @@protoc_insertion_point(field_mutable:lobby.S2C_GameStart.room_id)
-		return _s;
-	}
-	inline const std::string& S2C_GameStart::_internal_room_id() const {
-		::google::protobuf::internal::TSanRead(&_impl_);
-		return _impl_.room_id_.Get();
-	}
-	inline void S2C_GameStart::_internal_set_room_id(const std::string& value) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.room_id_.Set(value, GetArena());
-	}
-	inline std::string* S2C_GameStart::_internal_mutable_room_id() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		return _impl_.room_id_.Mutable(GetArena());
-	}
-	inline std::string* S2C_GameStart::release_room_id() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		// @@protoc_insertion_point(field_release:lobby.S2C_GameStart.room_id)
-		return _impl_.room_id_.Release();
-	}
-	inline void S2C_GameStart::set_allocated_room_id(std::string* value) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.room_id_.SetAllocated(value, GetArena());
-		if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.room_id_.IsDefault()) {
-			_impl_.room_id_.Set("", GetArena());
-		}
-		// @@protoc_insertion_point(field_set_allocated:lobby.S2C_GameStart.room_id)
-	}
+// -------------------------------------------------------------------
 
-	// string message = 3;
-	inline void S2C_GameStart::clear_message() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.message_.ClearToEmpty();
-	}
-	inline const std::string& S2C_GameStart::message() const
-		ABSL_ATTRIBUTE_LIFETIME_BOUND{
-		// @@protoc_insertion_point(field_get:lobby.S2C_GameStart.message)
-		return _internal_message();
-	}
-		template <typename Arg_, typename... Args_>
-	inline PROTOBUF_ALWAYS_INLINE void S2C_GameStart::set_message(Arg_&& arg,
-		Args_... args) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.message_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
-		// @@protoc_insertion_point(field_set:lobby.S2C_GameStart.message)
-	}
-	inline std::string* S2C_GameStart::mutable_message() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-		std::string* _s = _internal_mutable_message();
-		// @@protoc_insertion_point(field_mutable:lobby.S2C_GameStart.message)
-		return _s;
-	}
-	inline const std::string& S2C_GameStart::_internal_message() const {
-		::google::protobuf::internal::TSanRead(&_impl_);
-		return _impl_.message_.Get();
-	}
-	inline void S2C_GameStart::_internal_set_message(const std::string& value) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.message_.Set(value, GetArena());
-	}
-	inline std::string* S2C_GameStart::_internal_mutable_message() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		return _impl_.message_.Mutable(GetArena());
-	}
-	inline std::string* S2C_GameStart::release_message() {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		// @@protoc_insertion_point(field_release:lobby.S2C_GameStart.message)
-		return _impl_.message_.Release();
-	}
-	inline void S2C_GameStart::set_allocated_message(std::string* value) {
-		::google::protobuf::internal::TSanWrite(&_impl_);
-		_impl_.message_.SetAllocated(value, GetArena());
-		if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.message_.IsDefault()) {
-			_impl_.message_.Set("", GetArena());
-		}
-		// @@protoc_insertion_point(field_set_allocated:lobby.S2C_GameStart.message)
-	}
+// C2S_GameStart
+
+// string user_id = 1;
+inline void C2S_GameStart::clear_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.ClearToEmpty();
+}
+inline const std::string& C2S_GameStart::user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.C2S_GameStart.user_id)
+  return _internal_user_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void C2S_GameStart::set_user_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.C2S_GameStart.user_id)
+}
+inline std::string* C2S_GameStart::mutable_user_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:lobby.C2S_GameStart.user_id)
+  return _s;
+}
+inline const std::string& C2S_GameStart::_internal_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.user_id_.Get();
+}
+inline void C2S_GameStart::_internal_set_user_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(value, GetArena());
+}
+inline std::string* C2S_GameStart::_internal_mutable_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.user_id_.Mutable( GetArena());
+}
+inline std::string* C2S_GameStart::release_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.C2S_GameStart.user_id)
+  return _impl_.user_id_.Release();
+}
+inline void C2S_GameStart::set_allocated_user_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.C2S_GameStart.user_id)
+}
+
+// -------------------------------------------------------------------
+
+// S2C_GameStart
+
+// bool success = 1;
+inline void S2C_GameStart::clear_success() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_ = false;
+}
+inline bool S2C_GameStart::success() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_GameStart.success)
+  return _internal_success();
+}
+inline void S2C_GameStart::set_success(bool value) {
+  _internal_set_success(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_GameStart.success)
+}
+inline bool S2C_GameStart::_internal_success() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.success_;
+}
+inline void S2C_GameStart::_internal_set_success(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_ = value;
+}
+
+// string room_id = 2;
+inline void S2C_GameStart::clear_room_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.room_id_.ClearToEmpty();
+}
+inline const std::string& S2C_GameStart::room_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_GameStart.room_id)
+  return _internal_room_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_GameStart::set_room_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.room_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_GameStart.room_id)
+}
+inline std::string* S2C_GameStart::mutable_room_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_room_id();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_GameStart.room_id)
+  return _s;
+}
+inline const std::string& S2C_GameStart::_internal_room_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.room_id_.Get();
+}
+inline void S2C_GameStart::_internal_set_room_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.room_id_.Set(value, GetArena());
+}
+inline std::string* S2C_GameStart::_internal_mutable_room_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.room_id_.Mutable( GetArena());
+}
+inline std::string* S2C_GameStart::release_room_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_GameStart.room_id)
+  return _impl_.room_id_.Release();
+}
+inline void S2C_GameStart::set_allocated_room_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.room_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.room_id_.IsDefault()) {
+    _impl_.room_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_GameStart.room_id)
+}
+
+// string server_ip = 3;
+inline void S2C_GameStart::clear_server_ip() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.server_ip_.ClearToEmpty();
+}
+inline const std::string& S2C_GameStart::server_ip() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_GameStart.server_ip)
+  return _internal_server_ip();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_GameStart::set_server_ip(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.server_ip_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_GameStart.server_ip)
+}
+inline std::string* S2C_GameStart::mutable_server_ip() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_server_ip();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_GameStart.server_ip)
+  return _s;
+}
+inline const std::string& S2C_GameStart::_internal_server_ip() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.server_ip_.Get();
+}
+inline void S2C_GameStart::_internal_set_server_ip(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.server_ip_.Set(value, GetArena());
+}
+inline std::string* S2C_GameStart::_internal_mutable_server_ip() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.server_ip_.Mutable( GetArena());
+}
+inline std::string* S2C_GameStart::release_server_ip() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_GameStart.server_ip)
+  return _impl_.server_ip_.Release();
+}
+inline void S2C_GameStart::set_allocated_server_ip(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.server_ip_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.server_ip_.IsDefault()) {
+    _impl_.server_ip_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_GameStart.server_ip)
+}
+
+// int32 server_port = 4;
+inline void S2C_GameStart::clear_server_port() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.server_port_ = 0;
+}
+inline ::int32_t S2C_GameStart::server_port() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_GameStart.server_port)
+  return _internal_server_port();
+}
+inline void S2C_GameStart::set_server_port(::int32_t value) {
+  _internal_set_server_port(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_GameStart.server_port)
+}
+inline ::int32_t S2C_GameStart::_internal_server_port() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.server_port_;
+}
+inline void S2C_GameStart::_internal_set_server_port(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.server_port_ = value;
+}
+
+// string message = 5;
+inline void S2C_GameStart::clear_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.ClearToEmpty();
+}
+inline const std::string& S2C_GameStart::message() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_GameStart.message)
+  return _internal_message();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_GameStart::set_message(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_GameStart.message)
+}
+inline std::string* S2C_GameStart::mutable_message() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_GameStart.message)
+  return _s;
+}
+inline const std::string& S2C_GameStart::_internal_message() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.message_.Get();
+}
+inline void S2C_GameStart::_internal_set_message(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.Set(value, GetArena());
+}
+inline std::string* S2C_GameStart::_internal_mutable_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.message_.Mutable( GetArena());
+}
+inline std::string* S2C_GameStart::release_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_GameStart.message)
+  return _impl_.message_.Release();
+}
+inline void S2C_GameStart::set_allocated_message(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.message_.IsDefault()) {
+    _impl_.message_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_GameStart.message)
+}
+
+// -------------------------------------------------------------------
+
+// C2S_ShopRequest
+
+// string user_id = 1;
+inline void C2S_ShopRequest::clear_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.ClearToEmpty();
+}
+inline const std::string& C2S_ShopRequest::user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.C2S_ShopRequest.user_id)
+  return _internal_user_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void C2S_ShopRequest::set_user_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.C2S_ShopRequest.user_id)
+}
+inline std::string* C2S_ShopRequest::mutable_user_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:lobby.C2S_ShopRequest.user_id)
+  return _s;
+}
+inline const std::string& C2S_ShopRequest::_internal_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.user_id_.Get();
+}
+inline void C2S_ShopRequest::_internal_set_user_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(value, GetArena());
+}
+inline std::string* C2S_ShopRequest::_internal_mutable_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.user_id_.Mutable( GetArena());
+}
+inline std::string* C2S_ShopRequest::release_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.C2S_ShopRequest.user_id)
+  return _impl_.user_id_.Release();
+}
+inline void C2S_ShopRequest::set_allocated_user_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.C2S_ShopRequest.user_id)
+}
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// S2C_ShopResponse_ShopItem
+
+// string item_id = 1;
+inline void S2C_ShopResponse_ShopItem::clear_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.ClearToEmpty();
+}
+inline const std::string& S2C_ShopResponse_ShopItem::item_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_ShopResponse.ShopItem.item_id)
+  return _internal_item_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_ShopResponse_ShopItem::set_item_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_ShopResponse.ShopItem.item_id)
+}
+inline std::string* S2C_ShopResponse_ShopItem::mutable_item_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_item_id();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_ShopResponse.ShopItem.item_id)
+  return _s;
+}
+inline const std::string& S2C_ShopResponse_ShopItem::_internal_item_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.item_id_.Get();
+}
+inline void S2C_ShopResponse_ShopItem::_internal_set_item_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.Set(value, GetArena());
+}
+inline std::string* S2C_ShopResponse_ShopItem::_internal_mutable_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.item_id_.Mutable( GetArena());
+}
+inline std::string* S2C_ShopResponse_ShopItem::release_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_ShopResponse.ShopItem.item_id)
+  return _impl_.item_id_.Release();
+}
+inline void S2C_ShopResponse_ShopItem::set_allocated_item_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.item_id_.IsDefault()) {
+    _impl_.item_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_ShopResponse.ShopItem.item_id)
+}
+
+// string name = 2;
+inline void S2C_ShopResponse_ShopItem::clear_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.ClearToEmpty();
+}
+inline const std::string& S2C_ShopResponse_ShopItem::name() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_ShopResponse.ShopItem.name)
+  return _internal_name();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_ShopResponse_ShopItem::set_name(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_ShopResponse.ShopItem.name)
+}
+inline std::string* S2C_ShopResponse_ShopItem::mutable_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_ShopResponse.ShopItem.name)
+  return _s;
+}
+inline const std::string& S2C_ShopResponse_ShopItem::_internal_name() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.name_.Get();
+}
+inline void S2C_ShopResponse_ShopItem::_internal_set_name(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.Set(value, GetArena());
+}
+inline std::string* S2C_ShopResponse_ShopItem::_internal_mutable_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.name_.Mutable( GetArena());
+}
+inline std::string* S2C_ShopResponse_ShopItem::release_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_ShopResponse.ShopItem.name)
+  return _impl_.name_.Release();
+}
+inline void S2C_ShopResponse_ShopItem::set_allocated_name(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.name_.IsDefault()) {
+    _impl_.name_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_ShopResponse.ShopItem.name)
+}
+
+// string description = 3;
+inline void S2C_ShopResponse_ShopItem::clear_description() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.description_.ClearToEmpty();
+}
+inline const std::string& S2C_ShopResponse_ShopItem::description() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_ShopResponse.ShopItem.description)
+  return _internal_description();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_ShopResponse_ShopItem::set_description(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.description_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_ShopResponse.ShopItem.description)
+}
+inline std::string* S2C_ShopResponse_ShopItem::mutable_description() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_description();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_ShopResponse.ShopItem.description)
+  return _s;
+}
+inline const std::string& S2C_ShopResponse_ShopItem::_internal_description() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.description_.Get();
+}
+inline void S2C_ShopResponse_ShopItem::_internal_set_description(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.description_.Set(value, GetArena());
+}
+inline std::string* S2C_ShopResponse_ShopItem::_internal_mutable_description() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.description_.Mutable( GetArena());
+}
+inline std::string* S2C_ShopResponse_ShopItem::release_description() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_ShopResponse.ShopItem.description)
+  return _impl_.description_.Release();
+}
+inline void S2C_ShopResponse_ShopItem::set_allocated_description(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.description_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.description_.IsDefault()) {
+    _impl_.description_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_ShopResponse.ShopItem.description)
+}
+
+// int32 price = 4;
+inline void S2C_ShopResponse_ShopItem::clear_price() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.price_ = 0;
+}
+inline ::int32_t S2C_ShopResponse_ShopItem::price() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_ShopResponse.ShopItem.price)
+  return _internal_price();
+}
+inline void S2C_ShopResponse_ShopItem::set_price(::int32_t value) {
+  _internal_set_price(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_ShopResponse.ShopItem.price)
+}
+inline ::int32_t S2C_ShopResponse_ShopItem::_internal_price() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.price_;
+}
+inline void S2C_ShopResponse_ShopItem::_internal_set_price(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.price_ = value;
+}
+
+// .lobby.ItemType item_type = 5;
+inline void S2C_ShopResponse_ShopItem::clear_item_type() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_type_ = 0;
+}
+inline ::lobby::ItemType S2C_ShopResponse_ShopItem::item_type() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_ShopResponse.ShopItem.item_type)
+  return _internal_item_type();
+}
+inline void S2C_ShopResponse_ShopItem::set_item_type(::lobby::ItemType value) {
+  _internal_set_item_type(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_ShopResponse.ShopItem.item_type)
+}
+inline ::lobby::ItemType S2C_ShopResponse_ShopItem::_internal_item_type() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return static_cast<::lobby::ItemType>(_impl_.item_type_);
+}
+inline void S2C_ShopResponse_ShopItem::_internal_set_item_type(::lobby::ItemType value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_type_ = value;
+}
+
+// .lobby.ItemTier min_tier = 6;
+inline void S2C_ShopResponse_ShopItem::clear_min_tier() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.min_tier_ = 0;
+}
+inline ::lobby::ItemTier S2C_ShopResponse_ShopItem::min_tier() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_ShopResponse.ShopItem.min_tier)
+  return _internal_min_tier();
+}
+inline void S2C_ShopResponse_ShopItem::set_min_tier(::lobby::ItemTier value) {
+  _internal_set_min_tier(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_ShopResponse.ShopItem.min_tier)
+}
+inline ::lobby::ItemTier S2C_ShopResponse_ShopItem::_internal_min_tier() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return static_cast<::lobby::ItemTier>(_impl_.min_tier_);
+}
+inline void S2C_ShopResponse_ShopItem::_internal_set_min_tier(::lobby::ItemTier value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.min_tier_ = value;
+}
+
+// .lobby.ItemTier max_tier = 7;
+inline void S2C_ShopResponse_ShopItem::clear_max_tier() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.max_tier_ = 0;
+}
+inline ::lobby::ItemTier S2C_ShopResponse_ShopItem::max_tier() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_ShopResponse.ShopItem.max_tier)
+  return _internal_max_tier();
+}
+inline void S2C_ShopResponse_ShopItem::set_max_tier(::lobby::ItemTier value) {
+  _internal_set_max_tier(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_ShopResponse.ShopItem.max_tier)
+}
+inline ::lobby::ItemTier S2C_ShopResponse_ShopItem::_internal_max_tier() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return static_cast<::lobby::ItemTier>(_impl_.max_tier_);
+}
+inline void S2C_ShopResponse_ShopItem::_internal_set_max_tier(::lobby::ItemTier value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.max_tier_ = value;
+}
+
+// map<int32, float> tier_probabilities = 8;
+inline int S2C_ShopResponse_ShopItem::_internal_tier_probabilities_size() const {
+  return _internal_tier_probabilities().size();
+}
+inline int S2C_ShopResponse_ShopItem::tier_probabilities_size() const {
+  return _internal_tier_probabilities_size();
+}
+inline void S2C_ShopResponse_ShopItem::clear_tier_probabilities() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.tier_probabilities_.Clear();
+}
+inline const ::google::protobuf::Map<::int32_t, float>& S2C_ShopResponse_ShopItem::_internal_tier_probabilities() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.tier_probabilities_.GetMap();
+}
+inline const ::google::protobuf::Map<::int32_t, float>& S2C_ShopResponse_ShopItem::tier_probabilities() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_map:lobby.S2C_ShopResponse.ShopItem.tier_probabilities)
+  return _internal_tier_probabilities();
+}
+inline ::google::protobuf::Map<::int32_t, float>* S2C_ShopResponse_ShopItem::_internal_mutable_tier_probabilities() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.tier_probabilities_.MutableMap();
+}
+inline ::google::protobuf::Map<::int32_t, float>* S2C_ShopResponse_ShopItem::mutable_tier_probabilities() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable_map:lobby.S2C_ShopResponse.ShopItem.tier_probabilities)
+  return _internal_mutable_tier_probabilities();
+}
+
+// -------------------------------------------------------------------
+
+// S2C_ShopResponse
+
+// repeated .lobby.S2C_ShopResponse.ShopItem items = 1;
+inline int S2C_ShopResponse::_internal_items_size() const {
+  return _internal_items().size();
+}
+inline int S2C_ShopResponse::items_size() const {
+  return _internal_items_size();
+}
+inline void S2C_ShopResponse::clear_items() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.items_.Clear();
+}
+inline ::lobby::S2C_ShopResponse_ShopItem* S2C_ShopResponse::mutable_items(int index)
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_ShopResponse.items)
+  return _internal_mutable_items()->Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField<::lobby::S2C_ShopResponse_ShopItem>* S2C_ShopResponse::mutable_items()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable_list:lobby.S2C_ShopResponse.items)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _internal_mutable_items();
+}
+inline const ::lobby::S2C_ShopResponse_ShopItem& S2C_ShopResponse::items(int index) const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_ShopResponse.items)
+  return _internal_items().Get(index);
+}
+inline ::lobby::S2C_ShopResponse_ShopItem* S2C_ShopResponse::add_items() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::lobby::S2C_ShopResponse_ShopItem* _add = _internal_mutable_items()->Add();
+  // @@protoc_insertion_point(field_add:lobby.S2C_ShopResponse.items)
+  return _add;
+}
+inline const ::google::protobuf::RepeatedPtrField<::lobby::S2C_ShopResponse_ShopItem>& S2C_ShopResponse::items() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:lobby.S2C_ShopResponse.items)
+  return _internal_items();
+}
+inline const ::google::protobuf::RepeatedPtrField<::lobby::S2C_ShopResponse_ShopItem>&
+S2C_ShopResponse::_internal_items() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.items_;
+}
+inline ::google::protobuf::RepeatedPtrField<::lobby::S2C_ShopResponse_ShopItem>*
+S2C_ShopResponse::_internal_mutable_items() {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return &_impl_.items_;
+}
+
+// -------------------------------------------------------------------
+
+// C2S_BuyItem
+
+// string user_id = 1;
+inline void C2S_BuyItem::clear_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.ClearToEmpty();
+}
+inline const std::string& C2S_BuyItem::user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.C2S_BuyItem.user_id)
+  return _internal_user_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void C2S_BuyItem::set_user_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.C2S_BuyItem.user_id)
+}
+inline std::string* C2S_BuyItem::mutable_user_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:lobby.C2S_BuyItem.user_id)
+  return _s;
+}
+inline const std::string& C2S_BuyItem::_internal_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.user_id_.Get();
+}
+inline void C2S_BuyItem::_internal_set_user_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(value, GetArena());
+}
+inline std::string* C2S_BuyItem::_internal_mutable_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.user_id_.Mutable( GetArena());
+}
+inline std::string* C2S_BuyItem::release_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.C2S_BuyItem.user_id)
+  return _impl_.user_id_.Release();
+}
+inline void C2S_BuyItem::set_allocated_user_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.C2S_BuyItem.user_id)
+}
+
+// string item_id = 2;
+inline void C2S_BuyItem::clear_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.ClearToEmpty();
+}
+inline const std::string& C2S_BuyItem::item_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.C2S_BuyItem.item_id)
+  return _internal_item_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void C2S_BuyItem::set_item_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.C2S_BuyItem.item_id)
+}
+inline std::string* C2S_BuyItem::mutable_item_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_item_id();
+  // @@protoc_insertion_point(field_mutable:lobby.C2S_BuyItem.item_id)
+  return _s;
+}
+inline const std::string& C2S_BuyItem::_internal_item_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.item_id_.Get();
+}
+inline void C2S_BuyItem::_internal_set_item_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.Set(value, GetArena());
+}
+inline std::string* C2S_BuyItem::_internal_mutable_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.item_id_.Mutable( GetArena());
+}
+inline std::string* C2S_BuyItem::release_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.C2S_BuyItem.item_id)
+  return _impl_.item_id_.Release();
+}
+inline void C2S_BuyItem::set_allocated_item_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.item_id_.IsDefault()) {
+    _impl_.item_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.C2S_BuyItem.item_id)
+}
+
+// int32 quantity = 3;
+inline void C2S_BuyItem::clear_quantity() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.quantity_ = 0;
+}
+inline ::int32_t C2S_BuyItem::quantity() const {
+  // @@protoc_insertion_point(field_get:lobby.C2S_BuyItem.quantity)
+  return _internal_quantity();
+}
+inline void C2S_BuyItem::set_quantity(::int32_t value) {
+  _internal_set_quantity(value);
+  // @@protoc_insertion_point(field_set:lobby.C2S_BuyItem.quantity)
+}
+inline ::int32_t C2S_BuyItem::_internal_quantity() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.quantity_;
+}
+inline void C2S_BuyItem::_internal_set_quantity(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.quantity_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// S2C_BuyResult
+
+// bool success = 1;
+inline void S2C_BuyResult::clear_success() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_ = false;
+}
+inline bool S2C_BuyResult::success() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_BuyResult.success)
+  return _internal_success();
+}
+inline void S2C_BuyResult::set_success(bool value) {
+  _internal_set_success(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_BuyResult.success)
+}
+inline bool S2C_BuyResult::_internal_success() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.success_;
+}
+inline void S2C_BuyResult::_internal_set_success(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_ = value;
+}
+
+// string item_id = 2;
+inline void S2C_BuyResult::clear_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.ClearToEmpty();
+}
+inline const std::string& S2C_BuyResult::item_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_BuyResult.item_id)
+  return _internal_item_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_BuyResult::set_item_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_BuyResult.item_id)
+}
+inline std::string* S2C_BuyResult::mutable_item_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_item_id();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_BuyResult.item_id)
+  return _s;
+}
+inline const std::string& S2C_BuyResult::_internal_item_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.item_id_.Get();
+}
+inline void S2C_BuyResult::_internal_set_item_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.Set(value, GetArena());
+}
+inline std::string* S2C_BuyResult::_internal_mutable_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.item_id_.Mutable( GetArena());
+}
+inline std::string* S2C_BuyResult::release_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_BuyResult.item_id)
+  return _impl_.item_id_.Release();
+}
+inline void S2C_BuyResult::set_allocated_item_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.item_id_.IsDefault()) {
+    _impl_.item_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_BuyResult.item_id)
+}
+
+// int32 quantity = 3;
+inline void S2C_BuyResult::clear_quantity() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.quantity_ = 0;
+}
+inline ::int32_t S2C_BuyResult::quantity() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_BuyResult.quantity)
+  return _internal_quantity();
+}
+inline void S2C_BuyResult::set_quantity(::int32_t value) {
+  _internal_set_quantity(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_BuyResult.quantity)
+}
+inline ::int32_t S2C_BuyResult::_internal_quantity() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.quantity_;
+}
+inline void S2C_BuyResult::_internal_set_quantity(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.quantity_ = value;
+}
+
+// int32 remaining_gold = 4;
+inline void S2C_BuyResult::clear_remaining_gold() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.remaining_gold_ = 0;
+}
+inline ::int32_t S2C_BuyResult::remaining_gold() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_BuyResult.remaining_gold)
+  return _internal_remaining_gold();
+}
+inline void S2C_BuyResult::set_remaining_gold(::int32_t value) {
+  _internal_set_remaining_gold(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_BuyResult.remaining_gold)
+}
+inline ::int32_t S2C_BuyResult::_internal_remaining_gold() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.remaining_gold_;
+}
+inline void S2C_BuyResult::_internal_set_remaining_gold(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.remaining_gold_ = value;
+}
+
+// string message = 5;
+inline void S2C_BuyResult::clear_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.ClearToEmpty();
+}
+inline const std::string& S2C_BuyResult::message() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_BuyResult.message)
+  return _internal_message();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_BuyResult::set_message(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_BuyResult.message)
+}
+inline std::string* S2C_BuyResult::mutable_message() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_BuyResult.message)
+  return _s;
+}
+inline const std::string& S2C_BuyResult::_internal_message() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.message_.Get();
+}
+inline void S2C_BuyResult::_internal_set_message(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.Set(value, GetArena());
+}
+inline std::string* S2C_BuyResult::_internal_mutable_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.message_.Mutable( GetArena());
+}
+inline std::string* S2C_BuyResult::release_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_BuyResult.message)
+  return _impl_.message_.Release();
+}
+inline void S2C_BuyResult::set_allocated_message(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.message_.IsDefault()) {
+    _impl_.message_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_BuyResult.message)
+}
+
+// -------------------------------------------------------------------
+
+// C2S_BuyAndOpenRandomBox
+
+// string user_id = 1;
+inline void C2S_BuyAndOpenRandomBox::clear_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.ClearToEmpty();
+}
+inline const std::string& C2S_BuyAndOpenRandomBox::user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.C2S_BuyAndOpenRandomBox.user_id)
+  return _internal_user_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void C2S_BuyAndOpenRandomBox::set_user_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.C2S_BuyAndOpenRandomBox.user_id)
+}
+inline std::string* C2S_BuyAndOpenRandomBox::mutable_user_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:lobby.C2S_BuyAndOpenRandomBox.user_id)
+  return _s;
+}
+inline const std::string& C2S_BuyAndOpenRandomBox::_internal_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.user_id_.Get();
+}
+inline void C2S_BuyAndOpenRandomBox::_internal_set_user_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(value, GetArena());
+}
+inline std::string* C2S_BuyAndOpenRandomBox::_internal_mutable_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.user_id_.Mutable( GetArena());
+}
+inline std::string* C2S_BuyAndOpenRandomBox::release_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.C2S_BuyAndOpenRandomBox.user_id)
+  return _impl_.user_id_.Release();
+}
+inline void C2S_BuyAndOpenRandomBox::set_allocated_user_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.C2S_BuyAndOpenRandomBox.user_id)
+}
+
+// string box_id = 2;
+inline void C2S_BuyAndOpenRandomBox::clear_box_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.box_id_.ClearToEmpty();
+}
+inline const std::string& C2S_BuyAndOpenRandomBox::box_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.C2S_BuyAndOpenRandomBox.box_id)
+  return _internal_box_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void C2S_BuyAndOpenRandomBox::set_box_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.box_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.C2S_BuyAndOpenRandomBox.box_id)
+}
+inline std::string* C2S_BuyAndOpenRandomBox::mutable_box_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_box_id();
+  // @@protoc_insertion_point(field_mutable:lobby.C2S_BuyAndOpenRandomBox.box_id)
+  return _s;
+}
+inline const std::string& C2S_BuyAndOpenRandomBox::_internal_box_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.box_id_.Get();
+}
+inline void C2S_BuyAndOpenRandomBox::_internal_set_box_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.box_id_.Set(value, GetArena());
+}
+inline std::string* C2S_BuyAndOpenRandomBox::_internal_mutable_box_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.box_id_.Mutable( GetArena());
+}
+inline std::string* C2S_BuyAndOpenRandomBox::release_box_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.C2S_BuyAndOpenRandomBox.box_id)
+  return _impl_.box_id_.Release();
+}
+inline void C2S_BuyAndOpenRandomBox::set_allocated_box_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.box_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.box_id_.IsDefault()) {
+    _impl_.box_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.C2S_BuyAndOpenRandomBox.box_id)
+}
+
+// int32 quantity = 3;
+inline void C2S_BuyAndOpenRandomBox::clear_quantity() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.quantity_ = 0;
+}
+inline ::int32_t C2S_BuyAndOpenRandomBox::quantity() const {
+  // @@protoc_insertion_point(field_get:lobby.C2S_BuyAndOpenRandomBox.quantity)
+  return _internal_quantity();
+}
+inline void C2S_BuyAndOpenRandomBox::set_quantity(::int32_t value) {
+  _internal_set_quantity(value);
+  // @@protoc_insertion_point(field_set:lobby.C2S_BuyAndOpenRandomBox.quantity)
+}
+inline ::int32_t C2S_BuyAndOpenRandomBox::_internal_quantity() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.quantity_;
+}
+inline void C2S_BuyAndOpenRandomBox::_internal_set_quantity(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.quantity_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// S2C_BuyAndOpenRandomBoxResult
+
+// bool success = 1;
+inline void S2C_BuyAndOpenRandomBoxResult::clear_success() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_ = false;
+}
+inline bool S2C_BuyAndOpenRandomBoxResult::success() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_BuyAndOpenRandomBoxResult.success)
+  return _internal_success();
+}
+inline void S2C_BuyAndOpenRandomBoxResult::set_success(bool value) {
+  _internal_set_success(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_BuyAndOpenRandomBoxResult.success)
+}
+inline bool S2C_BuyAndOpenRandomBoxResult::_internal_success() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.success_;
+}
+inline void S2C_BuyAndOpenRandomBoxResult::_internal_set_success(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_ = value;
+}
+
+// string box_id = 2;
+inline void S2C_BuyAndOpenRandomBoxResult::clear_box_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.box_id_.ClearToEmpty();
+}
+inline const std::string& S2C_BuyAndOpenRandomBoxResult::box_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_BuyAndOpenRandomBoxResult.box_id)
+  return _internal_box_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_BuyAndOpenRandomBoxResult::set_box_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.box_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_BuyAndOpenRandomBoxResult.box_id)
+}
+inline std::string* S2C_BuyAndOpenRandomBoxResult::mutable_box_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_box_id();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_BuyAndOpenRandomBoxResult.box_id)
+  return _s;
+}
+inline const std::string& S2C_BuyAndOpenRandomBoxResult::_internal_box_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.box_id_.Get();
+}
+inline void S2C_BuyAndOpenRandomBoxResult::_internal_set_box_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.box_id_.Set(value, GetArena());
+}
+inline std::string* S2C_BuyAndOpenRandomBoxResult::_internal_mutable_box_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.box_id_.Mutable( GetArena());
+}
+inline std::string* S2C_BuyAndOpenRandomBoxResult::release_box_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_BuyAndOpenRandomBoxResult.box_id)
+  return _impl_.box_id_.Release();
+}
+inline void S2C_BuyAndOpenRandomBoxResult::set_allocated_box_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.box_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.box_id_.IsDefault()) {
+    _impl_.box_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_BuyAndOpenRandomBoxResult.box_id)
+}
+
+// int32 quantity = 3;
+inline void S2C_BuyAndOpenRandomBoxResult::clear_quantity() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.quantity_ = 0;
+}
+inline ::int32_t S2C_BuyAndOpenRandomBoxResult::quantity() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_BuyAndOpenRandomBoxResult.quantity)
+  return _internal_quantity();
+}
+inline void S2C_BuyAndOpenRandomBoxResult::set_quantity(::int32_t value) {
+  _internal_set_quantity(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_BuyAndOpenRandomBoxResult.quantity)
+}
+inline ::int32_t S2C_BuyAndOpenRandomBoxResult::_internal_quantity() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.quantity_;
+}
+inline void S2C_BuyAndOpenRandomBoxResult::_internal_set_quantity(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.quantity_ = value;
+}
+
+// int32 total_price = 4;
+inline void S2C_BuyAndOpenRandomBoxResult::clear_total_price() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.total_price_ = 0;
+}
+inline ::int32_t S2C_BuyAndOpenRandomBoxResult::total_price() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_BuyAndOpenRandomBoxResult.total_price)
+  return _internal_total_price();
+}
+inline void S2C_BuyAndOpenRandomBoxResult::set_total_price(::int32_t value) {
+  _internal_set_total_price(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_BuyAndOpenRandomBoxResult.total_price)
+}
+inline ::int32_t S2C_BuyAndOpenRandomBoxResult::_internal_total_price() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.total_price_;
+}
+inline void S2C_BuyAndOpenRandomBoxResult::_internal_set_total_price(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.total_price_ = value;
+}
+
+// int32 remaining_gold = 5;
+inline void S2C_BuyAndOpenRandomBoxResult::clear_remaining_gold() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.remaining_gold_ = 0;
+}
+inline ::int32_t S2C_BuyAndOpenRandomBoxResult::remaining_gold() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_BuyAndOpenRandomBoxResult.remaining_gold)
+  return _internal_remaining_gold();
+}
+inline void S2C_BuyAndOpenRandomBoxResult::set_remaining_gold(::int32_t value) {
+  _internal_set_remaining_gold(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_BuyAndOpenRandomBoxResult.remaining_gold)
+}
+inline ::int32_t S2C_BuyAndOpenRandomBoxResult::_internal_remaining_gold() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.remaining_gold_;
+}
+inline void S2C_BuyAndOpenRandomBoxResult::_internal_set_remaining_gold(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.remaining_gold_ = value;
+}
+
+// repeated .lobby.BoxReward rewards = 6;
+inline int S2C_BuyAndOpenRandomBoxResult::_internal_rewards_size() const {
+  return _internal_rewards().size();
+}
+inline int S2C_BuyAndOpenRandomBoxResult::rewards_size() const {
+  return _internal_rewards_size();
+}
+inline void S2C_BuyAndOpenRandomBoxResult::clear_rewards() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.rewards_.Clear();
+}
+inline ::lobby::BoxReward* S2C_BuyAndOpenRandomBoxResult::mutable_rewards(int index)
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_BuyAndOpenRandomBoxResult.rewards)
+  return _internal_mutable_rewards()->Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField<::lobby::BoxReward>* S2C_BuyAndOpenRandomBoxResult::mutable_rewards()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable_list:lobby.S2C_BuyAndOpenRandomBoxResult.rewards)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _internal_mutable_rewards();
+}
+inline const ::lobby::BoxReward& S2C_BuyAndOpenRandomBoxResult::rewards(int index) const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_BuyAndOpenRandomBoxResult.rewards)
+  return _internal_rewards().Get(index);
+}
+inline ::lobby::BoxReward* S2C_BuyAndOpenRandomBoxResult::add_rewards() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::lobby::BoxReward* _add = _internal_mutable_rewards()->Add();
+  // @@protoc_insertion_point(field_add:lobby.S2C_BuyAndOpenRandomBoxResult.rewards)
+  return _add;
+}
+inline const ::google::protobuf::RepeatedPtrField<::lobby::BoxReward>& S2C_BuyAndOpenRandomBoxResult::rewards() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:lobby.S2C_BuyAndOpenRandomBoxResult.rewards)
+  return _internal_rewards();
+}
+inline const ::google::protobuf::RepeatedPtrField<::lobby::BoxReward>&
+S2C_BuyAndOpenRandomBoxResult::_internal_rewards() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.rewards_;
+}
+inline ::google::protobuf::RepeatedPtrField<::lobby::BoxReward>*
+S2C_BuyAndOpenRandomBoxResult::_internal_mutable_rewards() {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return &_impl_.rewards_;
+}
+
+// string message = 7;
+inline void S2C_BuyAndOpenRandomBoxResult::clear_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.ClearToEmpty();
+}
+inline const std::string& S2C_BuyAndOpenRandomBoxResult::message() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_BuyAndOpenRandomBoxResult.message)
+  return _internal_message();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_BuyAndOpenRandomBoxResult::set_message(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_BuyAndOpenRandomBoxResult.message)
+}
+inline std::string* S2C_BuyAndOpenRandomBoxResult::mutable_message() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_BuyAndOpenRandomBoxResult.message)
+  return _s;
+}
+inline const std::string& S2C_BuyAndOpenRandomBoxResult::_internal_message() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.message_.Get();
+}
+inline void S2C_BuyAndOpenRandomBoxResult::_internal_set_message(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.Set(value, GetArena());
+}
+inline std::string* S2C_BuyAndOpenRandomBoxResult::_internal_mutable_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.message_.Mutable( GetArena());
+}
+inline std::string* S2C_BuyAndOpenRandomBoxResult::release_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_BuyAndOpenRandomBoxResult.message)
+  return _impl_.message_.Release();
+}
+inline void S2C_BuyAndOpenRandomBoxResult::set_allocated_message(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.message_.IsDefault()) {
+    _impl_.message_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_BuyAndOpenRandomBoxResult.message)
+}
+
+// -------------------------------------------------------------------
+
+// BoxReward
+
+// string item_id = 1;
+inline void BoxReward::clear_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.ClearToEmpty();
+}
+inline const std::string& BoxReward::item_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.BoxReward.item_id)
+  return _internal_item_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void BoxReward::set_item_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.BoxReward.item_id)
+}
+inline std::string* BoxReward::mutable_item_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_item_id();
+  // @@protoc_insertion_point(field_mutable:lobby.BoxReward.item_id)
+  return _s;
+}
+inline const std::string& BoxReward::_internal_item_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.item_id_.Get();
+}
+inline void BoxReward::_internal_set_item_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.Set(value, GetArena());
+}
+inline std::string* BoxReward::_internal_mutable_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.item_id_.Mutable( GetArena());
+}
+inline std::string* BoxReward::release_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.BoxReward.item_id)
+  return _impl_.item_id_.Release();
+}
+inline void BoxReward::set_allocated_item_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.item_id_.IsDefault()) {
+    _impl_.item_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.BoxReward.item_id)
+}
+
+// string name = 2;
+inline void BoxReward::clear_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.ClearToEmpty();
+}
+inline const std::string& BoxReward::name() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.BoxReward.name)
+  return _internal_name();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void BoxReward::set_name(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.BoxReward.name)
+}
+inline std::string* BoxReward::mutable_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:lobby.BoxReward.name)
+  return _s;
+}
+inline const std::string& BoxReward::_internal_name() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.name_.Get();
+}
+inline void BoxReward::_internal_set_name(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.Set(value, GetArena());
+}
+inline std::string* BoxReward::_internal_mutable_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.name_.Mutable( GetArena());
+}
+inline std::string* BoxReward::release_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.BoxReward.name)
+  return _impl_.name_.Release();
+}
+inline void BoxReward::set_allocated_name(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.name_.IsDefault()) {
+    _impl_.name_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.BoxReward.name)
+}
+
+// .lobby.ItemTier tier = 3;
+inline void BoxReward::clear_tier() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.tier_ = 0;
+}
+inline ::lobby::ItemTier BoxReward::tier() const {
+  // @@protoc_insertion_point(field_get:lobby.BoxReward.tier)
+  return _internal_tier();
+}
+inline void BoxReward::set_tier(::lobby::ItemTier value) {
+  _internal_set_tier(value);
+  // @@protoc_insertion_point(field_set:lobby.BoxReward.tier)
+}
+inline ::lobby::ItemTier BoxReward::_internal_tier() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return static_cast<::lobby::ItemTier>(_impl_.tier_);
+}
+inline void BoxReward::_internal_set_tier(::lobby::ItemTier value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.tier_ = value;
+}
+
+// int32 quantity = 4;
+inline void BoxReward::clear_quantity() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.quantity_ = 0;
+}
+inline ::int32_t BoxReward::quantity() const {
+  // @@protoc_insertion_point(field_get:lobby.BoxReward.quantity)
+  return _internal_quantity();
+}
+inline void BoxReward::set_quantity(::int32_t value) {
+  _internal_set_quantity(value);
+  // @@protoc_insertion_point(field_set:lobby.BoxReward.quantity)
+}
+inline ::int32_t BoxReward::_internal_quantity() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.quantity_;
+}
+inline void BoxReward::_internal_set_quantity(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.quantity_ = value;
+}
+
+// bool is_new = 5;
+inline void BoxReward::clear_is_new() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.is_new_ = false;
+}
+inline bool BoxReward::is_new() const {
+  // @@protoc_insertion_point(field_get:lobby.BoxReward.is_new)
+  return _internal_is_new();
+}
+inline void BoxReward::set_is_new(bool value) {
+  _internal_set_is_new(value);
+  // @@protoc_insertion_point(field_set:lobby.BoxReward.is_new)
+}
+inline bool BoxReward::_internal_is_new() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.is_new_;
+}
+inline void BoxReward::_internal_set_is_new(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.is_new_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// C2S_InventoryRequest
+
+// string user_id = 1;
+inline void C2S_InventoryRequest::clear_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.ClearToEmpty();
+}
+inline const std::string& C2S_InventoryRequest::user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.C2S_InventoryRequest.user_id)
+  return _internal_user_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void C2S_InventoryRequest::set_user_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.C2S_InventoryRequest.user_id)
+}
+inline std::string* C2S_InventoryRequest::mutable_user_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:lobby.C2S_InventoryRequest.user_id)
+  return _s;
+}
+inline const std::string& C2S_InventoryRequest::_internal_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.user_id_.Get();
+}
+inline void C2S_InventoryRequest::_internal_set_user_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(value, GetArena());
+}
+inline std::string* C2S_InventoryRequest::_internal_mutable_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.user_id_.Mutable( GetArena());
+}
+inline std::string* C2S_InventoryRequest::release_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.C2S_InventoryRequest.user_id)
+  return _impl_.user_id_.Release();
+}
+inline void C2S_InventoryRequest::set_allocated_user_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.C2S_InventoryRequest.user_id)
+}
+
+// -------------------------------------------------------------------
+
+// S2C_InventoryResponse_InventoryItem
+
+// string item_id = 1;
+inline void S2C_InventoryResponse_InventoryItem::clear_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.ClearToEmpty();
+}
+inline const std::string& S2C_InventoryResponse_InventoryItem::item_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_InventoryResponse.InventoryItem.item_id)
+  return _internal_item_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_InventoryResponse_InventoryItem::set_item_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_InventoryResponse.InventoryItem.item_id)
+}
+inline std::string* S2C_InventoryResponse_InventoryItem::mutable_item_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_item_id();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_InventoryResponse.InventoryItem.item_id)
+  return _s;
+}
+inline const std::string& S2C_InventoryResponse_InventoryItem::_internal_item_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.item_id_.Get();
+}
+inline void S2C_InventoryResponse_InventoryItem::_internal_set_item_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.Set(value, GetArena());
+}
+inline std::string* S2C_InventoryResponse_InventoryItem::_internal_mutable_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.item_id_.Mutable( GetArena());
+}
+inline std::string* S2C_InventoryResponse_InventoryItem::release_item_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_InventoryResponse.InventoryItem.item_id)
+  return _impl_.item_id_.Release();
+}
+inline void S2C_InventoryResponse_InventoryItem::set_allocated_item_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.item_id_.IsDefault()) {
+    _impl_.item_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_InventoryResponse.InventoryItem.item_id)
+}
+
+// string name = 2;
+inline void S2C_InventoryResponse_InventoryItem::clear_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.ClearToEmpty();
+}
+inline const std::string& S2C_InventoryResponse_InventoryItem::name() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_InventoryResponse.InventoryItem.name)
+  return _internal_name();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_InventoryResponse_InventoryItem::set_name(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_InventoryResponse.InventoryItem.name)
+}
+inline std::string* S2C_InventoryResponse_InventoryItem::mutable_name() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_InventoryResponse.InventoryItem.name)
+  return _s;
+}
+inline const std::string& S2C_InventoryResponse_InventoryItem::_internal_name() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.name_.Get();
+}
+inline void S2C_InventoryResponse_InventoryItem::_internal_set_name(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.Set(value, GetArena());
+}
+inline std::string* S2C_InventoryResponse_InventoryItem::_internal_mutable_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.name_.Mutable( GetArena());
+}
+inline std::string* S2C_InventoryResponse_InventoryItem::release_name() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_InventoryResponse.InventoryItem.name)
+  return _impl_.name_.Release();
+}
+inline void S2C_InventoryResponse_InventoryItem::set_allocated_name(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.name_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.name_.IsDefault()) {
+    _impl_.name_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_InventoryResponse.InventoryItem.name)
+}
+
+// .lobby.ItemType item_type = 3;
+inline void S2C_InventoryResponse_InventoryItem::clear_item_type() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_type_ = 0;
+}
+inline ::lobby::ItemType S2C_InventoryResponse_InventoryItem::item_type() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_InventoryResponse.InventoryItem.item_type)
+  return _internal_item_type();
+}
+inline void S2C_InventoryResponse_InventoryItem::set_item_type(::lobby::ItemType value) {
+  _internal_set_item_type(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_InventoryResponse.InventoryItem.item_type)
+}
+inline ::lobby::ItemType S2C_InventoryResponse_InventoryItem::_internal_item_type() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return static_cast<::lobby::ItemType>(_impl_.item_type_);
+}
+inline void S2C_InventoryResponse_InventoryItem::_internal_set_item_type(::lobby::ItemType value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.item_type_ = value;
+}
+
+// .lobby.ItemTier tier = 4;
+inline void S2C_InventoryResponse_InventoryItem::clear_tier() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.tier_ = 0;
+}
+inline ::lobby::ItemTier S2C_InventoryResponse_InventoryItem::tier() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_InventoryResponse.InventoryItem.tier)
+  return _internal_tier();
+}
+inline void S2C_InventoryResponse_InventoryItem::set_tier(::lobby::ItemTier value) {
+  _internal_set_tier(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_InventoryResponse.InventoryItem.tier)
+}
+inline ::lobby::ItemTier S2C_InventoryResponse_InventoryItem::_internal_tier() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return static_cast<::lobby::ItemTier>(_impl_.tier_);
+}
+inline void S2C_InventoryResponse_InventoryItem::_internal_set_tier(::lobby::ItemTier value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.tier_ = value;
+}
+
+// int32 quantity = 5;
+inline void S2C_InventoryResponse_InventoryItem::clear_quantity() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.quantity_ = 0;
+}
+inline ::int32_t S2C_InventoryResponse_InventoryItem::quantity() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_InventoryResponse.InventoryItem.quantity)
+  return _internal_quantity();
+}
+inline void S2C_InventoryResponse_InventoryItem::set_quantity(::int32_t value) {
+  _internal_set_quantity(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_InventoryResponse.InventoryItem.quantity)
+}
+inline ::int32_t S2C_InventoryResponse_InventoryItem::_internal_quantity() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.quantity_;
+}
+inline void S2C_InventoryResponse_InventoryItem::_internal_set_quantity(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.quantity_ = value;
+}
+
+// bool is_equipped = 6;
+inline void S2C_InventoryResponse_InventoryItem::clear_is_equipped() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.is_equipped_ = false;
+}
+inline bool S2C_InventoryResponse_InventoryItem::is_equipped() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_InventoryResponse.InventoryItem.is_equipped)
+  return _internal_is_equipped();
+}
+inline void S2C_InventoryResponse_InventoryItem::set_is_equipped(bool value) {
+  _internal_set_is_equipped(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_InventoryResponse.InventoryItem.is_equipped)
+}
+inline bool S2C_InventoryResponse_InventoryItem::_internal_is_equipped() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.is_equipped_;
+}
+inline void S2C_InventoryResponse_InventoryItem::_internal_set_is_equipped(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.is_equipped_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// S2C_InventoryResponse
+
+// repeated .lobby.S2C_InventoryResponse.InventoryItem items = 1;
+inline int S2C_InventoryResponse::_internal_items_size() const {
+  return _internal_items().size();
+}
+inline int S2C_InventoryResponse::items_size() const {
+  return _internal_items_size();
+}
+inline void S2C_InventoryResponse::clear_items() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.items_.Clear();
+}
+inline ::lobby::S2C_InventoryResponse_InventoryItem* S2C_InventoryResponse::mutable_items(int index)
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_InventoryResponse.items)
+  return _internal_mutable_items()->Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField<::lobby::S2C_InventoryResponse_InventoryItem>* S2C_InventoryResponse::mutable_items()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable_list:lobby.S2C_InventoryResponse.items)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _internal_mutable_items();
+}
+inline const ::lobby::S2C_InventoryResponse_InventoryItem& S2C_InventoryResponse::items(int index) const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_InventoryResponse.items)
+  return _internal_items().Get(index);
+}
+inline ::lobby::S2C_InventoryResponse_InventoryItem* S2C_InventoryResponse::add_items() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::lobby::S2C_InventoryResponse_InventoryItem* _add = _internal_mutable_items()->Add();
+  // @@protoc_insertion_point(field_add:lobby.S2C_InventoryResponse.items)
+  return _add;
+}
+inline const ::google::protobuf::RepeatedPtrField<::lobby::S2C_InventoryResponse_InventoryItem>& S2C_InventoryResponse::items() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:lobby.S2C_InventoryResponse.items)
+  return _internal_items();
+}
+inline const ::google::protobuf::RepeatedPtrField<::lobby::S2C_InventoryResponse_InventoryItem>&
+S2C_InventoryResponse::_internal_items() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.items_;
+}
+inline ::google::protobuf::RepeatedPtrField<::lobby::S2C_InventoryResponse_InventoryItem>*
+S2C_InventoryResponse::_internal_mutable_items() {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return &_impl_.items_;
+}
+
+// -------------------------------------------------------------------
+
+// C2S_EquipCostume
+
+// string user_id = 1;
+inline void C2S_EquipCostume::clear_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.ClearToEmpty();
+}
+inline const std::string& C2S_EquipCostume::user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.C2S_EquipCostume.user_id)
+  return _internal_user_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void C2S_EquipCostume::set_user_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.C2S_EquipCostume.user_id)
+}
+inline std::string* C2S_EquipCostume::mutable_user_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:lobby.C2S_EquipCostume.user_id)
+  return _s;
+}
+inline const std::string& C2S_EquipCostume::_internal_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.user_id_.Get();
+}
+inline void C2S_EquipCostume::_internal_set_user_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(value, GetArena());
+}
+inline std::string* C2S_EquipCostume::_internal_mutable_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.user_id_.Mutable( GetArena());
+}
+inline std::string* C2S_EquipCostume::release_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.C2S_EquipCostume.user_id)
+  return _impl_.user_id_.Release();
+}
+inline void C2S_EquipCostume::set_allocated_user_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.C2S_EquipCostume.user_id)
+}
+
+// string costume_id = 2;
+inline void C2S_EquipCostume::clear_costume_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.costume_id_.ClearToEmpty();
+}
+inline const std::string& C2S_EquipCostume::costume_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.C2S_EquipCostume.costume_id)
+  return _internal_costume_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void C2S_EquipCostume::set_costume_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.costume_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.C2S_EquipCostume.costume_id)
+}
+inline std::string* C2S_EquipCostume::mutable_costume_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_costume_id();
+  // @@protoc_insertion_point(field_mutable:lobby.C2S_EquipCostume.costume_id)
+  return _s;
+}
+inline const std::string& C2S_EquipCostume::_internal_costume_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.costume_id_.Get();
+}
+inline void C2S_EquipCostume::_internal_set_costume_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.costume_id_.Set(value, GetArena());
+}
+inline std::string* C2S_EquipCostume::_internal_mutable_costume_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.costume_id_.Mutable( GetArena());
+}
+inline std::string* C2S_EquipCostume::release_costume_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.C2S_EquipCostume.costume_id)
+  return _impl_.costume_id_.Release();
+}
+inline void C2S_EquipCostume::set_allocated_costume_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.costume_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.costume_id_.IsDefault()) {
+    _impl_.costume_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.C2S_EquipCostume.costume_id)
+}
+
+// bool equip = 3;
+inline void C2S_EquipCostume::clear_equip() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.equip_ = false;
+}
+inline bool C2S_EquipCostume::equip() const {
+  // @@protoc_insertion_point(field_get:lobby.C2S_EquipCostume.equip)
+  return _internal_equip();
+}
+inline void C2S_EquipCostume::set_equip(bool value) {
+  _internal_set_equip(value);
+  // @@protoc_insertion_point(field_set:lobby.C2S_EquipCostume.equip)
+}
+inline bool C2S_EquipCostume::_internal_equip() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.equip_;
+}
+inline void C2S_EquipCostume::_internal_set_equip(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.equip_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// S2C_EquipCostumeResult
+
+// bool success = 1;
+inline void S2C_EquipCostumeResult::clear_success() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_ = false;
+}
+inline bool S2C_EquipCostumeResult::success() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_EquipCostumeResult.success)
+  return _internal_success();
+}
+inline void S2C_EquipCostumeResult::set_success(bool value) {
+  _internal_set_success(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_EquipCostumeResult.success)
+}
+inline bool S2C_EquipCostumeResult::_internal_success() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.success_;
+}
+inline void S2C_EquipCostumeResult::_internal_set_success(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.success_ = value;
+}
+
+// string costume_id = 2;
+inline void S2C_EquipCostumeResult::clear_costume_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.costume_id_.ClearToEmpty();
+}
+inline const std::string& S2C_EquipCostumeResult::costume_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_EquipCostumeResult.costume_id)
+  return _internal_costume_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_EquipCostumeResult::set_costume_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.costume_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_EquipCostumeResult.costume_id)
+}
+inline std::string* S2C_EquipCostumeResult::mutable_costume_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_costume_id();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_EquipCostumeResult.costume_id)
+  return _s;
+}
+inline const std::string& S2C_EquipCostumeResult::_internal_costume_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.costume_id_.Get();
+}
+inline void S2C_EquipCostumeResult::_internal_set_costume_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.costume_id_.Set(value, GetArena());
+}
+inline std::string* S2C_EquipCostumeResult::_internal_mutable_costume_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.costume_id_.Mutable( GetArena());
+}
+inline std::string* S2C_EquipCostumeResult::release_costume_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_EquipCostumeResult.costume_id)
+  return _impl_.costume_id_.Release();
+}
+inline void S2C_EquipCostumeResult::set_allocated_costume_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.costume_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.costume_id_.IsDefault()) {
+    _impl_.costume_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_EquipCostumeResult.costume_id)
+}
+
+// bool is_equipped = 3;
+inline void S2C_EquipCostumeResult::clear_is_equipped() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.is_equipped_ = false;
+}
+inline bool S2C_EquipCostumeResult::is_equipped() const {
+  // @@protoc_insertion_point(field_get:lobby.S2C_EquipCostumeResult.is_equipped)
+  return _internal_is_equipped();
+}
+inline void S2C_EquipCostumeResult::set_is_equipped(bool value) {
+  _internal_set_is_equipped(value);
+  // @@protoc_insertion_point(field_set:lobby.S2C_EquipCostumeResult.is_equipped)
+}
+inline bool S2C_EquipCostumeResult::_internal_is_equipped() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.is_equipped_;
+}
+inline void S2C_EquipCostumeResult::_internal_set_is_equipped(bool value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.is_equipped_ = value;
+}
+
+// string message = 4;
+inline void S2C_EquipCostumeResult::clear_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.ClearToEmpty();
+}
+inline const std::string& S2C_EquipCostumeResult::message() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:lobby.S2C_EquipCostumeResult.message)
+  return _internal_message();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_EquipCostumeResult::set_message(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:lobby.S2C_EquipCostumeResult.message)
+}
+inline std::string* S2C_EquipCostumeResult::mutable_message() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:lobby.S2C_EquipCostumeResult.message)
+  return _s;
+}
+inline const std::string& S2C_EquipCostumeResult::_internal_message() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.message_.Get();
+}
+inline void S2C_EquipCostumeResult::_internal_set_message(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.Set(value, GetArena());
+}
+inline std::string* S2C_EquipCostumeResult::_internal_mutable_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.message_.Mutable( GetArena());
+}
+inline std::string* S2C_EquipCostumeResult::release_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:lobby.S2C_EquipCostumeResult.message)
+  return _impl_.message_.Release();
+}
+inline void S2C_EquipCostumeResult::set_allocated_message(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.message_.IsDefault()) {
+    _impl_.message_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:lobby.S2C_EquipCostumeResult.message)
+}
 
 #ifdef __GNUC__
 #pragma GCC diagnostic pop
 #endif  // __GNUC__
 
-	// @@protoc_insertion_point(namespace_scope)
+// @@protoc_insertion_point(namespace_scope)
 }  // namespace lobby
+
+
+namespace google {
+namespace protobuf {
+
+template <>
+struct is_proto_enum<::lobby::ItemType> : std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor<::lobby::ItemType>() {
+  return ::lobby::ItemType_descriptor();
+}
+template <>
+struct is_proto_enum<::lobby::ItemTier> : std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor<::lobby::ItemTier>() {
+  return ::lobby::ItemTier_descriptor();
+}
+
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
 

@@ -77,6 +77,36 @@ const ::uint32_t
         ::_pbi::kInvalidFieldOffsetTag,
         ::_pbi::kInvalidFieldOffsetTag,
         ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
         PROTOBUF_FIELD_OFFSET(::center::GamePacket, _impl_.payload_),
 };
 
@@ -90,20 +120,67 @@ static const ::_pb::Message* const file_default_instances[] = {
 const char descriptor_table_protodef_center_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
     "\n\014center.proto\022\006center\032\nauth.proto\032\013lobb"
-    "y.proto\032\014ingame.proto\"\373\003\n\nGamePacket\022$\n\t"
+    "y.proto\032\014ingame.proto\"\305\022\n\nGamePacket\022$\n\t"
     "c2s_login\030\001 \001(\0132\017.auth.C2S_LoginH\000\022$\n\ts2"
     "c_login\030\002 \001(\0132\017.auth.S2C_LoginH\000\0220\n\017c2s_"
-    "enter_lobby\030\003 \001(\0132\025.lobby.C2S_EnterLobby"
-    "H\000\0220\n\017s2c_enter_lobby\030\004 \001(\0132\025.lobby.S2C_"
-    "EnterLobbyH\000\022.\n\016c2s_game_start\030\005 \001(\0132\024.l"
-    "obby.C2S_GameStartH\000\022.\n\016s2c_game_start\030\006"
-    " \001(\0132\024.lobby.S2C_GameStartH\000\0221\n\017c2s_play"
-    "er_move\030\007 \001(\0132\026.ingame.C2S_PlayerMoveH\000\022"
-    "1\n\017s2c_player_move\030\010 \001(\0132\026.ingame.S2C_Pl"
-    "ayerMoveH\000\0225\n\021c2s_player_attack\030\t \001(\0132\030."
-    "ingame.C2S_PlayerAttackH\000\0225\n\021s2c_player_"
-    "attack\030\n \001(\0132\030.ingame.S2C_PlayerAttackH\000"
-    "B\t\n\007payloadb\006proto3"
+    "enter_lobby\030\013 \001(\0132\025.lobby.C2S_EnterLobby"
+    "H\000\0220\n\017s2c_enter_lobby\030\014 \001(\0132\025.lobby.S2C_"
+    "EnterLobbyH\000\022.\n\016c2s_game_start\030\r \001(\0132\024.l"
+    "obby.C2S_GameStartH\000\022.\n\016s2c_game_start\030\016"
+    " \001(\0132\024.lobby.S2C_GameStartH\000\0227\n\023s2c_lobb"
+    "y_user_list\030\017 \001(\0132\030.lobby.S2C_LobbyUserL"
+    "istH\000\0222\n\020c2s_shop_request\030\020 \001(\0132\026.lobby."
+    "C2S_ShopRequestH\000\0224\n\021s2c_shpe_response\030\021"
+    " \001(\0132\027.lobby.S2C_ShopResponseH\000\022*\n\014c2s_b"
+    "uy_item\030\022 \001(\0132\022.lobby.C2S_BuyItemH\000\022.\n\016s"
+    "2c_buy_result\030\023 \001(\0132\024.lobby.S2C_BuyResul"
+    "tH\000\022E\n\033c2s_buy_and_open_random_box\030\024 \001(\013"
+    "2\036.lobby.C2S_BuyAndOpenRandomBoxH\000\022R\n\"s2"
+    "c_buy_and_open_random_box_result\030\025 \001(\0132$"
+    ".lobby.S2C_BuyAndOpenRandomBoxResultH\000\022<"
+    "\n\025c2s_inventory_request\030\026 \001(\0132\033.lobby.C2"
+    "S_InventoryRequestH\000\022>\n\026s2c_inventory_re"
+    "sponse\030\027 \001(\0132\034.lobby.S2C_InventoryRespon"
+    "seH\000\0224\n\021c2s_equip_costume\030\030 \001(\0132\027.lobby."
+    "C2S_EquipCostumeH\000\022A\n\030s2c_equip_costume_"
+    "result\030\031 \001(\0132\035.lobby.S2C_EquipCostumeRes"
+    "ultH\000\022-\n\rc2s_join_game\030e \001(\0132\024.ingame.C2"
+    "S_JoinGameH\000\022:\n\024s2c_join_game_result\030f \001"
+    "(\0132\032.ingame.S2C_JoinGameResultH\000\0221\n\017c2s_"
+    "player_move\030g \001(\0132\026.ingame.C2S_PlayerMov"
+    "eH\000\022J\n\034s2c_player_move_notification\030h \001("
+    "\0132\".ingame.S2C_PlayerMoveNotificationH\000\022"
+    "5\n\021c2s_player_attack\030i \001(\0132\030.ingame.C2S_"
+    "PlayerAttackH\000\022B\n\030s2c_player_attack_resu"
+    "lt\030j \001(\0132\036.ingame.S2C_PlayerAttackResult"
+    "H\000\022H\n\033s2c_attack_hit_notification\030k \001(\0132"
+    "!.ingame.S2C_AttackHitNotificationH\000\022L\n\035"
+    "s2c_player_death_notification\030l \001(\0132#.in"
+    "game.S2C_PlayerDeathNotificationH\000\022/\n\016s2"
+    "c_game_state\030m \001(\0132\025.ingame.S2C_GameStat"
+    "eH\000\0225\n\021c2s_gene_acquired\030n \001(\0132\030.ingame."
+    "C2S_GeneAcquiredH\000\022B\n\030s2c_gene_acquired_"
+    "result\030o \001(\0132\036.ingame.S2C_GeneAcquiredRe"
+    "sultH\000\022/\n\016c2s_equip_gene\030p \001(\0132\025.ingame."
+    "C2S_EquipGeneH\000\022<\n\025s2c_gene_equip_result"
+    "\030q \001(\0132\033.ingame.S2C_GeneEquipResultH\000\0229\n"
+    "\023c2s_transform_giant\030r \001(\0132\032.ingame.C2S_"
+    "TransformGiantH\000\022;\n\024s2c_transform_result"
+    "\030s \001(\0132\033.ingame.S2C_TransformResultH\000\022\?\n"
+    "\026s2c_crown_notification\030t \001(\0132\035.ingame.S"
+    "2C_CrownNotificationH\000\022H\n\033s2c_crown_drop"
+    "_notification\030u \001(\0132!.ingame.S2C_CrownDr"
+    "opNotificationH\000\0223\n\020c2s_pickup_crown\030v \001"
+    "(\0132\027.ingame.C2S_PickupCrownH\000\022@\n\027s2c_cro"
+    "wn_pickup_result\030w \001(\0132\035.ingame.S2C_Crow"
+    "nPickupResultH\000\0223\n\020c2s_hidden_skill\030x \001("
+    "\0132\027.ingame.C2S_HiddenSkillH\000\022@\n\027s2c_hidd"
+    "en_skill_result\030y \001(\0132\035.ingame.S2C_Hidde"
+    "nSkillResultH\000\022U\n\"s2c_giant_kill_contrib"
+    "ution_result\030z \001(\0132\'.ingame.S2C_GiantKil"
+    "lContributionResultH\000\022+\n\014s2c_game_end\030{ "
+    "\001(\0132\023.ingame.S2C_GameEndH\000B\t\n\007payloadb\006p"
+    "roto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_center_2eproto_deps[3] =
     {
@@ -115,7 +192,7 @@ static ::absl::once_flag descriptor_table_center_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_center_2eproto = {
     false,
     false,
-    579,
+    2445,
     descriptor_table_protodef_center_2eproto,
     "center.proto",
     &descriptor_table_center_2eproto_once,
@@ -281,6 +358,318 @@ void GamePacket::clear_s2c_game_start() {
     clear_has_payload();
   }
 }
+void GamePacket::set_allocated_s2c_lobby_user_list(::lobby::S2C_LobbyUserList* s2c_lobby_user_list) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_lobby_user_list) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_lobby_user_list)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_lobby_user_list = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_lobby_user_list, submessage_arena);
+    }
+    set_has_s2c_lobby_user_list();
+    _impl_.payload_.s2c_lobby_user_list_ = s2c_lobby_user_list;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_lobby_user_list)
+}
+void GamePacket::clear_s2c_lobby_user_list() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CLobbyUserList) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_lobby_user_list_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_lobby_user_list_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_c2s_shop_request(::lobby::C2S_ShopRequest* c2s_shop_request) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (c2s_shop_request) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(c2s_shop_request)->GetArena();
+    if (message_arena != submessage_arena) {
+      c2s_shop_request = ::google::protobuf::internal::GetOwnedMessage(message_arena, c2s_shop_request, submessage_arena);
+    }
+    set_has_c2s_shop_request();
+    _impl_.payload_.c2s_shop_request_ = c2s_shop_request;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.c2s_shop_request)
+}
+void GamePacket::clear_c2s_shop_request() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kC2SShopRequest) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.c2s_shop_request_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_shop_request_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_shpe_response(::lobby::S2C_ShopResponse* s2c_shpe_response) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_shpe_response) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_shpe_response)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_shpe_response = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_shpe_response, submessage_arena);
+    }
+    set_has_s2c_shpe_response();
+    _impl_.payload_.s2c_shpe_response_ = s2c_shpe_response;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_shpe_response)
+}
+void GamePacket::clear_s2c_shpe_response() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CShpeResponse) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_shpe_response_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_shpe_response_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_c2s_buy_item(::lobby::C2S_BuyItem* c2s_buy_item) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (c2s_buy_item) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(c2s_buy_item)->GetArena();
+    if (message_arena != submessage_arena) {
+      c2s_buy_item = ::google::protobuf::internal::GetOwnedMessage(message_arena, c2s_buy_item, submessage_arena);
+    }
+    set_has_c2s_buy_item();
+    _impl_.payload_.c2s_buy_item_ = c2s_buy_item;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.c2s_buy_item)
+}
+void GamePacket::clear_c2s_buy_item() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kC2SBuyItem) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.c2s_buy_item_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_buy_item_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_buy_result(::lobby::S2C_BuyResult* s2c_buy_result) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_buy_result) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_buy_result)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_buy_result = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_buy_result, submessage_arena);
+    }
+    set_has_s2c_buy_result();
+    _impl_.payload_.s2c_buy_result_ = s2c_buy_result;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_buy_result)
+}
+void GamePacket::clear_s2c_buy_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CBuyResult) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_buy_result_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_buy_result_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_c2s_buy_and_open_random_box(::lobby::C2S_BuyAndOpenRandomBox* c2s_buy_and_open_random_box) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (c2s_buy_and_open_random_box) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(c2s_buy_and_open_random_box)->GetArena();
+    if (message_arena != submessage_arena) {
+      c2s_buy_and_open_random_box = ::google::protobuf::internal::GetOwnedMessage(message_arena, c2s_buy_and_open_random_box, submessage_arena);
+    }
+    set_has_c2s_buy_and_open_random_box();
+    _impl_.payload_.c2s_buy_and_open_random_box_ = c2s_buy_and_open_random_box;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.c2s_buy_and_open_random_box)
+}
+void GamePacket::clear_c2s_buy_and_open_random_box() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kC2SBuyAndOpenRandomBox) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.c2s_buy_and_open_random_box_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_buy_and_open_random_box_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_buy_and_open_random_box_result(::lobby::S2C_BuyAndOpenRandomBoxResult* s2c_buy_and_open_random_box_result) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_buy_and_open_random_box_result) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_buy_and_open_random_box_result)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_buy_and_open_random_box_result = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_buy_and_open_random_box_result, submessage_arena);
+    }
+    set_has_s2c_buy_and_open_random_box_result();
+    _impl_.payload_.s2c_buy_and_open_random_box_result_ = s2c_buy_and_open_random_box_result;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_buy_and_open_random_box_result)
+}
+void GamePacket::clear_s2c_buy_and_open_random_box_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CBuyAndOpenRandomBoxResult) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_buy_and_open_random_box_result_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_buy_and_open_random_box_result_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_c2s_inventory_request(::lobby::C2S_InventoryRequest* c2s_inventory_request) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (c2s_inventory_request) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(c2s_inventory_request)->GetArena();
+    if (message_arena != submessage_arena) {
+      c2s_inventory_request = ::google::protobuf::internal::GetOwnedMessage(message_arena, c2s_inventory_request, submessage_arena);
+    }
+    set_has_c2s_inventory_request();
+    _impl_.payload_.c2s_inventory_request_ = c2s_inventory_request;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.c2s_inventory_request)
+}
+void GamePacket::clear_c2s_inventory_request() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kC2SInventoryRequest) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.c2s_inventory_request_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_inventory_request_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_inventory_response(::lobby::S2C_InventoryResponse* s2c_inventory_response) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_inventory_response) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_inventory_response)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_inventory_response = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_inventory_response, submessage_arena);
+    }
+    set_has_s2c_inventory_response();
+    _impl_.payload_.s2c_inventory_response_ = s2c_inventory_response;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_inventory_response)
+}
+void GamePacket::clear_s2c_inventory_response() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CInventoryResponse) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_inventory_response_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_inventory_response_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_c2s_equip_costume(::lobby::C2S_EquipCostume* c2s_equip_costume) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (c2s_equip_costume) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(c2s_equip_costume)->GetArena();
+    if (message_arena != submessage_arena) {
+      c2s_equip_costume = ::google::protobuf::internal::GetOwnedMessage(message_arena, c2s_equip_costume, submessage_arena);
+    }
+    set_has_c2s_equip_costume();
+    _impl_.payload_.c2s_equip_costume_ = c2s_equip_costume;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.c2s_equip_costume)
+}
+void GamePacket::clear_c2s_equip_costume() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kC2SEquipCostume) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.c2s_equip_costume_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_equip_costume_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_equip_costume_result(::lobby::S2C_EquipCostumeResult* s2c_equip_costume_result) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_equip_costume_result) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_equip_costume_result)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_equip_costume_result = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_equip_costume_result, submessage_arena);
+    }
+    set_has_s2c_equip_costume_result();
+    _impl_.payload_.s2c_equip_costume_result_ = s2c_equip_costume_result;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_equip_costume_result)
+}
+void GamePacket::clear_s2c_equip_costume_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CEquipCostumeResult) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_equip_costume_result_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_equip_costume_result_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_c2s_join_game(::ingame::C2S_JoinGame* c2s_join_game) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (c2s_join_game) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(c2s_join_game)->GetArena();
+    if (message_arena != submessage_arena) {
+      c2s_join_game = ::google::protobuf::internal::GetOwnedMessage(message_arena, c2s_join_game, submessage_arena);
+    }
+    set_has_c2s_join_game();
+    _impl_.payload_.c2s_join_game_ = c2s_join_game;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.c2s_join_game)
+}
+void GamePacket::clear_c2s_join_game() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kC2SJoinGame) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.c2s_join_game_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_join_game_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_join_game_result(::ingame::S2C_JoinGameResult* s2c_join_game_result) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_join_game_result) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_join_game_result)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_join_game_result = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_join_game_result, submessage_arena);
+    }
+    set_has_s2c_join_game_result();
+    _impl_.payload_.s2c_join_game_result_ = s2c_join_game_result;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_join_game_result)
+}
+void GamePacket::clear_s2c_join_game_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CJoinGameResult) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_join_game_result_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_join_game_result_);
+    }
+    clear_has_payload();
+  }
+}
 void GamePacket::set_allocated_c2s_player_move(::ingame::C2S_PlayerMove* c2s_player_move) {
   ::google::protobuf::Arena* message_arena = GetArena();
   clear_payload();
@@ -305,26 +694,26 @@ void GamePacket::clear_c2s_player_move() {
     clear_has_payload();
   }
 }
-void GamePacket::set_allocated_s2c_player_move(::ingame::S2C_PlayerMove* s2c_player_move) {
+void GamePacket::set_allocated_s2c_player_move_notification(::ingame::S2C_PlayerMoveNotification* s2c_player_move_notification) {
   ::google::protobuf::Arena* message_arena = GetArena();
   clear_payload();
-  if (s2c_player_move) {
-    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_player_move)->GetArena();
+  if (s2c_player_move_notification) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_player_move_notification)->GetArena();
     if (message_arena != submessage_arena) {
-      s2c_player_move = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_player_move, submessage_arena);
+      s2c_player_move_notification = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_player_move_notification, submessage_arena);
     }
-    set_has_s2c_player_move();
-    _impl_.payload_.s2c_player_move_ = s2c_player_move;
+    set_has_s2c_player_move_notification();
+    _impl_.payload_.s2c_player_move_notification_ = s2c_player_move_notification;
   }
-  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_player_move)
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_player_move_notification)
 }
-void GamePacket::clear_s2c_player_move() {
+void GamePacket::clear_s2c_player_move_notification() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (payload_case() == kS2CPlayerMove) {
+  if (payload_case() == kS2CPlayerMoveNotification) {
     if (GetArena() == nullptr) {
-      delete _impl_.payload_.s2c_player_move_;
+      delete _impl_.payload_.s2c_player_move_notification_;
     } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
-      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_player_move_);
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_player_move_notification_);
     }
     clear_has_payload();
   }
@@ -353,26 +742,434 @@ void GamePacket::clear_c2s_player_attack() {
     clear_has_payload();
   }
 }
-void GamePacket::set_allocated_s2c_player_attack(::ingame::S2C_PlayerAttack* s2c_player_attack) {
+void GamePacket::set_allocated_s2c_player_attack_result(::ingame::S2C_PlayerAttackResult* s2c_player_attack_result) {
   ::google::protobuf::Arena* message_arena = GetArena();
   clear_payload();
-  if (s2c_player_attack) {
-    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_player_attack)->GetArena();
+  if (s2c_player_attack_result) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_player_attack_result)->GetArena();
     if (message_arena != submessage_arena) {
-      s2c_player_attack = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_player_attack, submessage_arena);
+      s2c_player_attack_result = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_player_attack_result, submessage_arena);
     }
-    set_has_s2c_player_attack();
-    _impl_.payload_.s2c_player_attack_ = s2c_player_attack;
+    set_has_s2c_player_attack_result();
+    _impl_.payload_.s2c_player_attack_result_ = s2c_player_attack_result;
   }
-  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_player_attack)
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_player_attack_result)
 }
-void GamePacket::clear_s2c_player_attack() {
+void GamePacket::clear_s2c_player_attack_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (payload_case() == kS2CPlayerAttack) {
+  if (payload_case() == kS2CPlayerAttackResult) {
     if (GetArena() == nullptr) {
-      delete _impl_.payload_.s2c_player_attack_;
+      delete _impl_.payload_.s2c_player_attack_result_;
     } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
-      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_player_attack_);
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_player_attack_result_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_attack_hit_notification(::ingame::S2C_AttackHitNotification* s2c_attack_hit_notification) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_attack_hit_notification) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_attack_hit_notification)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_attack_hit_notification = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_attack_hit_notification, submessage_arena);
+    }
+    set_has_s2c_attack_hit_notification();
+    _impl_.payload_.s2c_attack_hit_notification_ = s2c_attack_hit_notification;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_attack_hit_notification)
+}
+void GamePacket::clear_s2c_attack_hit_notification() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CAttackHitNotification) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_attack_hit_notification_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_attack_hit_notification_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_player_death_notification(::ingame::S2C_PlayerDeathNotification* s2c_player_death_notification) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_player_death_notification) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_player_death_notification)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_player_death_notification = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_player_death_notification, submessage_arena);
+    }
+    set_has_s2c_player_death_notification();
+    _impl_.payload_.s2c_player_death_notification_ = s2c_player_death_notification;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_player_death_notification)
+}
+void GamePacket::clear_s2c_player_death_notification() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CPlayerDeathNotification) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_player_death_notification_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_player_death_notification_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_game_state(::ingame::S2C_GameState* s2c_game_state) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_game_state) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_game_state)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_game_state = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_game_state, submessage_arena);
+    }
+    set_has_s2c_game_state();
+    _impl_.payload_.s2c_game_state_ = s2c_game_state;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_game_state)
+}
+void GamePacket::clear_s2c_game_state() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CGameState) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_game_state_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_game_state_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_c2s_gene_acquired(::ingame::C2S_GeneAcquired* c2s_gene_acquired) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (c2s_gene_acquired) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(c2s_gene_acquired)->GetArena();
+    if (message_arena != submessage_arena) {
+      c2s_gene_acquired = ::google::protobuf::internal::GetOwnedMessage(message_arena, c2s_gene_acquired, submessage_arena);
+    }
+    set_has_c2s_gene_acquired();
+    _impl_.payload_.c2s_gene_acquired_ = c2s_gene_acquired;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.c2s_gene_acquired)
+}
+void GamePacket::clear_c2s_gene_acquired() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kC2SGeneAcquired) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.c2s_gene_acquired_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_gene_acquired_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_gene_acquired_result(::ingame::S2C_GeneAcquiredResult* s2c_gene_acquired_result) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_gene_acquired_result) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_gene_acquired_result)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_gene_acquired_result = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_gene_acquired_result, submessage_arena);
+    }
+    set_has_s2c_gene_acquired_result();
+    _impl_.payload_.s2c_gene_acquired_result_ = s2c_gene_acquired_result;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_gene_acquired_result)
+}
+void GamePacket::clear_s2c_gene_acquired_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CGeneAcquiredResult) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_gene_acquired_result_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_gene_acquired_result_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_c2s_equip_gene(::ingame::C2S_EquipGene* c2s_equip_gene) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (c2s_equip_gene) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(c2s_equip_gene)->GetArena();
+    if (message_arena != submessage_arena) {
+      c2s_equip_gene = ::google::protobuf::internal::GetOwnedMessage(message_arena, c2s_equip_gene, submessage_arena);
+    }
+    set_has_c2s_equip_gene();
+    _impl_.payload_.c2s_equip_gene_ = c2s_equip_gene;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.c2s_equip_gene)
+}
+void GamePacket::clear_c2s_equip_gene() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kC2SEquipGene) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.c2s_equip_gene_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_equip_gene_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_gene_equip_result(::ingame::S2C_GeneEquipResult* s2c_gene_equip_result) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_gene_equip_result) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_gene_equip_result)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_gene_equip_result = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_gene_equip_result, submessage_arena);
+    }
+    set_has_s2c_gene_equip_result();
+    _impl_.payload_.s2c_gene_equip_result_ = s2c_gene_equip_result;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_gene_equip_result)
+}
+void GamePacket::clear_s2c_gene_equip_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CGeneEquipResult) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_gene_equip_result_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_gene_equip_result_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_c2s_transform_giant(::ingame::C2S_TransformGiant* c2s_transform_giant) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (c2s_transform_giant) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(c2s_transform_giant)->GetArena();
+    if (message_arena != submessage_arena) {
+      c2s_transform_giant = ::google::protobuf::internal::GetOwnedMessage(message_arena, c2s_transform_giant, submessage_arena);
+    }
+    set_has_c2s_transform_giant();
+    _impl_.payload_.c2s_transform_giant_ = c2s_transform_giant;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.c2s_transform_giant)
+}
+void GamePacket::clear_c2s_transform_giant() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kC2STransformGiant) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.c2s_transform_giant_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_transform_giant_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_transform_result(::ingame::S2C_TransformResult* s2c_transform_result) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_transform_result) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_transform_result)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_transform_result = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_transform_result, submessage_arena);
+    }
+    set_has_s2c_transform_result();
+    _impl_.payload_.s2c_transform_result_ = s2c_transform_result;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_transform_result)
+}
+void GamePacket::clear_s2c_transform_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CTransformResult) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_transform_result_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_transform_result_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_crown_notification(::ingame::S2C_CrownNotification* s2c_crown_notification) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_crown_notification) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_crown_notification)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_crown_notification = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_crown_notification, submessage_arena);
+    }
+    set_has_s2c_crown_notification();
+    _impl_.payload_.s2c_crown_notification_ = s2c_crown_notification;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_crown_notification)
+}
+void GamePacket::clear_s2c_crown_notification() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CCrownNotification) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_crown_notification_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_crown_notification_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_crown_drop_notification(::ingame::S2C_CrownDropNotification* s2c_crown_drop_notification) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_crown_drop_notification) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_crown_drop_notification)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_crown_drop_notification = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_crown_drop_notification, submessage_arena);
+    }
+    set_has_s2c_crown_drop_notification();
+    _impl_.payload_.s2c_crown_drop_notification_ = s2c_crown_drop_notification;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_crown_drop_notification)
+}
+void GamePacket::clear_s2c_crown_drop_notification() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CCrownDropNotification) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_crown_drop_notification_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_crown_drop_notification_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_c2s_pickup_crown(::ingame::C2S_PickupCrown* c2s_pickup_crown) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (c2s_pickup_crown) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(c2s_pickup_crown)->GetArena();
+    if (message_arena != submessage_arena) {
+      c2s_pickup_crown = ::google::protobuf::internal::GetOwnedMessage(message_arena, c2s_pickup_crown, submessage_arena);
+    }
+    set_has_c2s_pickup_crown();
+    _impl_.payload_.c2s_pickup_crown_ = c2s_pickup_crown;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.c2s_pickup_crown)
+}
+void GamePacket::clear_c2s_pickup_crown() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kC2SPickupCrown) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.c2s_pickup_crown_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_pickup_crown_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_crown_pickup_result(::ingame::S2C_CrownPickupResult* s2c_crown_pickup_result) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_crown_pickup_result) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_crown_pickup_result)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_crown_pickup_result = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_crown_pickup_result, submessage_arena);
+    }
+    set_has_s2c_crown_pickup_result();
+    _impl_.payload_.s2c_crown_pickup_result_ = s2c_crown_pickup_result;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_crown_pickup_result)
+}
+void GamePacket::clear_s2c_crown_pickup_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CCrownPickupResult) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_crown_pickup_result_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_crown_pickup_result_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_c2s_hidden_skill(::ingame::C2S_HiddenSkill* c2s_hidden_skill) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (c2s_hidden_skill) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(c2s_hidden_skill)->GetArena();
+    if (message_arena != submessage_arena) {
+      c2s_hidden_skill = ::google::protobuf::internal::GetOwnedMessage(message_arena, c2s_hidden_skill, submessage_arena);
+    }
+    set_has_c2s_hidden_skill();
+    _impl_.payload_.c2s_hidden_skill_ = c2s_hidden_skill;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.c2s_hidden_skill)
+}
+void GamePacket::clear_c2s_hidden_skill() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kC2SHiddenSkill) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.c2s_hidden_skill_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_hidden_skill_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_hidden_skill_result(::ingame::S2C_HiddenSkillResult* s2c_hidden_skill_result) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_hidden_skill_result) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_hidden_skill_result)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_hidden_skill_result = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_hidden_skill_result, submessage_arena);
+    }
+    set_has_s2c_hidden_skill_result();
+    _impl_.payload_.s2c_hidden_skill_result_ = s2c_hidden_skill_result;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_hidden_skill_result)
+}
+void GamePacket::clear_s2c_hidden_skill_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CHiddenSkillResult) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_hidden_skill_result_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_hidden_skill_result_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_giant_kill_contribution_result(::ingame::S2C_GiantKillContributionResult* s2c_giant_kill_contribution_result) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_giant_kill_contribution_result) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_giant_kill_contribution_result)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_giant_kill_contribution_result = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_giant_kill_contribution_result, submessage_arena);
+    }
+    set_has_s2c_giant_kill_contribution_result();
+    _impl_.payload_.s2c_giant_kill_contribution_result_ = s2c_giant_kill_contribution_result;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_giant_kill_contribution_result)
+}
+void GamePacket::clear_s2c_giant_kill_contribution_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CGiantKillContributionResult) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_giant_kill_contribution_result_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_giant_kill_contribution_result_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_game_end(::ingame::S2C_GameEnd* s2c_game_end) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_game_end) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_game_end)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_game_end = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_game_end, submessage_arena);
+    }
+    set_has_s2c_game_end();
+    _impl_.payload_.s2c_game_end_ = s2c_game_end;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_game_end)
+}
+void GamePacket::clear_s2c_game_end() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CGameEnd) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_game_end_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_game_end_);
     }
     clear_has_payload();
   }
@@ -427,17 +1224,107 @@ GamePacket::GamePacket(
       case kS2CGameStart:
         _impl_.payload_.s2c_game_start_ = ::google::protobuf::Message::CopyConstruct<::lobby::S2C_GameStart>(arena, *from._impl_.payload_.s2c_game_start_);
         break;
+      case kS2CLobbyUserList:
+        _impl_.payload_.s2c_lobby_user_list_ = ::google::protobuf::Message::CopyConstruct<::lobby::S2C_LobbyUserList>(arena, *from._impl_.payload_.s2c_lobby_user_list_);
+        break;
+      case kC2SShopRequest:
+        _impl_.payload_.c2s_shop_request_ = ::google::protobuf::Message::CopyConstruct<::lobby::C2S_ShopRequest>(arena, *from._impl_.payload_.c2s_shop_request_);
+        break;
+      case kS2CShpeResponse:
+        _impl_.payload_.s2c_shpe_response_ = ::google::protobuf::Message::CopyConstruct<::lobby::S2C_ShopResponse>(arena, *from._impl_.payload_.s2c_shpe_response_);
+        break;
+      case kC2SBuyItem:
+        _impl_.payload_.c2s_buy_item_ = ::google::protobuf::Message::CopyConstruct<::lobby::C2S_BuyItem>(arena, *from._impl_.payload_.c2s_buy_item_);
+        break;
+      case kS2CBuyResult:
+        _impl_.payload_.s2c_buy_result_ = ::google::protobuf::Message::CopyConstruct<::lobby::S2C_BuyResult>(arena, *from._impl_.payload_.s2c_buy_result_);
+        break;
+      case kC2SBuyAndOpenRandomBox:
+        _impl_.payload_.c2s_buy_and_open_random_box_ = ::google::protobuf::Message::CopyConstruct<::lobby::C2S_BuyAndOpenRandomBox>(arena, *from._impl_.payload_.c2s_buy_and_open_random_box_);
+        break;
+      case kS2CBuyAndOpenRandomBoxResult:
+        _impl_.payload_.s2c_buy_and_open_random_box_result_ = ::google::protobuf::Message::CopyConstruct<::lobby::S2C_BuyAndOpenRandomBoxResult>(arena, *from._impl_.payload_.s2c_buy_and_open_random_box_result_);
+        break;
+      case kC2SInventoryRequest:
+        _impl_.payload_.c2s_inventory_request_ = ::google::protobuf::Message::CopyConstruct<::lobby::C2S_InventoryRequest>(arena, *from._impl_.payload_.c2s_inventory_request_);
+        break;
+      case kS2CInventoryResponse:
+        _impl_.payload_.s2c_inventory_response_ = ::google::protobuf::Message::CopyConstruct<::lobby::S2C_InventoryResponse>(arena, *from._impl_.payload_.s2c_inventory_response_);
+        break;
+      case kC2SEquipCostume:
+        _impl_.payload_.c2s_equip_costume_ = ::google::protobuf::Message::CopyConstruct<::lobby::C2S_EquipCostume>(arena, *from._impl_.payload_.c2s_equip_costume_);
+        break;
+      case kS2CEquipCostumeResult:
+        _impl_.payload_.s2c_equip_costume_result_ = ::google::protobuf::Message::CopyConstruct<::lobby::S2C_EquipCostumeResult>(arena, *from._impl_.payload_.s2c_equip_costume_result_);
+        break;
+      case kC2SJoinGame:
+        _impl_.payload_.c2s_join_game_ = ::google::protobuf::Message::CopyConstruct<::ingame::C2S_JoinGame>(arena, *from._impl_.payload_.c2s_join_game_);
+        break;
+      case kS2CJoinGameResult:
+        _impl_.payload_.s2c_join_game_result_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_JoinGameResult>(arena, *from._impl_.payload_.s2c_join_game_result_);
+        break;
       case kC2SPlayerMove:
         _impl_.payload_.c2s_player_move_ = ::google::protobuf::Message::CopyConstruct<::ingame::C2S_PlayerMove>(arena, *from._impl_.payload_.c2s_player_move_);
         break;
-      case kS2CPlayerMove:
-        _impl_.payload_.s2c_player_move_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_PlayerMove>(arena, *from._impl_.payload_.s2c_player_move_);
+      case kS2CPlayerMoveNotification:
+        _impl_.payload_.s2c_player_move_notification_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_PlayerMoveNotification>(arena, *from._impl_.payload_.s2c_player_move_notification_);
         break;
       case kC2SPlayerAttack:
         _impl_.payload_.c2s_player_attack_ = ::google::protobuf::Message::CopyConstruct<::ingame::C2S_PlayerAttack>(arena, *from._impl_.payload_.c2s_player_attack_);
         break;
-      case kS2CPlayerAttack:
-        _impl_.payload_.s2c_player_attack_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_PlayerAttack>(arena, *from._impl_.payload_.s2c_player_attack_);
+      case kS2CPlayerAttackResult:
+        _impl_.payload_.s2c_player_attack_result_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_PlayerAttackResult>(arena, *from._impl_.payload_.s2c_player_attack_result_);
+        break;
+      case kS2CAttackHitNotification:
+        _impl_.payload_.s2c_attack_hit_notification_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_AttackHitNotification>(arena, *from._impl_.payload_.s2c_attack_hit_notification_);
+        break;
+      case kS2CPlayerDeathNotification:
+        _impl_.payload_.s2c_player_death_notification_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_PlayerDeathNotification>(arena, *from._impl_.payload_.s2c_player_death_notification_);
+        break;
+      case kS2CGameState:
+        _impl_.payload_.s2c_game_state_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_GameState>(arena, *from._impl_.payload_.s2c_game_state_);
+        break;
+      case kC2SGeneAcquired:
+        _impl_.payload_.c2s_gene_acquired_ = ::google::protobuf::Message::CopyConstruct<::ingame::C2S_GeneAcquired>(arena, *from._impl_.payload_.c2s_gene_acquired_);
+        break;
+      case kS2CGeneAcquiredResult:
+        _impl_.payload_.s2c_gene_acquired_result_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_GeneAcquiredResult>(arena, *from._impl_.payload_.s2c_gene_acquired_result_);
+        break;
+      case kC2SEquipGene:
+        _impl_.payload_.c2s_equip_gene_ = ::google::protobuf::Message::CopyConstruct<::ingame::C2S_EquipGene>(arena, *from._impl_.payload_.c2s_equip_gene_);
+        break;
+      case kS2CGeneEquipResult:
+        _impl_.payload_.s2c_gene_equip_result_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_GeneEquipResult>(arena, *from._impl_.payload_.s2c_gene_equip_result_);
+        break;
+      case kC2STransformGiant:
+        _impl_.payload_.c2s_transform_giant_ = ::google::protobuf::Message::CopyConstruct<::ingame::C2S_TransformGiant>(arena, *from._impl_.payload_.c2s_transform_giant_);
+        break;
+      case kS2CTransformResult:
+        _impl_.payload_.s2c_transform_result_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_TransformResult>(arena, *from._impl_.payload_.s2c_transform_result_);
+        break;
+      case kS2CCrownNotification:
+        _impl_.payload_.s2c_crown_notification_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_CrownNotification>(arena, *from._impl_.payload_.s2c_crown_notification_);
+        break;
+      case kS2CCrownDropNotification:
+        _impl_.payload_.s2c_crown_drop_notification_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_CrownDropNotification>(arena, *from._impl_.payload_.s2c_crown_drop_notification_);
+        break;
+      case kC2SPickupCrown:
+        _impl_.payload_.c2s_pickup_crown_ = ::google::protobuf::Message::CopyConstruct<::ingame::C2S_PickupCrown>(arena, *from._impl_.payload_.c2s_pickup_crown_);
+        break;
+      case kS2CCrownPickupResult:
+        _impl_.payload_.s2c_crown_pickup_result_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_CrownPickupResult>(arena, *from._impl_.payload_.s2c_crown_pickup_result_);
+        break;
+      case kC2SHiddenSkill:
+        _impl_.payload_.c2s_hidden_skill_ = ::google::protobuf::Message::CopyConstruct<::ingame::C2S_HiddenSkill>(arena, *from._impl_.payload_.c2s_hidden_skill_);
+        break;
+      case kS2CHiddenSkillResult:
+        _impl_.payload_.s2c_hidden_skill_result_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_HiddenSkillResult>(arena, *from._impl_.payload_.s2c_hidden_skill_result_);
+        break;
+      case kS2CGiantKillContributionResult:
+        _impl_.payload_.s2c_giant_kill_contribution_result_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_GiantKillContributionResult>(arena, *from._impl_.payload_.s2c_giant_kill_contribution_result_);
+        break;
+      case kS2CGameEnd:
+        _impl_.payload_.s2c_game_end_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_GameEnd>(arena, *from._impl_.payload_.s2c_game_end_);
         break;
   }
 
@@ -519,6 +1406,110 @@ void GamePacket::clear_payload() {
       }
       break;
     }
+    case kS2CLobbyUserList: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_lobby_user_list_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_lobby_user_list_);
+      }
+      break;
+    }
+    case kC2SShopRequest: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.c2s_shop_request_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_shop_request_);
+      }
+      break;
+    }
+    case kS2CShpeResponse: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_shpe_response_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_shpe_response_);
+      }
+      break;
+    }
+    case kC2SBuyItem: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.c2s_buy_item_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_buy_item_);
+      }
+      break;
+    }
+    case kS2CBuyResult: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_buy_result_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_buy_result_);
+      }
+      break;
+    }
+    case kC2SBuyAndOpenRandomBox: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.c2s_buy_and_open_random_box_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_buy_and_open_random_box_);
+      }
+      break;
+    }
+    case kS2CBuyAndOpenRandomBoxResult: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_buy_and_open_random_box_result_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_buy_and_open_random_box_result_);
+      }
+      break;
+    }
+    case kC2SInventoryRequest: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.c2s_inventory_request_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_inventory_request_);
+      }
+      break;
+    }
+    case kS2CInventoryResponse: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_inventory_response_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_inventory_response_);
+      }
+      break;
+    }
+    case kC2SEquipCostume: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.c2s_equip_costume_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_equip_costume_);
+      }
+      break;
+    }
+    case kS2CEquipCostumeResult: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_equip_costume_result_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_equip_costume_result_);
+      }
+      break;
+    }
+    case kC2SJoinGame: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.c2s_join_game_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_join_game_);
+      }
+      break;
+    }
+    case kS2CJoinGameResult: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_join_game_result_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_join_game_result_);
+      }
+      break;
+    }
     case kC2SPlayerMove: {
       if (GetArena() == nullptr) {
         delete _impl_.payload_.c2s_player_move_;
@@ -527,11 +1518,11 @@ void GamePacket::clear_payload() {
       }
       break;
     }
-    case kS2CPlayerMove: {
+    case kS2CPlayerMoveNotification: {
       if (GetArena() == nullptr) {
-        delete _impl_.payload_.s2c_player_move_;
+        delete _impl_.payload_.s2c_player_move_notification_;
       } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
-        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_player_move_);
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_player_move_notification_);
       }
       break;
     }
@@ -543,11 +1534,147 @@ void GamePacket::clear_payload() {
       }
       break;
     }
-    case kS2CPlayerAttack: {
+    case kS2CPlayerAttackResult: {
       if (GetArena() == nullptr) {
-        delete _impl_.payload_.s2c_player_attack_;
+        delete _impl_.payload_.s2c_player_attack_result_;
       } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
-        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_player_attack_);
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_player_attack_result_);
+      }
+      break;
+    }
+    case kS2CAttackHitNotification: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_attack_hit_notification_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_attack_hit_notification_);
+      }
+      break;
+    }
+    case kS2CPlayerDeathNotification: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_player_death_notification_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_player_death_notification_);
+      }
+      break;
+    }
+    case kS2CGameState: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_game_state_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_game_state_);
+      }
+      break;
+    }
+    case kC2SGeneAcquired: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.c2s_gene_acquired_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_gene_acquired_);
+      }
+      break;
+    }
+    case kS2CGeneAcquiredResult: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_gene_acquired_result_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_gene_acquired_result_);
+      }
+      break;
+    }
+    case kC2SEquipGene: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.c2s_equip_gene_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_equip_gene_);
+      }
+      break;
+    }
+    case kS2CGeneEquipResult: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_gene_equip_result_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_gene_equip_result_);
+      }
+      break;
+    }
+    case kC2STransformGiant: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.c2s_transform_giant_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_transform_giant_);
+      }
+      break;
+    }
+    case kS2CTransformResult: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_transform_result_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_transform_result_);
+      }
+      break;
+    }
+    case kS2CCrownNotification: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_crown_notification_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_crown_notification_);
+      }
+      break;
+    }
+    case kS2CCrownDropNotification: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_crown_drop_notification_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_crown_drop_notification_);
+      }
+      break;
+    }
+    case kC2SPickupCrown: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.c2s_pickup_crown_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_pickup_crown_);
+      }
+      break;
+    }
+    case kS2CCrownPickupResult: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_crown_pickup_result_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_crown_pickup_result_);
+      }
+      break;
+    }
+    case kC2SHiddenSkill: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.c2s_hidden_skill_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_hidden_skill_);
+      }
+      break;
+    }
+    case kS2CHiddenSkillResult: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_hidden_skill_result_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_hidden_skill_result_);
+      }
+      break;
+    }
+    case kS2CGiantKillContributionResult: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_giant_kill_contribution_result_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_giant_kill_contribution_result_);
+      }
+      break;
+    }
+    case kS2CGameEnd: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_game_end_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_game_end_);
       }
       break;
     }
@@ -595,16 +1722,16 @@ const ::google::protobuf::internal::ClassData* GamePacket::GetClassData() const 
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 10, 10, 0, 2> GamePacket::_table_ = {
+const ::_pbi::TcParseTable<0, 40, 40, 0, 9> GamePacket::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    10, 0,  // max_field_number, fast_idx_mask
+    123, 0,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294966272,  // skipmap
+    4261413884,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    10,  // num_field_entries
-    10,  // num_aux_entries
+    40,  // num_field_entries
+    40,  // num_aux_entries
     offsetof(decltype(_table_), aux_entries),
     _class_data_.base(),
     nullptr,  // post_loop_handler
@@ -615,6 +1742,8 @@ const ::_pbi::TcParseTable<0, 10, 10, 0, 2> GamePacket::_table_ = {
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
   }}, {{
+    101, 0, 2,
+    0, 17, 65408, 33,
     65535, 65535
   }}, {{
     // .auth.C2S_Login c2s_login = 1;
@@ -623,29 +1752,119 @@ const ::_pbi::TcParseTable<0, 10, 10, 0, 2> GamePacket::_table_ = {
     // .auth.S2C_Login s2c_login = 2;
     {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_login_), _Internal::kOneofCaseOffset + 0, 1,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .lobby.C2S_EnterLobby c2s_enter_lobby = 3;
+    // .lobby.C2S_EnterLobby c2s_enter_lobby = 11;
     {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_enter_lobby_), _Internal::kOneofCaseOffset + 0, 2,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .lobby.S2C_EnterLobby s2c_enter_lobby = 4;
+    // .lobby.S2C_EnterLobby s2c_enter_lobby = 12;
     {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_enter_lobby_), _Internal::kOneofCaseOffset + 0, 3,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .lobby.C2S_GameStart c2s_game_start = 5;
+    // .lobby.C2S_GameStart c2s_game_start = 13;
     {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_game_start_), _Internal::kOneofCaseOffset + 0, 4,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .lobby.S2C_GameStart s2c_game_start = 6;
+    // .lobby.S2C_GameStart s2c_game_start = 14;
     {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_game_start_), _Internal::kOneofCaseOffset + 0, 5,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .ingame.C2S_PlayerMove c2s_player_move = 7;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_player_move_), _Internal::kOneofCaseOffset + 0, 6,
+    // .lobby.S2C_LobbyUserList s2c_lobby_user_list = 15;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_lobby_user_list_), _Internal::kOneofCaseOffset + 0, 6,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .ingame.S2C_PlayerMove s2c_player_move = 8;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_player_move_), _Internal::kOneofCaseOffset + 0, 7,
+    // .lobby.C2S_ShopRequest c2s_shop_request = 16;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_shop_request_), _Internal::kOneofCaseOffset + 0, 7,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .ingame.C2S_PlayerAttack c2s_player_attack = 9;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_player_attack_), _Internal::kOneofCaseOffset + 0, 8,
+    // .lobby.S2C_ShopResponse s2c_shpe_response = 17;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_shpe_response_), _Internal::kOneofCaseOffset + 0, 8,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .ingame.S2C_PlayerAttack s2c_player_attack = 10;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_player_attack_), _Internal::kOneofCaseOffset + 0, 9,
+    // .lobby.C2S_BuyItem c2s_buy_item = 18;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_buy_item_), _Internal::kOneofCaseOffset + 0, 9,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .lobby.S2C_BuyResult s2c_buy_result = 19;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_buy_result_), _Internal::kOneofCaseOffset + 0, 10,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .lobby.C2S_BuyAndOpenRandomBox c2s_buy_and_open_random_box = 20;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_buy_and_open_random_box_), _Internal::kOneofCaseOffset + 0, 11,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .lobby.S2C_BuyAndOpenRandomBoxResult s2c_buy_and_open_random_box_result = 21;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_buy_and_open_random_box_result_), _Internal::kOneofCaseOffset + 0, 12,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .lobby.C2S_InventoryRequest c2s_inventory_request = 22;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_inventory_request_), _Internal::kOneofCaseOffset + 0, 13,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .lobby.S2C_InventoryResponse s2c_inventory_response = 23;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_inventory_response_), _Internal::kOneofCaseOffset + 0, 14,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .lobby.C2S_EquipCostume c2s_equip_costume = 24;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_equip_costume_), _Internal::kOneofCaseOffset + 0, 15,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .lobby.S2C_EquipCostumeResult s2c_equip_costume_result = 25;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_equip_costume_result_), _Internal::kOneofCaseOffset + 0, 16,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.C2S_JoinGame c2s_join_game = 101;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_join_game_), _Internal::kOneofCaseOffset + 0, 17,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_JoinGameResult s2c_join_game_result = 102;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_join_game_result_), _Internal::kOneofCaseOffset + 0, 18,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.C2S_PlayerMove c2s_player_move = 103;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_player_move_), _Internal::kOneofCaseOffset + 0, 19,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_PlayerMoveNotification s2c_player_move_notification = 104;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_player_move_notification_), _Internal::kOneofCaseOffset + 0, 20,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.C2S_PlayerAttack c2s_player_attack = 105;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_player_attack_), _Internal::kOneofCaseOffset + 0, 21,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_PlayerAttackResult s2c_player_attack_result = 106;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_player_attack_result_), _Internal::kOneofCaseOffset + 0, 22,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_AttackHitNotification s2c_attack_hit_notification = 107;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_attack_hit_notification_), _Internal::kOneofCaseOffset + 0, 23,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_PlayerDeathNotification s2c_player_death_notification = 108;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_player_death_notification_), _Internal::kOneofCaseOffset + 0, 24,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_GameState s2c_game_state = 109;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_game_state_), _Internal::kOneofCaseOffset + 0, 25,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.C2S_GeneAcquired c2s_gene_acquired = 110;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_gene_acquired_), _Internal::kOneofCaseOffset + 0, 26,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_GeneAcquiredResult s2c_gene_acquired_result = 111;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_gene_acquired_result_), _Internal::kOneofCaseOffset + 0, 27,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.C2S_EquipGene c2s_equip_gene = 112;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_equip_gene_), _Internal::kOneofCaseOffset + 0, 28,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_GeneEquipResult s2c_gene_equip_result = 113;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_gene_equip_result_), _Internal::kOneofCaseOffset + 0, 29,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.C2S_TransformGiant c2s_transform_giant = 114;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_transform_giant_), _Internal::kOneofCaseOffset + 0, 30,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_TransformResult s2c_transform_result = 115;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_transform_result_), _Internal::kOneofCaseOffset + 0, 31,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_CrownNotification s2c_crown_notification = 116;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_crown_notification_), _Internal::kOneofCaseOffset + 0, 32,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_CrownDropNotification s2c_crown_drop_notification = 117;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_crown_drop_notification_), _Internal::kOneofCaseOffset + 0, 33,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.C2S_PickupCrown c2s_pickup_crown = 118;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_pickup_crown_), _Internal::kOneofCaseOffset + 0, 34,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_CrownPickupResult s2c_crown_pickup_result = 119;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_crown_pickup_result_), _Internal::kOneofCaseOffset + 0, 35,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.C2S_HiddenSkill c2s_hidden_skill = 120;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_hidden_skill_), _Internal::kOneofCaseOffset + 0, 36,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_HiddenSkillResult s2c_hidden_skill_result = 121;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_hidden_skill_result_), _Internal::kOneofCaseOffset + 0, 37,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_GiantKillContributionResult s2c_giant_kill_contribution_result = 122;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_giant_kill_contribution_result_), _Internal::kOneofCaseOffset + 0, 38,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_GameEnd s2c_game_end = 123;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_game_end_), _Internal::kOneofCaseOffset + 0, 39,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
     {::_pbi::TcParser::GetTable<::auth::C2S_Login>()},
@@ -654,10 +1873,40 @@ const ::_pbi::TcParseTable<0, 10, 10, 0, 2> GamePacket::_table_ = {
     {::_pbi::TcParser::GetTable<::lobby::S2C_EnterLobby>()},
     {::_pbi::TcParser::GetTable<::lobby::C2S_GameStart>()},
     {::_pbi::TcParser::GetTable<::lobby::S2C_GameStart>()},
+    {::_pbi::TcParser::GetTable<::lobby::S2C_LobbyUserList>()},
+    {::_pbi::TcParser::GetTable<::lobby::C2S_ShopRequest>()},
+    {::_pbi::TcParser::GetTable<::lobby::S2C_ShopResponse>()},
+    {::_pbi::TcParser::GetTable<::lobby::C2S_BuyItem>()},
+    {::_pbi::TcParser::GetTable<::lobby::S2C_BuyResult>()},
+    {::_pbi::TcParser::GetTable<::lobby::C2S_BuyAndOpenRandomBox>()},
+    {::_pbi::TcParser::GetTable<::lobby::S2C_BuyAndOpenRandomBoxResult>()},
+    {::_pbi::TcParser::GetTable<::lobby::C2S_InventoryRequest>()},
+    {::_pbi::TcParser::GetTable<::lobby::S2C_InventoryResponse>()},
+    {::_pbi::TcParser::GetTable<::lobby::C2S_EquipCostume>()},
+    {::_pbi::TcParser::GetTable<::lobby::S2C_EquipCostumeResult>()},
+    {::_pbi::TcParser::GetTable<::ingame::C2S_JoinGame>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_JoinGameResult>()},
     {::_pbi::TcParser::GetTable<::ingame::C2S_PlayerMove>()},
-    {::_pbi::TcParser::GetTable<::ingame::S2C_PlayerMove>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_PlayerMoveNotification>()},
     {::_pbi::TcParser::GetTable<::ingame::C2S_PlayerAttack>()},
-    {::_pbi::TcParser::GetTable<::ingame::S2C_PlayerAttack>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_PlayerAttackResult>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_AttackHitNotification>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_PlayerDeathNotification>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_GameState>()},
+    {::_pbi::TcParser::GetTable<::ingame::C2S_GeneAcquired>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_GeneAcquiredResult>()},
+    {::_pbi::TcParser::GetTable<::ingame::C2S_EquipGene>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_GeneEquipResult>()},
+    {::_pbi::TcParser::GetTable<::ingame::C2S_TransformGiant>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_TransformResult>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_CrownNotification>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_CrownDropNotification>()},
+    {::_pbi::TcParser::GetTable<::ingame::C2S_PickupCrown>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_CrownPickupResult>()},
+    {::_pbi::TcParser::GetTable<::ingame::C2S_HiddenSkill>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_HiddenSkillResult>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_GiantKillContributionResult>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_GameEnd>()},
   }}, {{
   }},
 };
@@ -703,49 +1952,229 @@ PROTOBUF_NOINLINE void GamePacket::Clear() {
             }
             case kC2SEnterLobby: {
               target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                  3, *this_._impl_.payload_.c2s_enter_lobby_, this_._impl_.payload_.c2s_enter_lobby_->GetCachedSize(), target,
+                  11, *this_._impl_.payload_.c2s_enter_lobby_, this_._impl_.payload_.c2s_enter_lobby_->GetCachedSize(), target,
                   stream);
               break;
             }
             case kS2CEnterLobby: {
               target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                  4, *this_._impl_.payload_.s2c_enter_lobby_, this_._impl_.payload_.s2c_enter_lobby_->GetCachedSize(), target,
+                  12, *this_._impl_.payload_.s2c_enter_lobby_, this_._impl_.payload_.s2c_enter_lobby_->GetCachedSize(), target,
                   stream);
               break;
             }
             case kC2SGameStart: {
               target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                  5, *this_._impl_.payload_.c2s_game_start_, this_._impl_.payload_.c2s_game_start_->GetCachedSize(), target,
+                  13, *this_._impl_.payload_.c2s_game_start_, this_._impl_.payload_.c2s_game_start_->GetCachedSize(), target,
                   stream);
               break;
             }
             case kS2CGameStart: {
               target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                  6, *this_._impl_.payload_.s2c_game_start_, this_._impl_.payload_.s2c_game_start_->GetCachedSize(), target,
+                  14, *this_._impl_.payload_.s2c_game_start_, this_._impl_.payload_.s2c_game_start_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CLobbyUserList: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  15, *this_._impl_.payload_.s2c_lobby_user_list_, this_._impl_.payload_.s2c_lobby_user_list_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kC2SShopRequest: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  16, *this_._impl_.payload_.c2s_shop_request_, this_._impl_.payload_.c2s_shop_request_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CShpeResponse: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  17, *this_._impl_.payload_.s2c_shpe_response_, this_._impl_.payload_.s2c_shpe_response_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kC2SBuyItem: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  18, *this_._impl_.payload_.c2s_buy_item_, this_._impl_.payload_.c2s_buy_item_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CBuyResult: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  19, *this_._impl_.payload_.s2c_buy_result_, this_._impl_.payload_.s2c_buy_result_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kC2SBuyAndOpenRandomBox: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  20, *this_._impl_.payload_.c2s_buy_and_open_random_box_, this_._impl_.payload_.c2s_buy_and_open_random_box_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CBuyAndOpenRandomBoxResult: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  21, *this_._impl_.payload_.s2c_buy_and_open_random_box_result_, this_._impl_.payload_.s2c_buy_and_open_random_box_result_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kC2SInventoryRequest: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  22, *this_._impl_.payload_.c2s_inventory_request_, this_._impl_.payload_.c2s_inventory_request_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CInventoryResponse: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  23, *this_._impl_.payload_.s2c_inventory_response_, this_._impl_.payload_.s2c_inventory_response_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kC2SEquipCostume: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  24, *this_._impl_.payload_.c2s_equip_costume_, this_._impl_.payload_.c2s_equip_costume_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CEquipCostumeResult: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  25, *this_._impl_.payload_.s2c_equip_costume_result_, this_._impl_.payload_.s2c_equip_costume_result_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kC2SJoinGame: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  101, *this_._impl_.payload_.c2s_join_game_, this_._impl_.payload_.c2s_join_game_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CJoinGameResult: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  102, *this_._impl_.payload_.s2c_join_game_result_, this_._impl_.payload_.s2c_join_game_result_->GetCachedSize(), target,
                   stream);
               break;
             }
             case kC2SPlayerMove: {
               target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                  7, *this_._impl_.payload_.c2s_player_move_, this_._impl_.payload_.c2s_player_move_->GetCachedSize(), target,
+                  103, *this_._impl_.payload_.c2s_player_move_, this_._impl_.payload_.c2s_player_move_->GetCachedSize(), target,
                   stream);
               break;
             }
-            case kS2CPlayerMove: {
+            case kS2CPlayerMoveNotification: {
               target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                  8, *this_._impl_.payload_.s2c_player_move_, this_._impl_.payload_.s2c_player_move_->GetCachedSize(), target,
+                  104, *this_._impl_.payload_.s2c_player_move_notification_, this_._impl_.payload_.s2c_player_move_notification_->GetCachedSize(), target,
                   stream);
               break;
             }
             case kC2SPlayerAttack: {
               target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                  9, *this_._impl_.payload_.c2s_player_attack_, this_._impl_.payload_.c2s_player_attack_->GetCachedSize(), target,
+                  105, *this_._impl_.payload_.c2s_player_attack_, this_._impl_.payload_.c2s_player_attack_->GetCachedSize(), target,
                   stream);
               break;
             }
-            case kS2CPlayerAttack: {
+            case kS2CPlayerAttackResult: {
               target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                  10, *this_._impl_.payload_.s2c_player_attack_, this_._impl_.payload_.s2c_player_attack_->GetCachedSize(), target,
+                  106, *this_._impl_.payload_.s2c_player_attack_result_, this_._impl_.payload_.s2c_player_attack_result_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CAttackHitNotification: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  107, *this_._impl_.payload_.s2c_attack_hit_notification_, this_._impl_.payload_.s2c_attack_hit_notification_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CPlayerDeathNotification: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  108, *this_._impl_.payload_.s2c_player_death_notification_, this_._impl_.payload_.s2c_player_death_notification_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CGameState: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  109, *this_._impl_.payload_.s2c_game_state_, this_._impl_.payload_.s2c_game_state_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kC2SGeneAcquired: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  110, *this_._impl_.payload_.c2s_gene_acquired_, this_._impl_.payload_.c2s_gene_acquired_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CGeneAcquiredResult: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  111, *this_._impl_.payload_.s2c_gene_acquired_result_, this_._impl_.payload_.s2c_gene_acquired_result_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kC2SEquipGene: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  112, *this_._impl_.payload_.c2s_equip_gene_, this_._impl_.payload_.c2s_equip_gene_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CGeneEquipResult: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  113, *this_._impl_.payload_.s2c_gene_equip_result_, this_._impl_.payload_.s2c_gene_equip_result_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kC2STransformGiant: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  114, *this_._impl_.payload_.c2s_transform_giant_, this_._impl_.payload_.c2s_transform_giant_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CTransformResult: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  115, *this_._impl_.payload_.s2c_transform_result_, this_._impl_.payload_.s2c_transform_result_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CCrownNotification: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  116, *this_._impl_.payload_.s2c_crown_notification_, this_._impl_.payload_.s2c_crown_notification_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CCrownDropNotification: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  117, *this_._impl_.payload_.s2c_crown_drop_notification_, this_._impl_.payload_.s2c_crown_drop_notification_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kC2SPickupCrown: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  118, *this_._impl_.payload_.c2s_pickup_crown_, this_._impl_.payload_.c2s_pickup_crown_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CCrownPickupResult: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  119, *this_._impl_.payload_.s2c_crown_pickup_result_, this_._impl_.payload_.s2c_crown_pickup_result_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kC2SHiddenSkill: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  120, *this_._impl_.payload_.c2s_hidden_skill_, this_._impl_.payload_.c2s_hidden_skill_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CHiddenSkillResult: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  121, *this_._impl_.payload_.s2c_hidden_skill_result_, this_._impl_.payload_.s2c_hidden_skill_result_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CGiantKillContributionResult: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  122, *this_._impl_.payload_.s2c_giant_kill_contribution_result_, this_._impl_.payload_.s2c_giant_kill_contribution_result_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CGameEnd: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  123, *this_._impl_.payload_.s2c_game_end_, this_._impl_.payload_.s2c_game_end_->GetCachedSize(), target,
                   stream);
               break;
             }
@@ -788,52 +2217,232 @@ PROTOBUF_NOINLINE void GamePacket::Clear() {
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_login_);
               break;
             }
-            // .lobby.C2S_EnterLobby c2s_enter_lobby = 3;
+            // .lobby.C2S_EnterLobby c2s_enter_lobby = 11;
             case kC2SEnterLobby: {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_enter_lobby_);
               break;
             }
-            // .lobby.S2C_EnterLobby s2c_enter_lobby = 4;
+            // .lobby.S2C_EnterLobby s2c_enter_lobby = 12;
             case kS2CEnterLobby: {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_enter_lobby_);
               break;
             }
-            // .lobby.C2S_GameStart c2s_game_start = 5;
+            // .lobby.C2S_GameStart c2s_game_start = 13;
             case kC2SGameStart: {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_game_start_);
               break;
             }
-            // .lobby.S2C_GameStart s2c_game_start = 6;
+            // .lobby.S2C_GameStart s2c_game_start = 14;
             case kS2CGameStart: {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_game_start_);
               break;
             }
-            // .ingame.C2S_PlayerMove c2s_player_move = 7;
-            case kC2SPlayerMove: {
+            // .lobby.S2C_LobbyUserList s2c_lobby_user_list = 15;
+            case kS2CLobbyUserList: {
               total_size += 1 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_lobby_user_list_);
+              break;
+            }
+            // .lobby.C2S_ShopRequest c2s_shop_request = 16;
+            case kC2SShopRequest: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_shop_request_);
+              break;
+            }
+            // .lobby.S2C_ShopResponse s2c_shpe_response = 17;
+            case kS2CShpeResponse: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_shpe_response_);
+              break;
+            }
+            // .lobby.C2S_BuyItem c2s_buy_item = 18;
+            case kC2SBuyItem: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_buy_item_);
+              break;
+            }
+            // .lobby.S2C_BuyResult s2c_buy_result = 19;
+            case kS2CBuyResult: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_buy_result_);
+              break;
+            }
+            // .lobby.C2S_BuyAndOpenRandomBox c2s_buy_and_open_random_box = 20;
+            case kC2SBuyAndOpenRandomBox: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_buy_and_open_random_box_);
+              break;
+            }
+            // .lobby.S2C_BuyAndOpenRandomBoxResult s2c_buy_and_open_random_box_result = 21;
+            case kS2CBuyAndOpenRandomBoxResult: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_buy_and_open_random_box_result_);
+              break;
+            }
+            // .lobby.C2S_InventoryRequest c2s_inventory_request = 22;
+            case kC2SInventoryRequest: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_inventory_request_);
+              break;
+            }
+            // .lobby.S2C_InventoryResponse s2c_inventory_response = 23;
+            case kS2CInventoryResponse: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_inventory_response_);
+              break;
+            }
+            // .lobby.C2S_EquipCostume c2s_equip_costume = 24;
+            case kC2SEquipCostume: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_equip_costume_);
+              break;
+            }
+            // .lobby.S2C_EquipCostumeResult s2c_equip_costume_result = 25;
+            case kS2CEquipCostumeResult: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_equip_costume_result_);
+              break;
+            }
+            // .ingame.C2S_JoinGame c2s_join_game = 101;
+            case kC2SJoinGame: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_join_game_);
+              break;
+            }
+            // .ingame.S2C_JoinGameResult s2c_join_game_result = 102;
+            case kS2CJoinGameResult: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_join_game_result_);
+              break;
+            }
+            // .ingame.C2S_PlayerMove c2s_player_move = 103;
+            case kC2SPlayerMove: {
+              total_size += 2 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_player_move_);
               break;
             }
-            // .ingame.S2C_PlayerMove s2c_player_move = 8;
-            case kS2CPlayerMove: {
-              total_size += 1 +
-                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_player_move_);
+            // .ingame.S2C_PlayerMoveNotification s2c_player_move_notification = 104;
+            case kS2CPlayerMoveNotification: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_player_move_notification_);
               break;
             }
-            // .ingame.C2S_PlayerAttack c2s_player_attack = 9;
+            // .ingame.C2S_PlayerAttack c2s_player_attack = 105;
             case kC2SPlayerAttack: {
-              total_size += 1 +
+              total_size += 2 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_player_attack_);
               break;
             }
-            // .ingame.S2C_PlayerAttack s2c_player_attack = 10;
-            case kS2CPlayerAttack: {
-              total_size += 1 +
-                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_player_attack_);
+            // .ingame.S2C_PlayerAttackResult s2c_player_attack_result = 106;
+            case kS2CPlayerAttackResult: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_player_attack_result_);
+              break;
+            }
+            // .ingame.S2C_AttackHitNotification s2c_attack_hit_notification = 107;
+            case kS2CAttackHitNotification: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_attack_hit_notification_);
+              break;
+            }
+            // .ingame.S2C_PlayerDeathNotification s2c_player_death_notification = 108;
+            case kS2CPlayerDeathNotification: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_player_death_notification_);
+              break;
+            }
+            // .ingame.S2C_GameState s2c_game_state = 109;
+            case kS2CGameState: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_game_state_);
+              break;
+            }
+            // .ingame.C2S_GeneAcquired c2s_gene_acquired = 110;
+            case kC2SGeneAcquired: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_gene_acquired_);
+              break;
+            }
+            // .ingame.S2C_GeneAcquiredResult s2c_gene_acquired_result = 111;
+            case kS2CGeneAcquiredResult: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_gene_acquired_result_);
+              break;
+            }
+            // .ingame.C2S_EquipGene c2s_equip_gene = 112;
+            case kC2SEquipGene: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_equip_gene_);
+              break;
+            }
+            // .ingame.S2C_GeneEquipResult s2c_gene_equip_result = 113;
+            case kS2CGeneEquipResult: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_gene_equip_result_);
+              break;
+            }
+            // .ingame.C2S_TransformGiant c2s_transform_giant = 114;
+            case kC2STransformGiant: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_transform_giant_);
+              break;
+            }
+            // .ingame.S2C_TransformResult s2c_transform_result = 115;
+            case kS2CTransformResult: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_transform_result_);
+              break;
+            }
+            // .ingame.S2C_CrownNotification s2c_crown_notification = 116;
+            case kS2CCrownNotification: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_crown_notification_);
+              break;
+            }
+            // .ingame.S2C_CrownDropNotification s2c_crown_drop_notification = 117;
+            case kS2CCrownDropNotification: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_crown_drop_notification_);
+              break;
+            }
+            // .ingame.C2S_PickupCrown c2s_pickup_crown = 118;
+            case kC2SPickupCrown: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_pickup_crown_);
+              break;
+            }
+            // .ingame.S2C_CrownPickupResult s2c_crown_pickup_result = 119;
+            case kS2CCrownPickupResult: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_crown_pickup_result_);
+              break;
+            }
+            // .ingame.C2S_HiddenSkill c2s_hidden_skill = 120;
+            case kC2SHiddenSkill: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_hidden_skill_);
+              break;
+            }
+            // .ingame.S2C_HiddenSkillResult s2c_hidden_skill_result = 121;
+            case kS2CHiddenSkillResult: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_hidden_skill_result_);
+              break;
+            }
+            // .ingame.S2C_GiantKillContributionResult s2c_giant_kill_contribution_result = 122;
+            case kS2CGiantKillContributionResult: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_giant_kill_contribution_result_);
+              break;
+            }
+            // .ingame.S2C_GameEnd s2c_game_end = 123;
+            case kS2CGameEnd: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_game_end_);
               break;
             }
             case PAYLOAD_NOT_SET: {
@@ -918,6 +2527,123 @@ void GamePacket::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goog
         }
         break;
       }
+      case kS2CLobbyUserList: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_lobby_user_list_ =
+              ::google::protobuf::Message::CopyConstruct<::lobby::S2C_LobbyUserList>(arena, *from._impl_.payload_.s2c_lobby_user_list_);
+        } else {
+          _this->_impl_.payload_.s2c_lobby_user_list_->MergeFrom(from._internal_s2c_lobby_user_list());
+        }
+        break;
+      }
+      case kC2SShopRequest: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.c2s_shop_request_ =
+              ::google::protobuf::Message::CopyConstruct<::lobby::C2S_ShopRequest>(arena, *from._impl_.payload_.c2s_shop_request_);
+        } else {
+          _this->_impl_.payload_.c2s_shop_request_->MergeFrom(from._internal_c2s_shop_request());
+        }
+        break;
+      }
+      case kS2CShpeResponse: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_shpe_response_ =
+              ::google::protobuf::Message::CopyConstruct<::lobby::S2C_ShopResponse>(arena, *from._impl_.payload_.s2c_shpe_response_);
+        } else {
+          _this->_impl_.payload_.s2c_shpe_response_->MergeFrom(from._internal_s2c_shpe_response());
+        }
+        break;
+      }
+      case kC2SBuyItem: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.c2s_buy_item_ =
+              ::google::protobuf::Message::CopyConstruct<::lobby::C2S_BuyItem>(arena, *from._impl_.payload_.c2s_buy_item_);
+        } else {
+          _this->_impl_.payload_.c2s_buy_item_->MergeFrom(from._internal_c2s_buy_item());
+        }
+        break;
+      }
+      case kS2CBuyResult: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_buy_result_ =
+              ::google::protobuf::Message::CopyConstruct<::lobby::S2C_BuyResult>(arena, *from._impl_.payload_.s2c_buy_result_);
+        } else {
+          _this->_impl_.payload_.s2c_buy_result_->MergeFrom(from._internal_s2c_buy_result());
+        }
+        break;
+      }
+      case kC2SBuyAndOpenRandomBox: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.c2s_buy_and_open_random_box_ =
+              ::google::protobuf::Message::CopyConstruct<::lobby::C2S_BuyAndOpenRandomBox>(arena, *from._impl_.payload_.c2s_buy_and_open_random_box_);
+        } else {
+          _this->_impl_.payload_.c2s_buy_and_open_random_box_->MergeFrom(from._internal_c2s_buy_and_open_random_box());
+        }
+        break;
+      }
+      case kS2CBuyAndOpenRandomBoxResult: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_buy_and_open_random_box_result_ =
+              ::google::protobuf::Message::CopyConstruct<::lobby::S2C_BuyAndOpenRandomBoxResult>(arena, *from._impl_.payload_.s2c_buy_and_open_random_box_result_);
+        } else {
+          _this->_impl_.payload_.s2c_buy_and_open_random_box_result_->MergeFrom(from._internal_s2c_buy_and_open_random_box_result());
+        }
+        break;
+      }
+      case kC2SInventoryRequest: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.c2s_inventory_request_ =
+              ::google::protobuf::Message::CopyConstruct<::lobby::C2S_InventoryRequest>(arena, *from._impl_.payload_.c2s_inventory_request_);
+        } else {
+          _this->_impl_.payload_.c2s_inventory_request_->MergeFrom(from._internal_c2s_inventory_request());
+        }
+        break;
+      }
+      case kS2CInventoryResponse: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_inventory_response_ =
+              ::google::protobuf::Message::CopyConstruct<::lobby::S2C_InventoryResponse>(arena, *from._impl_.payload_.s2c_inventory_response_);
+        } else {
+          _this->_impl_.payload_.s2c_inventory_response_->MergeFrom(from._internal_s2c_inventory_response());
+        }
+        break;
+      }
+      case kC2SEquipCostume: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.c2s_equip_costume_ =
+              ::google::protobuf::Message::CopyConstruct<::lobby::C2S_EquipCostume>(arena, *from._impl_.payload_.c2s_equip_costume_);
+        } else {
+          _this->_impl_.payload_.c2s_equip_costume_->MergeFrom(from._internal_c2s_equip_costume());
+        }
+        break;
+      }
+      case kS2CEquipCostumeResult: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_equip_costume_result_ =
+              ::google::protobuf::Message::CopyConstruct<::lobby::S2C_EquipCostumeResult>(arena, *from._impl_.payload_.s2c_equip_costume_result_);
+        } else {
+          _this->_impl_.payload_.s2c_equip_costume_result_->MergeFrom(from._internal_s2c_equip_costume_result());
+        }
+        break;
+      }
+      case kC2SJoinGame: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.c2s_join_game_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::C2S_JoinGame>(arena, *from._impl_.payload_.c2s_join_game_);
+        } else {
+          _this->_impl_.payload_.c2s_join_game_->MergeFrom(from._internal_c2s_join_game());
+        }
+        break;
+      }
+      case kS2CJoinGameResult: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_join_game_result_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_JoinGameResult>(arena, *from._impl_.payload_.s2c_join_game_result_);
+        } else {
+          _this->_impl_.payload_.s2c_join_game_result_->MergeFrom(from._internal_s2c_join_game_result());
+        }
+        break;
+      }
       case kC2SPlayerMove: {
         if (oneof_needs_init) {
           _this->_impl_.payload_.c2s_player_move_ =
@@ -927,12 +2653,12 @@ void GamePacket::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goog
         }
         break;
       }
-      case kS2CPlayerMove: {
+      case kS2CPlayerMoveNotification: {
         if (oneof_needs_init) {
-          _this->_impl_.payload_.s2c_player_move_ =
-              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_PlayerMove>(arena, *from._impl_.payload_.s2c_player_move_);
+          _this->_impl_.payload_.s2c_player_move_notification_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_PlayerMoveNotification>(arena, *from._impl_.payload_.s2c_player_move_notification_);
         } else {
-          _this->_impl_.payload_.s2c_player_move_->MergeFrom(from._internal_s2c_player_move());
+          _this->_impl_.payload_.s2c_player_move_notification_->MergeFrom(from._internal_s2c_player_move_notification());
         }
         break;
       }
@@ -945,12 +2671,165 @@ void GamePacket::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goog
         }
         break;
       }
-      case kS2CPlayerAttack: {
+      case kS2CPlayerAttackResult: {
         if (oneof_needs_init) {
-          _this->_impl_.payload_.s2c_player_attack_ =
-              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_PlayerAttack>(arena, *from._impl_.payload_.s2c_player_attack_);
+          _this->_impl_.payload_.s2c_player_attack_result_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_PlayerAttackResult>(arena, *from._impl_.payload_.s2c_player_attack_result_);
         } else {
-          _this->_impl_.payload_.s2c_player_attack_->MergeFrom(from._internal_s2c_player_attack());
+          _this->_impl_.payload_.s2c_player_attack_result_->MergeFrom(from._internal_s2c_player_attack_result());
+        }
+        break;
+      }
+      case kS2CAttackHitNotification: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_attack_hit_notification_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_AttackHitNotification>(arena, *from._impl_.payload_.s2c_attack_hit_notification_);
+        } else {
+          _this->_impl_.payload_.s2c_attack_hit_notification_->MergeFrom(from._internal_s2c_attack_hit_notification());
+        }
+        break;
+      }
+      case kS2CPlayerDeathNotification: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_player_death_notification_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_PlayerDeathNotification>(arena, *from._impl_.payload_.s2c_player_death_notification_);
+        } else {
+          _this->_impl_.payload_.s2c_player_death_notification_->MergeFrom(from._internal_s2c_player_death_notification());
+        }
+        break;
+      }
+      case kS2CGameState: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_game_state_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_GameState>(arena, *from._impl_.payload_.s2c_game_state_);
+        } else {
+          _this->_impl_.payload_.s2c_game_state_->MergeFrom(from._internal_s2c_game_state());
+        }
+        break;
+      }
+      case kC2SGeneAcquired: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.c2s_gene_acquired_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::C2S_GeneAcquired>(arena, *from._impl_.payload_.c2s_gene_acquired_);
+        } else {
+          _this->_impl_.payload_.c2s_gene_acquired_->MergeFrom(from._internal_c2s_gene_acquired());
+        }
+        break;
+      }
+      case kS2CGeneAcquiredResult: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_gene_acquired_result_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_GeneAcquiredResult>(arena, *from._impl_.payload_.s2c_gene_acquired_result_);
+        } else {
+          _this->_impl_.payload_.s2c_gene_acquired_result_->MergeFrom(from._internal_s2c_gene_acquired_result());
+        }
+        break;
+      }
+      case kC2SEquipGene: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.c2s_equip_gene_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::C2S_EquipGene>(arena, *from._impl_.payload_.c2s_equip_gene_);
+        } else {
+          _this->_impl_.payload_.c2s_equip_gene_->MergeFrom(from._internal_c2s_equip_gene());
+        }
+        break;
+      }
+      case kS2CGeneEquipResult: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_gene_equip_result_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_GeneEquipResult>(arena, *from._impl_.payload_.s2c_gene_equip_result_);
+        } else {
+          _this->_impl_.payload_.s2c_gene_equip_result_->MergeFrom(from._internal_s2c_gene_equip_result());
+        }
+        break;
+      }
+      case kC2STransformGiant: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.c2s_transform_giant_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::C2S_TransformGiant>(arena, *from._impl_.payload_.c2s_transform_giant_);
+        } else {
+          _this->_impl_.payload_.c2s_transform_giant_->MergeFrom(from._internal_c2s_transform_giant());
+        }
+        break;
+      }
+      case kS2CTransformResult: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_transform_result_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_TransformResult>(arena, *from._impl_.payload_.s2c_transform_result_);
+        } else {
+          _this->_impl_.payload_.s2c_transform_result_->MergeFrom(from._internal_s2c_transform_result());
+        }
+        break;
+      }
+      case kS2CCrownNotification: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_crown_notification_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_CrownNotification>(arena, *from._impl_.payload_.s2c_crown_notification_);
+        } else {
+          _this->_impl_.payload_.s2c_crown_notification_->MergeFrom(from._internal_s2c_crown_notification());
+        }
+        break;
+      }
+      case kS2CCrownDropNotification: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_crown_drop_notification_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_CrownDropNotification>(arena, *from._impl_.payload_.s2c_crown_drop_notification_);
+        } else {
+          _this->_impl_.payload_.s2c_crown_drop_notification_->MergeFrom(from._internal_s2c_crown_drop_notification());
+        }
+        break;
+      }
+      case kC2SPickupCrown: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.c2s_pickup_crown_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::C2S_PickupCrown>(arena, *from._impl_.payload_.c2s_pickup_crown_);
+        } else {
+          _this->_impl_.payload_.c2s_pickup_crown_->MergeFrom(from._internal_c2s_pickup_crown());
+        }
+        break;
+      }
+      case kS2CCrownPickupResult: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_crown_pickup_result_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_CrownPickupResult>(arena, *from._impl_.payload_.s2c_crown_pickup_result_);
+        } else {
+          _this->_impl_.payload_.s2c_crown_pickup_result_->MergeFrom(from._internal_s2c_crown_pickup_result());
+        }
+        break;
+      }
+      case kC2SHiddenSkill: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.c2s_hidden_skill_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::C2S_HiddenSkill>(arena, *from._impl_.payload_.c2s_hidden_skill_);
+        } else {
+          _this->_impl_.payload_.c2s_hidden_skill_->MergeFrom(from._internal_c2s_hidden_skill());
+        }
+        break;
+      }
+      case kS2CHiddenSkillResult: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_hidden_skill_result_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_HiddenSkillResult>(arena, *from._impl_.payload_.s2c_hidden_skill_result_);
+        } else {
+          _this->_impl_.payload_.s2c_hidden_skill_result_->MergeFrom(from._internal_s2c_hidden_skill_result());
+        }
+        break;
+      }
+      case kS2CGiantKillContributionResult: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_giant_kill_contribution_result_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_GiantKillContributionResult>(arena, *from._impl_.payload_.s2c_giant_kill_contribution_result_);
+        } else {
+          _this->_impl_.payload_.s2c_giant_kill_contribution_result_->MergeFrom(from._internal_s2c_giant_kill_contribution_result());
+        }
+        break;
+      }
+      case kS2CGameEnd: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_game_end_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_GameEnd>(arena, *from._impl_.payload_.s2c_game_end_);
+        } else {
+          _this->_impl_.payload_.s2c_game_end_->MergeFrom(from._internal_s2c_game_end());
         }
         break;
       }

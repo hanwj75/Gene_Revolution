@@ -26,19 +26,14 @@ namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
 namespace ingame {
 
-inline constexpr S2C_PlayerDeath::Impl_::Impl_(
+inline constexpr Vector2::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : player_id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        killer_id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
-        death_noti_{static_cast< ::ingame::DeathType >(0)},
+      : x_{0},
+        y_{0},
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR S2C_PlayerDeath::S2C_PlayerDeath(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR Vector2::Vector2(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -46,16 +41,108 @@ PROTOBUF_CONSTEXPR S2C_PlayerDeath::S2C_PlayerDeath(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct S2C_PlayerDeathDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR S2C_PlayerDeathDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~S2C_PlayerDeathDefaultTypeInternal() {}
+struct Vector2DefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Vector2DefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Vector2DefaultTypeInternal() {}
   union {
-    S2C_PlayerDeath _instance;
+    Vector2 _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_PlayerDeathDefaultTypeInternal _S2C_PlayerDeath_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Vector2DefaultTypeInternal _Vector2_default_instance_;
+
+inline constexpr S2C_PlayerDeathNotification::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : player_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        killer_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        death_notification_{static_cast< ::ingame::DeathType >(0)},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR S2C_PlayerDeathNotification::S2C_PlayerDeathNotification(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct S2C_PlayerDeathNotificationDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_PlayerDeathNotificationDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_PlayerDeathNotificationDefaultTypeInternal() {}
+  union {
+    S2C_PlayerDeathNotification _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_PlayerDeathNotificationDefaultTypeInternal _S2C_PlayerDeathNotification_default_instance_;
+
+inline constexpr S2C_HiddenSkillResult::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        message_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        skill_type_{static_cast< ::ingame::GeneType >(0)},
+        success_{false},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR S2C_HiddenSkillResult::S2C_HiddenSkillResult(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct S2C_HiddenSkillResultDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_HiddenSkillResultDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_HiddenSkillResultDefaultTypeInternal() {}
+  union {
+    S2C_HiddenSkillResult _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_HiddenSkillResultDefaultTypeInternal _S2C_HiddenSkillResult_default_instance_;
+
+inline constexpr S2C_GiantKillContributionResult_Contribution::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        damage_{0},
+        percentage_{0},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR S2C_GiantKillContributionResult_Contribution::S2C_GiantKillContributionResult_Contribution(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct S2C_GiantKillContributionResult_ContributionDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_GiantKillContributionResult_ContributionDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_GiantKillContributionResult_ContributionDefaultTypeInternal() {}
+  union {
+    S2C_GiantKillContributionResult_Contribution _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_GiantKillContributionResult_ContributionDefaultTypeInternal _S2C_GiantKillContributionResult_Contribution_default_instance_;
 
 inline constexpr S2C_GeneEquipResult::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -68,6 +155,7 @@ inline constexpr S2C_GeneEquipResult::Impl_::Impl_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         success_{false},
+        can_transform_{false},
         _cached_size_{0} {}
 
 template <typename>
@@ -90,7 +178,7 @@ struct S2C_GeneEquipResultDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_GeneEquipResultDefaultTypeInternal _S2C_GeneEquipResult_default_instance_;
 
-inline constexpr S2C_GeneAcquired::Impl_::Impl_(
+inline constexpr S2C_GeneAcquiredResult::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : user_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
@@ -100,12 +188,12 @@ inline constexpr S2C_GeneAcquired::Impl_::Impl_(
             ::_pbi::ConstantInitialized()),
         gene_type_{static_cast< ::ingame::GeneType >(0)},
         new_count_{0},
-        total_genes_{0},
-        is_hidden_{false},
+        total_gene_count_{0},
+        can_transform_{false},
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR S2C_GeneAcquired::S2C_GeneAcquired(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR S2C_GeneAcquiredResult::S2C_GeneAcquiredResult(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -113,25 +201,35 @@ PROTOBUF_CONSTEXPR S2C_GeneAcquired::S2C_GeneAcquired(::_pbi::ConstantInitialize
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct S2C_GeneAcquiredDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR S2C_GeneAcquiredDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~S2C_GeneAcquiredDefaultTypeInternal() {}
+struct S2C_GeneAcquiredResultDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_GeneAcquiredResultDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_GeneAcquiredResultDefaultTypeInternal() {}
   union {
-    S2C_GeneAcquired _instance;
+    S2C_GeneAcquiredResult _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_GeneAcquiredDefaultTypeInternal _S2C_GeneAcquired_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_GeneAcquiredResultDefaultTypeInternal _S2C_GeneAcquiredResult_default_instance_;
 
-inline constexpr Positions::Impl_::Impl_(
+inline constexpr S2C_GameEnd_PlayerResult::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : x_{0},
-        y_{0},
+      : user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        nickname_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        final_score_{0},
+        gold_earned_{0},
+        final_race_{static_cast< ::ingame::RaceType >(0)},
+        player_killed_{0},
+        monster_killed_{0},
+        survival_time_{0},
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR Positions::Positions(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR S2C_GameEnd_PlayerResult::S2C_GameEnd_PlayerResult(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -139,16 +237,111 @@ PROTOBUF_CONSTEXPR Positions::Positions(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct PositionsDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR PositionsDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~PositionsDefaultTypeInternal() {}
+struct S2C_GameEnd_PlayerResultDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_GameEnd_PlayerResultDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_GameEnd_PlayerResultDefaultTypeInternal() {}
   union {
-    Positions _instance;
+    S2C_GameEnd_PlayerResult _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PositionsDefaultTypeInternal _Positions_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_GameEnd_PlayerResultDefaultTypeInternal _S2C_GameEnd_PlayerResult_default_instance_;
+
+inline constexpr S2C_DamageContribution::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        giant_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        damage_dealt_{0},
+        total_contribution_{0},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR S2C_DamageContribution::S2C_DamageContribution(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct S2C_DamageContributionDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_DamageContributionDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_DamageContributionDefaultTypeInternal() {}
+  union {
+    S2C_DamageContribution _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_DamageContributionDefaultTypeInternal _S2C_DamageContribution_default_instance_;
+
+inline constexpr S2C_CrownPickupResult::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        message_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        success_{false},
+        countdown_{0},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR S2C_CrownPickupResult::S2C_CrownPickupResult(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct S2C_CrownPickupResultDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_CrownPickupResultDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_CrownPickupResultDefaultTypeInternal() {}
+  union {
+    S2C_CrownPickupResult _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_CrownPickupResultDefaultTypeInternal _S2C_CrownPickupResult_default_instance_;
+
+inline constexpr S2C_CrownNotification::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        giant_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        countdown_{0},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR S2C_CrownNotification::S2C_CrownNotification(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct S2C_CrownNotificationDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_CrownNotificationDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_CrownNotificationDefaultTypeInternal() {}
+  union {
+    S2C_CrownNotification _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_CrownNotificationDefaultTypeInternal _S2C_CrownNotification_default_instance_;
               template <typename>
 PROTOBUF_CONSTEXPR PlayerRaceState_GeneInventoryEntry_DoNotUse::PlayerRaceState_GeneInventoryEntry_DoNotUse(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
@@ -197,15 +390,17 @@ struct GiantStatsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GiantStatsDefaultTypeInternal _GiantStats_default_instance_;
 
-inline constexpr C2S_Transform::Impl_::Impl_(
+inline constexpr GameWorldState::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : user_id_(
-            &::google::protobuf::internal::fixed_address_empty_string,
-            ::_pbi::ConstantInitialized()),
+      : current_phase_{0},
+        phase_time_remaining_{0},
+        human_count_{0},
+        giane_count_{0},
+        monster_count_{0},
         _cached_size_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR C2S_Transform::C2S_Transform(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR GameWorldState::GameWorldState(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -213,16 +408,73 @@ PROTOBUF_CONSTEXPR C2S_Transform::C2S_Transform(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct C2S_TransformDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR C2S_TransformDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~C2S_TransformDefaultTypeInternal() {}
+struct GameWorldStateDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GameWorldStateDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GameWorldStateDefaultTypeInternal() {}
   union {
-    C2S_Transform _instance;
+    GameWorldState _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 C2S_TransformDefaultTypeInternal _C2S_Transform_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GameWorldStateDefaultTypeInternal _GameWorldState_default_instance_;
+
+inline constexpr C2S_TransformGiant::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR C2S_TransformGiant::C2S_TransformGiant(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct C2S_TransformGiantDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR C2S_TransformGiantDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~C2S_TransformGiantDefaultTypeInternal() {}
+  union {
+    C2S_TransformGiant _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 C2S_TransformGiantDefaultTypeInternal _C2S_TransformGiant_default_instance_;
+
+inline constexpr C2S_JoinGame::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        room_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR C2S_JoinGame::C2S_JoinGame(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct C2S_JoinGameDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR C2S_JoinGameDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~C2S_JoinGameDefaultTypeInternal() {}
+  union {
+    C2S_JoinGame _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 C2S_JoinGameDefaultTypeInternal _C2S_JoinGame_default_instance_;
 
 inline constexpr C2S_GeneAcquired::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -285,7 +537,7 @@ struct C2S_EquipGeneDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 C2S_EquipGeneDefaultTypeInternal _C2S_EquipGene_default_instance_;
 
-inline constexpr S2C_Transform::Impl_::Impl_(
+inline constexpr S2C_TransformResult::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
         user_id_(
@@ -299,7 +551,7 @@ inline constexpr S2C_Transform::Impl_::Impl_(
         new_race_{static_cast< ::ingame::RaceType >(0)} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR S2C_Transform::S2C_Transform(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR S2C_TransformResult::S2C_TransformResult(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -307,18 +559,18 @@ PROTOBUF_CONSTEXPR S2C_Transform::S2C_Transform(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct S2C_TransformDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR S2C_TransformDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~S2C_TransformDefaultTypeInternal() {}
+struct S2C_TransformResultDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_TransformResultDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_TransformResultDefaultTypeInternal() {}
   union {
-    S2C_Transform _instance;
+    S2C_TransformResult _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_TransformDefaultTypeInternal _S2C_Transform_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_TransformResultDefaultTypeInternal _S2C_TransformResult_default_instance_;
 
-inline constexpr S2C_PlayerMove::Impl_::Impl_(
+inline constexpr S2C_PlayerMoveNotification::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
         user_id_(
@@ -328,7 +580,7 @@ inline constexpr S2C_PlayerMove::Impl_::Impl_(
         dir_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR S2C_PlayerMove::S2C_PlayerMove(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR S2C_PlayerMoveNotification::S2C_PlayerMoveNotification(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -336,18 +588,18 @@ PROTOBUF_CONSTEXPR S2C_PlayerMove::S2C_PlayerMove(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct S2C_PlayerMoveDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR S2C_PlayerMoveDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~S2C_PlayerMoveDefaultTypeInternal() {}
+struct S2C_PlayerMoveNotificationDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_PlayerMoveNotificationDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_PlayerMoveNotificationDefaultTypeInternal() {}
   union {
-    S2C_PlayerMove _instance;
+    S2C_PlayerMoveNotification _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_PlayerMoveDefaultTypeInternal _S2C_PlayerMove_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_PlayerMoveNotificationDefaultTypeInternal _S2C_PlayerMoveNotification_default_instance_;
 
-inline constexpr S2C_PlayerAttack::Impl_::Impl_(
+inline constexpr S2C_PlayerAttackResult::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
         hit_targets_{},
@@ -355,13 +607,13 @@ inline constexpr S2C_PlayerAttack::Impl_::Impl_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         attack_position_{nullptr},
-        attack_dir_{nullptr},
+        attack_direction_{nullptr},
         attack_type_{static_cast< ::ingame::AttackType >(0)},
         attack_range_{0},
-        damage_{0} {}
+        total_damage_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR S2C_PlayerAttack::S2C_PlayerAttack(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR S2C_PlayerAttackResult::S2C_PlayerAttackResult(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -369,16 +621,47 @@ PROTOBUF_CONSTEXPR S2C_PlayerAttack::S2C_PlayerAttack(::_pbi::ConstantInitialize
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct S2C_PlayerAttackDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR S2C_PlayerAttackDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~S2C_PlayerAttackDefaultTypeInternal() {}
+struct S2C_PlayerAttackResultDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_PlayerAttackResultDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_PlayerAttackResultDefaultTypeInternal() {}
   union {
-    S2C_PlayerAttack _instance;
+    S2C_PlayerAttackResult _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_PlayerAttackDefaultTypeInternal _S2C_PlayerAttack_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_PlayerAttackResultDefaultTypeInternal _S2C_PlayerAttackResult_default_instance_;
+
+inline constexpr S2C_GiantKillContributionResult::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : contributions_{},
+        giant_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        crown_winner_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR S2C_GiantKillContributionResult::S2C_GiantKillContributionResult(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct S2C_GiantKillContributionResultDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_GiantKillContributionResultDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_GiantKillContributionResultDefaultTypeInternal() {}
+  union {
+    S2C_GiantKillContributionResult _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_GiantKillContributionResultDefaultTypeInternal _S2C_GiantKillContributionResult_default_instance_;
 
 inline constexpr S2C_GameState_PlayerState::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -387,9 +670,10 @@ inline constexpr S2C_GameState_PlayerState::Impl_::Impl_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
         position_{nullptr},
-        dir_{0},
+        direction_{0},
         current_hp_{0},
-        max_hp_{0} {}
+        max_hp_{0},
+        current_race_{static_cast< ::ingame::RaceType >(0)} {}
 
 template <typename>
 PROTOBUF_CONSTEXPR S2C_GameState_PlayerState::S2C_GameState_PlayerState(::_pbi::ConstantInitialized)
@@ -442,7 +726,61 @@ struct S2C_GameState_MonsterStateDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_GameState_MonsterStateDefaultTypeInternal _S2C_GameState_MonsterState_default_instance_;
 
-inline constexpr S2C_AttackHit::Impl_::Impl_(
+inline constexpr S2C_GameEnd::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : results_{},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR S2C_GameEnd::S2C_GameEnd(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct S2C_GameEndDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_GameEndDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_GameEndDefaultTypeInternal() {}
+  union {
+    S2C_GameEnd _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_GameEndDefaultTypeInternal _S2C_GameEnd_default_instance_;
+
+inline constexpr S2C_CrownDropNotification::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        giant_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        position_{nullptr},
+        countdown_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR S2C_CrownDropNotification::S2C_CrownDropNotification(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct S2C_CrownDropNotificationDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_CrownDropNotificationDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_CrownDropNotificationDefaultTypeInternal() {}
+  union {
+    S2C_CrownDropNotification _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_CrownDropNotificationDefaultTypeInternal _S2C_CrownDropNotification_default_instance_;
+
+inline constexpr S2C_AttackHitNotification::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
       : _cached_size_{0},
         attacker_id_(
@@ -455,7 +793,7 @@ inline constexpr S2C_AttackHit::Impl_::Impl_(
         damage_{0} {}
 
 template <typename>
-PROTOBUF_CONSTEXPR S2C_AttackHit::S2C_AttackHit(::_pbi::ConstantInitialized)
+PROTOBUF_CONSTEXPR S2C_AttackHitNotification::S2C_AttackHitNotification(::_pbi::ConstantInitialized)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(_class_data_.base()),
 #else   // PROTOBUF_CUSTOM_VTABLE
@@ -463,16 +801,16 @@ PROTOBUF_CONSTEXPR S2C_AttackHit::S2C_AttackHit(::_pbi::ConstantInitialized)
 #endif  // PROTOBUF_CUSTOM_VTABLE
       _impl_(::_pbi::ConstantInitialized()) {
 }
-struct S2C_AttackHitDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR S2C_AttackHitDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~S2C_AttackHitDefaultTypeInternal() {}
+struct S2C_AttackHitNotificationDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_AttackHitNotificationDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_AttackHitNotificationDefaultTypeInternal() {}
   union {
-    S2C_AttackHit _instance;
+    S2C_AttackHitNotification _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_AttackHitDefaultTypeInternal _S2C_AttackHit_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_AttackHitNotificationDefaultTypeInternal _S2C_AttackHitNotification_default_instance_;
 
 inline constexpr PlayerRaceState::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -485,7 +823,7 @@ inline constexpr PlayerRaceState::Impl_::Impl_(
             ::_pbi::ConstantInitialized()),
         giant_stats_{nullptr},
         current_race_{static_cast< ::ingame::RaceType >(0)},
-        transform_giant_{false},
+        can_transform_{false},
         current_hp_{0},
         max_hp_{0} {}
 
@@ -544,7 +882,7 @@ inline constexpr C2S_PlayerAttack::Impl_::Impl_(
         user_id_(
             &::google::protobuf::internal::fixed_address_empty_string,
             ::_pbi::ConstantInitialized()),
-        attack_dir_{nullptr},
+        attack_direction_{nullptr},
         attack_position_{nullptr},
         attack_type_{static_cast< ::ingame::AttackType >(0)} {}
 
@@ -567,6 +905,93 @@ struct C2S_PlayerAttackDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 C2S_PlayerAttackDefaultTypeInternal _C2S_PlayerAttack_default_instance_;
+
+inline constexpr C2S_PickupCrown::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        crown_position_{nullptr} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR C2S_PickupCrown::C2S_PickupCrown(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct C2S_PickupCrownDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR C2S_PickupCrownDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~C2S_PickupCrownDefaultTypeInternal() {}
+  union {
+    C2S_PickupCrown _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 C2S_PickupCrownDefaultTypeInternal _C2S_PickupCrown_default_instance_;
+
+inline constexpr C2S_HiddenSkill::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        user_id_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        cursor_position_{nullptr},
+        skill_type_{static_cast< ::ingame::GeneType >(0)} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR C2S_HiddenSkill::C2S_HiddenSkill(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct C2S_HiddenSkillDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR C2S_HiddenSkillDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~C2S_HiddenSkillDefaultTypeInternal() {}
+  union {
+    C2S_HiddenSkill _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 C2S_HiddenSkillDefaultTypeInternal _C2S_HiddenSkill_default_instance_;
+
+inline constexpr S2C_JoinGameResult::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        message_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        initial_state_{nullptr},
+        world_state_{nullptr},
+        success_{false} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR S2C_JoinGameResult::S2C_JoinGameResult(::_pbi::ConstantInitialized)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(_class_data_.base()),
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(),
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      _impl_(::_pbi::ConstantInitialized()) {
+}
+struct S2C_JoinGameResultDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR S2C_JoinGameResultDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~S2C_JoinGameResultDefaultTypeInternal() {}
+  union {
+    S2C_JoinGameResult _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 S2C_JoinGameResultDefaultTypeInternal _S2C_JoinGameResult_default_instance_;
 
 inline constexpr S2C_GameState::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
@@ -603,15 +1028,54 @@ const ::uint32_t
     TableStruct_ingame_2eproto::offsets[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
         protodesc_cold) = {
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::ingame::Positions, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_JoinGame, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::ingame::Positions, _impl_.x_),
-        PROTOBUF_FIELD_OFFSET(::ingame::Positions, _impl_.y_),
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_JoinGame, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_JoinGame, _impl_.room_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_JoinGameResult, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_JoinGameResult, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_JoinGameResult, _impl_.success_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_JoinGameResult, _impl_.initial_state_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_JoinGameResult, _impl_.world_state_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_JoinGameResult, _impl_.message_),
+        ~0u,
+        0,
+        1,
+        ~0u,
+        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::ingame::GameWorldState, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::GameWorldState, _impl_.current_phase_),
+        PROTOBUF_FIELD_OFFSET(::ingame::GameWorldState, _impl_.phase_time_remaining_),
+        PROTOBUF_FIELD_OFFSET(::ingame::GameWorldState, _impl_.human_count_),
+        PROTOBUF_FIELD_OFFSET(::ingame::GameWorldState, _impl_.giane_count_),
+        PROTOBUF_FIELD_OFFSET(::ingame::GameWorldState, _impl_.monster_count_),
+        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::ingame::Vector2, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::Vector2, _impl_.x_),
+        PROTOBUF_FIELD_OFFSET(::ingame::Vector2, _impl_.y_),
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::ingame::GiantStats, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -649,7 +1113,7 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::ingame::PlayerRaceState, _impl_.current_race_),
         PROTOBUF_FIELD_OFFSET(::ingame::PlayerRaceState, _impl_.gene_inventory_),
         PROTOBUF_FIELD_OFFSET(::ingame::PlayerRaceState, _impl_.equipped_genes_),
-        PROTOBUF_FIELD_OFFSET(::ingame::PlayerRaceState, _impl_.transform_giant_),
+        PROTOBUF_FIELD_OFFSET(::ingame::PlayerRaceState, _impl_.can_transform_),
         PROTOBUF_FIELD_OFFSET(::ingame::PlayerRaceState, _impl_.giant_stats_),
         PROTOBUF_FIELD_OFFSET(::ingame::PlayerRaceState, _impl_.current_hp_),
         PROTOBUF_FIELD_OFFSET(::ingame::PlayerRaceState, _impl_.max_hp_),
@@ -662,27 +1126,27 @@ const ::uint32_t
         ~0u,
         ~0u,
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::ingame::C2S_Transform, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_TransformGiant, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::ingame::C2S_Transform, _impl_.user_id_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_Transform, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_Transform, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_TransformGiant, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_TransformResult, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_TransformResult, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_Transform, _impl_.user_id_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_Transform, _impl_.success_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_Transform, _impl_.new_race_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_Transform, _impl_.new_stats_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_Transform, _impl_.message_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_TransformResult, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_TransformResult, _impl_.success_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_TransformResult, _impl_.new_race_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_TransformResult, _impl_.new_stats_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_TransformResult, _impl_.message_),
         ~0u,
         ~0u,
         ~0u,
@@ -702,17 +1166,17 @@ const ::uint32_t
         ~0u,
         0,
         ~0u,
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerMove, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerMove, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerMoveNotification, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerMoveNotification, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerMove, _impl_.user_id_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerMove, _impl_.position_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerMove, _impl_.dir_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerMoveNotification, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerMoveNotification, _impl_.position_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerMoveNotification, _impl_.dir_),
         ~0u,
         0,
         ~0u,
@@ -726,27 +1190,27 @@ const ::uint32_t
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::ingame::C2S_PlayerAttack, _impl_.user_id_),
         PROTOBUF_FIELD_OFFSET(::ingame::C2S_PlayerAttack, _impl_.attack_type_),
-        PROTOBUF_FIELD_OFFSET(::ingame::C2S_PlayerAttack, _impl_.attack_dir_),
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_PlayerAttack, _impl_.attack_direction_),
         PROTOBUF_FIELD_OFFSET(::ingame::C2S_PlayerAttack, _impl_.attack_position_),
         ~0u,
         ~0u,
         0,
         1,
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttack, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttack, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttackResult, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttackResult, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttack, _impl_.user_id_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttack, _impl_.attack_type_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttack, _impl_.attack_position_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttack, _impl_.attack_dir_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttack, _impl_.attack_range_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttack, _impl_.damage_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttack, _impl_.hit_targets_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttackResult, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttackResult, _impl_.attack_type_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttackResult, _impl_.attack_position_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttackResult, _impl_.attack_direction_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttackResult, _impl_.attack_range_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttackResult, _impl_.total_damage_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerAttackResult, _impl_.hit_targets_),
         ~0u,
         ~0u,
         0,
@@ -754,33 +1218,33 @@ const ::uint32_t
         ~0u,
         ~0u,
         ~0u,
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_AttackHit, _impl_._has_bits_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_AttackHit, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_AttackHitNotification, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_AttackHitNotification, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_AttackHit, _impl_.attacker_id_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_AttackHit, _impl_.target_id_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_AttackHit, _impl_.damage_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_AttackHit, _impl_.hit_position_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_AttackHitNotification, _impl_.attacker_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_AttackHitNotification, _impl_.target_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_AttackHitNotification, _impl_.damage_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_AttackHitNotification, _impl_.hit_position_),
         ~0u,
         ~0u,
         ~0u,
         0,
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerDeath, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerDeathNotification, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerDeath, _impl_.player_id_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerDeath, _impl_.killer_id_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerDeath, _impl_.death_noti_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerDeathNotification, _impl_.player_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerDeathNotification, _impl_.killer_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_PlayerDeathNotification, _impl_.death_notification_),
         PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameState_PlayerState, _impl_._has_bits_),
         PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameState_PlayerState, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -791,11 +1255,13 @@ const ::uint32_t
         ~0u,  // no sizeof(Split)
         PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameState_PlayerState, _impl_.user_id_),
         PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameState_PlayerState, _impl_.position_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameState_PlayerState, _impl_.dir_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameState_PlayerState, _impl_.direction_),
         PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameState_PlayerState, _impl_.current_hp_),
         PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameState_PlayerState, _impl_.max_hp_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameState_PlayerState, _impl_.current_race_),
         ~0u,
         0,
+        ~0u,
         ~0u,
         ~0u,
         ~0u,
@@ -841,19 +1307,19 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::ingame::C2S_GeneAcquired, _impl_.gene_type_),
         PROTOBUF_FIELD_OFFSET(::ingame::C2S_GeneAcquired, _impl_.source_),
         ~0u,  // no _has_bits_
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquired, _internal_metadata_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquiredResult, _internal_metadata_),
         ~0u,  // no _extensions_
         ~0u,  // no _oneof_case_
         ~0u,  // no _weak_field_map_
         ~0u,  // no _inlined_string_donated_
         ~0u,  // no _split_
         ~0u,  // no sizeof(Split)
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquired, _impl_.user_id_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquired, _impl_.gene_type_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquired, _impl_.new_count_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquired, _impl_.total_genes_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquired, _impl_.is_hidden_),
-        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquired, _impl_.message_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquiredResult, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquiredResult, _impl_.gene_type_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquiredResult, _impl_.new_count_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquiredResult, _impl_.total_gene_count_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquiredResult, _impl_.can_transform_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneAcquiredResult, _impl_.message_),
         ~0u,  // no _has_bits_
         PROTOBUF_FIELD_OFFSET(::ingame::C2S_EquipGene, _internal_metadata_),
         ~0u,  // no _extensions_
@@ -877,144 +1343,349 @@ const ::uint32_t
         PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneEquipResult, _impl_.user_id_),
         PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneEquipResult, _impl_.success_),
         PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneEquipResult, _impl_.equipped_genes_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneEquipResult, _impl_.can_transform_),
         PROTOBUF_FIELD_OFFSET(::ingame::S2C_GeneEquipResult, _impl_.message_),
+        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownNotification, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownNotification, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownNotification, _impl_.giant_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownNotification, _impl_.countdown_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownDropNotification, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownDropNotification, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownDropNotification, _impl_.position_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownDropNotification, _impl_.giant_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownDropNotification, _impl_.countdown_),
+        0,
+        ~0u,
+        ~0u,
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_PickupCrown, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_PickupCrown, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_PickupCrown, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_PickupCrown, _impl_.crown_position_),
+        ~0u,
+        0,
+        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownPickupResult, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownPickupResult, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownPickupResult, _impl_.success_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownPickupResult, _impl_.countdown_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_CrownPickupResult, _impl_.message_),
+        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_DamageContribution, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_DamageContribution, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_DamageContribution, _impl_.giant_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_DamageContribution, _impl_.damage_dealt_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_DamageContribution, _impl_.total_contribution_),
+        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GiantKillContributionResult_Contribution, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GiantKillContributionResult_Contribution, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GiantKillContributionResult_Contribution, _impl_.damage_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GiantKillContributionResult_Contribution, _impl_.percentage_),
+        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GiantKillContributionResult, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GiantKillContributionResult, _impl_.giant_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GiantKillContributionResult, _impl_.contributions_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GiantKillContributionResult, _impl_.crown_winner_),
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_HiddenSkill, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_HiddenSkill, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_HiddenSkill, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_HiddenSkill, _impl_.skill_type_),
+        PROTOBUF_FIELD_OFFSET(::ingame::C2S_HiddenSkill, _impl_.cursor_position_),
+        ~0u,
+        ~0u,
+        0,
+        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_HiddenSkillResult, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_HiddenSkillResult, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_HiddenSkillResult, _impl_.skill_type_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_HiddenSkillResult, _impl_.success_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_HiddenSkillResult, _impl_.message_),
+        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameEnd_PlayerResult, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameEnd_PlayerResult, _impl_.user_id_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameEnd_PlayerResult, _impl_.nickname_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameEnd_PlayerResult, _impl_.final_score_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameEnd_PlayerResult, _impl_.gold_earned_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameEnd_PlayerResult, _impl_.final_race_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameEnd_PlayerResult, _impl_.player_killed_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameEnd_PlayerResult, _impl_.monster_killed_),
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameEnd_PlayerResult, _impl_.survival_time_),
+        ~0u,  // no _has_bits_
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameEnd, _internal_metadata_),
+        ~0u,  // no _extensions_
+        ~0u,  // no _oneof_case_
+        ~0u,  // no _weak_field_map_
+        ~0u,  // no _inlined_string_donated_
+        ~0u,  // no _split_
+        ~0u,  // no sizeof(Split)
+        PROTOBUF_FIELD_OFFSET(::ingame::S2C_GameEnd, _impl_.results_),
 };
 
 static const ::_pbi::MigrationSchema
     schemas[] ABSL_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-        {0, -1, -1, sizeof(::ingame::Positions)},
-        {10, -1, -1, sizeof(::ingame::GiantStats)},
-        {23, 33, -1, sizeof(::ingame::PlayerRaceState_GeneInventoryEntry_DoNotUse)},
-        {35, 51, -1, sizeof(::ingame::PlayerRaceState)},
-        {59, -1, -1, sizeof(::ingame::C2S_Transform)},
-        {68, 81, -1, sizeof(::ingame::S2C_Transform)},
-        {86, 97, -1, sizeof(::ingame::C2S_PlayerMove)},
-        {100, 111, -1, sizeof(::ingame::S2C_PlayerMove)},
-        {114, 126, -1, sizeof(::ingame::C2S_PlayerAttack)},
-        {130, 145, -1, sizeof(::ingame::S2C_PlayerAttack)},
-        {152, 164, -1, sizeof(::ingame::S2C_AttackHit)},
-        {168, -1, -1, sizeof(::ingame::S2C_PlayerDeath)},
-        {179, 192, -1, sizeof(::ingame::S2C_GameState_PlayerState)},
-        {197, 210, -1, sizeof(::ingame::S2C_GameState_MonsterState)},
-        {215, -1, -1, sizeof(::ingame::S2C_GameState)},
-        {227, -1, -1, sizeof(::ingame::C2S_GeneAcquired)},
-        {238, -1, -1, sizeof(::ingame::S2C_GeneAcquired)},
-        {252, -1, -1, sizeof(::ingame::C2S_EquipGene)},
-        {264, -1, -1, sizeof(::ingame::S2C_GeneEquipResult)},
+        {0, -1, -1, sizeof(::ingame::C2S_JoinGame)},
+        {10, 22, -1, sizeof(::ingame::S2C_JoinGameResult)},
+        {26, -1, -1, sizeof(::ingame::GameWorldState)},
+        {39, -1, -1, sizeof(::ingame::Vector2)},
+        {49, -1, -1, sizeof(::ingame::GiantStats)},
+        {62, 72, -1, sizeof(::ingame::PlayerRaceState_GeneInventoryEntry_DoNotUse)},
+        {74, 90, -1, sizeof(::ingame::PlayerRaceState)},
+        {98, -1, -1, sizeof(::ingame::C2S_TransformGiant)},
+        {107, 120, -1, sizeof(::ingame::S2C_TransformResult)},
+        {125, 136, -1, sizeof(::ingame::C2S_PlayerMove)},
+        {139, 150, -1, sizeof(::ingame::S2C_PlayerMoveNotification)},
+        {153, 165, -1, sizeof(::ingame::C2S_PlayerAttack)},
+        {169, 184, -1, sizeof(::ingame::S2C_PlayerAttackResult)},
+        {191, 203, -1, sizeof(::ingame::S2C_AttackHitNotification)},
+        {207, -1, -1, sizeof(::ingame::S2C_PlayerDeathNotification)},
+        {218, 232, -1, sizeof(::ingame::S2C_GameState_PlayerState)},
+        {238, 251, -1, sizeof(::ingame::S2C_GameState_MonsterState)},
+        {256, -1, -1, sizeof(::ingame::S2C_GameState)},
+        {268, -1, -1, sizeof(::ingame::C2S_GeneAcquired)},
+        {279, -1, -1, sizeof(::ingame::S2C_GeneAcquiredResult)},
+        {293, -1, -1, sizeof(::ingame::C2S_EquipGene)},
+        {305, -1, -1, sizeof(::ingame::S2C_GeneEquipResult)},
+        {318, -1, -1, sizeof(::ingame::S2C_CrownNotification)},
+        {329, 340, -1, sizeof(::ingame::S2C_CrownDropNotification)},
+        {343, 353, -1, sizeof(::ingame::C2S_PickupCrown)},
+        {355, -1, -1, sizeof(::ingame::S2C_CrownPickupResult)},
+        {367, -1, -1, sizeof(::ingame::S2C_DamageContribution)},
+        {379, -1, -1, sizeof(::ingame::S2C_GiantKillContributionResult_Contribution)},
+        {390, -1, -1, sizeof(::ingame::S2C_GiantKillContributionResult)},
+        {401, 412, -1, sizeof(::ingame::C2S_HiddenSkill)},
+        {415, -1, -1, sizeof(::ingame::S2C_HiddenSkillResult)},
+        {427, -1, -1, sizeof(::ingame::S2C_GameEnd_PlayerResult)},
+        {443, -1, -1, sizeof(::ingame::S2C_GameEnd)},
 };
 static const ::_pb::Message* const file_default_instances[] = {
-    &::ingame::_Positions_default_instance_._instance,
+    &::ingame::_C2S_JoinGame_default_instance_._instance,
+    &::ingame::_S2C_JoinGameResult_default_instance_._instance,
+    &::ingame::_GameWorldState_default_instance_._instance,
+    &::ingame::_Vector2_default_instance_._instance,
     &::ingame::_GiantStats_default_instance_._instance,
     &::ingame::_PlayerRaceState_GeneInventoryEntry_DoNotUse_default_instance_._instance,
     &::ingame::_PlayerRaceState_default_instance_._instance,
-    &::ingame::_C2S_Transform_default_instance_._instance,
-    &::ingame::_S2C_Transform_default_instance_._instance,
+    &::ingame::_C2S_TransformGiant_default_instance_._instance,
+    &::ingame::_S2C_TransformResult_default_instance_._instance,
     &::ingame::_C2S_PlayerMove_default_instance_._instance,
-    &::ingame::_S2C_PlayerMove_default_instance_._instance,
+    &::ingame::_S2C_PlayerMoveNotification_default_instance_._instance,
     &::ingame::_C2S_PlayerAttack_default_instance_._instance,
-    &::ingame::_S2C_PlayerAttack_default_instance_._instance,
-    &::ingame::_S2C_AttackHit_default_instance_._instance,
-    &::ingame::_S2C_PlayerDeath_default_instance_._instance,
+    &::ingame::_S2C_PlayerAttackResult_default_instance_._instance,
+    &::ingame::_S2C_AttackHitNotification_default_instance_._instance,
+    &::ingame::_S2C_PlayerDeathNotification_default_instance_._instance,
     &::ingame::_S2C_GameState_PlayerState_default_instance_._instance,
     &::ingame::_S2C_GameState_MonsterState_default_instance_._instance,
     &::ingame::_S2C_GameState_default_instance_._instance,
     &::ingame::_C2S_GeneAcquired_default_instance_._instance,
-    &::ingame::_S2C_GeneAcquired_default_instance_._instance,
+    &::ingame::_S2C_GeneAcquiredResult_default_instance_._instance,
     &::ingame::_C2S_EquipGene_default_instance_._instance,
     &::ingame::_S2C_GeneEquipResult_default_instance_._instance,
+    &::ingame::_S2C_CrownNotification_default_instance_._instance,
+    &::ingame::_S2C_CrownDropNotification_default_instance_._instance,
+    &::ingame::_C2S_PickupCrown_default_instance_._instance,
+    &::ingame::_S2C_CrownPickupResult_default_instance_._instance,
+    &::ingame::_S2C_DamageContribution_default_instance_._instance,
+    &::ingame::_S2C_GiantKillContributionResult_Contribution_default_instance_._instance,
+    &::ingame::_S2C_GiantKillContributionResult_default_instance_._instance,
+    &::ingame::_C2S_HiddenSkill_default_instance_._instance,
+    &::ingame::_S2C_HiddenSkillResult_default_instance_._instance,
+    &::ingame::_S2C_GameEnd_PlayerResult_default_instance_._instance,
+    &::ingame::_S2C_GameEnd_default_instance_._instance,
 };
 const char descriptor_table_protodef_ingame_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
-    "\n\014ingame.proto\022\006ingame\"!\n\tPositions\022\t\n\001x"
-    "\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\"n\n\nGiantStats\022\024\n\014attac"
-    "k_speed\030\001 \001(\002\022\022\n\nmove_speed\030\002 \001(\002\022\024\n\014att"
-    "ack_range\030\003 \001(\002\022\022\n\nmax_health\030\004 \001(\005\022\014\n\004s"
-    "ize\030\005 \001(\002\"\324\002\n\017PlayerRaceState\022\017\n\007user_id"
-    "\030\001 \001(\t\022&\n\014current_race\030\002 \001(\0162\020.ingame.Ra"
-    "ceType\022B\n\016gene_inventory\030\003 \003(\0132*.ingame."
-    "PlayerRaceState.GeneInventoryEntry\022(\n\016eq"
-    "uipped_genes\030\004 \003(\0162\020.ingame.GeneType\022\027\n\017"
-    "transform_giant\030\005 \001(\010\022\'\n\013giant_stats\030\006 \001"
-    "(\0132\022.ingame.GiantStats\022\022\n\ncurrent_hp\030\007 \001"
-    "(\005\022\016\n\006max_hp\030\010 \001(\005\0324\n\022GeneInventoryEntry"
-    "\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001(\005:\0028\001\" \n\rC2S_"
-    "Transform\022\017\n\007user_id\030\001 \001(\t\"\215\001\n\rS2C_Trans"
-    "form\022\017\n\007user_id\030\001 \001(\t\022\017\n\007success\030\002 \001(\010\022\""
-    "\n\010new_race\030\003 \001(\0162\020.ingame.RaceType\022%\n\tne"
-    "w_stats\030\004 \001(\0132\022.ingame.GiantStats\022\017\n\007mes"
-    "sage\030\005 \001(\t\"S\n\016C2S_PlayerMove\022\017\n\007user_id\030"
-    "\001 \001(\t\022#\n\010position\030\002 \001(\0132\021.ingame.Positio"
-    "ns\022\013\n\003dir\030\003 \001(\002\"S\n\016S2C_PlayerMove\022\017\n\007use"
-    "r_id\030\001 \001(\t\022#\n\010position\030\002 \001(\0132\021.ingame.Po"
-    "sitions\022\013\n\003dir\030\003 \001(\002\"\237\001\n\020C2S_PlayerAttac"
-    "k\022\017\n\007user_id\030\001 \001(\t\022\'\n\013attack_type\030\002 \001(\0162"
-    "\022.ingame.AttackType\022%\n\nattack_dir\030\003 \001(\0132"
-    "\021.ingame.Positions\022*\n\017attack_position\030\004 "
-    "\001(\0132\021.ingame.Positions\"\332\001\n\020S2C_PlayerAtt"
-    "ack\022\017\n\007user_id\030\001 \001(\t\022\'\n\013attack_type\030\002 \001("
-    "\0162\022.ingame.AttackType\022*\n\017attack_position"
-    "\030\003 \001(\0132\021.ingame.Positions\022%\n\nattack_dir\030"
-    "\004 \001(\0132\021.ingame.Positions\022\024\n\014attack_range"
-    "\030\005 \001(\002\022\016\n\006damage\030\006 \001(\005\022\023\n\013hit_targets\030\007 "
-    "\003(\t\"p\n\rS2C_AttackHit\022\023\n\013attacker_id\030\001 \001("
-    "\t\022\021\n\ttarget_id\030\002 \001(\t\022\016\n\006damage\030\003 \001(\005\022\'\n\014"
-    "hit_position\030\004 \001(\0132\021.ingame.Positions\"^\n"
-    "\017S2C_PlayerDeath\022\021\n\tplayer_id\030\001 \001(\t\022\021\n\tk"
-    "iller_id\030\002 \001(\t\022%\n\ndeath_noti\030\003 \001(\0162\021.ing"
-    "ame.DeathType\"\275\003\n\rS2C_GameState\0222\n\007playe"
-    "rs\030\001 \003(\0132!.ingame.S2C_GameState.PlayerSt"
-    "ate\0224\n\010monsters\030\002 \003(\0132\".ingame.S2C_GameS"
-    "tate.MonsterState\022\034\n\024phase_time_remainin"
-    "g\030\003 \001(\005\022\025\n\rcurrent_phase\030\004 \001(\005\032t\n\013Player"
-    "State\022\017\n\007user_id\030\001 \001(\t\022#\n\010position\030\002 \001(\013"
-    "2\021.ingame.Positions\022\013\n\003dir\030\003 \001(\002\022\022\n\ncurr"
-    "ent_hp\030\004 \001(\005\022\016\n\006max_hp\030\005 \001(\005\032\226\001\n\014Monster"
-    "State\022\022\n\nmonster_id\030\001 \001(\t\022#\n\010position\030\002 "
-    "\001(\0132\021.ingame.Positions\022\022\n\ncurrent_hp\030\003 \001"
-    "(\005\022\016\n\006max_hp\030\004 \001(\005\022)\n\014monster_type\030\005 \001(\016"
-    "2\023.ingame.MonsterType\"X\n\020C2S_GeneAcquire"
-    "d\022\017\n\007user_id\030\001 \001(\t\022#\n\tgene_type\030\002 \001(\0162\020."
-    "ingame.GeneType\022\016\n\006source\030\003 \001(\t\"\224\001\n\020S2C_"
-    "GeneAcquired\022\017\n\007user_id\030\001 \001(\t\022#\n\tgene_ty"
-    "pe\030\002 \001(\0162\020.ingame.GeneType\022\021\n\tnew_count\030"
-    "\003 \001(\005\022\023\n\013total_genes\030\004 \001(\005\022\021\n\tis_hidden\030"
-    "\005 \001(\010\022\017\n\007message\030\006 \001(\t\"h\n\rC2S_EquipGene\022"
-    "\017\n\007user_id\030\001 \001(\t\022#\n\tgene_type\030\002 \001(\0162\020.in"
-    "game.GeneType\022\022\n\nslot_index\030\003 \001(\005\022\r\n\005equ"
-    "ip\030\004 \001(\010\"r\n\023S2C_GeneEquipResult\022\017\n\007user_"
-    "id\030\001 \001(\t\022\017\n\007success\030\002 \001(\010\022(\n\016equipped_ge"
-    "nes\030\003 \003(\0162\020.ingame.GeneType\022\017\n\007message\030\004"
-    " \001(\t*\257\001\n\010RaceType\022\020\n\014RACE_UNKNOWN\020\000\022\016\n\nR"
-    "ACE_HUMAN\020\001\022\025\n\021RACE_ATTACK_GIANT\020\002\022\024\n\020RA"
-    "CE_SPEED_GIANT\020\003\022\024\n\020RACE_RANGE_GIANT\020\004\022\025"
-    "\n\021RACE_HEALTH_GIANT\020\005\022\023\n\017RACE_SIZE_GIANT"
-    "\020\006\022\022\n\016RACE_NOT_HUMAN\020\007*\240\002\n\010GeneType\022\020\n\014U"
-    "NKNOWN_GENE\020\000\022\034\n\030NORMAL_ATTACK_SPEED_GEN"
-    "E\020\001\022\032\n\026NORMAL_MOVE_SPEED_GENE\020\002\022\034\n\030NORMA"
-    "L_ATTACK_RANGE_GENE\020\003\022\026\n\022NORMAL_HEALTH_G"
-    "ENE\020\004\022\024\n\020NORMAL_SIZE_GENE\020\005\022\025\n\021HIDDEN_SW"
-    "ORD_GENE\020\006\022\026\n\022HIDDEN_SHIELD_GENE\020\007\022\034\n\030HI"
-    "DDEN_REGENERATION_GENE\020\010\022\030\n\024HIDDEN_SUMMO"
-    "NER_GENE\020\t\022\025\n\021HIDDEN_FLASH_GENE\020\n*E\n\nAtt"
-    "ackType\022\022\n\016UNKNOWN_ATTACK\020\000\022\021\n\rNORMAL_AT"
-    "TACK\020\001\022\020\n\014GIANT_ATTACK\020\002*]\n\013MonsterType\022"
-    "\020\n\014NONE_MONSTER\020\000\022\022\n\016NORMAL_MONSTER\020\001\022\022\n"
-    "\016HIDDEN_MONSTER\020\002\022\024\n\020SUMMONER_MONSTER\020\003*"
-    "\\\n\tDeathType\022\021\n\rDEATH_UNKNOWN\020\000\022\022\n\016DEATH"
-    "_BY_HUMAN\020\001\022\024\n\020DEATH_BY_MONSTER\020\002\022\022\n\016DEA"
-    "TH_BY_GIANT\020\003b\006proto3"
+    "\n\014ingame.proto\022\006ingame\"0\n\014C2S_JoinGame\022\017"
+    "\n\007user_id\030\001 \001(\t\022\017\n\007room_id\030\002 \001(\t\"\223\001\n\022S2C"
+    "_JoinGameResult\022\017\n\007success\030\001 \001(\010\022.\n\rinit"
+    "ial_state\030\002 \001(\0132\027.ingame.PlayerRaceState"
+    "\022+\n\013world_state\030\003 \001(\0132\026.ingame.GameWorld"
+    "State\022\017\n\007message\030\004 \001(\t\"\206\001\n\016GameWorldStat"
+    "e\022\025\n\rcurrent_phase\030\001 \001(\005\022\034\n\024phase_time_r"
+    "emaining\030\002 \001(\005\022\023\n\013human_count\030\003 \001(\005\022\023\n\013g"
+    "iane_count\030\004 \001(\005\022\025\n\rmonster_count\030\005 \001(\005\""
+    "\037\n\007Vector2\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\"n\n\nGian"
+    "tStats\022\024\n\014attack_speed\030\001 \001(\002\022\022\n\nmove_spe"
+    "ed\030\002 \001(\002\022\024\n\014attack_range\030\003 \001(\002\022\022\n\nmax_he"
+    "alth\030\004 \001(\005\022\014\n\004size\030\005 \001(\002\"\322\002\n\017PlayerRaceS"
+    "tate\022\017\n\007user_id\030\001 \001(\t\022&\n\014current_race\030\002 "
+    "\001(\0162\020.ingame.RaceType\022B\n\016gene_inventory\030"
+    "\003 \003(\0132*.ingame.PlayerRaceState.GeneInven"
+    "toryEntry\022(\n\016equipped_genes\030\004 \003(\0162\020.inga"
+    "me.GeneType\022\025\n\rcan_transform\030\005 \001(\010\022\'\n\013gi"
+    "ant_stats\030\006 \001(\0132\022.ingame.GiantStats\022\022\n\nc"
+    "urrent_hp\030\007 \001(\005\022\016\n\006max_hp\030\010 \001(\005\0324\n\022GeneI"
+    "nventoryEntry\022\013\n\003key\030\001 \001(\005\022\r\n\005value\030\002 \001("
+    "\005:\0028\001\"%\n\022C2S_TransformGiant\022\017\n\007user_id\030\001"
+    " \001(\t\"\223\001\n\023S2C_TransformResult\022\017\n\007user_id\030"
+    "\001 \001(\t\022\017\n\007success\030\002 \001(\010\022\"\n\010new_race\030\003 \001(\016"
+    "2\020.ingame.RaceType\022%\n\tnew_stats\030\004 \001(\0132\022."
+    "ingame.GiantStats\022\017\n\007message\030\005 \001(\t\"Q\n\016C2"
+    "S_PlayerMove\022\017\n\007user_id\030\001 \001(\t\022!\n\010positio"
+    "n\030\002 \001(\0132\017.ingame.Vector2\022\013\n\003dir\030\003 \001(\002\"]\n"
+    "\032S2C_PlayerMoveNotification\022\017\n\007user_id\030\001"
+    " \001(\t\022!\n\010position\030\002 \001(\0132\017.ingame.Vector2\022"
+    "\013\n\003dir\030\003 \001(\002\"\241\001\n\020C2S_PlayerAttack\022\017\n\007use"
+    "r_id\030\001 \001(\t\022\'\n\013attack_type\030\002 \001(\0162\022.ingame"
+    ".AttackType\022)\n\020attack_direction\030\003 \001(\0132\017."
+    "ingame.Vector2\022(\n\017attack_position\030\004 \001(\0132"
+    "\017.ingame.Vector2\"\350\001\n\026S2C_PlayerAttackRes"
+    "ult\022\017\n\007user_id\030\001 \001(\t\022\'\n\013attack_type\030\002 \001("
+    "\0162\022.ingame.AttackType\022(\n\017attack_position"
+    "\030\003 \001(\0132\017.ingame.Vector2\022)\n\020attack_direct"
+    "ion\030\004 \001(\0132\017.ingame.Vector2\022\024\n\014attack_ran"
+    "ge\030\005 \001(\002\022\024\n\014total_damage\030\006 \001(\005\022\023\n\013hit_ta"
+    "rgets\030\007 \003(\t\"z\n\031S2C_AttackHitNotification"
+    "\022\023\n\013attacker_id\030\001 \001(\t\022\021\n\ttarget_id\030\002 \001(\t"
+    "\022\016\n\006damage\030\003 \001(\005\022%\n\014hit_position\030\004 \001(\0132\017"
+    ".ingame.Vector2\"r\n\033S2C_PlayerDeathNotifi"
+    "cation\022\021\n\tplayer_id\030\001 \001(\t\022\021\n\tkiller_id\030\002"
+    " \001(\t\022-\n\022death_notification\030\003 \001(\0162\021.ingam"
+    "e.DeathType\"\350\003\n\rS2C_GameState\0222\n\007players"
+    "\030\001 \003(\0132!.ingame.S2C_GameState.PlayerStat"
+    "e\0224\n\010monsters\030\002 \003(\0132\".ingame.S2C_GameSta"
+    "te.MonsterState\022\034\n\024phase_time_remaining\030"
+    "\003 \001(\005\022\025\n\rcurrent_phase\030\004 \001(\005\032\240\001\n\013PlayerS"
+    "tate\022\017\n\007user_id\030\001 \001(\t\022!\n\010position\030\002 \001(\0132"
+    "\017.ingame.Vector2\022\021\n\tdirection\030\003 \001(\002\022\022\n\nc"
+    "urrent_hp\030\004 \001(\005\022\016\n\006max_hp\030\005 \001(\005\022&\n\014curre"
+    "nt_race\030\006 \001(\0162\020.ingame.RaceType\032\224\001\n\014Mons"
+    "terState\022\022\n\nmonster_id\030\001 \001(\t\022!\n\010position"
+    "\030\002 \001(\0132\017.ingame.Vector2\022\022\n\ncurrent_hp\030\003 "
+    "\001(\005\022\016\n\006max_hp\030\004 \001(\005\022)\n\014monster_type\030\005 \001("
+    "\0162\023.ingame.MonsterType\"X\n\020C2S_GeneAcquir"
+    "ed\022\017\n\007user_id\030\001 \001(\t\022#\n\tgene_type\030\002 \001(\0162\020"
+    ".ingame.GeneType\022\016\n\006source\030\003 \001(\t\"\243\001\n\026S2C"
+    "_GeneAcquiredResult\022\017\n\007user_id\030\001 \001(\t\022#\n\t"
+    "gene_type\030\002 \001(\0162\020.ingame.GeneType\022\021\n\tnew"
+    "_count\030\003 \001(\005\022\030\n\020total_gene_count\030\004 \001(\005\022\025"
+    "\n\rcan_transform\030\005 \001(\010\022\017\n\007message\030\006 \001(\t\"h"
+    "\n\rC2S_EquipGene\022\017\n\007user_id\030\001 \001(\t\022#\n\tgene"
+    "_type\030\002 \001(\0162\020.ingame.GeneType\022\022\n\nslot_in"
+    "dex\030\003 \001(\005\022\r\n\005equip\030\004 \001(\010\"\211\001\n\023S2C_GeneEqu"
+    "ipResult\022\017\n\007user_id\030\001 \001(\t\022\017\n\007success\030\002 \001"
+    "(\010\022(\n\016equipped_genes\030\003 \003(\0162\020.ingame.Gene"
+    "Type\022\025\n\rcan_transform\030\004 \001(\010\022\017\n\007message\030\005"
+    " \001(\t\"M\n\025S2C_CrownNotification\022\017\n\007user_id"
+    "\030\001 \001(\t\022\020\n\010giant_id\030\002 \001(\t\022\021\n\tcountdown\030\003 "
+    "\001(\005\"c\n\031S2C_CrownDropNotification\022!\n\010posi"
+    "tion\030\001 \001(\0132\017.ingame.Vector2\022\020\n\010giant_id\030"
+    "\002 \001(\t\022\021\n\tcountdown\030\003 \001(\005\"K\n\017C2S_PickupCr"
+    "own\022\017\n\007user_id\030\001 \001(\t\022\'\n\016crown_position\030\002"
+    " \001(\0132\017.ingame.Vector2\"]\n\025S2C_CrownPickup"
+    "Result\022\017\n\007user_id\030\001 \001(\t\022\017\n\007success\030\002 \001(\010"
+    "\022\021\n\tcountdown\030\003 \001(\005\022\017\n\007message\030\004 \001(\t\"m\n\026"
+    "S2C_DamageContribution\022\017\n\007user_id\030\001 \001(\t\022"
+    "\020\n\010giant_id\030\002 \001(\t\022\024\n\014damage_dealt\030\003 \001(\005\022"
+    "\032\n\022total_contribution\030\004 \001(\005\"\333\001\n\037S2C_Gian"
+    "tKillContributionResult\022\020\n\010giant_id\030\001 \001("
+    "\t\022K\n\rcontributions\030\002 \003(\01324.ingame.S2C_Gi"
+    "antKillContributionResult.Contribution\022\024"
+    "\n\014crown_winner\030\003 \001(\t\032C\n\014Contribution\022\017\n\007"
+    "user_id\030\001 \001(\t\022\016\n\006damage\030\002 \001(\005\022\022\n\npercent"
+    "age\030\003 \001(\002\"r\n\017C2S_HiddenSkill\022\017\n\007user_id\030"
+    "\001 \001(\t\022$\n\nskill_type\030\002 \001(\0162\020.ingame.GeneT"
+    "ype\022(\n\017cursor_position\030\003 \001(\0132\017.ingame.Ve"
+    "ctor2\"p\n\025S2C_HiddenSkillResult\022\017\n\007user_i"
+    "d\030\001 \001(\t\022$\n\nskill_type\030\002 \001(\0162\020.ingame.Gen"
+    "eType\022\017\n\007success\030\003 \001(\010\022\017\n\007message\030\004 \001(\t\""
+    "\212\002\n\013S2C_GameEnd\0221\n\007results\030\001 \003(\0132 .ingam"
+    "e.S2C_GameEnd.PlayerResult\032\307\001\n\014PlayerRes"
+    "ult\022\017\n\007user_id\030\001 \001(\t\022\020\n\010nickname\030\002 \001(\t\022\023"
+    "\n\013final_score\030\003 \001(\005\022\023\n\013gold_earned\030\004 \001(\005"
+    "\022$\n\nfinal_race\030\005 \001(\0162\020.ingame.RaceType\022\025"
+    "\n\rplayer_killed\030\006 \001(\005\022\026\n\016monster_killed\030"
+    "\007 \001(\005\022\025\n\rsurvival_time\030\010 \001(\005*\257\001\n\010RaceTyp"
+    "e\022\020\n\014RACE_UNKNOWN\020\000\022\016\n\nRACE_HUMAN\020\001\022\025\n\021R"
+    "ACE_ATTACK_GIANT\020\002\022\024\n\020RACE_SPEED_GIANT\020\003"
+    "\022\024\n\020RACE_RANGE_GIANT\020\004\022\025\n\021RACE_HEALTH_GI"
+    "ANT\020\005\022\023\n\017RACE_SIZE_GIANT\020\006\022\022\n\016RACE_NOT_H"
+    "UMAN\020\007*\240\002\n\010GeneType\022\020\n\014UNKNOWN_GENE\020\000\022\034\n"
+    "\030NORMAL_ATTACK_SPEED_GENE\020\001\022\032\n\026NORMAL_MO"
+    "VE_SPEED_GENE\020\002\022\034\n\030NORMAL_ATTACK_RANGE_G"
+    "ENE\020\003\022\026\n\022NORMAL_HEALTH_GENE\020\004\022\024\n\020NORMAL_"
+    "SIZE_GENE\020\005\022\025\n\021HIDDEN_SWORD_GENE\020\006\022\026\n\022HI"
+    "DDEN_SHIELD_GENE\020\007\022\034\n\030HIDDEN_REGENERATIO"
+    "N_GENE\020\010\022\030\n\024HIDDEN_SUMMONER_GENE\020\t\022\025\n\021HI"
+    "DDEN_FLASH_GENE\020\n*E\n\nAttackType\022\022\n\016UNKNO"
+    "WN_ATTACK\020\000\022\021\n\rNORMAL_ATTACK\020\001\022\020\n\014GIANT_"
+    "ATTACK\020\002*]\n\013MonsterType\022\020\n\014NONE_MONSTER\020"
+    "\000\022\022\n\016NORMAL_MONSTER\020\001\022\022\n\016HIDDEN_MONSTER\020"
+    "\002\022\024\n\020SUMMONER_MONSTER\020\003*\\\n\tDeathType\022\021\n\r"
+    "DEATH_UNKNOWN\020\000\022\022\n\016DEATH_BY_HUMAN\020\001\022\024\n\020D"
+    "EATH_BY_MONSTER\020\002\022\022\n\016DEATH_BY_GIANT\020\003b\006p"
+    "roto3"
 };
 static ::absl::once_flag descriptor_table_ingame_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_ingame_2eproto = {
     false,
     false,
-    3101,
+    4765,
     descriptor_table_protodef_ingame_2eproto,
     "ingame.proto",
     &descriptor_table_ingame_2eproto_once,
     nullptr,
     0,
-    19,
+    33,
     schemas,
     file_default_instances,
     TableStruct_ingame_2eproto::offsets,
@@ -1069,86 +1740,102 @@ bool DeathType_IsValid(int value) {
 }
 // ===================================================================
 
-class Positions::_Internal {
+class C2S_JoinGame::_Internal {
  public:
 };
 
-Positions::Positions(::google::protobuf::Arena* arena)
+C2S_JoinGame::C2S_JoinGame(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ingame.Positions)
+  // @@protoc_insertion_point(arena_constructor:ingame.C2S_JoinGame)
 }
-Positions::Positions(
-    ::google::protobuf::Arena* arena, const Positions& from)
-    : Positions(arena) {
-  MergeFrom(from);
+inline PROTOBUF_NDEBUG_INLINE C2S_JoinGame::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::ingame::C2S_JoinGame& from_msg)
+      : user_id_(arena, from.user_id_),
+        room_id_(arena, from.room_id_),
+        _cached_size_{0} {}
+
+C2S_JoinGame::C2S_JoinGame(
+    ::google::protobuf::Arena* arena,
+    const C2S_JoinGame& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  C2S_JoinGame* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:ingame.C2S_JoinGame)
 }
-inline PROTOBUF_NDEBUG_INLINE Positions::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE C2S_JoinGame::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
-      : _cached_size_{0} {}
+      : user_id_(arena),
+        room_id_(arena),
+        _cached_size_{0} {}
 
-inline void Positions::SharedCtor(::_pb::Arena* arena) {
+inline void C2S_JoinGame::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, x_),
-           0,
-           offsetof(Impl_, y_) -
-               offsetof(Impl_, x_) +
-               sizeof(Impl_::y_));
 }
-Positions::~Positions() {
-  // @@protoc_insertion_point(destructor:ingame.Positions)
+C2S_JoinGame::~C2S_JoinGame() {
+  // @@protoc_insertion_point(destructor:ingame.C2S_JoinGame)
   SharedDtor(*this);
 }
-inline void Positions::SharedDtor(MessageLite& self) {
-  Positions& this_ = static_cast<Positions&>(self);
+inline void C2S_JoinGame::SharedDtor(MessageLite& self) {
+  C2S_JoinGame& this_ = static_cast<C2S_JoinGame&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.user_id_.Destroy();
+  this_._impl_.room_id_.Destroy();
   this_._impl_.~Impl_();
 }
 
-inline void* Positions::PlacementNew_(const void*, void* mem,
+inline void* C2S_JoinGame::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) Positions(arena);
+  return ::new (mem) C2S_JoinGame(arena);
 }
-constexpr auto Positions::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(Positions),
-                                            alignof(Positions));
+constexpr auto C2S_JoinGame::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(C2S_JoinGame),
+                                            alignof(C2S_JoinGame));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull Positions::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull C2S_JoinGame::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_Positions_default_instance_._instance,
+        &_C2S_JoinGame_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &Positions::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<Positions>(),
+        &C2S_JoinGame::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<C2S_JoinGame>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &Positions::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<Positions>(), &Positions::ByteSizeLong,
-            &Positions::_InternalSerialize,
+        &C2S_JoinGame::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<C2S_JoinGame>(), &C2S_JoinGame::ByteSizeLong,
+            &C2S_JoinGame::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(Positions, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(C2S_JoinGame, _impl_._cached_size_),
         false,
     },
-    &Positions::kDescriptorMethods,
+    &C2S_JoinGame::kDescriptorMethods,
     &descriptor_table_ingame_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* Positions::GetClassData() const {
+const ::google::protobuf::internal::ClassData* C2S_JoinGame::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<1, 2, 0, 0, 2> Positions::_table_ = {
+const ::_pbi::TcParseTable<1, 2, 0, 42, 2> C2S_JoinGame::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -1163,23 +1850,933 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> Positions::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::ingame::Positions>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::ingame::C2S_JoinGame>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // string room_id = 2;
+    {::_pbi::TcParser::FastUS1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(C2S_JoinGame, _impl_.room_id_)}},
+    // string user_id = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(C2S_JoinGame, _impl_.user_id_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string user_id = 1;
+    {PROTOBUF_FIELD_OFFSET(C2S_JoinGame, _impl_.user_id_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // string room_id = 2;
+    {PROTOBUF_FIELD_OFFSET(C2S_JoinGame, _impl_.room_id_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+  }},
+  // no aux_entries
+  {{
+    "\23\7\7\0\0\0\0\0"
+    "ingame.C2S_JoinGame"
+    "user_id"
+    "room_id"
+  }},
+};
+
+PROTOBUF_NOINLINE void C2S_JoinGame::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.C2S_JoinGame)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.user_id_.ClearToEmpty();
+  _impl_.room_id_.ClearToEmpty();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* C2S_JoinGame::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const C2S_JoinGame& this_ = static_cast<const C2S_JoinGame&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* C2S_JoinGame::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const C2S_JoinGame& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.C2S_JoinGame)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // string user_id = 1;
+          if (!this_._internal_user_id().empty()) {
+            const std::string& _s = this_._internal_user_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.C2S_JoinGame.user_id");
+            target = stream->WriteStringMaybeAliased(1, _s, target);
+          }
+
+          // string room_id = 2;
+          if (!this_._internal_room_id().empty()) {
+            const std::string& _s = this_._internal_room_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.C2S_JoinGame.room_id");
+            target = stream->WriteStringMaybeAliased(2, _s, target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.C2S_JoinGame)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t C2S_JoinGame::ByteSizeLong(const MessageLite& base) {
+          const C2S_JoinGame& this_ = static_cast<const C2S_JoinGame&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t C2S_JoinGame::ByteSizeLong() const {
+          const C2S_JoinGame& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.C2S_JoinGame)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // string user_id = 1;
+            if (!this_._internal_user_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_user_id());
+            }
+            // string room_id = 2;
+            if (!this_._internal_room_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_room_id());
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void C2S_JoinGame::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<C2S_JoinGame*>(&to_msg);
+  auto& from = static_cast<const C2S_JoinGame&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.C2S_JoinGame)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_user_id().empty()) {
+    _this->_internal_set_user_id(from._internal_user_id());
+  }
+  if (!from._internal_room_id().empty()) {
+    _this->_internal_set_room_id(from._internal_room_id());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void C2S_JoinGame::CopyFrom(const C2S_JoinGame& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.C2S_JoinGame)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void C2S_JoinGame::InternalSwap(C2S_JoinGame* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.room_id_, &other->_impl_.room_id_, arena);
+}
+
+::google::protobuf::Metadata C2S_JoinGame::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class S2C_JoinGameResult::_Internal {
+ public:
+  using HasBits =
+      decltype(std::declval<S2C_JoinGameResult>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(S2C_JoinGameResult, _impl_._has_bits_);
+};
+
+S2C_JoinGameResult::S2C_JoinGameResult(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_JoinGameResult)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_JoinGameResult::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::ingame::S2C_JoinGameResult& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        message_(arena, from.message_) {}
+
+S2C_JoinGameResult::S2C_JoinGameResult(
+    ::google::protobuf::Arena* arena,
+    const S2C_JoinGameResult& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  S2C_JoinGameResult* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.initial_state_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::PlayerRaceState>(
+                              arena, *from._impl_.initial_state_)
+                        : nullptr;
+  _impl_.world_state_ = (cached_has_bits & 0x00000002u) ? ::google::protobuf::Message::CopyConstruct<::ingame::GameWorldState>(
+                              arena, *from._impl_.world_state_)
+                        : nullptr;
+  _impl_.success_ = from._impl_.success_;
+
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_JoinGameResult)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_JoinGameResult::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        message_(arena) {}
+
+inline void S2C_JoinGameResult::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, initial_state_),
+           0,
+           offsetof(Impl_, success_) -
+               offsetof(Impl_, initial_state_) +
+               sizeof(Impl_::success_));
+}
+S2C_JoinGameResult::~S2C_JoinGameResult() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_JoinGameResult)
+  SharedDtor(*this);
+}
+inline void S2C_JoinGameResult::SharedDtor(MessageLite& self) {
+  S2C_JoinGameResult& this_ = static_cast<S2C_JoinGameResult&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.message_.Destroy();
+  delete this_._impl_.initial_state_;
+  delete this_._impl_.world_state_;
+  this_._impl_.~Impl_();
+}
+
+inline void* S2C_JoinGameResult::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) S2C_JoinGameResult(arena);
+}
+constexpr auto S2C_JoinGameResult::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_JoinGameResult),
+                                            alignof(S2C_JoinGameResult));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull S2C_JoinGameResult::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_S2C_JoinGameResult_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &S2C_JoinGameResult::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_JoinGameResult>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &S2C_JoinGameResult::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_JoinGameResult>(), &S2C_JoinGameResult::ByteSizeLong,
+            &S2C_JoinGameResult::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(S2C_JoinGameResult, _impl_._cached_size_),
+        false,
+    },
+    &S2C_JoinGameResult::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* S2C_JoinGameResult::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 4, 2, 41, 2> S2C_JoinGameResult::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(S2C_JoinGameResult, _impl_._has_bits_),
+    0, // no _extensions_
+    4, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967280,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    4,  // num_field_entries
+    2,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::S2C_JoinGameResult>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // string message = 4;
+    {::_pbi::TcParser::FastUS1,
+     {34, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_JoinGameResult, _impl_.message_)}},
+    // bool success = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(S2C_JoinGameResult, _impl_.success_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_JoinGameResult, _impl_.success_)}},
+    // .ingame.PlayerRaceState initial_state = 2;
+    {::_pbi::TcParser::FastMtS1,
+     {18, 0, 0, PROTOBUF_FIELD_OFFSET(S2C_JoinGameResult, _impl_.initial_state_)}},
+    // .ingame.GameWorldState world_state = 3;
+    {::_pbi::TcParser::FastMtS1,
+     {26, 1, 1, PROTOBUF_FIELD_OFFSET(S2C_JoinGameResult, _impl_.world_state_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // bool success = 1;
+    {PROTOBUF_FIELD_OFFSET(S2C_JoinGameResult, _impl_.success_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
+    // .ingame.PlayerRaceState initial_state = 2;
+    {PROTOBUF_FIELD_OFFSET(S2C_JoinGameResult, _impl_.initial_state_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.GameWorldState world_state = 3;
+    {PROTOBUF_FIELD_OFFSET(S2C_JoinGameResult, _impl_.world_state_), _Internal::kHasBitsOffset + 1, 1,
+    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+    // string message = 4;
+    {PROTOBUF_FIELD_OFFSET(S2C_JoinGameResult, _impl_.message_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::ingame::PlayerRaceState>()},
+    {::_pbi::TcParser::GetTable<::ingame::GameWorldState>()},
+  }}, {{
+    "\31\0\0\0\7\0\0\0"
+    "ingame.S2C_JoinGameResult"
+    "message"
+  }},
+};
+
+PROTOBUF_NOINLINE void S2C_JoinGameResult::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_JoinGameResult)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.message_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      ABSL_DCHECK(_impl_.initial_state_ != nullptr);
+      _impl_.initial_state_->Clear();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      ABSL_DCHECK(_impl_.world_state_ != nullptr);
+      _impl_.world_state_->Clear();
+    }
+  }
+  _impl_.success_ = false;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* S2C_JoinGameResult::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const S2C_JoinGameResult& this_ = static_cast<const S2C_JoinGameResult&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* S2C_JoinGameResult::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const S2C_JoinGameResult& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_JoinGameResult)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // bool success = 1;
+          if (this_._internal_success() != 0) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteBoolToArray(
+                1, this_._internal_success(), target);
+          }
+
+          cached_has_bits = this_._impl_._has_bits_[0];
+          // .ingame.PlayerRaceState initial_state = 2;
+          if (cached_has_bits & 0x00000001u) {
+            target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                2, *this_._impl_.initial_state_, this_._impl_.initial_state_->GetCachedSize(), target,
+                stream);
+          }
+
+          // .ingame.GameWorldState world_state = 3;
+          if (cached_has_bits & 0x00000002u) {
+            target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                3, *this_._impl_.world_state_, this_._impl_.world_state_->GetCachedSize(), target,
+                stream);
+          }
+
+          // string message = 4;
+          if (!this_._internal_message().empty()) {
+            const std::string& _s = this_._internal_message();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_JoinGameResult.message");
+            target = stream->WriteStringMaybeAliased(4, _s, target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_JoinGameResult)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t S2C_JoinGameResult::ByteSizeLong(const MessageLite& base) {
+          const S2C_JoinGameResult& this_ = static_cast<const S2C_JoinGameResult&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t S2C_JoinGameResult::ByteSizeLong() const {
+          const S2C_JoinGameResult& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_JoinGameResult)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // string message = 4;
+            if (!this_._internal_message().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_message());
+            }
+          }
+          cached_has_bits = this_._impl_._has_bits_[0];
+          if (cached_has_bits & 0x00000003u) {
+            // .ingame.PlayerRaceState initial_state = 2;
+            if (cached_has_bits & 0x00000001u) {
+              total_size += 1 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.initial_state_);
+            }
+            // .ingame.GameWorldState world_state = 3;
+            if (cached_has_bits & 0x00000002u) {
+              total_size += 1 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.world_state_);
+            }
+          }
+           {
+            // bool success = 1;
+            if (this_._internal_success() != 0) {
+              total_size += 2;
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void S2C_JoinGameResult::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_JoinGameResult*>(&to_msg);
+  auto& from = static_cast<const S2C_JoinGameResult&>(from_msg);
+  ::google::protobuf::Arena* arena = _this->GetArena();
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_JoinGameResult)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_message().empty()) {
+    _this->_internal_set_message(from._internal_message());
+  }
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      ABSL_DCHECK(from._impl_.initial_state_ != nullptr);
+      if (_this->_impl_.initial_state_ == nullptr) {
+        _this->_impl_.initial_state_ =
+            ::google::protobuf::Message::CopyConstruct<::ingame::PlayerRaceState>(arena, *from._impl_.initial_state_);
+      } else {
+        _this->_impl_.initial_state_->MergeFrom(*from._impl_.initial_state_);
+      }
+    }
+    if (cached_has_bits & 0x00000002u) {
+      ABSL_DCHECK(from._impl_.world_state_ != nullptr);
+      if (_this->_impl_.world_state_ == nullptr) {
+        _this->_impl_.world_state_ =
+            ::google::protobuf::Message::CopyConstruct<::ingame::GameWorldState>(arena, *from._impl_.world_state_);
+      } else {
+        _this->_impl_.world_state_->MergeFrom(*from._impl_.world_state_);
+      }
+    }
+  }
+  if (from._internal_success() != 0) {
+    _this->_impl_.success_ = from._impl_.success_;
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void S2C_JoinGameResult::CopyFrom(const S2C_JoinGameResult& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_JoinGameResult)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void S2C_JoinGameResult::InternalSwap(S2C_JoinGameResult* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.message_, &other->_impl_.message_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(S2C_JoinGameResult, _impl_.success_)
+      + sizeof(S2C_JoinGameResult::_impl_.success_)
+      - PROTOBUF_FIELD_OFFSET(S2C_JoinGameResult, _impl_.initial_state_)>(
+          reinterpret_cast<char*>(&_impl_.initial_state_),
+          reinterpret_cast<char*>(&other->_impl_.initial_state_));
+}
+
+::google::protobuf::Metadata S2C_JoinGameResult::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class GameWorldState::_Internal {
+ public:
+};
+
+GameWorldState::GameWorldState(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.GameWorldState)
+}
+GameWorldState::GameWorldState(
+    ::google::protobuf::Arena* arena, const GameWorldState& from)
+    : GameWorldState(arena) {
+  MergeFrom(from);
+}
+inline PROTOBUF_NDEBUG_INLINE GameWorldState::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0} {}
+
+inline void GameWorldState::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, current_phase_),
+           0,
+           offsetof(Impl_, monster_count_) -
+               offsetof(Impl_, current_phase_) +
+               sizeof(Impl_::monster_count_));
+}
+GameWorldState::~GameWorldState() {
+  // @@protoc_insertion_point(destructor:ingame.GameWorldState)
+  SharedDtor(*this);
+}
+inline void GameWorldState::SharedDtor(MessageLite& self) {
+  GameWorldState& this_ = static_cast<GameWorldState&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.~Impl_();
+}
+
+inline void* GameWorldState::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) GameWorldState(arena);
+}
+constexpr auto GameWorldState::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(GameWorldState),
+                                            alignof(GameWorldState));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull GameWorldState::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_GameWorldState_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &GameWorldState::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<GameWorldState>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &GameWorldState::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<GameWorldState>(), &GameWorldState::ByteSizeLong,
+            &GameWorldState::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(GameWorldState, _impl_._cached_size_),
+        false,
+    },
+    &GameWorldState::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* GameWorldState::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<3, 5, 0, 0, 2> GameWorldState::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    5, 56,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967264,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    5,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::GameWorldState>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+    // int32 current_phase = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GameWorldState, _impl_.current_phase_), 63>(),
+     {8, 63, 0, PROTOBUF_FIELD_OFFSET(GameWorldState, _impl_.current_phase_)}},
+    // int32 phase_time_remaining = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GameWorldState, _impl_.phase_time_remaining_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(GameWorldState, _impl_.phase_time_remaining_)}},
+    // int32 human_count = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GameWorldState, _impl_.human_count_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(GameWorldState, _impl_.human_count_)}},
+    // int32 giane_count = 4;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GameWorldState, _impl_.giane_count_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(GameWorldState, _impl_.giane_count_)}},
+    // int32 monster_count = 5;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(GameWorldState, _impl_.monster_count_), 63>(),
+     {40, 63, 0, PROTOBUF_FIELD_OFFSET(GameWorldState, _impl_.monster_count_)}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // int32 current_phase = 1;
+    {PROTOBUF_FIELD_OFFSET(GameWorldState, _impl_.current_phase_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    // int32 phase_time_remaining = 2;
+    {PROTOBUF_FIELD_OFFSET(GameWorldState, _impl_.phase_time_remaining_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    // int32 human_count = 3;
+    {PROTOBUF_FIELD_OFFSET(GameWorldState, _impl_.human_count_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    // int32 giane_count = 4;
+    {PROTOBUF_FIELD_OFFSET(GameWorldState, _impl_.giane_count_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    // int32 monster_count = 5;
+    {PROTOBUF_FIELD_OFFSET(GameWorldState, _impl_.monster_count_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+  }},
+  // no aux_entries
+  {{
+  }},
+};
+
+PROTOBUF_NOINLINE void GameWorldState::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.GameWorldState)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&_impl_.current_phase_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.monster_count_) -
+      reinterpret_cast<char*>(&_impl_.current_phase_)) + sizeof(_impl_.monster_count_));
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* GameWorldState::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const GameWorldState& this_ = static_cast<const GameWorldState&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* GameWorldState::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const GameWorldState& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.GameWorldState)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // int32 current_phase = 1;
+          if (this_._internal_current_phase() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<1>(
+                    stream, this_._internal_current_phase(), target);
+          }
+
+          // int32 phase_time_remaining = 2;
+          if (this_._internal_phase_time_remaining() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<2>(
+                    stream, this_._internal_phase_time_remaining(), target);
+          }
+
+          // int32 human_count = 3;
+          if (this_._internal_human_count() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<3>(
+                    stream, this_._internal_human_count(), target);
+          }
+
+          // int32 giane_count = 4;
+          if (this_._internal_giane_count() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<4>(
+                    stream, this_._internal_giane_count(), target);
+          }
+
+          // int32 monster_count = 5;
+          if (this_._internal_monster_count() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<5>(
+                    stream, this_._internal_monster_count(), target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.GameWorldState)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t GameWorldState::ByteSizeLong(const MessageLite& base) {
+          const GameWorldState& this_ = static_cast<const GameWorldState&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t GameWorldState::ByteSizeLong() const {
+          const GameWorldState& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.GameWorldState)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // int32 current_phase = 1;
+            if (this_._internal_current_phase() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_current_phase());
+            }
+            // int32 phase_time_remaining = 2;
+            if (this_._internal_phase_time_remaining() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_phase_time_remaining());
+            }
+            // int32 human_count = 3;
+            if (this_._internal_human_count() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_human_count());
+            }
+            // int32 giane_count = 4;
+            if (this_._internal_giane_count() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_giane_count());
+            }
+            // int32 monster_count = 5;
+            if (this_._internal_monster_count() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_monster_count());
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void GameWorldState::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<GameWorldState*>(&to_msg);
+  auto& from = static_cast<const GameWorldState&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.GameWorldState)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_current_phase() != 0) {
+    _this->_impl_.current_phase_ = from._impl_.current_phase_;
+  }
+  if (from._internal_phase_time_remaining() != 0) {
+    _this->_impl_.phase_time_remaining_ = from._impl_.phase_time_remaining_;
+  }
+  if (from._internal_human_count() != 0) {
+    _this->_impl_.human_count_ = from._impl_.human_count_;
+  }
+  if (from._internal_giane_count() != 0) {
+    _this->_impl_.giane_count_ = from._impl_.giane_count_;
+  }
+  if (from._internal_monster_count() != 0) {
+    _this->_impl_.monster_count_ = from._impl_.monster_count_;
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void GameWorldState::CopyFrom(const GameWorldState& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.GameWorldState)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void GameWorldState::InternalSwap(GameWorldState* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GameWorldState, _impl_.monster_count_)
+      + sizeof(GameWorldState::_impl_.monster_count_)
+      - PROTOBUF_FIELD_OFFSET(GameWorldState, _impl_.current_phase_)>(
+          reinterpret_cast<char*>(&_impl_.current_phase_),
+          reinterpret_cast<char*>(&other->_impl_.current_phase_));
+}
+
+::google::protobuf::Metadata GameWorldState::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class Vector2::_Internal {
+ public:
+};
+
+Vector2::Vector2(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.Vector2)
+}
+Vector2::Vector2(
+    ::google::protobuf::Arena* arena, const Vector2& from)
+    : Vector2(arena) {
+  MergeFrom(from);
+}
+inline PROTOBUF_NDEBUG_INLINE Vector2::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0} {}
+
+inline void Vector2::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, x_),
+           0,
+           offsetof(Impl_, y_) -
+               offsetof(Impl_, x_) +
+               sizeof(Impl_::y_));
+}
+Vector2::~Vector2() {
+  // @@protoc_insertion_point(destructor:ingame.Vector2)
+  SharedDtor(*this);
+}
+inline void Vector2::SharedDtor(MessageLite& self) {
+  Vector2& this_ = static_cast<Vector2&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.~Impl_();
+}
+
+inline void* Vector2::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) Vector2(arena);
+}
+constexpr auto Vector2::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(Vector2),
+                                            alignof(Vector2));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull Vector2::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_Vector2_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &Vector2::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<Vector2>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &Vector2::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<Vector2>(), &Vector2::ByteSizeLong,
+            &Vector2::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(Vector2, _impl_._cached_size_),
+        false,
+    },
+    &Vector2::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* Vector2::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<1, 2, 0, 0, 2> Vector2::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    2, 8,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967292,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    2,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::Vector2>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // float y = 2;
     {::_pbi::TcParser::FastF32S1,
-     {21, 63, 0, PROTOBUF_FIELD_OFFSET(Positions, _impl_.y_)}},
+     {21, 63, 0, PROTOBUF_FIELD_OFFSET(Vector2, _impl_.y_)}},
     // float x = 1;
     {::_pbi::TcParser::FastF32S1,
-     {13, 63, 0, PROTOBUF_FIELD_OFFSET(Positions, _impl_.x_)}},
+     {13, 63, 0, PROTOBUF_FIELD_OFFSET(Vector2, _impl_.x_)}},
   }}, {{
     65535, 65535
   }}, {{
     // float x = 1;
-    {PROTOBUF_FIELD_OFFSET(Positions, _impl_.x_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Vector2, _impl_.x_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
     // float y = 2;
-    {PROTOBUF_FIELD_OFFSET(Positions, _impl_.y_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(Vector2, _impl_.y_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
   }},
   // no aux_entries
@@ -1187,8 +2784,8 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> Positions::_table_ = {
   }},
 };
 
-PROTOBUF_NOINLINE void Positions::Clear() {
-// @@protoc_insertion_point(message_clear_start:ingame.Positions)
+PROTOBUF_NOINLINE void Vector2::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.Vector2)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1201,17 +2798,17 @@ PROTOBUF_NOINLINE void Positions::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* Positions::_InternalSerialize(
+        ::uint8_t* Vector2::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const Positions& this_ = static_cast<const Positions&>(base);
+          const Vector2& this_ = static_cast<const Vector2&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* Positions::_InternalSerialize(
+        ::uint8_t* Vector2::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const Positions& this_ = *this;
+          const Vector2& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:ingame.Positions)
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.Vector2)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -1234,18 +2831,18 @@ PROTOBUF_NOINLINE void Positions::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:ingame.Positions)
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.Vector2)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t Positions::ByteSizeLong(const MessageLite& base) {
-          const Positions& this_ = static_cast<const Positions&>(base);
+        ::size_t Vector2::ByteSizeLong(const MessageLite& base) {
+          const Vector2& this_ = static_cast<const Vector2&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t Positions::ByteSizeLong() const {
-          const Positions& this_ = *this;
+        ::size_t Vector2::ByteSizeLong() const {
+          const Vector2& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:ingame.Positions)
+          // @@protoc_insertion_point(message_byte_size_start:ingame.Vector2)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -1267,10 +2864,10 @@ PROTOBUF_NOINLINE void Positions::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void Positions::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<Positions*>(&to_msg);
-  auto& from = static_cast<const Positions&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.Positions)
+void Vector2::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<Vector2*>(&to_msg);
+  auto& from = static_cast<const Vector2&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.Vector2)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1284,26 +2881,26 @@ void Positions::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::googl
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void Positions::CopyFrom(const Positions& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ingame.Positions)
+void Vector2::CopyFrom(const Vector2& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.Vector2)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void Positions::InternalSwap(Positions* PROTOBUF_RESTRICT other) {
+void Vector2::InternalSwap(Vector2* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(Positions, _impl_.y_)
-      + sizeof(Positions::_impl_.y_)
-      - PROTOBUF_FIELD_OFFSET(Positions, _impl_.x_)>(
+      PROTOBUF_FIELD_OFFSET(Vector2, _impl_.y_)
+      + sizeof(Vector2::_impl_.y_)
+      - PROTOBUF_FIELD_OFFSET(Vector2, _impl_.x_)>(
           reinterpret_cast<char*>(&_impl_.x_),
           reinterpret_cast<char*>(&other->_impl_.x_));
 }
 
-::google::protobuf::Metadata Positions::GetMetadata() const {
+::google::protobuf::Metadata Vector2::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
@@ -1870,9 +3467,9 @@ const ::_pbi::TcParseTable<3, 8, 2, 46, 2> PlayerRaceState::_table_ = {
     // repeated .ingame.GeneType equipped_genes = 4;
     {::_pbi::TcParser::FastV32P1,
      {34, 63, 0, PROTOBUF_FIELD_OFFSET(PlayerRaceState, _impl_.equipped_genes_)}},
-    // bool transform_giant = 5;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(PlayerRaceState, _impl_.transform_giant_), 63>(),
-     {40, 63, 0, PROTOBUF_FIELD_OFFSET(PlayerRaceState, _impl_.transform_giant_)}},
+    // bool can_transform = 5;
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(PlayerRaceState, _impl_.can_transform_), 63>(),
+     {40, 63, 0, PROTOBUF_FIELD_OFFSET(PlayerRaceState, _impl_.can_transform_)}},
     // .ingame.GiantStats giant_stats = 6;
     {::_pbi::TcParser::FastMtS1,
      {50, 0, 0, PROTOBUF_FIELD_OFFSET(PlayerRaceState, _impl_.giant_stats_)}},
@@ -1894,8 +3491,8 @@ const ::_pbi::TcParseTable<3, 8, 2, 46, 2> PlayerRaceState::_table_ = {
     // repeated .ingame.GeneType equipped_genes = 4;
     {PROTOBUF_FIELD_OFFSET(PlayerRaceState, _impl_.equipped_genes_), -1, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kPackedOpenEnum)},
-    // bool transform_giant = 5;
-    {PROTOBUF_FIELD_OFFSET(PlayerRaceState, _impl_.transform_giant_), -1, 0,
+    // bool can_transform = 5;
+    {PROTOBUF_FIELD_OFFSET(PlayerRaceState, _impl_.can_transform_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kBool)},
     // .ingame.GiantStats giant_stats = 6;
     {PROTOBUF_FIELD_OFFSET(PlayerRaceState, _impl_.giant_stats_), _Internal::kHasBitsOffset + 0, 0,
@@ -2002,11 +3599,11 @@ PROTOBUF_NOINLINE void PlayerRaceState::Clear() {
             }
           }
 
-          // bool transform_giant = 5;
-          if (this_._internal_transform_giant() != 0) {
+          // bool can_transform = 5;
+          if (this_._internal_can_transform() != 0) {
             target = stream->EnsureSpace(target);
             target = ::_pbi::WireFormatLite::WriteBoolToArray(
-                5, this_._internal_transform_giant(), target);
+                5, this_._internal_can_transform(), target);
           }
 
           cached_has_bits = this_._impl_._has_bits_[0];
@@ -2093,8 +3690,8 @@ PROTOBUF_NOINLINE void PlayerRaceState::Clear() {
               total_size += 1 +
                             ::_pbi::WireFormatLite::EnumSize(this_._internal_current_race());
             }
-            // bool transform_giant = 5;
-            if (this_._internal_transform_giant() != 0) {
+            // bool can_transform = 5;
+            if (this_._internal_can_transform() != 0) {
               total_size += 2;
             }
             // int32 current_hp = 7;
@@ -2139,8 +3736,8 @@ void PlayerRaceState::MergeImpl(::google::protobuf::MessageLite& to_msg, const :
   if (from._internal_current_race() != 0) {
     _this->_impl_.current_race_ = from._impl_.current_race_;
   }
-  if (from._internal_transform_giant() != 0) {
-    _this->_impl_.transform_giant_ = from._impl_.transform_giant_;
+  if (from._internal_can_transform() != 0) {
+    _this->_impl_.can_transform_ = from._impl_.can_transform_;
   }
   if (from._internal_current_hp() != 0) {
     _this->_impl_.current_hp_ = from._impl_.current_hp_;
@@ -2182,99 +3779,99 @@ void PlayerRaceState::InternalSwap(PlayerRaceState* PROTOBUF_RESTRICT other) {
 }
 // ===================================================================
 
-class C2S_Transform::_Internal {
+class C2S_TransformGiant::_Internal {
  public:
 };
 
-C2S_Transform::C2S_Transform(::google::protobuf::Arena* arena)
+C2S_TransformGiant::C2S_TransformGiant(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ingame.C2S_Transform)
+  // @@protoc_insertion_point(arena_constructor:ingame.C2S_TransformGiant)
 }
-inline PROTOBUF_NDEBUG_INLINE C2S_Transform::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE C2S_TransformGiant::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::ingame::C2S_Transform& from_msg)
+    const Impl_& from, const ::ingame::C2S_TransformGiant& from_msg)
       : user_id_(arena, from.user_id_),
         _cached_size_{0} {}
 
-C2S_Transform::C2S_Transform(
+C2S_TransformGiant::C2S_TransformGiant(
     ::google::protobuf::Arena* arena,
-    const C2S_Transform& from)
+    const C2S_TransformGiant& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  C2S_Transform* const _this = this;
+  C2S_TransformGiant* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
 
-  // @@protoc_insertion_point(copy_constructor:ingame.C2S_Transform)
+  // @@protoc_insertion_point(copy_constructor:ingame.C2S_TransformGiant)
 }
-inline PROTOBUF_NDEBUG_INLINE C2S_Transform::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE C2S_TransformGiant::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : user_id_(arena),
         _cached_size_{0} {}
 
-inline void C2S_Transform::SharedCtor(::_pb::Arena* arena) {
+inline void C2S_TransformGiant::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
 }
-C2S_Transform::~C2S_Transform() {
-  // @@protoc_insertion_point(destructor:ingame.C2S_Transform)
+C2S_TransformGiant::~C2S_TransformGiant() {
+  // @@protoc_insertion_point(destructor:ingame.C2S_TransformGiant)
   SharedDtor(*this);
 }
-inline void C2S_Transform::SharedDtor(MessageLite& self) {
-  C2S_Transform& this_ = static_cast<C2S_Transform&>(self);
+inline void C2S_TransformGiant::SharedDtor(MessageLite& self) {
+  C2S_TransformGiant& this_ = static_cast<C2S_TransformGiant&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.user_id_.Destroy();
   this_._impl_.~Impl_();
 }
 
-inline void* C2S_Transform::PlacementNew_(const void*, void* mem,
+inline void* C2S_TransformGiant::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) C2S_Transform(arena);
+  return ::new (mem) C2S_TransformGiant(arena);
 }
-constexpr auto C2S_Transform::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(C2S_Transform),
-                                            alignof(C2S_Transform));
+constexpr auto C2S_TransformGiant::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(C2S_TransformGiant),
+                                            alignof(C2S_TransformGiant));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull C2S_Transform::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull C2S_TransformGiant::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_C2S_Transform_default_instance_._instance,
+        &_C2S_TransformGiant_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &C2S_Transform::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<C2S_Transform>(),
+        &C2S_TransformGiant::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<C2S_TransformGiant>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &C2S_Transform::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<C2S_Transform>(), &C2S_Transform::ByteSizeLong,
-            &C2S_Transform::_InternalSerialize,
+        &C2S_TransformGiant::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<C2S_TransformGiant>(), &C2S_TransformGiant::ByteSizeLong,
+            &C2S_TransformGiant::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(C2S_Transform, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(C2S_TransformGiant, _impl_._cached_size_),
         false,
     },
-    &C2S_Transform::kDescriptorMethods,
+    &C2S_TransformGiant::kDescriptorMethods,
     &descriptor_table_ingame_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* C2S_Transform::GetClassData() const {
+const ::google::protobuf::internal::ClassData* C2S_TransformGiant::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 1, 0, 36, 2> C2S_Transform::_table_ = {
+const ::_pbi::TcParseTable<0, 1, 0, 41, 2> C2S_TransformGiant::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -2289,29 +3886,29 @@ const ::_pbi::TcParseTable<0, 1, 0, 36, 2> C2S_Transform::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::ingame::C2S_Transform>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::ingame::C2S_TransformGiant>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     // string user_id = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(C2S_Transform, _impl_.user_id_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(C2S_TransformGiant, _impl_.user_id_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string user_id = 1;
-    {PROTOBUF_FIELD_OFFSET(C2S_Transform, _impl_.user_id_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(C2S_TransformGiant, _impl_.user_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\24\7\0\0\0\0\0\0"
-    "ingame.C2S_Transform"
+    "\31\7\0\0\0\0\0\0"
+    "ingame.C2S_TransformGiant"
     "user_id"
   }},
 };
 
-PROTOBUF_NOINLINE void C2S_Transform::Clear() {
-// @@protoc_insertion_point(message_clear_start:ingame.C2S_Transform)
+PROTOBUF_NOINLINE void C2S_TransformGiant::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.C2S_TransformGiant)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -2322,17 +3919,17 @@ PROTOBUF_NOINLINE void C2S_Transform::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* C2S_Transform::_InternalSerialize(
+        ::uint8_t* C2S_TransformGiant::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const C2S_Transform& this_ = static_cast<const C2S_Transform&>(base);
+          const C2S_TransformGiant& this_ = static_cast<const C2S_TransformGiant&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* C2S_Transform::_InternalSerialize(
+        ::uint8_t* C2S_TransformGiant::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const C2S_Transform& this_ = *this;
+          const C2S_TransformGiant& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:ingame.C2S_Transform)
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.C2S_TransformGiant)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -2340,7 +3937,7 @@ PROTOBUF_NOINLINE void C2S_Transform::Clear() {
           if (!this_._internal_user_id().empty()) {
             const std::string& _s = this_._internal_user_id();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.C2S_Transform.user_id");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.C2S_TransformGiant.user_id");
             target = stream->WriteStringMaybeAliased(1, _s, target);
           }
 
@@ -2349,18 +3946,18 @@ PROTOBUF_NOINLINE void C2S_Transform::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:ingame.C2S_Transform)
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.C2S_TransformGiant)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t C2S_Transform::ByteSizeLong(const MessageLite& base) {
-          const C2S_Transform& this_ = static_cast<const C2S_Transform&>(base);
+        ::size_t C2S_TransformGiant::ByteSizeLong(const MessageLite& base) {
+          const C2S_TransformGiant& this_ = static_cast<const C2S_TransformGiant&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t C2S_Transform::ByteSizeLong() const {
-          const C2S_Transform& this_ = *this;
+        ::size_t C2S_TransformGiant::ByteSizeLong() const {
+          const C2S_TransformGiant& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:ingame.C2S_Transform)
+          // @@protoc_insertion_point(message_byte_size_start:ingame.C2S_TransformGiant)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -2378,10 +3975,10 @@ PROTOBUF_NOINLINE void C2S_Transform::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void C2S_Transform::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<C2S_Transform*>(&to_msg);
-  auto& from = static_cast<const C2S_Transform&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.C2S_Transform)
+void C2S_TransformGiant::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<C2S_TransformGiant*>(&to_msg);
+  auto& from = static_cast<const C2S_TransformGiant&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.C2S_TransformGiant)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2392,15 +3989,15 @@ void C2S_Transform::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::g
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void C2S_Transform::CopyFrom(const C2S_Transform& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ingame.C2S_Transform)
+void C2S_TransformGiant::CopyFrom(const C2S_TransformGiant& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.C2S_TransformGiant)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void C2S_Transform::InternalSwap(C2S_Transform* PROTOBUF_RESTRICT other) {
+void C2S_TransformGiant::InternalSwap(C2S_TransformGiant* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -2408,45 +4005,45 @@ void C2S_Transform::InternalSwap(C2S_Transform* PROTOBUF_RESTRICT other) {
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
 }
 
-::google::protobuf::Metadata C2S_Transform::GetMetadata() const {
+::google::protobuf::Metadata C2S_TransformGiant::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class S2C_Transform::_Internal {
+class S2C_TransformResult::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<S2C_Transform>()._impl_._has_bits_);
+      decltype(std::declval<S2C_TransformResult>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_._has_bits_);
 };
 
-S2C_Transform::S2C_Transform(::google::protobuf::Arena* arena)
+S2C_TransformResult::S2C_TransformResult(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ingame.S2C_Transform)
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_TransformResult)
 }
-inline PROTOBUF_NDEBUG_INLINE S2C_Transform::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE S2C_TransformResult::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::ingame::S2C_Transform& from_msg)
+    const Impl_& from, const ::ingame::S2C_TransformResult& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         user_id_(arena, from.user_id_),
         message_(arena, from.message_) {}
 
-S2C_Transform::S2C_Transform(
+S2C_TransformResult::S2C_TransformResult(
     ::google::protobuf::Arena* arena,
-    const S2C_Transform& from)
+    const S2C_TransformResult& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  S2C_Transform* const _this = this;
+  S2C_TransformResult* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
@@ -2463,16 +4060,16 @@ S2C_Transform::S2C_Transform(
                offsetof(Impl_, success_) +
                sizeof(Impl_::new_race_));
 
-  // @@protoc_insertion_point(copy_constructor:ingame.S2C_Transform)
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_TransformResult)
 }
-inline PROTOBUF_NDEBUG_INLINE S2C_Transform::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE S2C_TransformResult::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : _cached_size_{0},
         user_id_(arena),
         message_(arena) {}
 
-inline void S2C_Transform::SharedCtor(::_pb::Arena* arena) {
+inline void S2C_TransformResult::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, new_stats_),
@@ -2481,12 +4078,12 @@ inline void S2C_Transform::SharedCtor(::_pb::Arena* arena) {
                offsetof(Impl_, new_stats_) +
                sizeof(Impl_::new_race_));
 }
-S2C_Transform::~S2C_Transform() {
-  // @@protoc_insertion_point(destructor:ingame.S2C_Transform)
+S2C_TransformResult::~S2C_TransformResult() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_TransformResult)
   SharedDtor(*this);
 }
-inline void S2C_Transform::SharedDtor(MessageLite& self) {
-  S2C_Transform& this_ = static_cast<S2C_Transform&>(self);
+inline void S2C_TransformResult::SharedDtor(MessageLite& self) {
+  S2C_TransformResult& this_ = static_cast<S2C_TransformResult&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.user_id_.Destroy();
@@ -2495,45 +4092,45 @@ inline void S2C_Transform::SharedDtor(MessageLite& self) {
   this_._impl_.~Impl_();
 }
 
-inline void* S2C_Transform::PlacementNew_(const void*, void* mem,
+inline void* S2C_TransformResult::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) S2C_Transform(arena);
+  return ::new (mem) S2C_TransformResult(arena);
 }
-constexpr auto S2C_Transform::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_Transform),
-                                            alignof(S2C_Transform));
+constexpr auto S2C_TransformResult::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_TransformResult),
+                                            alignof(S2C_TransformResult));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull S2C_Transform::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull S2C_TransformResult::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_S2C_Transform_default_instance_._instance,
+        &_S2C_TransformResult_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &S2C_Transform::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<S2C_Transform>(),
+        &S2C_TransformResult::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_TransformResult>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &S2C_Transform::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<S2C_Transform>(), &S2C_Transform::ByteSizeLong,
-            &S2C_Transform::_InternalSerialize,
+        &S2C_TransformResult::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_TransformResult>(), &S2C_TransformResult::ByteSizeLong,
+            &S2C_TransformResult::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_._cached_size_),
         false,
     },
-    &S2C_Transform::kDescriptorMethods,
+    &S2C_TransformResult::kDescriptorMethods,
     &descriptor_table_ingame_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* S2C_Transform::GetClassData() const {
+const ::google::protobuf::internal::ClassData* S2C_TransformResult::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 5, 1, 43, 2> S2C_Transform::_table_ = {
+const ::_pbi::TcParseTable<3, 5, 1, 49, 2> S2C_TransformResult::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_._has_bits_),
     0, // no _extensions_
     5, 56,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -2546,57 +4143,57 @@ const ::_pbi::TcParseTable<3, 5, 1, 43, 2> S2C_Transform::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::ingame::S2C_Transform>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::ingame::S2C_TransformResult>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
     // string user_id = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_.user_id_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_.user_id_)}},
     // bool success = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(S2C_Transform, _impl_.success_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_.success_)}},
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(S2C_TransformResult, _impl_.success_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_.success_)}},
     // .ingame.RaceType new_race = 3;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_Transform, _impl_.new_race_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_.new_race_)}},
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_TransformResult, _impl_.new_race_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_.new_race_)}},
     // .ingame.GiantStats new_stats = 4;
     {::_pbi::TcParser::FastMtS1,
-     {34, 0, 0, PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_.new_stats_)}},
+     {34, 0, 0, PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_.new_stats_)}},
     // string message = 5;
     {::_pbi::TcParser::FastUS1,
-     {42, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_.message_)}},
+     {42, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_.message_)}},
     {::_pbi::TcParser::MiniParse, {}},
     {::_pbi::TcParser::MiniParse, {}},
   }}, {{
     65535, 65535
   }}, {{
     // string user_id = 1;
-    {PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_.user_id_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_.user_id_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // bool success = 2;
-    {PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_.success_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_.success_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kBool)},
     // .ingame.RaceType new_race = 3;
-    {PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_.new_race_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_.new_race_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
     // .ingame.GiantStats new_stats = 4;
-    {PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_.new_stats_), _Internal::kHasBitsOffset + 0, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_.new_stats_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
     // string message = 5;
-    {PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_.message_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_.message_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }}, {{
     {::_pbi::TcParser::GetTable<::ingame::GiantStats>()},
   }}, {{
-    "\24\7\0\0\0\7\0\0"
-    "ingame.S2C_Transform"
+    "\32\7\0\0\0\7\0\0"
+    "ingame.S2C_TransformResult"
     "user_id"
     "message"
   }},
 };
 
-PROTOBUF_NOINLINE void S2C_Transform::Clear() {
-// @@protoc_insertion_point(message_clear_start:ingame.S2C_Transform)
+PROTOBUF_NOINLINE void S2C_TransformResult::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_TransformResult)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -2617,17 +4214,17 @@ PROTOBUF_NOINLINE void S2C_Transform::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* S2C_Transform::_InternalSerialize(
+        ::uint8_t* S2C_TransformResult::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const S2C_Transform& this_ = static_cast<const S2C_Transform&>(base);
+          const S2C_TransformResult& this_ = static_cast<const S2C_TransformResult&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* S2C_Transform::_InternalSerialize(
+        ::uint8_t* S2C_TransformResult::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const S2C_Transform& this_ = *this;
+          const S2C_TransformResult& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_Transform)
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_TransformResult)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -2635,7 +4232,7 @@ PROTOBUF_NOINLINE void S2C_Transform::Clear() {
           if (!this_._internal_user_id().empty()) {
             const std::string& _s = this_._internal_user_id();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_Transform.user_id");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_TransformResult.user_id");
             target = stream->WriteStringMaybeAliased(1, _s, target);
           }
 
@@ -2665,7 +4262,7 @@ PROTOBUF_NOINLINE void S2C_Transform::Clear() {
           if (!this_._internal_message().empty()) {
             const std::string& _s = this_._internal_message();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_Transform.message");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_TransformResult.message");
             target = stream->WriteStringMaybeAliased(5, _s, target);
           }
 
@@ -2674,18 +4271,18 @@ PROTOBUF_NOINLINE void S2C_Transform::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_Transform)
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_TransformResult)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t S2C_Transform::ByteSizeLong(const MessageLite& base) {
-          const S2C_Transform& this_ = static_cast<const S2C_Transform&>(base);
+        ::size_t S2C_TransformResult::ByteSizeLong(const MessageLite& base) {
+          const S2C_TransformResult& this_ = static_cast<const S2C_TransformResult&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t S2C_Transform::ByteSizeLong() const {
-          const S2C_Transform& this_ = *this;
+        ::size_t S2C_TransformResult::ByteSizeLong() const {
+          const S2C_TransformResult& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_Transform)
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_TransformResult)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -2728,11 +4325,11 @@ PROTOBUF_NOINLINE void S2C_Transform::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void S2C_Transform::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<S2C_Transform*>(&to_msg);
-  auto& from = static_cast<const S2C_Transform&>(from_msg);
+void S2C_TransformResult::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_TransformResult*>(&to_msg);
+  auto& from = static_cast<const S2C_TransformResult&>(from_msg);
   ::google::protobuf::Arena* arena = _this->GetArena();
-  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_Transform)
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_TransformResult)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2763,15 +4360,15 @@ void S2C_Transform::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::g
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void S2C_Transform::CopyFrom(const S2C_Transform& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_Transform)
+void S2C_TransformResult::CopyFrom(const S2C_TransformResult& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_TransformResult)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void S2C_Transform::InternalSwap(S2C_Transform* PROTOBUF_RESTRICT other) {
+void S2C_TransformResult::InternalSwap(S2C_TransformResult* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -2780,14 +4377,14 @@ void S2C_Transform::InternalSwap(S2C_Transform* PROTOBUF_RESTRICT other) {
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.message_, &other->_impl_.message_, arena);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_.new_race_)
-      + sizeof(S2C_Transform::_impl_.new_race_)
-      - PROTOBUF_FIELD_OFFSET(S2C_Transform, _impl_.new_stats_)>(
+      PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_.new_race_)
+      + sizeof(S2C_TransformResult::_impl_.new_race_)
+      - PROTOBUF_FIELD_OFFSET(S2C_TransformResult, _impl_.new_stats_)>(
           reinterpret_cast<char*>(&_impl_.new_stats_),
           reinterpret_cast<char*>(&other->_impl_.new_stats_));
 }
 
-::google::protobuf::Metadata S2C_Transform::GetMetadata() const {
+::google::protobuf::Metadata S2C_TransformResult::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
@@ -2830,7 +4427,7 @@ C2S_PlayerMove::C2S_PlayerMove(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(
+  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(
                               arena, *from._impl_.position_)
                         : nullptr;
   _impl_.dir_ = from._impl_.dir_;
@@ -2923,7 +4520,7 @@ const ::_pbi::TcParseTable<2, 3, 1, 37, 2> C2S_PlayerMove::_table_ = {
     // string user_id = 1;
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(C2S_PlayerMove, _impl_.user_id_)}},
-    // .ingame.Positions position = 2;
+    // .ingame.Vector2 position = 2;
     {::_pbi::TcParser::FastMtS1,
      {18, 0, 0, PROTOBUF_FIELD_OFFSET(C2S_PlayerMove, _impl_.position_)}},
     // float dir = 3;
@@ -2935,14 +4532,14 @@ const ::_pbi::TcParseTable<2, 3, 1, 37, 2> C2S_PlayerMove::_table_ = {
     // string user_id = 1;
     {PROTOBUF_FIELD_OFFSET(C2S_PlayerMove, _impl_.user_id_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // .ingame.Positions position = 2;
+    // .ingame.Vector2 position = 2;
     {PROTOBUF_FIELD_OFFSET(C2S_PlayerMove, _impl_.position_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
     // float dir = 3;
     {PROTOBUF_FIELD_OFFSET(C2S_PlayerMove, _impl_.dir_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::ingame::Positions>()},
+    {::_pbi::TcParser::GetTable<::ingame::Vector2>()},
   }}, {{
     "\25\7\0\0\0\0\0\0"
     "ingame.C2S_PlayerMove"
@@ -2992,7 +4589,7 @@ PROTOBUF_NOINLINE void C2S_PlayerMove::Clear() {
           }
 
           cached_has_bits = this_._impl_._has_bits_[0];
-          // .ingame.Positions position = 2;
+          // .ingame.Vector2 position = 2;
           if (cached_has_bits & 0x00000001u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 2, *this_._impl_.position_, this_._impl_.position_->GetCachedSize(), target,
@@ -3038,7 +4635,7 @@ PROTOBUF_NOINLINE void C2S_PlayerMove::Clear() {
             }
           }
            {
-            // .ingame.Positions position = 2;
+            // .ingame.Vector2 position = 2;
             cached_has_bits = this_._impl_._has_bits_[0];
             if (cached_has_bits & 0x00000001u) {
               total_size += 1 +
@@ -3072,7 +4669,7 @@ void C2S_PlayerMove::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::
     ABSL_DCHECK(from._impl_.position_ != nullptr);
     if (_this->_impl_.position_ == nullptr) {
       _this->_impl_.position_ =
-          ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(arena, *from._impl_.position_);
+          ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(arena, *from._impl_.position_);
     } else {
       _this->_impl_.position_->MergeFrom(*from._impl_.position_);
     }
@@ -3112,58 +4709,58 @@ void C2S_PlayerMove::InternalSwap(C2S_PlayerMove* PROTOBUF_RESTRICT other) {
 }
 // ===================================================================
 
-class S2C_PlayerMove::_Internal {
+class S2C_PlayerMoveNotification::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<S2C_PlayerMove>()._impl_._has_bits_);
+      decltype(std::declval<S2C_PlayerMoveNotification>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(S2C_PlayerMove, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(S2C_PlayerMoveNotification, _impl_._has_bits_);
 };
 
-S2C_PlayerMove::S2C_PlayerMove(::google::protobuf::Arena* arena)
+S2C_PlayerMoveNotification::S2C_PlayerMoveNotification(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ingame.S2C_PlayerMove)
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_PlayerMoveNotification)
 }
-inline PROTOBUF_NDEBUG_INLINE S2C_PlayerMove::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE S2C_PlayerMoveNotification::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::ingame::S2C_PlayerMove& from_msg)
+    const Impl_& from, const ::ingame::S2C_PlayerMoveNotification& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         user_id_(arena, from.user_id_) {}
 
-S2C_PlayerMove::S2C_PlayerMove(
+S2C_PlayerMoveNotification::S2C_PlayerMoveNotification(
     ::google::protobuf::Arena* arena,
-    const S2C_PlayerMove& from)
+    const S2C_PlayerMoveNotification& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  S2C_PlayerMove* const _this = this;
+  S2C_PlayerMoveNotification* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(
+  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(
                               arena, *from._impl_.position_)
                         : nullptr;
   _impl_.dir_ = from._impl_.dir_;
 
-  // @@protoc_insertion_point(copy_constructor:ingame.S2C_PlayerMove)
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_PlayerMoveNotification)
 }
-inline PROTOBUF_NDEBUG_INLINE S2C_PlayerMove::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE S2C_PlayerMoveNotification::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : _cached_size_{0},
         user_id_(arena) {}
 
-inline void S2C_PlayerMove::SharedCtor(::_pb::Arena* arena) {
+inline void S2C_PlayerMoveNotification::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, position_),
@@ -3172,12 +4769,12 @@ inline void S2C_PlayerMove::SharedCtor(::_pb::Arena* arena) {
                offsetof(Impl_, position_) +
                sizeof(Impl_::dir_));
 }
-S2C_PlayerMove::~S2C_PlayerMove() {
-  // @@protoc_insertion_point(destructor:ingame.S2C_PlayerMove)
+S2C_PlayerMoveNotification::~S2C_PlayerMoveNotification() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_PlayerMoveNotification)
   SharedDtor(*this);
 }
-inline void S2C_PlayerMove::SharedDtor(MessageLite& self) {
-  S2C_PlayerMove& this_ = static_cast<S2C_PlayerMove&>(self);
+inline void S2C_PlayerMoveNotification::SharedDtor(MessageLite& self) {
+  S2C_PlayerMoveNotification& this_ = static_cast<S2C_PlayerMoveNotification&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.user_id_.Destroy();
@@ -3185,45 +4782,45 @@ inline void S2C_PlayerMove::SharedDtor(MessageLite& self) {
   this_._impl_.~Impl_();
 }
 
-inline void* S2C_PlayerMove::PlacementNew_(const void*, void* mem,
+inline void* S2C_PlayerMoveNotification::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) S2C_PlayerMove(arena);
+  return ::new (mem) S2C_PlayerMoveNotification(arena);
 }
-constexpr auto S2C_PlayerMove::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_PlayerMove),
-                                            alignof(S2C_PlayerMove));
+constexpr auto S2C_PlayerMoveNotification::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_PlayerMoveNotification),
+                                            alignof(S2C_PlayerMoveNotification));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull S2C_PlayerMove::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull S2C_PlayerMoveNotification::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_S2C_PlayerMove_default_instance_._instance,
+        &_S2C_PlayerMoveNotification_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &S2C_PlayerMove::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<S2C_PlayerMove>(),
+        &S2C_PlayerMoveNotification::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_PlayerMoveNotification>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &S2C_PlayerMove::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<S2C_PlayerMove>(), &S2C_PlayerMove::ByteSizeLong,
-            &S2C_PlayerMove::_InternalSerialize,
+        &S2C_PlayerMoveNotification::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_PlayerMoveNotification>(), &S2C_PlayerMoveNotification::ByteSizeLong,
+            &S2C_PlayerMoveNotification::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(S2C_PlayerMove, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(S2C_PlayerMoveNotification, _impl_._cached_size_),
         false,
     },
-    &S2C_PlayerMove::kDescriptorMethods,
+    &S2C_PlayerMoveNotification::kDescriptorMethods,
     &descriptor_table_ingame_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* S2C_PlayerMove::GetClassData() const {
+const ::google::protobuf::internal::ClassData* S2C_PlayerMoveNotification::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 1, 37, 2> S2C_PlayerMove::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 1, 49, 2> S2C_PlayerMoveNotification::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(S2C_PlayerMove, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(S2C_PlayerMoveNotification, _impl_._has_bits_),
     0, // no _extensions_
     3, 24,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -3236,42 +4833,42 @@ const ::_pbi::TcParseTable<2, 3, 1, 37, 2> S2C_PlayerMove::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::ingame::S2C_PlayerMove>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::ingame::S2C_PlayerMoveNotification>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
     // string user_id = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerMove, _impl_.user_id_)}},
-    // .ingame.Positions position = 2;
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerMoveNotification, _impl_.user_id_)}},
+    // .ingame.Vector2 position = 2;
     {::_pbi::TcParser::FastMtS1,
-     {18, 0, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerMove, _impl_.position_)}},
+     {18, 0, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerMoveNotification, _impl_.position_)}},
     // float dir = 3;
     {::_pbi::TcParser::FastF32S1,
-     {29, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerMove, _impl_.dir_)}},
+     {29, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerMoveNotification, _impl_.dir_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string user_id = 1;
-    {PROTOBUF_FIELD_OFFSET(S2C_PlayerMove, _impl_.user_id_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_PlayerMoveNotification, _impl_.user_id_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // .ingame.Positions position = 2;
-    {PROTOBUF_FIELD_OFFSET(S2C_PlayerMove, _impl_.position_), _Internal::kHasBitsOffset + 0, 0,
+    // .ingame.Vector2 position = 2;
+    {PROTOBUF_FIELD_OFFSET(S2C_PlayerMoveNotification, _impl_.position_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
     // float dir = 3;
-    {PROTOBUF_FIELD_OFFSET(S2C_PlayerMove, _impl_.dir_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_PlayerMoveNotification, _impl_.dir_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::ingame::Positions>()},
+    {::_pbi::TcParser::GetTable<::ingame::Vector2>()},
   }}, {{
-    "\25\7\0\0\0\0\0\0"
-    "ingame.S2C_PlayerMove"
+    "\41\7\0\0\0\0\0\0"
+    "ingame.S2C_PlayerMoveNotification"
     "user_id"
   }},
 };
 
-PROTOBUF_NOINLINE void S2C_PlayerMove::Clear() {
-// @@protoc_insertion_point(message_clear_start:ingame.S2C_PlayerMove)
+PROTOBUF_NOINLINE void S2C_PlayerMoveNotification::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_PlayerMoveNotification)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -3289,17 +4886,17 @@ PROTOBUF_NOINLINE void S2C_PlayerMove::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* S2C_PlayerMove::_InternalSerialize(
+        ::uint8_t* S2C_PlayerMoveNotification::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const S2C_PlayerMove& this_ = static_cast<const S2C_PlayerMove&>(base);
+          const S2C_PlayerMoveNotification& this_ = static_cast<const S2C_PlayerMoveNotification&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* S2C_PlayerMove::_InternalSerialize(
+        ::uint8_t* S2C_PlayerMoveNotification::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const S2C_PlayerMove& this_ = *this;
+          const S2C_PlayerMoveNotification& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_PlayerMove)
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_PlayerMoveNotification)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -3307,12 +4904,12 @@ PROTOBUF_NOINLINE void S2C_PlayerMove::Clear() {
           if (!this_._internal_user_id().empty()) {
             const std::string& _s = this_._internal_user_id();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_PlayerMove.user_id");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_PlayerMoveNotification.user_id");
             target = stream->WriteStringMaybeAliased(1, _s, target);
           }
 
           cached_has_bits = this_._impl_._has_bits_[0];
-          // .ingame.Positions position = 2;
+          // .ingame.Vector2 position = 2;
           if (cached_has_bits & 0x00000001u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 2, *this_._impl_.position_, this_._impl_.position_->GetCachedSize(), target,
@@ -3331,18 +4928,18 @@ PROTOBUF_NOINLINE void S2C_PlayerMove::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_PlayerMove)
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_PlayerMoveNotification)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t S2C_PlayerMove::ByteSizeLong(const MessageLite& base) {
-          const S2C_PlayerMove& this_ = static_cast<const S2C_PlayerMove&>(base);
+        ::size_t S2C_PlayerMoveNotification::ByteSizeLong(const MessageLite& base) {
+          const S2C_PlayerMoveNotification& this_ = static_cast<const S2C_PlayerMoveNotification&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t S2C_PlayerMove::ByteSizeLong() const {
-          const S2C_PlayerMove& this_ = *this;
+        ::size_t S2C_PlayerMoveNotification::ByteSizeLong() const {
+          const S2C_PlayerMoveNotification& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_PlayerMove)
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_PlayerMoveNotification)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -3358,7 +4955,7 @@ PROTOBUF_NOINLINE void S2C_PlayerMove::Clear() {
             }
           }
            {
-            // .ingame.Positions position = 2;
+            // .ingame.Vector2 position = 2;
             cached_has_bits = this_._impl_._has_bits_[0];
             if (cached_has_bits & 0x00000001u) {
               total_size += 1 +
@@ -3375,11 +4972,11 @@ PROTOBUF_NOINLINE void S2C_PlayerMove::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void S2C_PlayerMove::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<S2C_PlayerMove*>(&to_msg);
-  auto& from = static_cast<const S2C_PlayerMove&>(from_msg);
+void S2C_PlayerMoveNotification::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_PlayerMoveNotification*>(&to_msg);
+  auto& from = static_cast<const S2C_PlayerMoveNotification&>(from_msg);
   ::google::protobuf::Arena* arena = _this->GetArena();
-  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_PlayerMove)
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_PlayerMoveNotification)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3392,7 +4989,7 @@ void S2C_PlayerMove::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::
     ABSL_DCHECK(from._impl_.position_ != nullptr);
     if (_this->_impl_.position_ == nullptr) {
       _this->_impl_.position_ =
-          ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(arena, *from._impl_.position_);
+          ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(arena, *from._impl_.position_);
     } else {
       _this->_impl_.position_->MergeFrom(*from._impl_.position_);
     }
@@ -3404,15 +5001,15 @@ void S2C_PlayerMove::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void S2C_PlayerMove::CopyFrom(const S2C_PlayerMove& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_PlayerMove)
+void S2C_PlayerMoveNotification::CopyFrom(const S2C_PlayerMoveNotification& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_PlayerMoveNotification)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void S2C_PlayerMove::InternalSwap(S2C_PlayerMove* PROTOBUF_RESTRICT other) {
+void S2C_PlayerMoveNotification::InternalSwap(S2C_PlayerMoveNotification* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -3420,14 +5017,14 @@ void S2C_PlayerMove::InternalSwap(S2C_PlayerMove* PROTOBUF_RESTRICT other) {
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(S2C_PlayerMove, _impl_.dir_)
-      + sizeof(S2C_PlayerMove::_impl_.dir_)
-      - PROTOBUF_FIELD_OFFSET(S2C_PlayerMove, _impl_.position_)>(
+      PROTOBUF_FIELD_OFFSET(S2C_PlayerMoveNotification, _impl_.dir_)
+      + sizeof(S2C_PlayerMoveNotification::_impl_.dir_)
+      - PROTOBUF_FIELD_OFFSET(S2C_PlayerMoveNotification, _impl_.position_)>(
           reinterpret_cast<char*>(&_impl_.position_),
           reinterpret_cast<char*>(&other->_impl_.position_));
 }
 
-::google::protobuf::Metadata S2C_PlayerMove::GetMetadata() const {
+::google::protobuf::Metadata S2C_PlayerMoveNotification::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
@@ -3470,10 +5067,10 @@ C2S_PlayerAttack::C2S_PlayerAttack(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.attack_dir_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(
-                              arena, *from._impl_.attack_dir_)
+  _impl_.attack_direction_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(
+                              arena, *from._impl_.attack_direction_)
                         : nullptr;
-  _impl_.attack_position_ = (cached_has_bits & 0x00000002u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(
+  _impl_.attack_position_ = (cached_has_bits & 0x00000002u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(
                               arena, *from._impl_.attack_position_)
                         : nullptr;
   _impl_.attack_type_ = from._impl_.attack_type_;
@@ -3489,10 +5086,10 @@ inline PROTOBUF_NDEBUG_INLINE C2S_PlayerAttack::Impl_::Impl_(
 inline void C2S_PlayerAttack::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, attack_dir_),
+               offsetof(Impl_, attack_direction_),
            0,
            offsetof(Impl_, attack_type_) -
-               offsetof(Impl_, attack_dir_) +
+               offsetof(Impl_, attack_direction_) +
                sizeof(Impl_::attack_type_));
 }
 C2S_PlayerAttack::~C2S_PlayerAttack() {
@@ -3504,7 +5101,7 @@ inline void C2S_PlayerAttack::SharedDtor(MessageLite& self) {
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.user_id_.Destroy();
-  delete this_._impl_.attack_dir_;
+  delete this_._impl_.attack_direction_;
   delete this_._impl_.attack_position_;
   this_._impl_.~Impl_();
 }
@@ -3563,7 +5160,7 @@ const ::_pbi::TcParseTable<2, 4, 2, 39, 2> C2S_PlayerAttack::_table_ = {
     ::_pbi::TcParser::GetTable<::ingame::C2S_PlayerAttack>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // .ingame.Positions attack_position = 4;
+    // .ingame.Vector2 attack_position = 4;
     {::_pbi::TcParser::FastMtS1,
      {34, 1, 1, PROTOBUF_FIELD_OFFSET(C2S_PlayerAttack, _impl_.attack_position_)}},
     // string user_id = 1;
@@ -3572,9 +5169,9 @@ const ::_pbi::TcParseTable<2, 4, 2, 39, 2> C2S_PlayerAttack::_table_ = {
     // .ingame.AttackType attack_type = 2;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(C2S_PlayerAttack, _impl_.attack_type_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(C2S_PlayerAttack, _impl_.attack_type_)}},
-    // .ingame.Positions attack_dir = 3;
+    // .ingame.Vector2 attack_direction = 3;
     {::_pbi::TcParser::FastMtS1,
-     {26, 0, 0, PROTOBUF_FIELD_OFFSET(C2S_PlayerAttack, _impl_.attack_dir_)}},
+     {26, 0, 0, PROTOBUF_FIELD_OFFSET(C2S_PlayerAttack, _impl_.attack_direction_)}},
   }}, {{
     65535, 65535
   }}, {{
@@ -3584,15 +5181,15 @@ const ::_pbi::TcParseTable<2, 4, 2, 39, 2> C2S_PlayerAttack::_table_ = {
     // .ingame.AttackType attack_type = 2;
     {PROTOBUF_FIELD_OFFSET(C2S_PlayerAttack, _impl_.attack_type_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
-    // .ingame.Positions attack_dir = 3;
-    {PROTOBUF_FIELD_OFFSET(C2S_PlayerAttack, _impl_.attack_dir_), _Internal::kHasBitsOffset + 0, 0,
+    // .ingame.Vector2 attack_direction = 3;
+    {PROTOBUF_FIELD_OFFSET(C2S_PlayerAttack, _impl_.attack_direction_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .ingame.Positions attack_position = 4;
+    // .ingame.Vector2 attack_position = 4;
     {PROTOBUF_FIELD_OFFSET(C2S_PlayerAttack, _impl_.attack_position_), _Internal::kHasBitsOffset + 1, 1,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::ingame::Positions>()},
-    {::_pbi::TcParser::GetTable<::ingame::Positions>()},
+    {::_pbi::TcParser::GetTable<::ingame::Vector2>()},
+    {::_pbi::TcParser::GetTable<::ingame::Vector2>()},
   }}, {{
     "\27\7\0\0\0\0\0\0"
     "ingame.C2S_PlayerAttack"
@@ -3611,8 +5208,8 @@ PROTOBUF_NOINLINE void C2S_PlayerAttack::Clear() {
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      ABSL_DCHECK(_impl_.attack_dir_ != nullptr);
-      _impl_.attack_dir_->Clear();
+      ABSL_DCHECK(_impl_.attack_direction_ != nullptr);
+      _impl_.attack_direction_->Clear();
     }
     if (cached_has_bits & 0x00000002u) {
       ABSL_DCHECK(_impl_.attack_position_ != nullptr);
@@ -3655,14 +5252,14 @@ PROTOBUF_NOINLINE void C2S_PlayerAttack::Clear() {
           }
 
           cached_has_bits = this_._impl_._has_bits_[0];
-          // .ingame.Positions attack_dir = 3;
+          // .ingame.Vector2 attack_direction = 3;
           if (cached_has_bits & 0x00000001u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                3, *this_._impl_.attack_dir_, this_._impl_.attack_dir_->GetCachedSize(), target,
+                3, *this_._impl_.attack_direction_, this_._impl_.attack_direction_->GetCachedSize(), target,
                 stream);
           }
 
-          // .ingame.Positions attack_position = 4;
+          // .ingame.Vector2 attack_position = 4;
           if (cached_has_bits & 0x00000002u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 4, *this_._impl_.attack_position_, this_._impl_.attack_position_->GetCachedSize(), target,
@@ -3702,12 +5299,12 @@ PROTOBUF_NOINLINE void C2S_PlayerAttack::Clear() {
           }
           cached_has_bits = this_._impl_._has_bits_[0];
           if (cached_has_bits & 0x00000003u) {
-            // .ingame.Positions attack_dir = 3;
+            // .ingame.Vector2 attack_direction = 3;
             if (cached_has_bits & 0x00000001u) {
               total_size += 1 +
-                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.attack_dir_);
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.attack_direction_);
             }
-            // .ingame.Positions attack_position = 4;
+            // .ingame.Vector2 attack_position = 4;
             if (cached_has_bits & 0x00000002u) {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.attack_position_);
@@ -3739,19 +5336,19 @@ void C2S_PlayerAttack::MergeImpl(::google::protobuf::MessageLite& to_msg, const 
   cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      ABSL_DCHECK(from._impl_.attack_dir_ != nullptr);
-      if (_this->_impl_.attack_dir_ == nullptr) {
-        _this->_impl_.attack_dir_ =
-            ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(arena, *from._impl_.attack_dir_);
+      ABSL_DCHECK(from._impl_.attack_direction_ != nullptr);
+      if (_this->_impl_.attack_direction_ == nullptr) {
+        _this->_impl_.attack_direction_ =
+            ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(arena, *from._impl_.attack_direction_);
       } else {
-        _this->_impl_.attack_dir_->MergeFrom(*from._impl_.attack_dir_);
+        _this->_impl_.attack_direction_->MergeFrom(*from._impl_.attack_direction_);
       }
     }
     if (cached_has_bits & 0x00000002u) {
       ABSL_DCHECK(from._impl_.attack_position_ != nullptr);
       if (_this->_impl_.attack_position_ == nullptr) {
         _this->_impl_.attack_position_ =
-            ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(arena, *from._impl_.attack_position_);
+            ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(arena, *from._impl_.attack_position_);
       } else {
         _this->_impl_.attack_position_->MergeFrom(*from._impl_.attack_position_);
       }
@@ -3782,9 +5379,9 @@ void C2S_PlayerAttack::InternalSwap(C2S_PlayerAttack* PROTOBUF_RESTRICT other) {
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(C2S_PlayerAttack, _impl_.attack_type_)
       + sizeof(C2S_PlayerAttack::_impl_.attack_type_)
-      - PROTOBUF_FIELD_OFFSET(C2S_PlayerAttack, _impl_.attack_dir_)>(
-          reinterpret_cast<char*>(&_impl_.attack_dir_),
-          reinterpret_cast<char*>(&other->_impl_.attack_dir_));
+      - PROTOBUF_FIELD_OFFSET(C2S_PlayerAttack, _impl_.attack_direction_)>(
+          reinterpret_cast<char*>(&_impl_.attack_direction_),
+          reinterpret_cast<char*>(&other->_impl_.attack_direction_));
 }
 
 ::google::protobuf::Metadata C2S_PlayerAttack::GetMetadata() const {
@@ -3792,142 +5389,142 @@ void C2S_PlayerAttack::InternalSwap(C2S_PlayerAttack* PROTOBUF_RESTRICT other) {
 }
 // ===================================================================
 
-class S2C_PlayerAttack::_Internal {
+class S2C_PlayerAttackResult::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<S2C_PlayerAttack>()._impl_._has_bits_);
+      decltype(std::declval<S2C_PlayerAttackResult>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_._has_bits_);
 };
 
-S2C_PlayerAttack::S2C_PlayerAttack(::google::protobuf::Arena* arena)
+S2C_PlayerAttackResult::S2C_PlayerAttackResult(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ingame.S2C_PlayerAttack)
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_PlayerAttackResult)
 }
-inline PROTOBUF_NDEBUG_INLINE S2C_PlayerAttack::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE S2C_PlayerAttackResult::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::ingame::S2C_PlayerAttack& from_msg)
+    const Impl_& from, const ::ingame::S2C_PlayerAttackResult& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         hit_targets_{visibility, arena, from.hit_targets_},
         user_id_(arena, from.user_id_) {}
 
-S2C_PlayerAttack::S2C_PlayerAttack(
+S2C_PlayerAttackResult::S2C_PlayerAttackResult(
     ::google::protobuf::Arena* arena,
-    const S2C_PlayerAttack& from)
+    const S2C_PlayerAttackResult& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  S2C_PlayerAttack* const _this = this;
+  S2C_PlayerAttackResult* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.attack_position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(
+  _impl_.attack_position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(
                               arena, *from._impl_.attack_position_)
                         : nullptr;
-  _impl_.attack_dir_ = (cached_has_bits & 0x00000002u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(
-                              arena, *from._impl_.attack_dir_)
+  _impl_.attack_direction_ = (cached_has_bits & 0x00000002u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(
+                              arena, *from._impl_.attack_direction_)
                         : nullptr;
   ::memcpy(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, attack_type_),
            reinterpret_cast<const char *>(&from._impl_) +
                offsetof(Impl_, attack_type_),
-           offsetof(Impl_, damage_) -
+           offsetof(Impl_, total_damage_) -
                offsetof(Impl_, attack_type_) +
-               sizeof(Impl_::damage_));
+               sizeof(Impl_::total_damage_));
 
-  // @@protoc_insertion_point(copy_constructor:ingame.S2C_PlayerAttack)
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_PlayerAttackResult)
 }
-inline PROTOBUF_NDEBUG_INLINE S2C_PlayerAttack::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE S2C_PlayerAttackResult::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : _cached_size_{0},
         hit_targets_{visibility, arena},
         user_id_(arena) {}
 
-inline void S2C_PlayerAttack::SharedCtor(::_pb::Arena* arena) {
+inline void S2C_PlayerAttackResult::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, attack_position_),
            0,
-           offsetof(Impl_, damage_) -
+           offsetof(Impl_, total_damage_) -
                offsetof(Impl_, attack_position_) +
-               sizeof(Impl_::damage_));
+               sizeof(Impl_::total_damage_));
 }
-S2C_PlayerAttack::~S2C_PlayerAttack() {
-  // @@protoc_insertion_point(destructor:ingame.S2C_PlayerAttack)
+S2C_PlayerAttackResult::~S2C_PlayerAttackResult() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_PlayerAttackResult)
   SharedDtor(*this);
 }
-inline void S2C_PlayerAttack::SharedDtor(MessageLite& self) {
-  S2C_PlayerAttack& this_ = static_cast<S2C_PlayerAttack&>(self);
+inline void S2C_PlayerAttackResult::SharedDtor(MessageLite& self) {
+  S2C_PlayerAttackResult& this_ = static_cast<S2C_PlayerAttackResult&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.user_id_.Destroy();
   delete this_._impl_.attack_position_;
-  delete this_._impl_.attack_dir_;
+  delete this_._impl_.attack_direction_;
   this_._impl_.~Impl_();
 }
 
-inline void* S2C_PlayerAttack::PlacementNew_(const void*, void* mem,
+inline void* S2C_PlayerAttackResult::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) S2C_PlayerAttack(arena);
+  return ::new (mem) S2C_PlayerAttackResult(arena);
 }
-constexpr auto S2C_PlayerAttack::InternalNewImpl_() {
+constexpr auto S2C_PlayerAttackResult::InternalNewImpl_() {
   constexpr auto arena_bits = ::google::protobuf::internal::EncodePlacementArenaOffsets({
-      PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.hit_targets_) +
-          decltype(S2C_PlayerAttack::_impl_.hit_targets_)::
+      PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.hit_targets_) +
+          decltype(S2C_PlayerAttackResult::_impl_.hit_targets_)::
               InternalGetArenaOffset(
                   ::google::protobuf::Message::internal_visibility()),
   });
   if (arena_bits.has_value()) {
     return ::google::protobuf::internal::MessageCreator::CopyInit(
-        sizeof(S2C_PlayerAttack), alignof(S2C_PlayerAttack), *arena_bits);
+        sizeof(S2C_PlayerAttackResult), alignof(S2C_PlayerAttackResult), *arena_bits);
   } else {
-    return ::google::protobuf::internal::MessageCreator(&S2C_PlayerAttack::PlacementNew_,
-                                 sizeof(S2C_PlayerAttack),
-                                 alignof(S2C_PlayerAttack));
+    return ::google::protobuf::internal::MessageCreator(&S2C_PlayerAttackResult::PlacementNew_,
+                                 sizeof(S2C_PlayerAttackResult),
+                                 alignof(S2C_PlayerAttackResult));
   }
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull S2C_PlayerAttack::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull S2C_PlayerAttackResult::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_S2C_PlayerAttack_default_instance_._instance,
+        &_S2C_PlayerAttackResult_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &S2C_PlayerAttack::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<S2C_PlayerAttack>(),
+        &S2C_PlayerAttackResult::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_PlayerAttackResult>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &S2C_PlayerAttack::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<S2C_PlayerAttack>(), &S2C_PlayerAttack::ByteSizeLong,
-            &S2C_PlayerAttack::_InternalSerialize,
+        &S2C_PlayerAttackResult::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_PlayerAttackResult>(), &S2C_PlayerAttackResult::ByteSizeLong,
+            &S2C_PlayerAttackResult::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_._cached_size_),
         false,
     },
-    &S2C_PlayerAttack::kDescriptorMethods,
+    &S2C_PlayerAttackResult::kDescriptorMethods,
     &descriptor_table_ingame_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* S2C_PlayerAttack::GetClassData() const {
+const ::google::protobuf::internal::ClassData* S2C_PlayerAttackResult::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 7, 2, 50, 2> S2C_PlayerAttack::_table_ = {
+const ::_pbi::TcParseTable<3, 7, 2, 56, 2> S2C_PlayerAttackResult::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_._has_bits_),
     0, // no _extensions_
     7, 56,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -3940,68 +5537,68 @@ const ::_pbi::TcParseTable<3, 7, 2, 50, 2> S2C_PlayerAttack::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::ingame::S2C_PlayerAttack>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::ingame::S2C_PlayerAttackResult>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
     // string user_id = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.user_id_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.user_id_)}},
     // .ingame.AttackType attack_type = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_PlayerAttack, _impl_.attack_type_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.attack_type_)}},
-    // .ingame.Positions attack_position = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_PlayerAttackResult, _impl_.attack_type_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.attack_type_)}},
+    // .ingame.Vector2 attack_position = 3;
     {::_pbi::TcParser::FastMtS1,
-     {26, 0, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.attack_position_)}},
-    // .ingame.Positions attack_dir = 4;
+     {26, 0, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.attack_position_)}},
+    // .ingame.Vector2 attack_direction = 4;
     {::_pbi::TcParser::FastMtS1,
-     {34, 1, 1, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.attack_dir_)}},
+     {34, 1, 1, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.attack_direction_)}},
     // float attack_range = 5;
     {::_pbi::TcParser::FastF32S1,
-     {45, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.attack_range_)}},
-    // int32 damage = 6;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_PlayerAttack, _impl_.damage_), 63>(),
-     {48, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.damage_)}},
+     {45, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.attack_range_)}},
+    // int32 total_damage = 6;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_PlayerAttackResult, _impl_.total_damage_), 63>(),
+     {48, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.total_damage_)}},
     // repeated string hit_targets = 7;
     {::_pbi::TcParser::FastUR1,
-     {58, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.hit_targets_)}},
+     {58, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.hit_targets_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string user_id = 1;
-    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.user_id_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.user_id_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // .ingame.AttackType attack_type = 2;
-    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.attack_type_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.attack_type_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
-    // .ingame.Positions attack_position = 3;
-    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.attack_position_), _Internal::kHasBitsOffset + 0, 0,
+    // .ingame.Vector2 attack_position = 3;
+    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.attack_position_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .ingame.Positions attack_dir = 4;
-    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.attack_dir_), _Internal::kHasBitsOffset + 1, 1,
+    // .ingame.Vector2 attack_direction = 4;
+    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.attack_direction_), _Internal::kHasBitsOffset + 1, 1,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
     // float attack_range = 5;
-    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.attack_range_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.attack_range_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
-    // int32 damage = 6;
-    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.damage_), -1, 0,
+    // int32 total_damage = 6;
+    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.total_damage_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
     // repeated string hit_targets = 7;
-    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.hit_targets_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.hit_targets_), -1, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kUtf8String | ::_fl::kRepSString)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::ingame::Positions>()},
-    {::_pbi::TcParser::GetTable<::ingame::Positions>()},
+    {::_pbi::TcParser::GetTable<::ingame::Vector2>()},
+    {::_pbi::TcParser::GetTable<::ingame::Vector2>()},
   }}, {{
-    "\27\7\0\0\0\0\0\13"
-    "ingame.S2C_PlayerAttack"
+    "\35\7\0\0\0\0\0\13"
+    "ingame.S2C_PlayerAttackResult"
     "user_id"
     "hit_targets"
   }},
 };
 
-PROTOBUF_NOINLINE void S2C_PlayerAttack::Clear() {
-// @@protoc_insertion_point(message_clear_start:ingame.S2C_PlayerAttack)
+PROTOBUF_NOINLINE void S2C_PlayerAttackResult::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_PlayerAttackResult)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -4016,29 +5613,29 @@ PROTOBUF_NOINLINE void S2C_PlayerAttack::Clear() {
       _impl_.attack_position_->Clear();
     }
     if (cached_has_bits & 0x00000002u) {
-      ABSL_DCHECK(_impl_.attack_dir_ != nullptr);
-      _impl_.attack_dir_->Clear();
+      ABSL_DCHECK(_impl_.attack_direction_ != nullptr);
+      _impl_.attack_direction_->Clear();
     }
   }
   ::memset(&_impl_.attack_type_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.damage_) -
-      reinterpret_cast<char*>(&_impl_.attack_type_)) + sizeof(_impl_.damage_));
+      reinterpret_cast<char*>(&_impl_.total_damage_) -
+      reinterpret_cast<char*>(&_impl_.attack_type_)) + sizeof(_impl_.total_damage_));
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* S2C_PlayerAttack::_InternalSerialize(
+        ::uint8_t* S2C_PlayerAttackResult::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const S2C_PlayerAttack& this_ = static_cast<const S2C_PlayerAttack&>(base);
+          const S2C_PlayerAttackResult& this_ = static_cast<const S2C_PlayerAttackResult&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* S2C_PlayerAttack::_InternalSerialize(
+        ::uint8_t* S2C_PlayerAttackResult::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const S2C_PlayerAttack& this_ = *this;
+          const S2C_PlayerAttackResult& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_PlayerAttack)
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_PlayerAttackResult)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -4046,7 +5643,7 @@ PROTOBUF_NOINLINE void S2C_PlayerAttack::Clear() {
           if (!this_._internal_user_id().empty()) {
             const std::string& _s = this_._internal_user_id();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_PlayerAttack.user_id");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_PlayerAttackResult.user_id");
             target = stream->WriteStringMaybeAliased(1, _s, target);
           }
 
@@ -4058,17 +5655,17 @@ PROTOBUF_NOINLINE void S2C_PlayerAttack::Clear() {
           }
 
           cached_has_bits = this_._impl_._has_bits_[0];
-          // .ingame.Positions attack_position = 3;
+          // .ingame.Vector2 attack_position = 3;
           if (cached_has_bits & 0x00000001u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 3, *this_._impl_.attack_position_, this_._impl_.attack_position_->GetCachedSize(), target,
                 stream);
           }
 
-          // .ingame.Positions attack_dir = 4;
+          // .ingame.Vector2 attack_direction = 4;
           if (cached_has_bits & 0x00000002u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                4, *this_._impl_.attack_dir_, this_._impl_.attack_dir_->GetCachedSize(), target,
+                4, *this_._impl_.attack_direction_, this_._impl_.attack_direction_->GetCachedSize(), target,
                 stream);
           }
 
@@ -4079,18 +5676,18 @@ PROTOBUF_NOINLINE void S2C_PlayerAttack::Clear() {
                 5, this_._internal_attack_range(), target);
           }
 
-          // int32 damage = 6;
-          if (this_._internal_damage() != 0) {
+          // int32 total_damage = 6;
+          if (this_._internal_total_damage() != 0) {
             target = ::google::protobuf::internal::WireFormatLite::
                 WriteInt32ToArrayWithField<6>(
-                    stream, this_._internal_damage(), target);
+                    stream, this_._internal_total_damage(), target);
           }
 
           // repeated string hit_targets = 7;
           for (int i = 0, n = this_._internal_hit_targets_size(); i < n; ++i) {
             const auto& s = this_._internal_hit_targets().Get(i);
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                s.data(), static_cast<int>(s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_PlayerAttack.hit_targets");
+                s.data(), static_cast<int>(s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_PlayerAttackResult.hit_targets");
             target = stream->WriteString(7, s, target);
           }
 
@@ -4099,18 +5696,18 @@ PROTOBUF_NOINLINE void S2C_PlayerAttack::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_PlayerAttack)
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_PlayerAttackResult)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t S2C_PlayerAttack::ByteSizeLong(const MessageLite& base) {
-          const S2C_PlayerAttack& this_ = static_cast<const S2C_PlayerAttack&>(base);
+        ::size_t S2C_PlayerAttackResult::ByteSizeLong(const MessageLite& base) {
+          const S2C_PlayerAttackResult& this_ = static_cast<const S2C_PlayerAttackResult&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t S2C_PlayerAttack::ByteSizeLong() const {
-          const S2C_PlayerAttack& this_ = *this;
+        ::size_t S2C_PlayerAttackResult::ByteSizeLong() const {
+          const S2C_PlayerAttackResult& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_PlayerAttack)
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_PlayerAttackResult)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -4138,15 +5735,15 @@ PROTOBUF_NOINLINE void S2C_PlayerAttack::Clear() {
           }
           cached_has_bits = this_._impl_._has_bits_[0];
           if (cached_has_bits & 0x00000003u) {
-            // .ingame.Positions attack_position = 3;
+            // .ingame.Vector2 attack_position = 3;
             if (cached_has_bits & 0x00000001u) {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.attack_position_);
             }
-            // .ingame.Positions attack_dir = 4;
+            // .ingame.Vector2 attack_direction = 4;
             if (cached_has_bits & 0x00000002u) {
               total_size += 1 +
-                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.attack_dir_);
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.attack_direction_);
             }
           }
            {
@@ -4159,21 +5756,21 @@ PROTOBUF_NOINLINE void S2C_PlayerAttack::Clear() {
             if (::absl::bit_cast<::uint32_t>(this_._internal_attack_range()) != 0) {
               total_size += 5;
             }
-            // int32 damage = 6;
-            if (this_._internal_damage() != 0) {
+            // int32 total_damage = 6;
+            if (this_._internal_total_damage() != 0) {
               total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-                  this_._internal_damage());
+                  this_._internal_total_damage());
             }
           }
           return this_.MaybeComputeUnknownFieldsSize(total_size,
                                                      &this_._impl_._cached_size_);
         }
 
-void S2C_PlayerAttack::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<S2C_PlayerAttack*>(&to_msg);
-  auto& from = static_cast<const S2C_PlayerAttack&>(from_msg);
+void S2C_PlayerAttackResult::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_PlayerAttackResult*>(&to_msg);
+  auto& from = static_cast<const S2C_PlayerAttackResult&>(from_msg);
   ::google::protobuf::Arena* arena = _this->GetArena();
-  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_PlayerAttack)
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_PlayerAttackResult)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4188,18 +5785,18 @@ void S2C_PlayerAttack::MergeImpl(::google::protobuf::MessageLite& to_msg, const 
       ABSL_DCHECK(from._impl_.attack_position_ != nullptr);
       if (_this->_impl_.attack_position_ == nullptr) {
         _this->_impl_.attack_position_ =
-            ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(arena, *from._impl_.attack_position_);
+            ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(arena, *from._impl_.attack_position_);
       } else {
         _this->_impl_.attack_position_->MergeFrom(*from._impl_.attack_position_);
       }
     }
     if (cached_has_bits & 0x00000002u) {
-      ABSL_DCHECK(from._impl_.attack_dir_ != nullptr);
-      if (_this->_impl_.attack_dir_ == nullptr) {
-        _this->_impl_.attack_dir_ =
-            ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(arena, *from._impl_.attack_dir_);
+      ABSL_DCHECK(from._impl_.attack_direction_ != nullptr);
+      if (_this->_impl_.attack_direction_ == nullptr) {
+        _this->_impl_.attack_direction_ =
+            ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(arena, *from._impl_.attack_direction_);
       } else {
-        _this->_impl_.attack_dir_->MergeFrom(*from._impl_.attack_dir_);
+        _this->_impl_.attack_direction_->MergeFrom(*from._impl_.attack_direction_);
       }
     }
   }
@@ -4209,22 +5806,22 @@ void S2C_PlayerAttack::MergeImpl(::google::protobuf::MessageLite& to_msg, const 
   if (::absl::bit_cast<::uint32_t>(from._internal_attack_range()) != 0) {
     _this->_impl_.attack_range_ = from._impl_.attack_range_;
   }
-  if (from._internal_damage() != 0) {
-    _this->_impl_.damage_ = from._impl_.damage_;
+  if (from._internal_total_damage() != 0) {
+    _this->_impl_.total_damage_ = from._impl_.total_damage_;
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void S2C_PlayerAttack::CopyFrom(const S2C_PlayerAttack& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_PlayerAttack)
+void S2C_PlayerAttackResult::CopyFrom(const S2C_PlayerAttackResult& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_PlayerAttackResult)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void S2C_PlayerAttack::InternalSwap(S2C_PlayerAttack* PROTOBUF_RESTRICT other) {
+void S2C_PlayerAttackResult::InternalSwap(S2C_PlayerAttackResult* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -4233,72 +5830,72 @@ void S2C_PlayerAttack::InternalSwap(S2C_PlayerAttack* PROTOBUF_RESTRICT other) {
   _impl_.hit_targets_.InternalSwap(&other->_impl_.hit_targets_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.damage_)
-      + sizeof(S2C_PlayerAttack::_impl_.damage_)
-      - PROTOBUF_FIELD_OFFSET(S2C_PlayerAttack, _impl_.attack_position_)>(
+      PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.total_damage_)
+      + sizeof(S2C_PlayerAttackResult::_impl_.total_damage_)
+      - PROTOBUF_FIELD_OFFSET(S2C_PlayerAttackResult, _impl_.attack_position_)>(
           reinterpret_cast<char*>(&_impl_.attack_position_),
           reinterpret_cast<char*>(&other->_impl_.attack_position_));
 }
 
-::google::protobuf::Metadata S2C_PlayerAttack::GetMetadata() const {
+::google::protobuf::Metadata S2C_PlayerAttackResult::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class S2C_AttackHit::_Internal {
+class S2C_AttackHitNotification::_Internal {
  public:
   using HasBits =
-      decltype(std::declval<S2C_AttackHit>()._impl_._has_bits_);
+      decltype(std::declval<S2C_AttackHitNotification>()._impl_._has_bits_);
   static constexpr ::int32_t kHasBitsOffset =
-      8 * PROTOBUF_FIELD_OFFSET(S2C_AttackHit, _impl_._has_bits_);
+      8 * PROTOBUF_FIELD_OFFSET(S2C_AttackHitNotification, _impl_._has_bits_);
 };
 
-S2C_AttackHit::S2C_AttackHit(::google::protobuf::Arena* arena)
+S2C_AttackHitNotification::S2C_AttackHitNotification(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ingame.S2C_AttackHit)
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_AttackHitNotification)
 }
-inline PROTOBUF_NDEBUG_INLINE S2C_AttackHit::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE S2C_AttackHitNotification::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::ingame::S2C_AttackHit& from_msg)
+    const Impl_& from, const ::ingame::S2C_AttackHitNotification& from_msg)
       : _has_bits_{from._has_bits_},
         _cached_size_{0},
         attacker_id_(arena, from.attacker_id_),
         target_id_(arena, from.target_id_) {}
 
-S2C_AttackHit::S2C_AttackHit(
+S2C_AttackHitNotification::S2C_AttackHitNotification(
     ::google::protobuf::Arena* arena,
-    const S2C_AttackHit& from)
+    const S2C_AttackHitNotification& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  S2C_AttackHit* const _this = this;
+  S2C_AttackHitNotification* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.hit_position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(
+  _impl_.hit_position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(
                               arena, *from._impl_.hit_position_)
                         : nullptr;
   _impl_.damage_ = from._impl_.damage_;
 
-  // @@protoc_insertion_point(copy_constructor:ingame.S2C_AttackHit)
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_AttackHitNotification)
 }
-inline PROTOBUF_NDEBUG_INLINE S2C_AttackHit::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE S2C_AttackHitNotification::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : _cached_size_{0},
         attacker_id_(arena),
         target_id_(arena) {}
 
-inline void S2C_AttackHit::SharedCtor(::_pb::Arena* arena) {
+inline void S2C_AttackHitNotification::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, hit_position_),
@@ -4307,12 +5904,12 @@ inline void S2C_AttackHit::SharedCtor(::_pb::Arena* arena) {
                offsetof(Impl_, hit_position_) +
                sizeof(Impl_::damage_));
 }
-S2C_AttackHit::~S2C_AttackHit() {
-  // @@protoc_insertion_point(destructor:ingame.S2C_AttackHit)
+S2C_AttackHitNotification::~S2C_AttackHitNotification() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_AttackHitNotification)
   SharedDtor(*this);
 }
-inline void S2C_AttackHit::SharedDtor(MessageLite& self) {
-  S2C_AttackHit& this_ = static_cast<S2C_AttackHit&>(self);
+inline void S2C_AttackHitNotification::SharedDtor(MessageLite& self) {
+  S2C_AttackHitNotification& this_ = static_cast<S2C_AttackHitNotification&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.attacker_id_.Destroy();
@@ -4321,45 +5918,45 @@ inline void S2C_AttackHit::SharedDtor(MessageLite& self) {
   this_._impl_.~Impl_();
 }
 
-inline void* S2C_AttackHit::PlacementNew_(const void*, void* mem,
+inline void* S2C_AttackHitNotification::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) S2C_AttackHit(arena);
+  return ::new (mem) S2C_AttackHitNotification(arena);
 }
-constexpr auto S2C_AttackHit::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_AttackHit),
-                                            alignof(S2C_AttackHit));
+constexpr auto S2C_AttackHitNotification::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_AttackHitNotification),
+                                            alignof(S2C_AttackHitNotification));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull S2C_AttackHit::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull S2C_AttackHitNotification::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_S2C_AttackHit_default_instance_._instance,
+        &_S2C_AttackHitNotification_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &S2C_AttackHit::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<S2C_AttackHit>(),
+        &S2C_AttackHitNotification::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_AttackHitNotification>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &S2C_AttackHit::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<S2C_AttackHit>(), &S2C_AttackHit::ByteSizeLong,
-            &S2C_AttackHit::_InternalSerialize,
+        &S2C_AttackHitNotification::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_AttackHitNotification>(), &S2C_AttackHitNotification::ByteSizeLong,
+            &S2C_AttackHitNotification::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(S2C_AttackHit, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(S2C_AttackHitNotification, _impl_._cached_size_),
         false,
     },
-    &S2C_AttackHit::kDescriptorMethods,
+    &S2C_AttackHitNotification::kDescriptorMethods,
     &descriptor_table_ingame_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* S2C_AttackHit::GetClassData() const {
+const ::google::protobuf::internal::ClassData* S2C_AttackHitNotification::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 1, 49, 2> S2C_AttackHit::_table_ = {
+const ::_pbi::TcParseTable<2, 4, 1, 61, 2> S2C_AttackHitNotification::_table_ = {
   {
-    PROTOBUF_FIELD_OFFSET(S2C_AttackHit, _impl_._has_bits_),
+    PROTOBUF_FIELD_OFFSET(S2C_AttackHitNotification, _impl_._has_bits_),
     0, // no _extensions_
     4, 24,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
@@ -4372,48 +5969,48 @@ const ::_pbi::TcParseTable<2, 4, 1, 49, 2> S2C_AttackHit::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::ingame::S2C_AttackHit>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::ingame::S2C_AttackHitNotification>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // .ingame.Positions hit_position = 4;
+    // .ingame.Vector2 hit_position = 4;
     {::_pbi::TcParser::FastMtS1,
-     {34, 0, 0, PROTOBUF_FIELD_OFFSET(S2C_AttackHit, _impl_.hit_position_)}},
+     {34, 0, 0, PROTOBUF_FIELD_OFFSET(S2C_AttackHitNotification, _impl_.hit_position_)}},
     // string attacker_id = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_AttackHit, _impl_.attacker_id_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_AttackHitNotification, _impl_.attacker_id_)}},
     // string target_id = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_AttackHit, _impl_.target_id_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_AttackHitNotification, _impl_.target_id_)}},
     // int32 damage = 3;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_AttackHit, _impl_.damage_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_AttackHit, _impl_.damage_)}},
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_AttackHitNotification, _impl_.damage_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_AttackHitNotification, _impl_.damage_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string attacker_id = 1;
-    {PROTOBUF_FIELD_OFFSET(S2C_AttackHit, _impl_.attacker_id_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_AttackHitNotification, _impl_.attacker_id_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string target_id = 2;
-    {PROTOBUF_FIELD_OFFSET(S2C_AttackHit, _impl_.target_id_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_AttackHitNotification, _impl_.target_id_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // int32 damage = 3;
-    {PROTOBUF_FIELD_OFFSET(S2C_AttackHit, _impl_.damage_), -1, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_AttackHitNotification, _impl_.damage_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // .ingame.Positions hit_position = 4;
-    {PROTOBUF_FIELD_OFFSET(S2C_AttackHit, _impl_.hit_position_), _Internal::kHasBitsOffset + 0, 0,
+    // .ingame.Vector2 hit_position = 4;
+    {PROTOBUF_FIELD_OFFSET(S2C_AttackHitNotification, _impl_.hit_position_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::ingame::Positions>()},
+    {::_pbi::TcParser::GetTable<::ingame::Vector2>()},
   }}, {{
-    "\24\13\11\0\0\0\0\0"
-    "ingame.S2C_AttackHit"
+    "\40\13\11\0\0\0\0\0"
+    "ingame.S2C_AttackHitNotification"
     "attacker_id"
     "target_id"
   }},
 };
 
-PROTOBUF_NOINLINE void S2C_AttackHit::Clear() {
-// @@protoc_insertion_point(message_clear_start:ingame.S2C_AttackHit)
+PROTOBUF_NOINLINE void S2C_AttackHitNotification::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_AttackHitNotification)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -4432,17 +6029,17 @@ PROTOBUF_NOINLINE void S2C_AttackHit::Clear() {
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* S2C_AttackHit::_InternalSerialize(
+        ::uint8_t* S2C_AttackHitNotification::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const S2C_AttackHit& this_ = static_cast<const S2C_AttackHit&>(base);
+          const S2C_AttackHitNotification& this_ = static_cast<const S2C_AttackHitNotification&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* S2C_AttackHit::_InternalSerialize(
+        ::uint8_t* S2C_AttackHitNotification::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const S2C_AttackHit& this_ = *this;
+          const S2C_AttackHitNotification& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_AttackHit)
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_AttackHitNotification)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -4450,7 +6047,7 @@ PROTOBUF_NOINLINE void S2C_AttackHit::Clear() {
           if (!this_._internal_attacker_id().empty()) {
             const std::string& _s = this_._internal_attacker_id();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_AttackHit.attacker_id");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_AttackHitNotification.attacker_id");
             target = stream->WriteStringMaybeAliased(1, _s, target);
           }
 
@@ -4458,7 +6055,7 @@ PROTOBUF_NOINLINE void S2C_AttackHit::Clear() {
           if (!this_._internal_target_id().empty()) {
             const std::string& _s = this_._internal_target_id();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_AttackHit.target_id");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_AttackHitNotification.target_id");
             target = stream->WriteStringMaybeAliased(2, _s, target);
           }
 
@@ -4470,7 +6067,7 @@ PROTOBUF_NOINLINE void S2C_AttackHit::Clear() {
           }
 
           cached_has_bits = this_._impl_._has_bits_[0];
-          // .ingame.Positions hit_position = 4;
+          // .ingame.Vector2 hit_position = 4;
           if (cached_has_bits & 0x00000001u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 4, *this_._impl_.hit_position_, this_._impl_.hit_position_->GetCachedSize(), target,
@@ -4482,18 +6079,18 @@ PROTOBUF_NOINLINE void S2C_AttackHit::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_AttackHit)
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_AttackHitNotification)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t S2C_AttackHit::ByteSizeLong(const MessageLite& base) {
-          const S2C_AttackHit& this_ = static_cast<const S2C_AttackHit&>(base);
+        ::size_t S2C_AttackHitNotification::ByteSizeLong(const MessageLite& base) {
+          const S2C_AttackHitNotification& this_ = static_cast<const S2C_AttackHitNotification&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t S2C_AttackHit::ByteSizeLong() const {
-          const S2C_AttackHit& this_ = *this;
+        ::size_t S2C_AttackHitNotification::ByteSizeLong() const {
+          const S2C_AttackHitNotification& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_AttackHit)
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_AttackHitNotification)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -4514,7 +6111,7 @@ PROTOBUF_NOINLINE void S2C_AttackHit::Clear() {
             }
           }
            {
-            // .ingame.Positions hit_position = 4;
+            // .ingame.Vector2 hit_position = 4;
             cached_has_bits = this_._impl_._has_bits_[0];
             if (cached_has_bits & 0x00000001u) {
               total_size += 1 +
@@ -4532,11 +6129,11 @@ PROTOBUF_NOINLINE void S2C_AttackHit::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void S2C_AttackHit::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<S2C_AttackHit*>(&to_msg);
-  auto& from = static_cast<const S2C_AttackHit&>(from_msg);
+void S2C_AttackHitNotification::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_AttackHitNotification*>(&to_msg);
+  auto& from = static_cast<const S2C_AttackHitNotification&>(from_msg);
   ::google::protobuf::Arena* arena = _this->GetArena();
-  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_AttackHit)
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_AttackHitNotification)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4552,7 +6149,7 @@ void S2C_AttackHit::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::g
     ABSL_DCHECK(from._impl_.hit_position_ != nullptr);
     if (_this->_impl_.hit_position_ == nullptr) {
       _this->_impl_.hit_position_ =
-          ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(arena, *from._impl_.hit_position_);
+          ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(arena, *from._impl_.hit_position_);
     } else {
       _this->_impl_.hit_position_->MergeFrom(*from._impl_.hit_position_);
     }
@@ -4564,15 +6161,15 @@ void S2C_AttackHit::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::g
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void S2C_AttackHit::CopyFrom(const S2C_AttackHit& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_AttackHit)
+void S2C_AttackHitNotification::CopyFrom(const S2C_AttackHitNotification& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_AttackHitNotification)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void S2C_AttackHit::InternalSwap(S2C_AttackHit* PROTOBUF_RESTRICT other) {
+void S2C_AttackHitNotification::InternalSwap(S2C_AttackHitNotification* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -4581,72 +6178,72 @@ void S2C_AttackHit::InternalSwap(S2C_AttackHit* PROTOBUF_RESTRICT other) {
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.attacker_id_, &other->_impl_.attacker_id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.target_id_, &other->_impl_.target_id_, arena);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(S2C_AttackHit, _impl_.damage_)
-      + sizeof(S2C_AttackHit::_impl_.damage_)
-      - PROTOBUF_FIELD_OFFSET(S2C_AttackHit, _impl_.hit_position_)>(
+      PROTOBUF_FIELD_OFFSET(S2C_AttackHitNotification, _impl_.damage_)
+      + sizeof(S2C_AttackHitNotification::_impl_.damage_)
+      - PROTOBUF_FIELD_OFFSET(S2C_AttackHitNotification, _impl_.hit_position_)>(
           reinterpret_cast<char*>(&_impl_.hit_position_),
           reinterpret_cast<char*>(&other->_impl_.hit_position_));
 }
 
-::google::protobuf::Metadata S2C_AttackHit::GetMetadata() const {
+::google::protobuf::Metadata S2C_AttackHitNotification::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
 
-class S2C_PlayerDeath::_Internal {
+class S2C_PlayerDeathNotification::_Internal {
  public:
 };
 
-S2C_PlayerDeath::S2C_PlayerDeath(::google::protobuf::Arena* arena)
+S2C_PlayerDeathNotification::S2C_PlayerDeathNotification(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ingame.S2C_PlayerDeath)
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_PlayerDeathNotification)
 }
-inline PROTOBUF_NDEBUG_INLINE S2C_PlayerDeath::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE S2C_PlayerDeathNotification::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::ingame::S2C_PlayerDeath& from_msg)
+    const Impl_& from, const ::ingame::S2C_PlayerDeathNotification& from_msg)
       : player_id_(arena, from.player_id_),
         killer_id_(arena, from.killer_id_),
         _cached_size_{0} {}
 
-S2C_PlayerDeath::S2C_PlayerDeath(
+S2C_PlayerDeathNotification::S2C_PlayerDeathNotification(
     ::google::protobuf::Arena* arena,
-    const S2C_PlayerDeath& from)
+    const S2C_PlayerDeathNotification& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  S2C_PlayerDeath* const _this = this;
+  S2C_PlayerDeathNotification* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
-  _impl_.death_noti_ = from._impl_.death_noti_;
+  _impl_.death_notification_ = from._impl_.death_notification_;
 
-  // @@protoc_insertion_point(copy_constructor:ingame.S2C_PlayerDeath)
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_PlayerDeathNotification)
 }
-inline PROTOBUF_NDEBUG_INLINE S2C_PlayerDeath::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE S2C_PlayerDeathNotification::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : player_id_(arena),
         killer_id_(arena),
         _cached_size_{0} {}
 
-inline void S2C_PlayerDeath::SharedCtor(::_pb::Arena* arena) {
+inline void S2C_PlayerDeathNotification::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.death_noti_ = {};
+  _impl_.death_notification_ = {};
 }
-S2C_PlayerDeath::~S2C_PlayerDeath() {
-  // @@protoc_insertion_point(destructor:ingame.S2C_PlayerDeath)
+S2C_PlayerDeathNotification::~S2C_PlayerDeathNotification() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_PlayerDeathNotification)
   SharedDtor(*this);
 }
-inline void S2C_PlayerDeath::SharedDtor(MessageLite& self) {
-  S2C_PlayerDeath& this_ = static_cast<S2C_PlayerDeath&>(self);
+inline void S2C_PlayerDeathNotification::SharedDtor(MessageLite& self) {
+  S2C_PlayerDeathNotification& this_ = static_cast<S2C_PlayerDeathNotification&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.player_id_.Destroy();
@@ -4654,43 +6251,43 @@ inline void S2C_PlayerDeath::SharedDtor(MessageLite& self) {
   this_._impl_.~Impl_();
 }
 
-inline void* S2C_PlayerDeath::PlacementNew_(const void*, void* mem,
+inline void* S2C_PlayerDeathNotification::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) S2C_PlayerDeath(arena);
+  return ::new (mem) S2C_PlayerDeathNotification(arena);
 }
-constexpr auto S2C_PlayerDeath::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_PlayerDeath),
-                                            alignof(S2C_PlayerDeath));
+constexpr auto S2C_PlayerDeathNotification::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_PlayerDeathNotification),
+                                            alignof(S2C_PlayerDeathNotification));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull S2C_PlayerDeath::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull S2C_PlayerDeathNotification::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_S2C_PlayerDeath_default_instance_._instance,
+        &_S2C_PlayerDeathNotification_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &S2C_PlayerDeath::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<S2C_PlayerDeath>(),
+        &S2C_PlayerDeathNotification::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_PlayerDeathNotification>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &S2C_PlayerDeath::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<S2C_PlayerDeath>(), &S2C_PlayerDeath::ByteSizeLong,
-            &S2C_PlayerDeath::_InternalSerialize,
+        &S2C_PlayerDeathNotification::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_PlayerDeathNotification>(), &S2C_PlayerDeathNotification::ByteSizeLong,
+            &S2C_PlayerDeathNotification::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(S2C_PlayerDeath, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(S2C_PlayerDeathNotification, _impl_._cached_size_),
         false,
     },
-    &S2C_PlayerDeath::kDescriptorMethods,
+    &S2C_PlayerDeathNotification::kDescriptorMethods,
     &descriptor_table_ingame_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* S2C_PlayerDeath::GetClassData() const {
+const ::google::protobuf::internal::ClassData* S2C_PlayerDeathNotification::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 3, 0, 49, 2> S2C_PlayerDeath::_table_ = {
+const ::_pbi::TcParseTable<2, 3, 0, 61, 2> S2C_PlayerDeathNotification::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -4705,43 +6302,43 @@ const ::_pbi::TcParseTable<2, 3, 0, 49, 2> S2C_PlayerDeath::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::ingame::S2C_PlayerDeath>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::ingame::S2C_PlayerDeathNotification>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
     // string player_id = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerDeath, _impl_.player_id_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerDeathNotification, _impl_.player_id_)}},
     // string killer_id = 2;
     {::_pbi::TcParser::FastUS1,
-     {18, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerDeath, _impl_.killer_id_)}},
-    // .ingame.DeathType death_noti = 3;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_PlayerDeath, _impl_.death_noti_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerDeath, _impl_.death_noti_)}},
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerDeathNotification, _impl_.killer_id_)}},
+    // .ingame.DeathType death_notification = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_PlayerDeathNotification, _impl_.death_notification_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_PlayerDeathNotification, _impl_.death_notification_)}},
   }}, {{
     65535, 65535
   }}, {{
     // string player_id = 1;
-    {PROTOBUF_FIELD_OFFSET(S2C_PlayerDeath, _impl_.player_id_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_PlayerDeathNotification, _impl_.player_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // string killer_id = 2;
-    {PROTOBUF_FIELD_OFFSET(S2C_PlayerDeath, _impl_.killer_id_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_PlayerDeathNotification, _impl_.killer_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // .ingame.DeathType death_noti = 3;
-    {PROTOBUF_FIELD_OFFSET(S2C_PlayerDeath, _impl_.death_noti_), 0, 0,
+    // .ingame.DeathType death_notification = 3;
+    {PROTOBUF_FIELD_OFFSET(S2C_PlayerDeathNotification, _impl_.death_notification_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
   }},
   // no aux_entries
   {{
-    "\26\11\11\0\0\0\0\0"
-    "ingame.S2C_PlayerDeath"
+    "\42\11\11\0\0\0\0\0"
+    "ingame.S2C_PlayerDeathNotification"
     "player_id"
     "killer_id"
   }},
 };
 
-PROTOBUF_NOINLINE void S2C_PlayerDeath::Clear() {
-// @@protoc_insertion_point(message_clear_start:ingame.S2C_PlayerDeath)
+PROTOBUF_NOINLINE void S2C_PlayerDeathNotification::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_PlayerDeathNotification)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -4749,22 +6346,22 @@ PROTOBUF_NOINLINE void S2C_PlayerDeath::Clear() {
 
   _impl_.player_id_.ClearToEmpty();
   _impl_.killer_id_.ClearToEmpty();
-  _impl_.death_noti_ = 0;
+  _impl_.death_notification_ = 0;
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* S2C_PlayerDeath::_InternalSerialize(
+        ::uint8_t* S2C_PlayerDeathNotification::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const S2C_PlayerDeath& this_ = static_cast<const S2C_PlayerDeath&>(base);
+          const S2C_PlayerDeathNotification& this_ = static_cast<const S2C_PlayerDeathNotification&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* S2C_PlayerDeath::_InternalSerialize(
+        ::uint8_t* S2C_PlayerDeathNotification::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const S2C_PlayerDeath& this_ = *this;
+          const S2C_PlayerDeathNotification& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_PlayerDeath)
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_PlayerDeathNotification)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -4772,7 +6369,7 @@ PROTOBUF_NOINLINE void S2C_PlayerDeath::Clear() {
           if (!this_._internal_player_id().empty()) {
             const std::string& _s = this_._internal_player_id();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_PlayerDeath.player_id");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_PlayerDeathNotification.player_id");
             target = stream->WriteStringMaybeAliased(1, _s, target);
           }
 
@@ -4780,15 +6377,15 @@ PROTOBUF_NOINLINE void S2C_PlayerDeath::Clear() {
           if (!this_._internal_killer_id().empty()) {
             const std::string& _s = this_._internal_killer_id();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_PlayerDeath.killer_id");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_PlayerDeathNotification.killer_id");
             target = stream->WriteStringMaybeAliased(2, _s, target);
           }
 
-          // .ingame.DeathType death_noti = 3;
-          if (this_._internal_death_noti() != 0) {
+          // .ingame.DeathType death_notification = 3;
+          if (this_._internal_death_notification() != 0) {
             target = stream->EnsureSpace(target);
             target = ::_pbi::WireFormatLite::WriteEnumToArray(
-                3, this_._internal_death_noti(), target);
+                3, this_._internal_death_notification(), target);
           }
 
           if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
@@ -4796,18 +6393,18 @@ PROTOBUF_NOINLINE void S2C_PlayerDeath::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_PlayerDeath)
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_PlayerDeathNotification)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t S2C_PlayerDeath::ByteSizeLong(const MessageLite& base) {
-          const S2C_PlayerDeath& this_ = static_cast<const S2C_PlayerDeath&>(base);
+        ::size_t S2C_PlayerDeathNotification::ByteSizeLong(const MessageLite& base) {
+          const S2C_PlayerDeathNotification& this_ = static_cast<const S2C_PlayerDeathNotification&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t S2C_PlayerDeath::ByteSizeLong() const {
-          const S2C_PlayerDeath& this_ = *this;
+        ::size_t S2C_PlayerDeathNotification::ByteSizeLong() const {
+          const S2C_PlayerDeathNotification& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_PlayerDeath)
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_PlayerDeathNotification)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -4826,20 +6423,20 @@ PROTOBUF_NOINLINE void S2C_PlayerDeath::Clear() {
               total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                               this_._internal_killer_id());
             }
-            // .ingame.DeathType death_noti = 3;
-            if (this_._internal_death_noti() != 0) {
+            // .ingame.DeathType death_notification = 3;
+            if (this_._internal_death_notification() != 0) {
               total_size += 1 +
-                            ::_pbi::WireFormatLite::EnumSize(this_._internal_death_noti());
+                            ::_pbi::WireFormatLite::EnumSize(this_._internal_death_notification());
             }
           }
           return this_.MaybeComputeUnknownFieldsSize(total_size,
                                                      &this_._impl_._cached_size_);
         }
 
-void S2C_PlayerDeath::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<S2C_PlayerDeath*>(&to_msg);
-  auto& from = static_cast<const S2C_PlayerDeath&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_PlayerDeath)
+void S2C_PlayerDeathNotification::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_PlayerDeathNotification*>(&to_msg);
+  auto& from = static_cast<const S2C_PlayerDeathNotification&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_PlayerDeathNotification)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4850,31 +6447,31 @@ void S2C_PlayerDeath::MergeImpl(::google::protobuf::MessageLite& to_msg, const :
   if (!from._internal_killer_id().empty()) {
     _this->_internal_set_killer_id(from._internal_killer_id());
   }
-  if (from._internal_death_noti() != 0) {
-    _this->_impl_.death_noti_ = from._impl_.death_noti_;
+  if (from._internal_death_notification() != 0) {
+    _this->_impl_.death_notification_ = from._impl_.death_notification_;
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void S2C_PlayerDeath::CopyFrom(const S2C_PlayerDeath& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_PlayerDeath)
+void S2C_PlayerDeathNotification::CopyFrom(const S2C_PlayerDeathNotification& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_PlayerDeathNotification)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void S2C_PlayerDeath::InternalSwap(S2C_PlayerDeath* PROTOBUF_RESTRICT other) {
+void S2C_PlayerDeathNotification::InternalSwap(S2C_PlayerDeathNotification* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.player_id_, &other->_impl_.player_id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.killer_id_, &other->_impl_.killer_id_, arena);
-  swap(_impl_.death_noti_, other->_impl_.death_noti_);
+  swap(_impl_.death_notification_, other->_impl_.death_notification_);
 }
 
-::google::protobuf::Metadata S2C_PlayerDeath::GetMetadata() const {
+::google::protobuf::Metadata S2C_PlayerDeathNotification::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
@@ -4917,16 +6514,16 @@ S2C_GameState_PlayerState::S2C_GameState_PlayerState(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(
+  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(
                               arena, *from._impl_.position_)
                         : nullptr;
   ::memcpy(reinterpret_cast<char *>(&_impl_) +
-               offsetof(Impl_, dir_),
+               offsetof(Impl_, direction_),
            reinterpret_cast<const char *>(&from._impl_) +
-               offsetof(Impl_, dir_),
-           offsetof(Impl_, max_hp_) -
-               offsetof(Impl_, dir_) +
-               sizeof(Impl_::max_hp_));
+               offsetof(Impl_, direction_),
+           offsetof(Impl_, current_race_) -
+               offsetof(Impl_, direction_) +
+               sizeof(Impl_::current_race_));
 
   // @@protoc_insertion_point(copy_constructor:ingame.S2C_GameState.PlayerState)
 }
@@ -4941,9 +6538,9 @@ inline void S2C_GameState_PlayerState::SharedCtor(::_pb::Arena* arena) {
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, position_),
            0,
-           offsetof(Impl_, max_hp_) -
+           offsetof(Impl_, current_race_) -
                offsetof(Impl_, position_) +
-               sizeof(Impl_::max_hp_));
+               sizeof(Impl_::current_race_));
 }
 S2C_GameState_PlayerState::~S2C_GameState_PlayerState() {
   // @@protoc_insertion_point(destructor:ingame.S2C_GameState.PlayerState)
@@ -4994,15 +6591,15 @@ const ::google::protobuf::internal::ClassData* S2C_GameState_PlayerState::GetCla
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 5, 1, 48, 2> S2C_GameState_PlayerState::_table_ = {
+const ::_pbi::TcParseTable<3, 6, 1, 48, 2> S2C_GameState_PlayerState::_table_ = {
   {
     PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_._has_bits_),
     0, // no _extensions_
-    5, 56,  // max_field_number, fast_idx_mask
+    6, 56,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967264,  // skipmap
+    4294967232,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    5,  // num_field_entries
+    6,  // num_field_entries
     1,  // num_aux_entries
     offsetof(decltype(_table_), aux_entries),
     _class_data_.base(),
@@ -5016,19 +6613,21 @@ const ::_pbi::TcParseTable<3, 5, 1, 48, 2> S2C_GameState_PlayerState::_table_ = 
     // string user_id = 1;
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.user_id_)}},
-    // .ingame.Positions position = 2;
+    // .ingame.Vector2 position = 2;
     {::_pbi::TcParser::FastMtS1,
      {18, 0, 0, PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.position_)}},
-    // float dir = 3;
+    // float direction = 3;
     {::_pbi::TcParser::FastF32S1,
-     {29, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.dir_)}},
+     {29, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.direction_)}},
     // int32 current_hp = 4;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GameState_PlayerState, _impl_.current_hp_), 63>(),
      {32, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.current_hp_)}},
     // int32 max_hp = 5;
     {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GameState_PlayerState, _impl_.max_hp_), 63>(),
      {40, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.max_hp_)}},
-    {::_pbi::TcParser::MiniParse, {}},
+    // .ingame.RaceType current_race = 6;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GameState_PlayerState, _impl_.current_race_), 63>(),
+     {48, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.current_race_)}},
     {::_pbi::TcParser::MiniParse, {}},
   }}, {{
     65535, 65535
@@ -5036,11 +6635,11 @@ const ::_pbi::TcParseTable<3, 5, 1, 48, 2> S2C_GameState_PlayerState::_table_ = 
     // string user_id = 1;
     {PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.user_id_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // .ingame.Positions position = 2;
+    // .ingame.Vector2 position = 2;
     {PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.position_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
-    // float dir = 3;
-    {PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.dir_), -1, 0,
+    // float direction = 3;
+    {PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.direction_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
     // int32 current_hp = 4;
     {PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.current_hp_), -1, 0,
@@ -5048,8 +6647,11 @@ const ::_pbi::TcParseTable<3, 5, 1, 48, 2> S2C_GameState_PlayerState::_table_ = 
     // int32 max_hp = 5;
     {PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.max_hp_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    // .ingame.RaceType current_race = 6;
+    {PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.current_race_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::ingame::Positions>()},
+    {::_pbi::TcParser::GetTable<::ingame::Vector2>()},
   }}, {{
     "\40\7\0\0\0\0\0\0"
     "ingame.S2C_GameState.PlayerState"
@@ -5070,9 +6672,9 @@ PROTOBUF_NOINLINE void S2C_GameState_PlayerState::Clear() {
     ABSL_DCHECK(_impl_.position_ != nullptr);
     _impl_.position_->Clear();
   }
-  ::memset(&_impl_.dir_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.max_hp_) -
-      reinterpret_cast<char*>(&_impl_.dir_)) + sizeof(_impl_.max_hp_));
+  ::memset(&_impl_.direction_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.current_race_) -
+      reinterpret_cast<char*>(&_impl_.direction_)) + sizeof(_impl_.current_race_));
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -5101,18 +6703,18 @@ PROTOBUF_NOINLINE void S2C_GameState_PlayerState::Clear() {
           }
 
           cached_has_bits = this_._impl_._has_bits_[0];
-          // .ingame.Positions position = 2;
+          // .ingame.Vector2 position = 2;
           if (cached_has_bits & 0x00000001u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 2, *this_._impl_.position_, this_._impl_.position_->GetCachedSize(), target,
                 stream);
           }
 
-          // float dir = 3;
-          if (::absl::bit_cast<::uint32_t>(this_._internal_dir()) != 0) {
+          // float direction = 3;
+          if (::absl::bit_cast<::uint32_t>(this_._internal_direction()) != 0) {
             target = stream->EnsureSpace(target);
             target = ::_pbi::WireFormatLite::WriteFloatToArray(
-                3, this_._internal_dir(), target);
+                3, this_._internal_direction(), target);
           }
 
           // int32 current_hp = 4;
@@ -5127,6 +6729,13 @@ PROTOBUF_NOINLINE void S2C_GameState_PlayerState::Clear() {
             target = ::google::protobuf::internal::WireFormatLite::
                 WriteInt32ToArrayWithField<5>(
                     stream, this_._internal_max_hp(), target);
+          }
+
+          // .ingame.RaceType current_race = 6;
+          if (this_._internal_current_race() != 0) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteEnumToArray(
+                6, this_._internal_current_race(), target);
           }
 
           if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
@@ -5161,7 +6770,7 @@ PROTOBUF_NOINLINE void S2C_GameState_PlayerState::Clear() {
             }
           }
            {
-            // .ingame.Positions position = 2;
+            // .ingame.Vector2 position = 2;
             cached_has_bits = this_._impl_._has_bits_[0];
             if (cached_has_bits & 0x00000001u) {
               total_size += 1 +
@@ -5169,8 +6778,8 @@ PROTOBUF_NOINLINE void S2C_GameState_PlayerState::Clear() {
             }
           }
            {
-            // float dir = 3;
-            if (::absl::bit_cast<::uint32_t>(this_._internal_dir()) != 0) {
+            // float direction = 3;
+            if (::absl::bit_cast<::uint32_t>(this_._internal_direction()) != 0) {
               total_size += 5;
             }
             // int32 current_hp = 4;
@@ -5182,6 +6791,11 @@ PROTOBUF_NOINLINE void S2C_GameState_PlayerState::Clear() {
             if (this_._internal_max_hp() != 0) {
               total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
                   this_._internal_max_hp());
+            }
+            // .ingame.RaceType current_race = 6;
+            if (this_._internal_current_race() != 0) {
+              total_size += 1 +
+                            ::_pbi::WireFormatLite::EnumSize(this_._internal_current_race());
             }
           }
           return this_.MaybeComputeUnknownFieldsSize(total_size,
@@ -5205,19 +6819,22 @@ void S2C_GameState_PlayerState::MergeImpl(::google::protobuf::MessageLite& to_ms
     ABSL_DCHECK(from._impl_.position_ != nullptr);
     if (_this->_impl_.position_ == nullptr) {
       _this->_impl_.position_ =
-          ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(arena, *from._impl_.position_);
+          ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(arena, *from._impl_.position_);
     } else {
       _this->_impl_.position_->MergeFrom(*from._impl_.position_);
     }
   }
-  if (::absl::bit_cast<::uint32_t>(from._internal_dir()) != 0) {
-    _this->_impl_.dir_ = from._impl_.dir_;
+  if (::absl::bit_cast<::uint32_t>(from._internal_direction()) != 0) {
+    _this->_impl_.direction_ = from._impl_.direction_;
   }
   if (from._internal_current_hp() != 0) {
     _this->_impl_.current_hp_ = from._impl_.current_hp_;
   }
   if (from._internal_max_hp() != 0) {
     _this->_impl_.max_hp_ = from._impl_.max_hp_;
+  }
+  if (from._internal_current_race() != 0) {
+    _this->_impl_.current_race_ = from._impl_.current_race_;
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
@@ -5239,8 +6856,8 @@ void S2C_GameState_PlayerState::InternalSwap(S2C_GameState_PlayerState* PROTOBUF
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.max_hp_)
-      + sizeof(S2C_GameState_PlayerState::_impl_.max_hp_)
+      PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.current_race_)
+      + sizeof(S2C_GameState_PlayerState::_impl_.current_race_)
       - PROTOBUF_FIELD_OFFSET(S2C_GameState_PlayerState, _impl_.position_)>(
           reinterpret_cast<char*>(&_impl_.position_),
           reinterpret_cast<char*>(&other->_impl_.position_));
@@ -5289,7 +6906,7 @@ S2C_GameState_MonsterState::S2C_GameState_MonsterState(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
   ::uint32_t cached_has_bits = _impl_._has_bits_[0];
-  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(
+  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(
                               arena, *from._impl_.position_)
                         : nullptr;
   ::memcpy(reinterpret_cast<char *>(&_impl_) +
@@ -5388,7 +7005,7 @@ const ::_pbi::TcParseTable<3, 5, 1, 52, 2> S2C_GameState_MonsterState::_table_ =
     // string monster_id = 1;
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameState_MonsterState, _impl_.monster_id_)}},
-    // .ingame.Positions position = 2;
+    // .ingame.Vector2 position = 2;
     {::_pbi::TcParser::FastMtS1,
      {18, 0, 0, PROTOBUF_FIELD_OFFSET(S2C_GameState_MonsterState, _impl_.position_)}},
     // int32 current_hp = 3;
@@ -5408,7 +7025,7 @@ const ::_pbi::TcParseTable<3, 5, 1, 52, 2> S2C_GameState_MonsterState::_table_ =
     // string monster_id = 1;
     {PROTOBUF_FIELD_OFFSET(S2C_GameState_MonsterState, _impl_.monster_id_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
-    // .ingame.Positions position = 2;
+    // .ingame.Vector2 position = 2;
     {PROTOBUF_FIELD_OFFSET(S2C_GameState_MonsterState, _impl_.position_), _Internal::kHasBitsOffset + 0, 0,
     (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
     // int32 current_hp = 3;
@@ -5421,7 +7038,7 @@ const ::_pbi::TcParseTable<3, 5, 1, 52, 2> S2C_GameState_MonsterState::_table_ =
     {PROTOBUF_FIELD_OFFSET(S2C_GameState_MonsterState, _impl_.monster_type_), -1, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
   }}, {{
-    {::_pbi::TcParser::GetTable<::ingame::Positions>()},
+    {::_pbi::TcParser::GetTable<::ingame::Vector2>()},
   }}, {{
     "\41\12\0\0\0\0\0\0"
     "ingame.S2C_GameState.MonsterState"
@@ -5473,7 +7090,7 @@ PROTOBUF_NOINLINE void S2C_GameState_MonsterState::Clear() {
           }
 
           cached_has_bits = this_._impl_._has_bits_[0];
-          // .ingame.Positions position = 2;
+          // .ingame.Vector2 position = 2;
           if (cached_has_bits & 0x00000001u) {
             target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
                 2, *this_._impl_.position_, this_._impl_.position_->GetCachedSize(), target,
@@ -5533,7 +7150,7 @@ PROTOBUF_NOINLINE void S2C_GameState_MonsterState::Clear() {
             }
           }
            {
-            // .ingame.Positions position = 2;
+            // .ingame.Vector2 position = 2;
             cached_has_bits = this_._impl_._has_bits_[0];
             if (cached_has_bits & 0x00000001u) {
               total_size += 1 +
@@ -5578,7 +7195,7 @@ void S2C_GameState_MonsterState::MergeImpl(::google::protobuf::MessageLite& to_m
     ABSL_DCHECK(from._impl_.position_ != nullptr);
     if (_this->_impl_.position_ == nullptr) {
       _this->_impl_.position_ =
-          ::google::protobuf::Message::CopyConstruct<::ingame::Positions>(arena, *from._impl_.position_);
+          ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(arena, *from._impl_.position_);
     } else {
       _this->_impl_.position_->MergeFrom(*from._impl_.position_);
     }
@@ -6253,35 +7870,35 @@ void C2S_GeneAcquired::InternalSwap(C2S_GeneAcquired* PROTOBUF_RESTRICT other) {
 }
 // ===================================================================
 
-class S2C_GeneAcquired::_Internal {
+class S2C_GeneAcquiredResult::_Internal {
  public:
 };
 
-S2C_GeneAcquired::S2C_GeneAcquired(::google::protobuf::Arena* arena)
+S2C_GeneAcquiredResult::S2C_GeneAcquiredResult(::google::protobuf::Arena* arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
   SharedCtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ingame.S2C_GeneAcquired)
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_GeneAcquiredResult)
 }
-inline PROTOBUF_NDEBUG_INLINE S2C_GeneAcquired::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE S2C_GeneAcquiredResult::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
-    const Impl_& from, const ::ingame::S2C_GeneAcquired& from_msg)
+    const Impl_& from, const ::ingame::S2C_GeneAcquiredResult& from_msg)
       : user_id_(arena, from.user_id_),
         message_(arena, from.message_),
         _cached_size_{0} {}
 
-S2C_GeneAcquired::S2C_GeneAcquired(
+S2C_GeneAcquiredResult::S2C_GeneAcquiredResult(
     ::google::protobuf::Arena* arena,
-    const S2C_GeneAcquired& from)
+    const S2C_GeneAcquiredResult& from)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, _class_data_.base()) {
 #else   // PROTOBUF_CUSTOM_VTABLE
     : ::google::protobuf::Message(arena) {
 #endif  // PROTOBUF_CUSTOM_VTABLE
-  S2C_GeneAcquired* const _this = this;
+  S2C_GeneAcquiredResult* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
@@ -6290,34 +7907,34 @@ S2C_GeneAcquired::S2C_GeneAcquired(
                offsetof(Impl_, gene_type_),
            reinterpret_cast<const char *>(&from._impl_) +
                offsetof(Impl_, gene_type_),
-           offsetof(Impl_, is_hidden_) -
+           offsetof(Impl_, can_transform_) -
                offsetof(Impl_, gene_type_) +
-               sizeof(Impl_::is_hidden_));
+               sizeof(Impl_::can_transform_));
 
-  // @@protoc_insertion_point(copy_constructor:ingame.S2C_GeneAcquired)
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_GeneAcquiredResult)
 }
-inline PROTOBUF_NDEBUG_INLINE S2C_GeneAcquired::Impl_::Impl_(
+inline PROTOBUF_NDEBUG_INLINE S2C_GeneAcquiredResult::Impl_::Impl_(
     ::google::protobuf::internal::InternalVisibility visibility,
     ::google::protobuf::Arena* arena)
       : user_id_(arena),
         message_(arena),
         _cached_size_{0} {}
 
-inline void S2C_GeneAcquired::SharedCtor(::_pb::Arena* arena) {
+inline void S2C_GeneAcquiredResult::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
   ::memset(reinterpret_cast<char *>(&_impl_) +
                offsetof(Impl_, gene_type_),
            0,
-           offsetof(Impl_, is_hidden_) -
+           offsetof(Impl_, can_transform_) -
                offsetof(Impl_, gene_type_) +
-               sizeof(Impl_::is_hidden_));
+               sizeof(Impl_::can_transform_));
 }
-S2C_GeneAcquired::~S2C_GeneAcquired() {
-  // @@protoc_insertion_point(destructor:ingame.S2C_GeneAcquired)
+S2C_GeneAcquiredResult::~S2C_GeneAcquiredResult() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_GeneAcquiredResult)
   SharedDtor(*this);
 }
-inline void S2C_GeneAcquired::SharedDtor(MessageLite& self) {
-  S2C_GeneAcquired& this_ = static_cast<S2C_GeneAcquired&>(self);
+inline void S2C_GeneAcquiredResult::SharedDtor(MessageLite& self) {
+  S2C_GeneAcquiredResult& this_ = static_cast<S2C_GeneAcquiredResult&>(self);
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
   this_._impl_.user_id_.Destroy();
@@ -6325,43 +7942,43 @@ inline void S2C_GeneAcquired::SharedDtor(MessageLite& self) {
   this_._impl_.~Impl_();
 }
 
-inline void* S2C_GeneAcquired::PlacementNew_(const void*, void* mem,
+inline void* S2C_GeneAcquiredResult::PlacementNew_(const void*, void* mem,
                                         ::google::protobuf::Arena* arena) {
-  return ::new (mem) S2C_GeneAcquired(arena);
+  return ::new (mem) S2C_GeneAcquiredResult(arena);
 }
-constexpr auto S2C_GeneAcquired::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_GeneAcquired),
-                                            alignof(S2C_GeneAcquired));
+constexpr auto S2C_GeneAcquiredResult::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_GeneAcquiredResult),
+                                            alignof(S2C_GeneAcquiredResult));
 }
 PROTOBUF_CONSTINIT
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::google::protobuf::internal::ClassDataFull S2C_GeneAcquired::_class_data_ = {
+const ::google::protobuf::internal::ClassDataFull S2C_GeneAcquiredResult::_class_data_ = {
     ::google::protobuf::internal::ClassData{
-        &_S2C_GeneAcquired_default_instance_._instance,
+        &_S2C_GeneAcquiredResult_default_instance_._instance,
         &_table_.header,
         nullptr,  // OnDemandRegisterArenaDtor
         nullptr,  // IsInitialized
-        &S2C_GeneAcquired::MergeImpl,
-        ::google::protobuf::Message::GetNewImpl<S2C_GeneAcquired>(),
+        &S2C_GeneAcquiredResult::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_GeneAcquiredResult>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        &S2C_GeneAcquired::SharedDtor,
-        ::google::protobuf::Message::GetClearImpl<S2C_GeneAcquired>(), &S2C_GeneAcquired::ByteSizeLong,
-            &S2C_GeneAcquired::_InternalSerialize,
+        &S2C_GeneAcquiredResult::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_GeneAcquiredResult>(), &S2C_GeneAcquiredResult::ByteSizeLong,
+            &S2C_GeneAcquiredResult::_InternalSerialize,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-        PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_._cached_size_),
+        PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_._cached_size_),
         false,
     },
-    &S2C_GeneAcquired::kDescriptorMethods,
+    &S2C_GeneAcquiredResult::kDescriptorMethods,
     &descriptor_table_ingame_2eproto,
     nullptr,  // tracker
 };
-const ::google::protobuf::internal::ClassData* S2C_GeneAcquired::GetClassData() const {
+const ::google::protobuf::internal::ClassData* S2C_GeneAcquiredResult::GetClassData() const {
   ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
   ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<3, 6, 0, 46, 2> S2C_GeneAcquired::_table_ = {
+const ::_pbi::TcParseTable<3, 6, 0, 52, 2> S2C_GeneAcquiredResult::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
@@ -6376,62 +7993,62 @@ const ::_pbi::TcParseTable<3, 6, 0, 46, 2> S2C_GeneAcquired::_table_ = {
     nullptr,  // post_loop_handler
     ::_pbi::TcParser::GenericFallback,  // fallback
     #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-    ::_pbi::TcParser::GetTable<::ingame::S2C_GeneAcquired>(),  // to_prefetch
+    ::_pbi::TcParser::GetTable<::ingame::S2C_GeneAcquiredResult>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
     // string user_id = 1;
     {::_pbi::TcParser::FastUS1,
-     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.user_id_)}},
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.user_id_)}},
     // .ingame.GeneType gene_type = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GeneAcquired, _impl_.gene_type_), 63>(),
-     {16, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.gene_type_)}},
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GeneAcquiredResult, _impl_.gene_type_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.gene_type_)}},
     // int32 new_count = 3;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GeneAcquired, _impl_.new_count_), 63>(),
-     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.new_count_)}},
-    // int32 total_genes = 4;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GeneAcquired, _impl_.total_genes_), 63>(),
-     {32, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.total_genes_)}},
-    // bool is_hidden = 5;
-    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(S2C_GeneAcquired, _impl_.is_hidden_), 63>(),
-     {40, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.is_hidden_)}},
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GeneAcquiredResult, _impl_.new_count_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.new_count_)}},
+    // int32 total_gene_count = 4;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GeneAcquiredResult, _impl_.total_gene_count_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.total_gene_count_)}},
+    // bool can_transform = 5;
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(S2C_GeneAcquiredResult, _impl_.can_transform_), 63>(),
+     {40, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.can_transform_)}},
     // string message = 6;
     {::_pbi::TcParser::FastUS1,
-     {50, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.message_)}},
+     {50, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.message_)}},
     {::_pbi::TcParser::MiniParse, {}},
   }}, {{
     65535, 65535
   }}, {{
     // string user_id = 1;
-    {PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.user_id_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.user_id_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
     // .ingame.GeneType gene_type = 2;
-    {PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.gene_type_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.gene_type_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
     // int32 new_count = 3;
-    {PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.new_count_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.new_count_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 total_genes = 4;
-    {PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.total_genes_), 0, 0,
+    // int32 total_gene_count = 4;
+    {PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.total_gene_count_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // bool is_hidden = 5;
-    {PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.is_hidden_), 0, 0,
+    // bool can_transform = 5;
+    {PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.can_transform_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kBool)},
     // string message = 6;
-    {PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.message_), 0, 0,
+    {PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.message_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\27\7\0\0\0\0\7\0"
-    "ingame.S2C_GeneAcquired"
+    "\35\7\0\0\0\0\7\0"
+    "ingame.S2C_GeneAcquiredResult"
     "user_id"
     "message"
   }},
 };
 
-PROTOBUF_NOINLINE void S2C_GeneAcquired::Clear() {
-// @@protoc_insertion_point(message_clear_start:ingame.S2C_GeneAcquired)
+PROTOBUF_NOINLINE void S2C_GeneAcquiredResult::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_GeneAcquiredResult)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -6440,23 +8057,23 @@ PROTOBUF_NOINLINE void S2C_GeneAcquired::Clear() {
   _impl_.user_id_.ClearToEmpty();
   _impl_.message_.ClearToEmpty();
   ::memset(&_impl_.gene_type_, 0, static_cast<::size_t>(
-      reinterpret_cast<char*>(&_impl_.is_hidden_) -
-      reinterpret_cast<char*>(&_impl_.gene_type_)) + sizeof(_impl_.is_hidden_));
+      reinterpret_cast<char*>(&_impl_.can_transform_) -
+      reinterpret_cast<char*>(&_impl_.gene_type_)) + sizeof(_impl_.can_transform_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::uint8_t* S2C_GeneAcquired::_InternalSerialize(
+        ::uint8_t* S2C_GeneAcquiredResult::_InternalSerialize(
             const MessageLite& base, ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) {
-          const S2C_GeneAcquired& this_ = static_cast<const S2C_GeneAcquired&>(base);
+          const S2C_GeneAcquiredResult& this_ = static_cast<const S2C_GeneAcquiredResult&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::uint8_t* S2C_GeneAcquired::_InternalSerialize(
+        ::uint8_t* S2C_GeneAcquiredResult::_InternalSerialize(
             ::uint8_t* target,
             ::google::protobuf::io::EpsCopyOutputStream* stream) const {
-          const S2C_GeneAcquired& this_ = *this;
+          const S2C_GeneAcquiredResult& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_GeneAcquired)
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_GeneAcquiredResult)
           ::uint32_t cached_has_bits = 0;
           (void)cached_has_bits;
 
@@ -6464,7 +8081,7 @@ PROTOBUF_NOINLINE void S2C_GeneAcquired::Clear() {
           if (!this_._internal_user_id().empty()) {
             const std::string& _s = this_._internal_user_id();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_GeneAcquired.user_id");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_GeneAcquiredResult.user_id");
             target = stream->WriteStringMaybeAliased(1, _s, target);
           }
 
@@ -6482,25 +8099,25 @@ PROTOBUF_NOINLINE void S2C_GeneAcquired::Clear() {
                     stream, this_._internal_new_count(), target);
           }
 
-          // int32 total_genes = 4;
-          if (this_._internal_total_genes() != 0) {
+          // int32 total_gene_count = 4;
+          if (this_._internal_total_gene_count() != 0) {
             target = ::google::protobuf::internal::WireFormatLite::
                 WriteInt32ToArrayWithField<4>(
-                    stream, this_._internal_total_genes(), target);
+                    stream, this_._internal_total_gene_count(), target);
           }
 
-          // bool is_hidden = 5;
-          if (this_._internal_is_hidden() != 0) {
+          // bool can_transform = 5;
+          if (this_._internal_can_transform() != 0) {
             target = stream->EnsureSpace(target);
             target = ::_pbi::WireFormatLite::WriteBoolToArray(
-                5, this_._internal_is_hidden(), target);
+                5, this_._internal_can_transform(), target);
           }
 
           // string message = 6;
           if (!this_._internal_message().empty()) {
             const std::string& _s = this_._internal_message();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_GeneAcquired.message");
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_GeneAcquiredResult.message");
             target = stream->WriteStringMaybeAliased(6, _s, target);
           }
 
@@ -6509,18 +8126,18 @@ PROTOBUF_NOINLINE void S2C_GeneAcquired::Clear() {
                 ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
                     this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
           }
-          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_GeneAcquired)
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_GeneAcquiredResult)
           return target;
         }
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-        ::size_t S2C_GeneAcquired::ByteSizeLong(const MessageLite& base) {
-          const S2C_GeneAcquired& this_ = static_cast<const S2C_GeneAcquired&>(base);
+        ::size_t S2C_GeneAcquiredResult::ByteSizeLong(const MessageLite& base) {
+          const S2C_GeneAcquiredResult& this_ = static_cast<const S2C_GeneAcquiredResult&>(base);
 #else   // PROTOBUF_CUSTOM_VTABLE
-        ::size_t S2C_GeneAcquired::ByteSizeLong() const {
-          const S2C_GeneAcquired& this_ = *this;
+        ::size_t S2C_GeneAcquiredResult::ByteSizeLong() const {
+          const S2C_GeneAcquiredResult& this_ = *this;
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_GeneAcquired)
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_GeneAcquiredResult)
           ::size_t total_size = 0;
 
           ::uint32_t cached_has_bits = 0;
@@ -6549,13 +8166,13 @@ PROTOBUF_NOINLINE void S2C_GeneAcquired::Clear() {
               total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
                   this_._internal_new_count());
             }
-            // int32 total_genes = 4;
-            if (this_._internal_total_genes() != 0) {
+            // int32 total_gene_count = 4;
+            if (this_._internal_total_gene_count() != 0) {
               total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
-                  this_._internal_total_genes());
+                  this_._internal_total_gene_count());
             }
-            // bool is_hidden = 5;
-            if (this_._internal_is_hidden() != 0) {
+            // bool can_transform = 5;
+            if (this_._internal_can_transform() != 0) {
               total_size += 2;
             }
           }
@@ -6563,10 +8180,10 @@ PROTOBUF_NOINLINE void S2C_GeneAcquired::Clear() {
                                                      &this_._impl_._cached_size_);
         }
 
-void S2C_GeneAcquired::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
-  auto* const _this = static_cast<S2C_GeneAcquired*>(&to_msg);
-  auto& from = static_cast<const S2C_GeneAcquired&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_GeneAcquired)
+void S2C_GeneAcquiredResult::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_GeneAcquiredResult*>(&to_msg);
+  auto& from = static_cast<const S2C_GeneAcquiredResult&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_GeneAcquiredResult)
   ABSL_DCHECK_NE(&from, _this);
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -6583,24 +8200,24 @@ void S2C_GeneAcquired::MergeImpl(::google::protobuf::MessageLite& to_msg, const 
   if (from._internal_new_count() != 0) {
     _this->_impl_.new_count_ = from._impl_.new_count_;
   }
-  if (from._internal_total_genes() != 0) {
-    _this->_impl_.total_genes_ = from._impl_.total_genes_;
+  if (from._internal_total_gene_count() != 0) {
+    _this->_impl_.total_gene_count_ = from._impl_.total_gene_count_;
   }
-  if (from._internal_is_hidden() != 0) {
-    _this->_impl_.is_hidden_ = from._impl_.is_hidden_;
+  if (from._internal_can_transform() != 0) {
+    _this->_impl_.can_transform_ = from._impl_.can_transform_;
   }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void S2C_GeneAcquired::CopyFrom(const S2C_GeneAcquired& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_GeneAcquired)
+void S2C_GeneAcquiredResult::CopyFrom(const S2C_GeneAcquiredResult& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_GeneAcquiredResult)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 
-void S2C_GeneAcquired::InternalSwap(S2C_GeneAcquired* PROTOBUF_RESTRICT other) {
+void S2C_GeneAcquiredResult::InternalSwap(S2C_GeneAcquiredResult* PROTOBUF_RESTRICT other) {
   using std::swap;
   auto* arena = GetArena();
   ABSL_DCHECK_EQ(arena, other->GetArena());
@@ -6608,14 +8225,14 @@ void S2C_GeneAcquired::InternalSwap(S2C_GeneAcquired* PROTOBUF_RESTRICT other) {
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.message_, &other->_impl_.message_, arena);
   ::google::protobuf::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.is_hidden_)
-      + sizeof(S2C_GeneAcquired::_impl_.is_hidden_)
-      - PROTOBUF_FIELD_OFFSET(S2C_GeneAcquired, _impl_.gene_type_)>(
+      PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.can_transform_)
+      + sizeof(S2C_GeneAcquiredResult::_impl_.can_transform_)
+      - PROTOBUF_FIELD_OFFSET(S2C_GeneAcquiredResult, _impl_.gene_type_)>(
           reinterpret_cast<char*>(&_impl_.gene_type_),
           reinterpret_cast<char*>(&other->_impl_.gene_type_));
 }
 
-::google::protobuf::Metadata S2C_GeneAcquired::GetMetadata() const {
+::google::protobuf::Metadata S2C_GeneAcquiredResult::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
@@ -6971,7 +8588,13 @@ S2C_GeneEquipResult::S2C_GeneEquipResult(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
-  _impl_.success_ = from._impl_.success_;
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, success_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, success_),
+           offsetof(Impl_, can_transform_) -
+               offsetof(Impl_, success_) +
+               sizeof(Impl_::can_transform_));
 
   // @@protoc_insertion_point(copy_constructor:ingame.S2C_GeneEquipResult)
 }
@@ -6986,7 +8609,12 @@ inline PROTOBUF_NDEBUG_INLINE S2C_GeneEquipResult::Impl_::Impl_(
 
 inline void S2C_GeneEquipResult::SharedCtor(::_pb::Arena* arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.success_ = {};
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, success_),
+           0,
+           offsetof(Impl_, can_transform_) -
+               offsetof(Impl_, success_) +
+               sizeof(Impl_::can_transform_));
 }
 S2C_GeneEquipResult::~S2C_GeneEquipResult() {
   // @@protoc_insertion_point(destructor:ingame.S2C_GeneEquipResult)
@@ -7049,15 +8677,15 @@ const ::google::protobuf::internal::ClassData* S2C_GeneEquipResult::GetClassData
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<2, 4, 0, 49, 2> S2C_GeneEquipResult::_table_ = {
+const ::_pbi::TcParseTable<3, 5, 0, 49, 2> S2C_GeneEquipResult::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    4, 24,  // max_field_number, fast_idx_mask
+    5, 56,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4294967280,  // skipmap
+    4294967264,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    4,  // num_field_entries
+    5,  // num_field_entries
     0,  // num_aux_entries
     offsetof(decltype(_table_), field_names),  // no aux_entries
     _class_data_.base(),
@@ -7067,9 +8695,7 @@ const ::_pbi::TcParseTable<2, 4, 0, 49, 2> S2C_GeneEquipResult::_table_ = {
     ::_pbi::TcParser::GetTable<::ingame::S2C_GeneEquipResult>(),  // to_prefetch
     #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
   }, {{
-    // string message = 4;
-    {::_pbi::TcParser::FastUS1,
-     {34, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneEquipResult, _impl_.message_)}},
+    {::_pbi::TcParser::MiniParse, {}},
     // string user_id = 1;
     {::_pbi::TcParser::FastUS1,
      {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneEquipResult, _impl_.user_id_)}},
@@ -7079,6 +8705,14 @@ const ::_pbi::TcParseTable<2, 4, 0, 49, 2> S2C_GeneEquipResult::_table_ = {
     // repeated .ingame.GeneType equipped_genes = 3;
     {::_pbi::TcParser::FastV32P1,
      {26, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneEquipResult, _impl_.equipped_genes_)}},
+    // bool can_transform = 4;
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(S2C_GeneEquipResult, _impl_.can_transform_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneEquipResult, _impl_.can_transform_)}},
+    // string message = 5;
+    {::_pbi::TcParser::FastUS1,
+     {42, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GeneEquipResult, _impl_.message_)}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
   }}, {{
     65535, 65535
   }}, {{
@@ -7091,13 +8725,16 @@ const ::_pbi::TcParseTable<2, 4, 0, 49, 2> S2C_GeneEquipResult::_table_ = {
     // repeated .ingame.GeneType equipped_genes = 3;
     {PROTOBUF_FIELD_OFFSET(S2C_GeneEquipResult, _impl_.equipped_genes_), 0, 0,
     (0 | ::_fl::kFcRepeated | ::_fl::kPackedOpenEnum)},
-    // string message = 4;
+    // bool can_transform = 4;
+    {PROTOBUF_FIELD_OFFSET(S2C_GeneEquipResult, _impl_.can_transform_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
+    // string message = 5;
     {PROTOBUF_FIELD_OFFSET(S2C_GeneEquipResult, _impl_.message_), 0, 0,
     (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
   }},
   // no aux_entries
   {{
-    "\32\7\0\0\7\0\0\0"
+    "\32\7\0\0\0\7\0\0"
     "ingame.S2C_GeneEquipResult"
     "user_id"
     "message"
@@ -7114,7 +8751,9 @@ PROTOBUF_NOINLINE void S2C_GeneEquipResult::Clear() {
   _impl_.equipped_genes_.Clear();
   _impl_.user_id_.ClearToEmpty();
   _impl_.message_.ClearToEmpty();
-  _impl_.success_ = false;
+  ::memset(&_impl_.success_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.can_transform_) -
+      reinterpret_cast<char*>(&_impl_.success_)) + sizeof(_impl_.can_transform_));
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -7158,12 +8797,19 @@ PROTOBUF_NOINLINE void S2C_GeneEquipResult::Clear() {
             }
           }
 
-          // string message = 4;
+          // bool can_transform = 4;
+          if (this_._internal_can_transform() != 0) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteBoolToArray(
+                4, this_._internal_can_transform(), target);
+          }
+
+          // string message = 5;
           if (!this_._internal_message().empty()) {
             const std::string& _s = this_._internal_message();
             ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
                 _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_GeneEquipResult.message");
-            target = stream->WriteStringMaybeAliased(4, _s, target);
+            target = stream->WriteStringMaybeAliased(5, _s, target);
           }
 
           if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
@@ -7203,13 +8849,17 @@ PROTOBUF_NOINLINE void S2C_GeneEquipResult::Clear() {
               total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                               this_._internal_user_id());
             }
-            // string message = 4;
+            // string message = 5;
             if (!this_._internal_message().empty()) {
               total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
                                               this_._internal_message());
             }
             // bool success = 2;
             if (this_._internal_success() != 0) {
+              total_size += 2;
+            }
+            // bool can_transform = 4;
+            if (this_._internal_can_transform() != 0) {
               total_size += 2;
             }
           }
@@ -7235,6 +8885,9 @@ void S2C_GeneEquipResult::MergeImpl(::google::protobuf::MessageLite& to_msg, con
   if (from._internal_success() != 0) {
     _this->_impl_.success_ = from._impl_.success_;
   }
+  if (from._internal_can_transform() != 0) {
+    _this->_impl_.can_transform_ = from._impl_.can_transform_;
+  }
   _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -7254,10 +8907,3449 @@ void S2C_GeneEquipResult::InternalSwap(S2C_GeneEquipResult* PROTOBUF_RESTRICT ot
   _impl_.equipped_genes_.InternalSwap(&other->_impl_.equipped_genes_);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
   ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.message_, &other->_impl_.message_, arena);
-        swap(_impl_.success_, other->_impl_.success_);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(S2C_GeneEquipResult, _impl_.can_transform_)
+      + sizeof(S2C_GeneEquipResult::_impl_.can_transform_)
+      - PROTOBUF_FIELD_OFFSET(S2C_GeneEquipResult, _impl_.success_)>(
+          reinterpret_cast<char*>(&_impl_.success_),
+          reinterpret_cast<char*>(&other->_impl_.success_));
 }
 
 ::google::protobuf::Metadata S2C_GeneEquipResult::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class S2C_CrownNotification::_Internal {
+ public:
+};
+
+S2C_CrownNotification::S2C_CrownNotification(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_CrownNotification)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_CrownNotification::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::ingame::S2C_CrownNotification& from_msg)
+      : user_id_(arena, from.user_id_),
+        giant_id_(arena, from.giant_id_),
+        _cached_size_{0} {}
+
+S2C_CrownNotification::S2C_CrownNotification(
+    ::google::protobuf::Arena* arena,
+    const S2C_CrownNotification& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  S2C_CrownNotification* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  _impl_.countdown_ = from._impl_.countdown_;
+
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_CrownNotification)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_CrownNotification::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : user_id_(arena),
+        giant_id_(arena),
+        _cached_size_{0} {}
+
+inline void S2C_CrownNotification::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.countdown_ = {};
+}
+S2C_CrownNotification::~S2C_CrownNotification() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_CrownNotification)
+  SharedDtor(*this);
+}
+inline void S2C_CrownNotification::SharedDtor(MessageLite& self) {
+  S2C_CrownNotification& this_ = static_cast<S2C_CrownNotification&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.user_id_.Destroy();
+  this_._impl_.giant_id_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+inline void* S2C_CrownNotification::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) S2C_CrownNotification(arena);
+}
+constexpr auto S2C_CrownNotification::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_CrownNotification),
+                                            alignof(S2C_CrownNotification));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull S2C_CrownNotification::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_S2C_CrownNotification_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &S2C_CrownNotification::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_CrownNotification>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &S2C_CrownNotification::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_CrownNotification>(), &S2C_CrownNotification::ByteSizeLong,
+            &S2C_CrownNotification::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(S2C_CrownNotification, _impl_._cached_size_),
+        false,
+    },
+    &S2C_CrownNotification::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* S2C_CrownNotification::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 3, 0, 52, 2> S2C_CrownNotification::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    3, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967288,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    3,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::S2C_CrownNotification>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+    // string user_id = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_CrownNotification, _impl_.user_id_)}},
+    // string giant_id = 2;
+    {::_pbi::TcParser::FastUS1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_CrownNotification, _impl_.giant_id_)}},
+    // int32 countdown = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_CrownNotification, _impl_.countdown_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_CrownNotification, _impl_.countdown_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string user_id = 1;
+    {PROTOBUF_FIELD_OFFSET(S2C_CrownNotification, _impl_.user_id_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // string giant_id = 2;
+    {PROTOBUF_FIELD_OFFSET(S2C_CrownNotification, _impl_.giant_id_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // int32 countdown = 3;
+    {PROTOBUF_FIELD_OFFSET(S2C_CrownNotification, _impl_.countdown_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+  }},
+  // no aux_entries
+  {{
+    "\34\7\10\0\0\0\0\0"
+    "ingame.S2C_CrownNotification"
+    "user_id"
+    "giant_id"
+  }},
+};
+
+PROTOBUF_NOINLINE void S2C_CrownNotification::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_CrownNotification)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.user_id_.ClearToEmpty();
+  _impl_.giant_id_.ClearToEmpty();
+  _impl_.countdown_ = 0;
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* S2C_CrownNotification::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const S2C_CrownNotification& this_ = static_cast<const S2C_CrownNotification&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* S2C_CrownNotification::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const S2C_CrownNotification& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_CrownNotification)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // string user_id = 1;
+          if (!this_._internal_user_id().empty()) {
+            const std::string& _s = this_._internal_user_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_CrownNotification.user_id");
+            target = stream->WriteStringMaybeAliased(1, _s, target);
+          }
+
+          // string giant_id = 2;
+          if (!this_._internal_giant_id().empty()) {
+            const std::string& _s = this_._internal_giant_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_CrownNotification.giant_id");
+            target = stream->WriteStringMaybeAliased(2, _s, target);
+          }
+
+          // int32 countdown = 3;
+          if (this_._internal_countdown() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<3>(
+                    stream, this_._internal_countdown(), target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_CrownNotification)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t S2C_CrownNotification::ByteSizeLong(const MessageLite& base) {
+          const S2C_CrownNotification& this_ = static_cast<const S2C_CrownNotification&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t S2C_CrownNotification::ByteSizeLong() const {
+          const S2C_CrownNotification& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_CrownNotification)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // string user_id = 1;
+            if (!this_._internal_user_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_user_id());
+            }
+            // string giant_id = 2;
+            if (!this_._internal_giant_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_giant_id());
+            }
+            // int32 countdown = 3;
+            if (this_._internal_countdown() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_countdown());
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void S2C_CrownNotification::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_CrownNotification*>(&to_msg);
+  auto& from = static_cast<const S2C_CrownNotification&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_CrownNotification)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_user_id().empty()) {
+    _this->_internal_set_user_id(from._internal_user_id());
+  }
+  if (!from._internal_giant_id().empty()) {
+    _this->_internal_set_giant_id(from._internal_giant_id());
+  }
+  if (from._internal_countdown() != 0) {
+    _this->_impl_.countdown_ = from._impl_.countdown_;
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void S2C_CrownNotification::CopyFrom(const S2C_CrownNotification& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_CrownNotification)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void S2C_CrownNotification::InternalSwap(S2C_CrownNotification* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.giant_id_, &other->_impl_.giant_id_, arena);
+        swap(_impl_.countdown_, other->_impl_.countdown_);
+}
+
+::google::protobuf::Metadata S2C_CrownNotification::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class S2C_CrownDropNotification::_Internal {
+ public:
+  using HasBits =
+      decltype(std::declval<S2C_CrownDropNotification>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(S2C_CrownDropNotification, _impl_._has_bits_);
+};
+
+S2C_CrownDropNotification::S2C_CrownDropNotification(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_CrownDropNotification)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_CrownDropNotification::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::ingame::S2C_CrownDropNotification& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        giant_id_(arena, from.giant_id_) {}
+
+S2C_CrownDropNotification::S2C_CrownDropNotification(
+    ::google::protobuf::Arena* arena,
+    const S2C_CrownDropNotification& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  S2C_CrownDropNotification* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(
+                              arena, *from._impl_.position_)
+                        : nullptr;
+  _impl_.countdown_ = from._impl_.countdown_;
+
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_CrownDropNotification)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_CrownDropNotification::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        giant_id_(arena) {}
+
+inline void S2C_CrownDropNotification::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, position_),
+           0,
+           offsetof(Impl_, countdown_) -
+               offsetof(Impl_, position_) +
+               sizeof(Impl_::countdown_));
+}
+S2C_CrownDropNotification::~S2C_CrownDropNotification() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_CrownDropNotification)
+  SharedDtor(*this);
+}
+inline void S2C_CrownDropNotification::SharedDtor(MessageLite& self) {
+  S2C_CrownDropNotification& this_ = static_cast<S2C_CrownDropNotification&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.giant_id_.Destroy();
+  delete this_._impl_.position_;
+  this_._impl_.~Impl_();
+}
+
+inline void* S2C_CrownDropNotification::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) S2C_CrownDropNotification(arena);
+}
+constexpr auto S2C_CrownDropNotification::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_CrownDropNotification),
+                                            alignof(S2C_CrownDropNotification));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull S2C_CrownDropNotification::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_S2C_CrownDropNotification_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &S2C_CrownDropNotification::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_CrownDropNotification>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &S2C_CrownDropNotification::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_CrownDropNotification>(), &S2C_CrownDropNotification::ByteSizeLong,
+            &S2C_CrownDropNotification::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(S2C_CrownDropNotification, _impl_._cached_size_),
+        false,
+    },
+    &S2C_CrownDropNotification::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* S2C_CrownDropNotification::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 3, 1, 49, 2> S2C_CrownDropNotification::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(S2C_CrownDropNotification, _impl_._has_bits_),
+    0, // no _extensions_
+    3, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967288,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    3,  // num_field_entries
+    1,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::S2C_CrownDropNotification>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+    // .ingame.Vector2 position = 1;
+    {::_pbi::TcParser::FastMtS1,
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(S2C_CrownDropNotification, _impl_.position_)}},
+    // string giant_id = 2;
+    {::_pbi::TcParser::FastUS1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_CrownDropNotification, _impl_.giant_id_)}},
+    // int32 countdown = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_CrownDropNotification, _impl_.countdown_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_CrownDropNotification, _impl_.countdown_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // .ingame.Vector2 position = 1;
+    {PROTOBUF_FIELD_OFFSET(S2C_CrownDropNotification, _impl_.position_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+    // string giant_id = 2;
+    {PROTOBUF_FIELD_OFFSET(S2C_CrownDropNotification, _impl_.giant_id_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // int32 countdown = 3;
+    {PROTOBUF_FIELD_OFFSET(S2C_CrownDropNotification, _impl_.countdown_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::ingame::Vector2>()},
+  }}, {{
+    "\40\0\10\0\0\0\0\0"
+    "ingame.S2C_CrownDropNotification"
+    "giant_id"
+  }},
+};
+
+PROTOBUF_NOINLINE void S2C_CrownDropNotification::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_CrownDropNotification)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.giant_id_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    ABSL_DCHECK(_impl_.position_ != nullptr);
+    _impl_.position_->Clear();
+  }
+  _impl_.countdown_ = 0;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* S2C_CrownDropNotification::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const S2C_CrownDropNotification& this_ = static_cast<const S2C_CrownDropNotification&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* S2C_CrownDropNotification::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const S2C_CrownDropNotification& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_CrownDropNotification)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          cached_has_bits = this_._impl_._has_bits_[0];
+          // .ingame.Vector2 position = 1;
+          if (cached_has_bits & 0x00000001u) {
+            target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                1, *this_._impl_.position_, this_._impl_.position_->GetCachedSize(), target,
+                stream);
+          }
+
+          // string giant_id = 2;
+          if (!this_._internal_giant_id().empty()) {
+            const std::string& _s = this_._internal_giant_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_CrownDropNotification.giant_id");
+            target = stream->WriteStringMaybeAliased(2, _s, target);
+          }
+
+          // int32 countdown = 3;
+          if (this_._internal_countdown() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<3>(
+                    stream, this_._internal_countdown(), target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_CrownDropNotification)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t S2C_CrownDropNotification::ByteSizeLong(const MessageLite& base) {
+          const S2C_CrownDropNotification& this_ = static_cast<const S2C_CrownDropNotification&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t S2C_CrownDropNotification::ByteSizeLong() const {
+          const S2C_CrownDropNotification& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_CrownDropNotification)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // string giant_id = 2;
+            if (!this_._internal_giant_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_giant_id());
+            }
+          }
+           {
+            // .ingame.Vector2 position = 1;
+            cached_has_bits = this_._impl_._has_bits_[0];
+            if (cached_has_bits & 0x00000001u) {
+              total_size += 1 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.position_);
+            }
+          }
+           {
+            // int32 countdown = 3;
+            if (this_._internal_countdown() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_countdown());
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void S2C_CrownDropNotification::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_CrownDropNotification*>(&to_msg);
+  auto& from = static_cast<const S2C_CrownDropNotification&>(from_msg);
+  ::google::protobuf::Arena* arena = _this->GetArena();
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_CrownDropNotification)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_giant_id().empty()) {
+    _this->_internal_set_giant_id(from._internal_giant_id());
+  }
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    ABSL_DCHECK(from._impl_.position_ != nullptr);
+    if (_this->_impl_.position_ == nullptr) {
+      _this->_impl_.position_ =
+          ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(arena, *from._impl_.position_);
+    } else {
+      _this->_impl_.position_->MergeFrom(*from._impl_.position_);
+    }
+  }
+  if (from._internal_countdown() != 0) {
+    _this->_impl_.countdown_ = from._impl_.countdown_;
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void S2C_CrownDropNotification::CopyFrom(const S2C_CrownDropNotification& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_CrownDropNotification)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void S2C_CrownDropNotification::InternalSwap(S2C_CrownDropNotification* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.giant_id_, &other->_impl_.giant_id_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(S2C_CrownDropNotification, _impl_.countdown_)
+      + sizeof(S2C_CrownDropNotification::_impl_.countdown_)
+      - PROTOBUF_FIELD_OFFSET(S2C_CrownDropNotification, _impl_.position_)>(
+          reinterpret_cast<char*>(&_impl_.position_),
+          reinterpret_cast<char*>(&other->_impl_.position_));
+}
+
+::google::protobuf::Metadata S2C_CrownDropNotification::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class C2S_PickupCrown::_Internal {
+ public:
+  using HasBits =
+      decltype(std::declval<C2S_PickupCrown>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(C2S_PickupCrown, _impl_._has_bits_);
+};
+
+C2S_PickupCrown::C2S_PickupCrown(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.C2S_PickupCrown)
+}
+inline PROTOBUF_NDEBUG_INLINE C2S_PickupCrown::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::ingame::C2S_PickupCrown& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        user_id_(arena, from.user_id_) {}
+
+C2S_PickupCrown::C2S_PickupCrown(
+    ::google::protobuf::Arena* arena,
+    const C2S_PickupCrown& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  C2S_PickupCrown* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.crown_position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(
+                              arena, *from._impl_.crown_position_)
+                        : nullptr;
+
+  // @@protoc_insertion_point(copy_constructor:ingame.C2S_PickupCrown)
+}
+inline PROTOBUF_NDEBUG_INLINE C2S_PickupCrown::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        user_id_(arena) {}
+
+inline void C2S_PickupCrown::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.crown_position_ = {};
+}
+C2S_PickupCrown::~C2S_PickupCrown() {
+  // @@protoc_insertion_point(destructor:ingame.C2S_PickupCrown)
+  SharedDtor(*this);
+}
+inline void C2S_PickupCrown::SharedDtor(MessageLite& self) {
+  C2S_PickupCrown& this_ = static_cast<C2S_PickupCrown&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.user_id_.Destroy();
+  delete this_._impl_.crown_position_;
+  this_._impl_.~Impl_();
+}
+
+inline void* C2S_PickupCrown::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) C2S_PickupCrown(arena);
+}
+constexpr auto C2S_PickupCrown::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(C2S_PickupCrown),
+                                            alignof(C2S_PickupCrown));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull C2S_PickupCrown::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_C2S_PickupCrown_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &C2S_PickupCrown::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<C2S_PickupCrown>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &C2S_PickupCrown::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<C2S_PickupCrown>(), &C2S_PickupCrown::ByteSizeLong,
+            &C2S_PickupCrown::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(C2S_PickupCrown, _impl_._cached_size_),
+        false,
+    },
+    &C2S_PickupCrown::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* C2S_PickupCrown::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<1, 2, 1, 38, 2> C2S_PickupCrown::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(C2S_PickupCrown, _impl_._has_bits_),
+    0, // no _extensions_
+    2, 8,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967292,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    2,  // num_field_entries
+    1,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::C2S_PickupCrown>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // .ingame.Vector2 crown_position = 2;
+    {::_pbi::TcParser::FastMtS1,
+     {18, 0, 0, PROTOBUF_FIELD_OFFSET(C2S_PickupCrown, _impl_.crown_position_)}},
+    // string user_id = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(C2S_PickupCrown, _impl_.user_id_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string user_id = 1;
+    {PROTOBUF_FIELD_OFFSET(C2S_PickupCrown, _impl_.user_id_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // .ingame.Vector2 crown_position = 2;
+    {PROTOBUF_FIELD_OFFSET(C2S_PickupCrown, _impl_.crown_position_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::ingame::Vector2>()},
+  }}, {{
+    "\26\7\0\0\0\0\0\0"
+    "ingame.C2S_PickupCrown"
+    "user_id"
+  }},
+};
+
+PROTOBUF_NOINLINE void C2S_PickupCrown::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.C2S_PickupCrown)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.user_id_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    ABSL_DCHECK(_impl_.crown_position_ != nullptr);
+    _impl_.crown_position_->Clear();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* C2S_PickupCrown::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const C2S_PickupCrown& this_ = static_cast<const C2S_PickupCrown&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* C2S_PickupCrown::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const C2S_PickupCrown& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.C2S_PickupCrown)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // string user_id = 1;
+          if (!this_._internal_user_id().empty()) {
+            const std::string& _s = this_._internal_user_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.C2S_PickupCrown.user_id");
+            target = stream->WriteStringMaybeAliased(1, _s, target);
+          }
+
+          cached_has_bits = this_._impl_._has_bits_[0];
+          // .ingame.Vector2 crown_position = 2;
+          if (cached_has_bits & 0x00000001u) {
+            target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                2, *this_._impl_.crown_position_, this_._impl_.crown_position_->GetCachedSize(), target,
+                stream);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.C2S_PickupCrown)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t C2S_PickupCrown::ByteSizeLong(const MessageLite& base) {
+          const C2S_PickupCrown& this_ = static_cast<const C2S_PickupCrown&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t C2S_PickupCrown::ByteSizeLong() const {
+          const C2S_PickupCrown& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.C2S_PickupCrown)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // string user_id = 1;
+            if (!this_._internal_user_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_user_id());
+            }
+          }
+           {
+            // .ingame.Vector2 crown_position = 2;
+            cached_has_bits = this_._impl_._has_bits_[0];
+            if (cached_has_bits & 0x00000001u) {
+              total_size += 1 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.crown_position_);
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void C2S_PickupCrown::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<C2S_PickupCrown*>(&to_msg);
+  auto& from = static_cast<const C2S_PickupCrown&>(from_msg);
+  ::google::protobuf::Arena* arena = _this->GetArena();
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.C2S_PickupCrown)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_user_id().empty()) {
+    _this->_internal_set_user_id(from._internal_user_id());
+  }
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    ABSL_DCHECK(from._impl_.crown_position_ != nullptr);
+    if (_this->_impl_.crown_position_ == nullptr) {
+      _this->_impl_.crown_position_ =
+          ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(arena, *from._impl_.crown_position_);
+    } else {
+      _this->_impl_.crown_position_->MergeFrom(*from._impl_.crown_position_);
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void C2S_PickupCrown::CopyFrom(const C2S_PickupCrown& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.C2S_PickupCrown)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void C2S_PickupCrown::InternalSwap(C2S_PickupCrown* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
+  swap(_impl_.crown_position_, other->_impl_.crown_position_);
+}
+
+::google::protobuf::Metadata C2S_PickupCrown::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class S2C_CrownPickupResult::_Internal {
+ public:
+};
+
+S2C_CrownPickupResult::S2C_CrownPickupResult(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_CrownPickupResult)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_CrownPickupResult::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::ingame::S2C_CrownPickupResult& from_msg)
+      : user_id_(arena, from.user_id_),
+        message_(arena, from.message_),
+        _cached_size_{0} {}
+
+S2C_CrownPickupResult::S2C_CrownPickupResult(
+    ::google::protobuf::Arena* arena,
+    const S2C_CrownPickupResult& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  S2C_CrownPickupResult* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, success_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, success_),
+           offsetof(Impl_, countdown_) -
+               offsetof(Impl_, success_) +
+               sizeof(Impl_::countdown_));
+
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_CrownPickupResult)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_CrownPickupResult::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : user_id_(arena),
+        message_(arena),
+        _cached_size_{0} {}
+
+inline void S2C_CrownPickupResult::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, success_),
+           0,
+           offsetof(Impl_, countdown_) -
+               offsetof(Impl_, success_) +
+               sizeof(Impl_::countdown_));
+}
+S2C_CrownPickupResult::~S2C_CrownPickupResult() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_CrownPickupResult)
+  SharedDtor(*this);
+}
+inline void S2C_CrownPickupResult::SharedDtor(MessageLite& self) {
+  S2C_CrownPickupResult& this_ = static_cast<S2C_CrownPickupResult&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.user_id_.Destroy();
+  this_._impl_.message_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+inline void* S2C_CrownPickupResult::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) S2C_CrownPickupResult(arena);
+}
+constexpr auto S2C_CrownPickupResult::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_CrownPickupResult),
+                                            alignof(S2C_CrownPickupResult));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull S2C_CrownPickupResult::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_S2C_CrownPickupResult_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &S2C_CrownPickupResult::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_CrownPickupResult>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &S2C_CrownPickupResult::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_CrownPickupResult>(), &S2C_CrownPickupResult::ByteSizeLong,
+            &S2C_CrownPickupResult::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(S2C_CrownPickupResult, _impl_._cached_size_),
+        false,
+    },
+    &S2C_CrownPickupResult::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* S2C_CrownPickupResult::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 4, 0, 51, 2> S2C_CrownPickupResult::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    4, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967280,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    4,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::S2C_CrownPickupResult>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // string message = 4;
+    {::_pbi::TcParser::FastUS1,
+     {34, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_CrownPickupResult, _impl_.message_)}},
+    // string user_id = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_CrownPickupResult, _impl_.user_id_)}},
+    // bool success = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(S2C_CrownPickupResult, _impl_.success_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_CrownPickupResult, _impl_.success_)}},
+    // int32 countdown = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_CrownPickupResult, _impl_.countdown_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_CrownPickupResult, _impl_.countdown_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string user_id = 1;
+    {PROTOBUF_FIELD_OFFSET(S2C_CrownPickupResult, _impl_.user_id_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // bool success = 2;
+    {PROTOBUF_FIELD_OFFSET(S2C_CrownPickupResult, _impl_.success_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
+    // int32 countdown = 3;
+    {PROTOBUF_FIELD_OFFSET(S2C_CrownPickupResult, _impl_.countdown_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    // string message = 4;
+    {PROTOBUF_FIELD_OFFSET(S2C_CrownPickupResult, _impl_.message_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+  }},
+  // no aux_entries
+  {{
+    "\34\7\0\0\7\0\0\0"
+    "ingame.S2C_CrownPickupResult"
+    "user_id"
+    "message"
+  }},
+};
+
+PROTOBUF_NOINLINE void S2C_CrownPickupResult::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_CrownPickupResult)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.user_id_.ClearToEmpty();
+  _impl_.message_.ClearToEmpty();
+  ::memset(&_impl_.success_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.countdown_) -
+      reinterpret_cast<char*>(&_impl_.success_)) + sizeof(_impl_.countdown_));
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* S2C_CrownPickupResult::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const S2C_CrownPickupResult& this_ = static_cast<const S2C_CrownPickupResult&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* S2C_CrownPickupResult::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const S2C_CrownPickupResult& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_CrownPickupResult)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // string user_id = 1;
+          if (!this_._internal_user_id().empty()) {
+            const std::string& _s = this_._internal_user_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_CrownPickupResult.user_id");
+            target = stream->WriteStringMaybeAliased(1, _s, target);
+          }
+
+          // bool success = 2;
+          if (this_._internal_success() != 0) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteBoolToArray(
+                2, this_._internal_success(), target);
+          }
+
+          // int32 countdown = 3;
+          if (this_._internal_countdown() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<3>(
+                    stream, this_._internal_countdown(), target);
+          }
+
+          // string message = 4;
+          if (!this_._internal_message().empty()) {
+            const std::string& _s = this_._internal_message();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_CrownPickupResult.message");
+            target = stream->WriteStringMaybeAliased(4, _s, target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_CrownPickupResult)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t S2C_CrownPickupResult::ByteSizeLong(const MessageLite& base) {
+          const S2C_CrownPickupResult& this_ = static_cast<const S2C_CrownPickupResult&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t S2C_CrownPickupResult::ByteSizeLong() const {
+          const S2C_CrownPickupResult& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_CrownPickupResult)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // string user_id = 1;
+            if (!this_._internal_user_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_user_id());
+            }
+            // string message = 4;
+            if (!this_._internal_message().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_message());
+            }
+            // bool success = 2;
+            if (this_._internal_success() != 0) {
+              total_size += 2;
+            }
+            // int32 countdown = 3;
+            if (this_._internal_countdown() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_countdown());
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void S2C_CrownPickupResult::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_CrownPickupResult*>(&to_msg);
+  auto& from = static_cast<const S2C_CrownPickupResult&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_CrownPickupResult)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_user_id().empty()) {
+    _this->_internal_set_user_id(from._internal_user_id());
+  }
+  if (!from._internal_message().empty()) {
+    _this->_internal_set_message(from._internal_message());
+  }
+  if (from._internal_success() != 0) {
+    _this->_impl_.success_ = from._impl_.success_;
+  }
+  if (from._internal_countdown() != 0) {
+    _this->_impl_.countdown_ = from._impl_.countdown_;
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void S2C_CrownPickupResult::CopyFrom(const S2C_CrownPickupResult& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_CrownPickupResult)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void S2C_CrownPickupResult::InternalSwap(S2C_CrownPickupResult* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.message_, &other->_impl_.message_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(S2C_CrownPickupResult, _impl_.countdown_)
+      + sizeof(S2C_CrownPickupResult::_impl_.countdown_)
+      - PROTOBUF_FIELD_OFFSET(S2C_CrownPickupResult, _impl_.success_)>(
+          reinterpret_cast<char*>(&_impl_.success_),
+          reinterpret_cast<char*>(&other->_impl_.success_));
+}
+
+::google::protobuf::Metadata S2C_CrownPickupResult::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class S2C_DamageContribution::_Internal {
+ public:
+};
+
+S2C_DamageContribution::S2C_DamageContribution(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_DamageContribution)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_DamageContribution::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::ingame::S2C_DamageContribution& from_msg)
+      : user_id_(arena, from.user_id_),
+        giant_id_(arena, from.giant_id_),
+        _cached_size_{0} {}
+
+S2C_DamageContribution::S2C_DamageContribution(
+    ::google::protobuf::Arena* arena,
+    const S2C_DamageContribution& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  S2C_DamageContribution* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, damage_dealt_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, damage_dealt_),
+           offsetof(Impl_, total_contribution_) -
+               offsetof(Impl_, damage_dealt_) +
+               sizeof(Impl_::total_contribution_));
+
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_DamageContribution)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_DamageContribution::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : user_id_(arena),
+        giant_id_(arena),
+        _cached_size_{0} {}
+
+inline void S2C_DamageContribution::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, damage_dealt_),
+           0,
+           offsetof(Impl_, total_contribution_) -
+               offsetof(Impl_, damage_dealt_) +
+               sizeof(Impl_::total_contribution_));
+}
+S2C_DamageContribution::~S2C_DamageContribution() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_DamageContribution)
+  SharedDtor(*this);
+}
+inline void S2C_DamageContribution::SharedDtor(MessageLite& self) {
+  S2C_DamageContribution& this_ = static_cast<S2C_DamageContribution&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.user_id_.Destroy();
+  this_._impl_.giant_id_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+inline void* S2C_DamageContribution::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) S2C_DamageContribution(arena);
+}
+constexpr auto S2C_DamageContribution::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_DamageContribution),
+                                            alignof(S2C_DamageContribution));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull S2C_DamageContribution::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_S2C_DamageContribution_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &S2C_DamageContribution::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_DamageContribution>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &S2C_DamageContribution::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_DamageContribution>(), &S2C_DamageContribution::ByteSizeLong,
+            &S2C_DamageContribution::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(S2C_DamageContribution, _impl_._cached_size_),
+        false,
+    },
+    &S2C_DamageContribution::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* S2C_DamageContribution::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 4, 0, 53, 2> S2C_DamageContribution::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    4, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967280,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    4,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::S2C_DamageContribution>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // int32 total_contribution = 4;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_DamageContribution, _impl_.total_contribution_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_DamageContribution, _impl_.total_contribution_)}},
+    // string user_id = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_DamageContribution, _impl_.user_id_)}},
+    // string giant_id = 2;
+    {::_pbi::TcParser::FastUS1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_DamageContribution, _impl_.giant_id_)}},
+    // int32 damage_dealt = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_DamageContribution, _impl_.damage_dealt_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_DamageContribution, _impl_.damage_dealt_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string user_id = 1;
+    {PROTOBUF_FIELD_OFFSET(S2C_DamageContribution, _impl_.user_id_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // string giant_id = 2;
+    {PROTOBUF_FIELD_OFFSET(S2C_DamageContribution, _impl_.giant_id_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // int32 damage_dealt = 3;
+    {PROTOBUF_FIELD_OFFSET(S2C_DamageContribution, _impl_.damage_dealt_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    // int32 total_contribution = 4;
+    {PROTOBUF_FIELD_OFFSET(S2C_DamageContribution, _impl_.total_contribution_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+  }},
+  // no aux_entries
+  {{
+    "\35\7\10\0\0\0\0\0"
+    "ingame.S2C_DamageContribution"
+    "user_id"
+    "giant_id"
+  }},
+};
+
+PROTOBUF_NOINLINE void S2C_DamageContribution::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_DamageContribution)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.user_id_.ClearToEmpty();
+  _impl_.giant_id_.ClearToEmpty();
+  ::memset(&_impl_.damage_dealt_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.total_contribution_) -
+      reinterpret_cast<char*>(&_impl_.damage_dealt_)) + sizeof(_impl_.total_contribution_));
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* S2C_DamageContribution::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const S2C_DamageContribution& this_ = static_cast<const S2C_DamageContribution&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* S2C_DamageContribution::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const S2C_DamageContribution& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_DamageContribution)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // string user_id = 1;
+          if (!this_._internal_user_id().empty()) {
+            const std::string& _s = this_._internal_user_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_DamageContribution.user_id");
+            target = stream->WriteStringMaybeAliased(1, _s, target);
+          }
+
+          // string giant_id = 2;
+          if (!this_._internal_giant_id().empty()) {
+            const std::string& _s = this_._internal_giant_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_DamageContribution.giant_id");
+            target = stream->WriteStringMaybeAliased(2, _s, target);
+          }
+
+          // int32 damage_dealt = 3;
+          if (this_._internal_damage_dealt() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<3>(
+                    stream, this_._internal_damage_dealt(), target);
+          }
+
+          // int32 total_contribution = 4;
+          if (this_._internal_total_contribution() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<4>(
+                    stream, this_._internal_total_contribution(), target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_DamageContribution)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t S2C_DamageContribution::ByteSizeLong(const MessageLite& base) {
+          const S2C_DamageContribution& this_ = static_cast<const S2C_DamageContribution&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t S2C_DamageContribution::ByteSizeLong() const {
+          const S2C_DamageContribution& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_DamageContribution)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // string user_id = 1;
+            if (!this_._internal_user_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_user_id());
+            }
+            // string giant_id = 2;
+            if (!this_._internal_giant_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_giant_id());
+            }
+            // int32 damage_dealt = 3;
+            if (this_._internal_damage_dealt() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_damage_dealt());
+            }
+            // int32 total_contribution = 4;
+            if (this_._internal_total_contribution() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_total_contribution());
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void S2C_DamageContribution::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_DamageContribution*>(&to_msg);
+  auto& from = static_cast<const S2C_DamageContribution&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_DamageContribution)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_user_id().empty()) {
+    _this->_internal_set_user_id(from._internal_user_id());
+  }
+  if (!from._internal_giant_id().empty()) {
+    _this->_internal_set_giant_id(from._internal_giant_id());
+  }
+  if (from._internal_damage_dealt() != 0) {
+    _this->_impl_.damage_dealt_ = from._impl_.damage_dealt_;
+  }
+  if (from._internal_total_contribution() != 0) {
+    _this->_impl_.total_contribution_ = from._impl_.total_contribution_;
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void S2C_DamageContribution::CopyFrom(const S2C_DamageContribution& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_DamageContribution)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void S2C_DamageContribution::InternalSwap(S2C_DamageContribution* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.giant_id_, &other->_impl_.giant_id_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(S2C_DamageContribution, _impl_.total_contribution_)
+      + sizeof(S2C_DamageContribution::_impl_.total_contribution_)
+      - PROTOBUF_FIELD_OFFSET(S2C_DamageContribution, _impl_.damage_dealt_)>(
+          reinterpret_cast<char*>(&_impl_.damage_dealt_),
+          reinterpret_cast<char*>(&other->_impl_.damage_dealt_));
+}
+
+::google::protobuf::Metadata S2C_DamageContribution::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class S2C_GiantKillContributionResult_Contribution::_Internal {
+ public:
+};
+
+S2C_GiantKillContributionResult_Contribution::S2C_GiantKillContributionResult_Contribution(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_GiantKillContributionResult.Contribution)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_GiantKillContributionResult_Contribution::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::ingame::S2C_GiantKillContributionResult_Contribution& from_msg)
+      : user_id_(arena, from.user_id_),
+        _cached_size_{0} {}
+
+S2C_GiantKillContributionResult_Contribution::S2C_GiantKillContributionResult_Contribution(
+    ::google::protobuf::Arena* arena,
+    const S2C_GiantKillContributionResult_Contribution& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  S2C_GiantKillContributionResult_Contribution* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, damage_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, damage_),
+           offsetof(Impl_, percentage_) -
+               offsetof(Impl_, damage_) +
+               sizeof(Impl_::percentage_));
+
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_GiantKillContributionResult.Contribution)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_GiantKillContributionResult_Contribution::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : user_id_(arena),
+        _cached_size_{0} {}
+
+inline void S2C_GiantKillContributionResult_Contribution::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, damage_),
+           0,
+           offsetof(Impl_, percentage_) -
+               offsetof(Impl_, damage_) +
+               sizeof(Impl_::percentage_));
+}
+S2C_GiantKillContributionResult_Contribution::~S2C_GiantKillContributionResult_Contribution() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_GiantKillContributionResult.Contribution)
+  SharedDtor(*this);
+}
+inline void S2C_GiantKillContributionResult_Contribution::SharedDtor(MessageLite& self) {
+  S2C_GiantKillContributionResult_Contribution& this_ = static_cast<S2C_GiantKillContributionResult_Contribution&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.user_id_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+inline void* S2C_GiantKillContributionResult_Contribution::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) S2C_GiantKillContributionResult_Contribution(arena);
+}
+constexpr auto S2C_GiantKillContributionResult_Contribution::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_GiantKillContributionResult_Contribution),
+                                            alignof(S2C_GiantKillContributionResult_Contribution));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull S2C_GiantKillContributionResult_Contribution::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_S2C_GiantKillContributionResult_Contribution_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &S2C_GiantKillContributionResult_Contribution::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_GiantKillContributionResult_Contribution>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &S2C_GiantKillContributionResult_Contribution::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_GiantKillContributionResult_Contribution>(), &S2C_GiantKillContributionResult_Contribution::ByteSizeLong,
+            &S2C_GiantKillContributionResult_Contribution::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult_Contribution, _impl_._cached_size_),
+        false,
+    },
+    &S2C_GiantKillContributionResult_Contribution::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* S2C_GiantKillContributionResult_Contribution::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 3, 0, 67, 2> S2C_GiantKillContributionResult_Contribution::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    3, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967288,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    3,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::S2C_GiantKillContributionResult_Contribution>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+    // string user_id = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult_Contribution, _impl_.user_id_)}},
+    // int32 damage = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GiantKillContributionResult_Contribution, _impl_.damage_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult_Contribution, _impl_.damage_)}},
+    // float percentage = 3;
+    {::_pbi::TcParser::FastF32S1,
+     {29, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult_Contribution, _impl_.percentage_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string user_id = 1;
+    {PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult_Contribution, _impl_.user_id_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // int32 damage = 2;
+    {PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult_Contribution, _impl_.damage_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    // float percentage = 3;
+    {PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult_Contribution, _impl_.percentage_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kFloat)},
+  }},
+  // no aux_entries
+  {{
+    "\63\7\0\0\0\0\0\0"
+    "ingame.S2C_GiantKillContributionResult.Contribution"
+    "user_id"
+  }},
+};
+
+PROTOBUF_NOINLINE void S2C_GiantKillContributionResult_Contribution::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_GiantKillContributionResult.Contribution)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.user_id_.ClearToEmpty();
+  ::memset(&_impl_.damage_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.percentage_) -
+      reinterpret_cast<char*>(&_impl_.damage_)) + sizeof(_impl_.percentage_));
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* S2C_GiantKillContributionResult_Contribution::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const S2C_GiantKillContributionResult_Contribution& this_ = static_cast<const S2C_GiantKillContributionResult_Contribution&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* S2C_GiantKillContributionResult_Contribution::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const S2C_GiantKillContributionResult_Contribution& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_GiantKillContributionResult.Contribution)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // string user_id = 1;
+          if (!this_._internal_user_id().empty()) {
+            const std::string& _s = this_._internal_user_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_GiantKillContributionResult.Contribution.user_id");
+            target = stream->WriteStringMaybeAliased(1, _s, target);
+          }
+
+          // int32 damage = 2;
+          if (this_._internal_damage() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<2>(
+                    stream, this_._internal_damage(), target);
+          }
+
+          // float percentage = 3;
+          if (::absl::bit_cast<::uint32_t>(this_._internal_percentage()) != 0) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteFloatToArray(
+                3, this_._internal_percentage(), target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_GiantKillContributionResult.Contribution)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t S2C_GiantKillContributionResult_Contribution::ByteSizeLong(const MessageLite& base) {
+          const S2C_GiantKillContributionResult_Contribution& this_ = static_cast<const S2C_GiantKillContributionResult_Contribution&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t S2C_GiantKillContributionResult_Contribution::ByteSizeLong() const {
+          const S2C_GiantKillContributionResult_Contribution& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_GiantKillContributionResult.Contribution)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // string user_id = 1;
+            if (!this_._internal_user_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_user_id());
+            }
+            // int32 damage = 2;
+            if (this_._internal_damage() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_damage());
+            }
+            // float percentage = 3;
+            if (::absl::bit_cast<::uint32_t>(this_._internal_percentage()) != 0) {
+              total_size += 5;
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void S2C_GiantKillContributionResult_Contribution::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_GiantKillContributionResult_Contribution*>(&to_msg);
+  auto& from = static_cast<const S2C_GiantKillContributionResult_Contribution&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_GiantKillContributionResult.Contribution)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_user_id().empty()) {
+    _this->_internal_set_user_id(from._internal_user_id());
+  }
+  if (from._internal_damage() != 0) {
+    _this->_impl_.damage_ = from._impl_.damage_;
+  }
+  if (::absl::bit_cast<::uint32_t>(from._internal_percentage()) != 0) {
+    _this->_impl_.percentage_ = from._impl_.percentage_;
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void S2C_GiantKillContributionResult_Contribution::CopyFrom(const S2C_GiantKillContributionResult_Contribution& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_GiantKillContributionResult.Contribution)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void S2C_GiantKillContributionResult_Contribution::InternalSwap(S2C_GiantKillContributionResult_Contribution* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult_Contribution, _impl_.percentage_)
+      + sizeof(S2C_GiantKillContributionResult_Contribution::_impl_.percentage_)
+      - PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult_Contribution, _impl_.damage_)>(
+          reinterpret_cast<char*>(&_impl_.damage_),
+          reinterpret_cast<char*>(&other->_impl_.damage_));
+}
+
+::google::protobuf::Metadata S2C_GiantKillContributionResult_Contribution::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class S2C_GiantKillContributionResult::_Internal {
+ public:
+};
+
+S2C_GiantKillContributionResult::S2C_GiantKillContributionResult(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_GiantKillContributionResult)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_GiantKillContributionResult::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::ingame::S2C_GiantKillContributionResult& from_msg)
+      : contributions_{visibility, arena, from.contributions_},
+        giant_id_(arena, from.giant_id_),
+        crown_winner_(arena, from.crown_winner_),
+        _cached_size_{0} {}
+
+S2C_GiantKillContributionResult::S2C_GiantKillContributionResult(
+    ::google::protobuf::Arena* arena,
+    const S2C_GiantKillContributionResult& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  S2C_GiantKillContributionResult* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_GiantKillContributionResult)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_GiantKillContributionResult::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : contributions_{visibility, arena},
+        giant_id_(arena),
+        crown_winner_(arena),
+        _cached_size_{0} {}
+
+inline void S2C_GiantKillContributionResult::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+S2C_GiantKillContributionResult::~S2C_GiantKillContributionResult() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_GiantKillContributionResult)
+  SharedDtor(*this);
+}
+inline void S2C_GiantKillContributionResult::SharedDtor(MessageLite& self) {
+  S2C_GiantKillContributionResult& this_ = static_cast<S2C_GiantKillContributionResult&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.giant_id_.Destroy();
+  this_._impl_.crown_winner_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+inline void* S2C_GiantKillContributionResult::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) S2C_GiantKillContributionResult(arena);
+}
+constexpr auto S2C_GiantKillContributionResult::InternalNewImpl_() {
+  constexpr auto arena_bits = ::google::protobuf::internal::EncodePlacementArenaOffsets({
+      PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult, _impl_.contributions_) +
+          decltype(S2C_GiantKillContributionResult::_impl_.contributions_)::
+              InternalGetArenaOffset(
+                  ::google::protobuf::Message::internal_visibility()),
+  });
+  if (arena_bits.has_value()) {
+    return ::google::protobuf::internal::MessageCreator::CopyInit(
+        sizeof(S2C_GiantKillContributionResult), alignof(S2C_GiantKillContributionResult), *arena_bits);
+  } else {
+    return ::google::protobuf::internal::MessageCreator(&S2C_GiantKillContributionResult::PlacementNew_,
+                                 sizeof(S2C_GiantKillContributionResult),
+                                 alignof(S2C_GiantKillContributionResult));
+  }
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull S2C_GiantKillContributionResult::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_S2C_GiantKillContributionResult_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &S2C_GiantKillContributionResult::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_GiantKillContributionResult>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &S2C_GiantKillContributionResult::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_GiantKillContributionResult>(), &S2C_GiantKillContributionResult::ByteSizeLong,
+            &S2C_GiantKillContributionResult::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult, _impl_._cached_size_),
+        false,
+    },
+    &S2C_GiantKillContributionResult::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* S2C_GiantKillContributionResult::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 3, 1, 67, 2> S2C_GiantKillContributionResult::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    3, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967288,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    3,  // num_field_entries
+    1,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::S2C_GiantKillContributionResult>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+    // string giant_id = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult, _impl_.giant_id_)}},
+    // repeated .ingame.S2C_GiantKillContributionResult.Contribution contributions = 2;
+    {::_pbi::TcParser::FastMtR1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult, _impl_.contributions_)}},
+    // string crown_winner = 3;
+    {::_pbi::TcParser::FastUS1,
+     {26, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult, _impl_.crown_winner_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string giant_id = 1;
+    {PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult, _impl_.giant_id_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // repeated .ingame.S2C_GiantKillContributionResult.Contribution contributions = 2;
+    {PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult, _impl_.contributions_), 0, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+    // string crown_winner = 3;
+    {PROTOBUF_FIELD_OFFSET(S2C_GiantKillContributionResult, _impl_.crown_winner_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::ingame::S2C_GiantKillContributionResult_Contribution>()},
+  }}, {{
+    "\46\10\0\14\0\0\0\0"
+    "ingame.S2C_GiantKillContributionResult"
+    "giant_id"
+    "crown_winner"
+  }},
+};
+
+PROTOBUF_NOINLINE void S2C_GiantKillContributionResult::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_GiantKillContributionResult)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.contributions_.Clear();
+  _impl_.giant_id_.ClearToEmpty();
+  _impl_.crown_winner_.ClearToEmpty();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* S2C_GiantKillContributionResult::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const S2C_GiantKillContributionResult& this_ = static_cast<const S2C_GiantKillContributionResult&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* S2C_GiantKillContributionResult::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const S2C_GiantKillContributionResult& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_GiantKillContributionResult)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // string giant_id = 1;
+          if (!this_._internal_giant_id().empty()) {
+            const std::string& _s = this_._internal_giant_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_GiantKillContributionResult.giant_id");
+            target = stream->WriteStringMaybeAliased(1, _s, target);
+          }
+
+          // repeated .ingame.S2C_GiantKillContributionResult.Contribution contributions = 2;
+          for (unsigned i = 0, n = static_cast<unsigned>(
+                                   this_._internal_contributions_size());
+               i < n; i++) {
+            const auto& repfield = this_._internal_contributions().Get(i);
+            target =
+                ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                    2, repfield, repfield.GetCachedSize(),
+                    target, stream);
+          }
+
+          // string crown_winner = 3;
+          if (!this_._internal_crown_winner().empty()) {
+            const std::string& _s = this_._internal_crown_winner();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_GiantKillContributionResult.crown_winner");
+            target = stream->WriteStringMaybeAliased(3, _s, target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_GiantKillContributionResult)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t S2C_GiantKillContributionResult::ByteSizeLong(const MessageLite& base) {
+          const S2C_GiantKillContributionResult& this_ = static_cast<const S2C_GiantKillContributionResult&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t S2C_GiantKillContributionResult::ByteSizeLong() const {
+          const S2C_GiantKillContributionResult& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_GiantKillContributionResult)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // repeated .ingame.S2C_GiantKillContributionResult.Contribution contributions = 2;
+            {
+              total_size += 1UL * this_._internal_contributions_size();
+              for (const auto& msg : this_._internal_contributions()) {
+                total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+              }
+            }
+          }
+           {
+            // string giant_id = 1;
+            if (!this_._internal_giant_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_giant_id());
+            }
+            // string crown_winner = 3;
+            if (!this_._internal_crown_winner().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_crown_winner());
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void S2C_GiantKillContributionResult::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_GiantKillContributionResult*>(&to_msg);
+  auto& from = static_cast<const S2C_GiantKillContributionResult&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_GiantKillContributionResult)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_mutable_contributions()->MergeFrom(
+      from._internal_contributions());
+  if (!from._internal_giant_id().empty()) {
+    _this->_internal_set_giant_id(from._internal_giant_id());
+  }
+  if (!from._internal_crown_winner().empty()) {
+    _this->_internal_set_crown_winner(from._internal_crown_winner());
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void S2C_GiantKillContributionResult::CopyFrom(const S2C_GiantKillContributionResult& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_GiantKillContributionResult)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void S2C_GiantKillContributionResult::InternalSwap(S2C_GiantKillContributionResult* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.contributions_.InternalSwap(&other->_impl_.contributions_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.giant_id_, &other->_impl_.giant_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.crown_winner_, &other->_impl_.crown_winner_, arena);
+}
+
+::google::protobuf::Metadata S2C_GiantKillContributionResult::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class C2S_HiddenSkill::_Internal {
+ public:
+  using HasBits =
+      decltype(std::declval<C2S_HiddenSkill>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(C2S_HiddenSkill, _impl_._has_bits_);
+};
+
+C2S_HiddenSkill::C2S_HiddenSkill(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.C2S_HiddenSkill)
+}
+inline PROTOBUF_NDEBUG_INLINE C2S_HiddenSkill::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::ingame::C2S_HiddenSkill& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        user_id_(arena, from.user_id_) {}
+
+C2S_HiddenSkill::C2S_HiddenSkill(
+    ::google::protobuf::Arena* arena,
+    const C2S_HiddenSkill& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  C2S_HiddenSkill* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.cursor_position_ = (cached_has_bits & 0x00000001u) ? ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(
+                              arena, *from._impl_.cursor_position_)
+                        : nullptr;
+  _impl_.skill_type_ = from._impl_.skill_type_;
+
+  // @@protoc_insertion_point(copy_constructor:ingame.C2S_HiddenSkill)
+}
+inline PROTOBUF_NDEBUG_INLINE C2S_HiddenSkill::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        user_id_(arena) {}
+
+inline void C2S_HiddenSkill::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, cursor_position_),
+           0,
+           offsetof(Impl_, skill_type_) -
+               offsetof(Impl_, cursor_position_) +
+               sizeof(Impl_::skill_type_));
+}
+C2S_HiddenSkill::~C2S_HiddenSkill() {
+  // @@protoc_insertion_point(destructor:ingame.C2S_HiddenSkill)
+  SharedDtor(*this);
+}
+inline void C2S_HiddenSkill::SharedDtor(MessageLite& self) {
+  C2S_HiddenSkill& this_ = static_cast<C2S_HiddenSkill&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.user_id_.Destroy();
+  delete this_._impl_.cursor_position_;
+  this_._impl_.~Impl_();
+}
+
+inline void* C2S_HiddenSkill::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) C2S_HiddenSkill(arena);
+}
+constexpr auto C2S_HiddenSkill::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(C2S_HiddenSkill),
+                                            alignof(C2S_HiddenSkill));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull C2S_HiddenSkill::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_C2S_HiddenSkill_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &C2S_HiddenSkill::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<C2S_HiddenSkill>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &C2S_HiddenSkill::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<C2S_HiddenSkill>(), &C2S_HiddenSkill::ByteSizeLong,
+            &C2S_HiddenSkill::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(C2S_HiddenSkill, _impl_._cached_size_),
+        false,
+    },
+    &C2S_HiddenSkill::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* C2S_HiddenSkill::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 3, 1, 38, 2> C2S_HiddenSkill::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(C2S_HiddenSkill, _impl_._has_bits_),
+    0, // no _extensions_
+    3, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967288,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    3,  // num_field_entries
+    1,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::C2S_HiddenSkill>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+    // string user_id = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(C2S_HiddenSkill, _impl_.user_id_)}},
+    // .ingame.GeneType skill_type = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(C2S_HiddenSkill, _impl_.skill_type_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(C2S_HiddenSkill, _impl_.skill_type_)}},
+    // .ingame.Vector2 cursor_position = 3;
+    {::_pbi::TcParser::FastMtS1,
+     {26, 0, 0, PROTOBUF_FIELD_OFFSET(C2S_HiddenSkill, _impl_.cursor_position_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string user_id = 1;
+    {PROTOBUF_FIELD_OFFSET(C2S_HiddenSkill, _impl_.user_id_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // .ingame.GeneType skill_type = 2;
+    {PROTOBUF_FIELD_OFFSET(C2S_HiddenSkill, _impl_.skill_type_), -1, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
+    // .ingame.Vector2 cursor_position = 3;
+    {PROTOBUF_FIELD_OFFSET(C2S_HiddenSkill, _impl_.cursor_position_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::ingame::Vector2>()},
+  }}, {{
+    "\26\7\0\0\0\0\0\0"
+    "ingame.C2S_HiddenSkill"
+    "user_id"
+  }},
+};
+
+PROTOBUF_NOINLINE void C2S_HiddenSkill::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.C2S_HiddenSkill)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.user_id_.ClearToEmpty();
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    ABSL_DCHECK(_impl_.cursor_position_ != nullptr);
+    _impl_.cursor_position_->Clear();
+  }
+  _impl_.skill_type_ = 0;
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* C2S_HiddenSkill::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const C2S_HiddenSkill& this_ = static_cast<const C2S_HiddenSkill&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* C2S_HiddenSkill::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const C2S_HiddenSkill& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.C2S_HiddenSkill)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // string user_id = 1;
+          if (!this_._internal_user_id().empty()) {
+            const std::string& _s = this_._internal_user_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.C2S_HiddenSkill.user_id");
+            target = stream->WriteStringMaybeAliased(1, _s, target);
+          }
+
+          // .ingame.GeneType skill_type = 2;
+          if (this_._internal_skill_type() != 0) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteEnumToArray(
+                2, this_._internal_skill_type(), target);
+          }
+
+          cached_has_bits = this_._impl_._has_bits_[0];
+          // .ingame.Vector2 cursor_position = 3;
+          if (cached_has_bits & 0x00000001u) {
+            target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                3, *this_._impl_.cursor_position_, this_._impl_.cursor_position_->GetCachedSize(), target,
+                stream);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.C2S_HiddenSkill)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t C2S_HiddenSkill::ByteSizeLong(const MessageLite& base) {
+          const C2S_HiddenSkill& this_ = static_cast<const C2S_HiddenSkill&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t C2S_HiddenSkill::ByteSizeLong() const {
+          const C2S_HiddenSkill& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.C2S_HiddenSkill)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // string user_id = 1;
+            if (!this_._internal_user_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_user_id());
+            }
+          }
+           {
+            // .ingame.Vector2 cursor_position = 3;
+            cached_has_bits = this_._impl_._has_bits_[0];
+            if (cached_has_bits & 0x00000001u) {
+              total_size += 1 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.cursor_position_);
+            }
+          }
+           {
+            // .ingame.GeneType skill_type = 2;
+            if (this_._internal_skill_type() != 0) {
+              total_size += 1 +
+                            ::_pbi::WireFormatLite::EnumSize(this_._internal_skill_type());
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void C2S_HiddenSkill::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<C2S_HiddenSkill*>(&to_msg);
+  auto& from = static_cast<const C2S_HiddenSkill&>(from_msg);
+  ::google::protobuf::Arena* arena = _this->GetArena();
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.C2S_HiddenSkill)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_user_id().empty()) {
+    _this->_internal_set_user_id(from._internal_user_id());
+  }
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    ABSL_DCHECK(from._impl_.cursor_position_ != nullptr);
+    if (_this->_impl_.cursor_position_ == nullptr) {
+      _this->_impl_.cursor_position_ =
+          ::google::protobuf::Message::CopyConstruct<::ingame::Vector2>(arena, *from._impl_.cursor_position_);
+    } else {
+      _this->_impl_.cursor_position_->MergeFrom(*from._impl_.cursor_position_);
+    }
+  }
+  if (from._internal_skill_type() != 0) {
+    _this->_impl_.skill_type_ = from._impl_.skill_type_;
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void C2S_HiddenSkill::CopyFrom(const C2S_HiddenSkill& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.C2S_HiddenSkill)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void C2S_HiddenSkill::InternalSwap(C2S_HiddenSkill* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(C2S_HiddenSkill, _impl_.skill_type_)
+      + sizeof(C2S_HiddenSkill::_impl_.skill_type_)
+      - PROTOBUF_FIELD_OFFSET(C2S_HiddenSkill, _impl_.cursor_position_)>(
+          reinterpret_cast<char*>(&_impl_.cursor_position_),
+          reinterpret_cast<char*>(&other->_impl_.cursor_position_));
+}
+
+::google::protobuf::Metadata C2S_HiddenSkill::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class S2C_HiddenSkillResult::_Internal {
+ public:
+};
+
+S2C_HiddenSkillResult::S2C_HiddenSkillResult(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_HiddenSkillResult)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_HiddenSkillResult::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::ingame::S2C_HiddenSkillResult& from_msg)
+      : user_id_(arena, from.user_id_),
+        message_(arena, from.message_),
+        _cached_size_{0} {}
+
+S2C_HiddenSkillResult::S2C_HiddenSkillResult(
+    ::google::protobuf::Arena* arena,
+    const S2C_HiddenSkillResult& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  S2C_HiddenSkillResult* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, skill_type_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, skill_type_),
+           offsetof(Impl_, success_) -
+               offsetof(Impl_, skill_type_) +
+               sizeof(Impl_::success_));
+
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_HiddenSkillResult)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_HiddenSkillResult::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : user_id_(arena),
+        message_(arena),
+        _cached_size_{0} {}
+
+inline void S2C_HiddenSkillResult::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, skill_type_),
+           0,
+           offsetof(Impl_, success_) -
+               offsetof(Impl_, skill_type_) +
+               sizeof(Impl_::success_));
+}
+S2C_HiddenSkillResult::~S2C_HiddenSkillResult() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_HiddenSkillResult)
+  SharedDtor(*this);
+}
+inline void S2C_HiddenSkillResult::SharedDtor(MessageLite& self) {
+  S2C_HiddenSkillResult& this_ = static_cast<S2C_HiddenSkillResult&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.user_id_.Destroy();
+  this_._impl_.message_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+inline void* S2C_HiddenSkillResult::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) S2C_HiddenSkillResult(arena);
+}
+constexpr auto S2C_HiddenSkillResult::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_HiddenSkillResult),
+                                            alignof(S2C_HiddenSkillResult));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull S2C_HiddenSkillResult::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_S2C_HiddenSkillResult_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &S2C_HiddenSkillResult::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_HiddenSkillResult>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &S2C_HiddenSkillResult::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_HiddenSkillResult>(), &S2C_HiddenSkillResult::ByteSizeLong,
+            &S2C_HiddenSkillResult::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(S2C_HiddenSkillResult, _impl_._cached_size_),
+        false,
+    },
+    &S2C_HiddenSkillResult::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* S2C_HiddenSkillResult::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 4, 0, 51, 2> S2C_HiddenSkillResult::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    4, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967280,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    4,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::S2C_HiddenSkillResult>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // string message = 4;
+    {::_pbi::TcParser::FastUS1,
+     {34, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_HiddenSkillResult, _impl_.message_)}},
+    // string user_id = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_HiddenSkillResult, _impl_.user_id_)}},
+    // .ingame.GeneType skill_type = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_HiddenSkillResult, _impl_.skill_type_), 63>(),
+     {16, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_HiddenSkillResult, _impl_.skill_type_)}},
+    // bool success = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<bool, offsetof(S2C_HiddenSkillResult, _impl_.success_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_HiddenSkillResult, _impl_.success_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string user_id = 1;
+    {PROTOBUF_FIELD_OFFSET(S2C_HiddenSkillResult, _impl_.user_id_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // .ingame.GeneType skill_type = 2;
+    {PROTOBUF_FIELD_OFFSET(S2C_HiddenSkillResult, _impl_.skill_type_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
+    // bool success = 3;
+    {PROTOBUF_FIELD_OFFSET(S2C_HiddenSkillResult, _impl_.success_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kBool)},
+    // string message = 4;
+    {PROTOBUF_FIELD_OFFSET(S2C_HiddenSkillResult, _impl_.message_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+  }},
+  // no aux_entries
+  {{
+    "\34\7\0\0\7\0\0\0"
+    "ingame.S2C_HiddenSkillResult"
+    "user_id"
+    "message"
+  }},
+};
+
+PROTOBUF_NOINLINE void S2C_HiddenSkillResult::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_HiddenSkillResult)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.user_id_.ClearToEmpty();
+  _impl_.message_.ClearToEmpty();
+  ::memset(&_impl_.skill_type_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.success_) -
+      reinterpret_cast<char*>(&_impl_.skill_type_)) + sizeof(_impl_.success_));
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* S2C_HiddenSkillResult::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const S2C_HiddenSkillResult& this_ = static_cast<const S2C_HiddenSkillResult&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* S2C_HiddenSkillResult::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const S2C_HiddenSkillResult& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_HiddenSkillResult)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // string user_id = 1;
+          if (!this_._internal_user_id().empty()) {
+            const std::string& _s = this_._internal_user_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_HiddenSkillResult.user_id");
+            target = stream->WriteStringMaybeAliased(1, _s, target);
+          }
+
+          // .ingame.GeneType skill_type = 2;
+          if (this_._internal_skill_type() != 0) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteEnumToArray(
+                2, this_._internal_skill_type(), target);
+          }
+
+          // bool success = 3;
+          if (this_._internal_success() != 0) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteBoolToArray(
+                3, this_._internal_success(), target);
+          }
+
+          // string message = 4;
+          if (!this_._internal_message().empty()) {
+            const std::string& _s = this_._internal_message();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_HiddenSkillResult.message");
+            target = stream->WriteStringMaybeAliased(4, _s, target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_HiddenSkillResult)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t S2C_HiddenSkillResult::ByteSizeLong(const MessageLite& base) {
+          const S2C_HiddenSkillResult& this_ = static_cast<const S2C_HiddenSkillResult&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t S2C_HiddenSkillResult::ByteSizeLong() const {
+          const S2C_HiddenSkillResult& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_HiddenSkillResult)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // string user_id = 1;
+            if (!this_._internal_user_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_user_id());
+            }
+            // string message = 4;
+            if (!this_._internal_message().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_message());
+            }
+            // .ingame.GeneType skill_type = 2;
+            if (this_._internal_skill_type() != 0) {
+              total_size += 1 +
+                            ::_pbi::WireFormatLite::EnumSize(this_._internal_skill_type());
+            }
+            // bool success = 3;
+            if (this_._internal_success() != 0) {
+              total_size += 2;
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void S2C_HiddenSkillResult::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_HiddenSkillResult*>(&to_msg);
+  auto& from = static_cast<const S2C_HiddenSkillResult&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_HiddenSkillResult)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_user_id().empty()) {
+    _this->_internal_set_user_id(from._internal_user_id());
+  }
+  if (!from._internal_message().empty()) {
+    _this->_internal_set_message(from._internal_message());
+  }
+  if (from._internal_skill_type() != 0) {
+    _this->_impl_.skill_type_ = from._impl_.skill_type_;
+  }
+  if (from._internal_success() != 0) {
+    _this->_impl_.success_ = from._impl_.success_;
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void S2C_HiddenSkillResult::CopyFrom(const S2C_HiddenSkillResult& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_HiddenSkillResult)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void S2C_HiddenSkillResult::InternalSwap(S2C_HiddenSkillResult* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.message_, &other->_impl_.message_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(S2C_HiddenSkillResult, _impl_.success_)
+      + sizeof(S2C_HiddenSkillResult::_impl_.success_)
+      - PROTOBUF_FIELD_OFFSET(S2C_HiddenSkillResult, _impl_.skill_type_)>(
+          reinterpret_cast<char*>(&_impl_.skill_type_),
+          reinterpret_cast<char*>(&other->_impl_.skill_type_));
+}
+
+::google::protobuf::Metadata S2C_HiddenSkillResult::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class S2C_GameEnd_PlayerResult::_Internal {
+ public:
+};
+
+S2C_GameEnd_PlayerResult::S2C_GameEnd_PlayerResult(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_GameEnd.PlayerResult)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_GameEnd_PlayerResult::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::ingame::S2C_GameEnd_PlayerResult& from_msg)
+      : user_id_(arena, from.user_id_),
+        nickname_(arena, from.nickname_),
+        _cached_size_{0} {}
+
+S2C_GameEnd_PlayerResult::S2C_GameEnd_PlayerResult(
+    ::google::protobuf::Arena* arena,
+    const S2C_GameEnd_PlayerResult& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  S2C_GameEnd_PlayerResult* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, final_score_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, final_score_),
+           offsetof(Impl_, survival_time_) -
+               offsetof(Impl_, final_score_) +
+               sizeof(Impl_::survival_time_));
+
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_GameEnd.PlayerResult)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_GameEnd_PlayerResult::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : user_id_(arena),
+        nickname_(arena),
+        _cached_size_{0} {}
+
+inline void S2C_GameEnd_PlayerResult::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, final_score_),
+           0,
+           offsetof(Impl_, survival_time_) -
+               offsetof(Impl_, final_score_) +
+               sizeof(Impl_::survival_time_));
+}
+S2C_GameEnd_PlayerResult::~S2C_GameEnd_PlayerResult() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_GameEnd.PlayerResult)
+  SharedDtor(*this);
+}
+inline void S2C_GameEnd_PlayerResult::SharedDtor(MessageLite& self) {
+  S2C_GameEnd_PlayerResult& this_ = static_cast<S2C_GameEnd_PlayerResult&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.user_id_.Destroy();
+  this_._impl_.nickname_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+inline void* S2C_GameEnd_PlayerResult::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) S2C_GameEnd_PlayerResult(arena);
+}
+constexpr auto S2C_GameEnd_PlayerResult::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(S2C_GameEnd_PlayerResult),
+                                            alignof(S2C_GameEnd_PlayerResult));
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull S2C_GameEnd_PlayerResult::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_S2C_GameEnd_PlayerResult_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &S2C_GameEnd_PlayerResult::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_GameEnd_PlayerResult>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &S2C_GameEnd_PlayerResult::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_GameEnd_PlayerResult>(), &S2C_GameEnd_PlayerResult::ByteSizeLong,
+            &S2C_GameEnd_PlayerResult::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_._cached_size_),
+        false,
+    },
+    &S2C_GameEnd_PlayerResult::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* S2C_GameEnd_PlayerResult::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<3, 8, 0, 63, 2> S2C_GameEnd_PlayerResult::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    8, 56,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967040,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    8,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::S2C_GameEnd_PlayerResult>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // int32 survival_time = 8;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GameEnd_PlayerResult, _impl_.survival_time_), 63>(),
+     {64, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.survival_time_)}},
+    // string user_id = 1;
+    {::_pbi::TcParser::FastUS1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.user_id_)}},
+    // string nickname = 2;
+    {::_pbi::TcParser::FastUS1,
+     {18, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.nickname_)}},
+    // int32 final_score = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GameEnd_PlayerResult, _impl_.final_score_), 63>(),
+     {24, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.final_score_)}},
+    // int32 gold_earned = 4;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GameEnd_PlayerResult, _impl_.gold_earned_), 63>(),
+     {32, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.gold_earned_)}},
+    // .ingame.RaceType final_race = 5;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GameEnd_PlayerResult, _impl_.final_race_), 63>(),
+     {40, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.final_race_)}},
+    // int32 player_killed = 6;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GameEnd_PlayerResult, _impl_.player_killed_), 63>(),
+     {48, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.player_killed_)}},
+    // int32 monster_killed = 7;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(S2C_GameEnd_PlayerResult, _impl_.monster_killed_), 63>(),
+     {56, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.monster_killed_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // string user_id = 1;
+    {PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.user_id_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // string nickname = 2;
+    {PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.nickname_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    // int32 final_score = 3;
+    {PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.final_score_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    // int32 gold_earned = 4;
+    {PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.gold_earned_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    // .ingame.RaceType final_race = 5;
+    {PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.final_race_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kOpenEnum)},
+    // int32 player_killed = 6;
+    {PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.player_killed_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    // int32 monster_killed = 7;
+    {PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.monster_killed_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    // int32 survival_time = 8;
+    {PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.survival_time_), 0, 0,
+    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+  }},
+  // no aux_entries
+  {{
+    "\37\7\10\0\0\0\0\0\0\0\0\0\0\0\0\0"
+    "ingame.S2C_GameEnd.PlayerResult"
+    "user_id"
+    "nickname"
+  }},
+};
+
+PROTOBUF_NOINLINE void S2C_GameEnd_PlayerResult::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_GameEnd.PlayerResult)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.user_id_.ClearToEmpty();
+  _impl_.nickname_.ClearToEmpty();
+  ::memset(&_impl_.final_score_, 0, static_cast<::size_t>(
+      reinterpret_cast<char*>(&_impl_.survival_time_) -
+      reinterpret_cast<char*>(&_impl_.final_score_)) + sizeof(_impl_.survival_time_));
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* S2C_GameEnd_PlayerResult::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const S2C_GameEnd_PlayerResult& this_ = static_cast<const S2C_GameEnd_PlayerResult&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* S2C_GameEnd_PlayerResult::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const S2C_GameEnd_PlayerResult& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_GameEnd.PlayerResult)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // string user_id = 1;
+          if (!this_._internal_user_id().empty()) {
+            const std::string& _s = this_._internal_user_id();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_GameEnd.PlayerResult.user_id");
+            target = stream->WriteStringMaybeAliased(1, _s, target);
+          }
+
+          // string nickname = 2;
+          if (!this_._internal_nickname().empty()) {
+            const std::string& _s = this_._internal_nickname();
+            ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+                _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "ingame.S2C_GameEnd.PlayerResult.nickname");
+            target = stream->WriteStringMaybeAliased(2, _s, target);
+          }
+
+          // int32 final_score = 3;
+          if (this_._internal_final_score() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<3>(
+                    stream, this_._internal_final_score(), target);
+          }
+
+          // int32 gold_earned = 4;
+          if (this_._internal_gold_earned() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<4>(
+                    stream, this_._internal_gold_earned(), target);
+          }
+
+          // .ingame.RaceType final_race = 5;
+          if (this_._internal_final_race() != 0) {
+            target = stream->EnsureSpace(target);
+            target = ::_pbi::WireFormatLite::WriteEnumToArray(
+                5, this_._internal_final_race(), target);
+          }
+
+          // int32 player_killed = 6;
+          if (this_._internal_player_killed() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<6>(
+                    stream, this_._internal_player_killed(), target);
+          }
+
+          // int32 monster_killed = 7;
+          if (this_._internal_monster_killed() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<7>(
+                    stream, this_._internal_monster_killed(), target);
+          }
+
+          // int32 survival_time = 8;
+          if (this_._internal_survival_time() != 0) {
+            target = ::google::protobuf::internal::WireFormatLite::
+                WriteInt32ToArrayWithField<8>(
+                    stream, this_._internal_survival_time(), target);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_GameEnd.PlayerResult)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t S2C_GameEnd_PlayerResult::ByteSizeLong(const MessageLite& base) {
+          const S2C_GameEnd_PlayerResult& this_ = static_cast<const S2C_GameEnd_PlayerResult&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t S2C_GameEnd_PlayerResult::ByteSizeLong() const {
+          const S2C_GameEnd_PlayerResult& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_GameEnd.PlayerResult)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // string user_id = 1;
+            if (!this_._internal_user_id().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_user_id());
+            }
+            // string nickname = 2;
+            if (!this_._internal_nickname().empty()) {
+              total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                              this_._internal_nickname());
+            }
+            // int32 final_score = 3;
+            if (this_._internal_final_score() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_final_score());
+            }
+            // int32 gold_earned = 4;
+            if (this_._internal_gold_earned() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_gold_earned());
+            }
+            // .ingame.RaceType final_race = 5;
+            if (this_._internal_final_race() != 0) {
+              total_size += 1 +
+                            ::_pbi::WireFormatLite::EnumSize(this_._internal_final_race());
+            }
+            // int32 player_killed = 6;
+            if (this_._internal_player_killed() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_player_killed());
+            }
+            // int32 monster_killed = 7;
+            if (this_._internal_monster_killed() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_monster_killed());
+            }
+            // int32 survival_time = 8;
+            if (this_._internal_survival_time() != 0) {
+              total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+                  this_._internal_survival_time());
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void S2C_GameEnd_PlayerResult::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_GameEnd_PlayerResult*>(&to_msg);
+  auto& from = static_cast<const S2C_GameEnd_PlayerResult&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_GameEnd.PlayerResult)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_user_id().empty()) {
+    _this->_internal_set_user_id(from._internal_user_id());
+  }
+  if (!from._internal_nickname().empty()) {
+    _this->_internal_set_nickname(from._internal_nickname());
+  }
+  if (from._internal_final_score() != 0) {
+    _this->_impl_.final_score_ = from._impl_.final_score_;
+  }
+  if (from._internal_gold_earned() != 0) {
+    _this->_impl_.gold_earned_ = from._impl_.gold_earned_;
+  }
+  if (from._internal_final_race() != 0) {
+    _this->_impl_.final_race_ = from._impl_.final_race_;
+  }
+  if (from._internal_player_killed() != 0) {
+    _this->_impl_.player_killed_ = from._impl_.player_killed_;
+  }
+  if (from._internal_monster_killed() != 0) {
+    _this->_impl_.monster_killed_ = from._impl_.monster_killed_;
+  }
+  if (from._internal_survival_time() != 0) {
+    _this->_impl_.survival_time_ = from._impl_.survival_time_;
+  }
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void S2C_GameEnd_PlayerResult::CopyFrom(const S2C_GameEnd_PlayerResult& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_GameEnd.PlayerResult)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void S2C_GameEnd_PlayerResult::InternalSwap(S2C_GameEnd_PlayerResult* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.user_id_, &other->_impl_.user_id_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.nickname_, &other->_impl_.nickname_, arena);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.survival_time_)
+      + sizeof(S2C_GameEnd_PlayerResult::_impl_.survival_time_)
+      - PROTOBUF_FIELD_OFFSET(S2C_GameEnd_PlayerResult, _impl_.final_score_)>(
+          reinterpret_cast<char*>(&_impl_.final_score_),
+          reinterpret_cast<char*>(&other->_impl_.final_score_));
+}
+
+::google::protobuf::Metadata S2C_GameEnd_PlayerResult::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+class S2C_GameEnd::_Internal {
+ public:
+};
+
+S2C_GameEnd::S2C_GameEnd(::google::protobuf::Arena* arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ingame.S2C_GameEnd)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_GameEnd::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from, const ::ingame::S2C_GameEnd& from_msg)
+      : results_{visibility, arena, from.results_},
+        _cached_size_{0} {}
+
+S2C_GameEnd::S2C_GameEnd(
+    ::google::protobuf::Arena* arena,
+    const S2C_GameEnd& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, _class_data_.base()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  S2C_GameEnd* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:ingame.S2C_GameEnd)
+}
+inline PROTOBUF_NDEBUG_INLINE S2C_GameEnd::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : results_{visibility, arena},
+        _cached_size_{0} {}
+
+inline void S2C_GameEnd::SharedCtor(::_pb::Arena* arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+S2C_GameEnd::~S2C_GameEnd() {
+  // @@protoc_insertion_point(destructor:ingame.S2C_GameEnd)
+  SharedDtor(*this);
+}
+inline void S2C_GameEnd::SharedDtor(MessageLite& self) {
+  S2C_GameEnd& this_ = static_cast<S2C_GameEnd&>(self);
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.~Impl_();
+}
+
+inline void* S2C_GameEnd::PlacementNew_(const void*, void* mem,
+                                        ::google::protobuf::Arena* arena) {
+  return ::new (mem) S2C_GameEnd(arena);
+}
+constexpr auto S2C_GameEnd::InternalNewImpl_() {
+  constexpr auto arena_bits = ::google::protobuf::internal::EncodePlacementArenaOffsets({
+      PROTOBUF_FIELD_OFFSET(S2C_GameEnd, _impl_.results_) +
+          decltype(S2C_GameEnd::_impl_.results_)::
+              InternalGetArenaOffset(
+                  ::google::protobuf::Message::internal_visibility()),
+  });
+  if (arena_bits.has_value()) {
+    return ::google::protobuf::internal::MessageCreator::ZeroInit(
+        sizeof(S2C_GameEnd), alignof(S2C_GameEnd), *arena_bits);
+  } else {
+    return ::google::protobuf::internal::MessageCreator(&S2C_GameEnd::PlacementNew_,
+                                 sizeof(S2C_GameEnd),
+                                 alignof(S2C_GameEnd));
+  }
+}
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::google::protobuf::internal::ClassDataFull S2C_GameEnd::_class_data_ = {
+    ::google::protobuf::internal::ClassData{
+        &_S2C_GameEnd_default_instance_._instance,
+        &_table_.header,
+        nullptr,  // OnDemandRegisterArenaDtor
+        nullptr,  // IsInitialized
+        &S2C_GameEnd::MergeImpl,
+        ::google::protobuf::Message::GetNewImpl<S2C_GameEnd>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        &S2C_GameEnd::SharedDtor,
+        ::google::protobuf::Message::GetClearImpl<S2C_GameEnd>(), &S2C_GameEnd::ByteSizeLong,
+            &S2C_GameEnd::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+        PROTOBUF_FIELD_OFFSET(S2C_GameEnd, _impl_._cached_size_),
+        false,
+    },
+    &S2C_GameEnd::kDescriptorMethods,
+    &descriptor_table_ingame_2eproto,
+    nullptr,  // tracker
+};
+const ::google::protobuf::internal::ClassData* S2C_GameEnd::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(_class_data_.tc_table);
+  return _class_data_.base();
+}
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<0, 1, 1, 0, 2> S2C_GameEnd::_table_ = {
+  {
+    0,  // no _has_bits_
+    0, // no _extensions_
+    1, 0,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967294,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    1,  // num_field_entries
+    1,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    _class_data_.base(),
+    nullptr,  // post_loop_handler
+    ::_pbi::TcParser::GenericFallback,  // fallback
+    #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+    ::_pbi::TcParser::GetTable<::ingame::S2C_GameEnd>(),  // to_prefetch
+    #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+  }, {{
+    // repeated .ingame.S2C_GameEnd.PlayerResult results = 1;
+    {::_pbi::TcParser::FastMtR1,
+     {10, 63, 0, PROTOBUF_FIELD_OFFSET(S2C_GameEnd, _impl_.results_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // repeated .ingame.S2C_GameEnd.PlayerResult results = 1;
+    {PROTOBUF_FIELD_OFFSET(S2C_GameEnd, _impl_.results_), 0, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::ingame::S2C_GameEnd_PlayerResult>()},
+  }}, {{
+  }},
+};
+
+PROTOBUF_NOINLINE void S2C_GameEnd::Clear() {
+// @@protoc_insertion_point(message_clear_start:ingame.S2C_GameEnd)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _impl_.results_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::uint8_t* S2C_GameEnd::_InternalSerialize(
+            const MessageLite& base, ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) {
+          const S2C_GameEnd& this_ = static_cast<const S2C_GameEnd&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::uint8_t* S2C_GameEnd::_InternalSerialize(
+            ::uint8_t* target,
+            ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+          const S2C_GameEnd& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(serialize_to_array_start:ingame.S2C_GameEnd)
+          ::uint32_t cached_has_bits = 0;
+          (void)cached_has_bits;
+
+          // repeated .ingame.S2C_GameEnd.PlayerResult results = 1;
+          for (unsigned i = 0, n = static_cast<unsigned>(
+                                   this_._internal_results_size());
+               i < n; i++) {
+            const auto& repfield = this_._internal_results().Get(i);
+            target =
+                ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                    1, repfield, repfield.GetCachedSize(),
+                    target, stream);
+          }
+
+          if (PROTOBUF_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+            target =
+                ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+                    this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+          }
+          // @@protoc_insertion_point(serialize_to_array_end:ingame.S2C_GameEnd)
+          return target;
+        }
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+        ::size_t S2C_GameEnd::ByteSizeLong(const MessageLite& base) {
+          const S2C_GameEnd& this_ = static_cast<const S2C_GameEnd&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+        ::size_t S2C_GameEnd::ByteSizeLong() const {
+          const S2C_GameEnd& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          // @@protoc_insertion_point(message_byte_size_start:ingame.S2C_GameEnd)
+          ::size_t total_size = 0;
+
+          ::uint32_t cached_has_bits = 0;
+          // Prevent compiler warnings about cached_has_bits being unused
+          (void)cached_has_bits;
+
+          ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+           {
+            // repeated .ingame.S2C_GameEnd.PlayerResult results = 1;
+            {
+              total_size += 1UL * this_._internal_results_size();
+              for (const auto& msg : this_._internal_results()) {
+                total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+              }
+            }
+          }
+          return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                                     &this_._impl_._cached_size_);
+        }
+
+void S2C_GameEnd::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::google::protobuf::MessageLite& from_msg) {
+  auto* const _this = static_cast<S2C_GameEnd*>(&to_msg);
+  auto& from = static_cast<const S2C_GameEnd&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:ingame.S2C_GameEnd)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_internal_mutable_results()->MergeFrom(
+      from._internal_results());
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void S2C_GameEnd::CopyFrom(const S2C_GameEnd& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ingame.S2C_GameEnd)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void S2C_GameEnd::InternalSwap(S2C_GameEnd* PROTOBUF_RESTRICT other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.results_.InternalSwap(&other->_impl_.results_);
+}
+
+::google::protobuf::Metadata S2C_GameEnd::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // @@protoc_insertion_point(namespace_scope)

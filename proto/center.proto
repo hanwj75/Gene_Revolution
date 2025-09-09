@@ -10,19 +10,84 @@ import "ingame.proto";
 
 message GamePacket {
 	oneof payload {
-	auth.C2S_Login c2s_login = 1; //클라 -> 로그인/로비 서버 로그인 요청
-	auth.S2C_Login s2c_login = 2; //서버 -> 클라 로그인 응답
 
-	lobby.C2S_EnterLobby c2s_enter_lobby = 3; //클라 -> 로비 서버 로비 입장 요청
-	lobby.S2C_EnterLobby s2c_enter_lobby = 4; //서버 -> 클라 로비 입장 응답
+		//==========================인증 영역(1~10)==============================
+	auth.C2S_Login c2s_login = 1;                                          //클라 -> 로그인/로비 서버 로그인 요청
+	auth.S2C_Login s2c_login = 2;                                          //서버 -> 클라 로그인 응답
 
-	lobby.C2S_GameStart c2s_game_start = 5; //클라 -> 로비 서버 게임 시작 요청
-	lobby.S2C_GameStart s2c_game_start = 6; //서버 -> 클라 게임 시작 응답
+		//==========================로비 영역(11~100)============================
+		//로비 - 입장
+		lobby.C2S_EnterLobby c2s_enter_lobby = 11;                               //클라 -> 로비 서버 로비 입장 요청
+	lobby.S2C_EnterLobby s2c_enter_lobby = 12;                                   //서버 -> 클라 로비 입장 응답
 
-	ingame.C2S_PlayerMove c2s_player_move = 7; //클라 -> 인게임 서버 플레이어 이동 요청
-	ingame.S2C_PlayerMove s2c_player_move = 8; //서버 -> 클라 플레이어 이동 응답
+		//로비 - 게임시작
+	lobby.C2S_GameStart c2s_game_start = 13;                                     //클라 -> 로비 서버 게임 시작 요청
+	lobby.S2C_GameStart s2c_game_start = 14;                                     //서버 -> 클라 게임 시작 응답
 
-	ingame.C2S_PlayerAttack c2s_player_attack = 9; //클라 -> 인게임 서버 플레이어 공격 요청
-    ingame.S2C_PlayerAttack s2c_player_attack = 10; //서버 -> 클라 플레이어 공격 응답
+		//로비 - 다른 유저 리스트
+	lobby.S2C_LobbyUserList s2c_lobby_user_list = 15;                            //서버 -> 클라 로비 유저 리스트
+
+		//로비 - 상점
+	lobby.C2S_ShopRequest c2s_shop_request = 16;                                 //클라 -> 서버 상접 목록 요청
+	lobby.S2C_ShopResponse s2c_shpe_response = 17;                               //서버 -> 클라 상점 목록 응답
+	lobby.C2S_BuyItem c2s_buy_item = 18;                                         //클라 -> 서버 아이템 구매 요청
+	lobby.S2C_BuyResult s2c_buy_result = 19;                                     //서버 -> 클라 아이템 구매 결과
+	lobby.C2S_BuyAndOpenRandomBox c2s_buy_and_open_random_box = 20;              //클라 -> 서버 랜덤박스 구매 및 오픈 요청
+    lobby.S2C_BuyAndOpenRandomBoxResult s2c_buy_and_open_random_box_result = 21; //서버 -> 클라 랜덤박스 구매 및 오픈 결과
+
+		//로비 - 인벤토리
+    lobby.C2S_InventoryRequest c2s_inventory_request = 22;                       //클라 -> 서버 인벤토리 요청
+    lobby.S2C_InventoryResponse s2c_inventory_response = 23;                     //서버 -> 클라 인벤토리 응답
+
+		//로비 - 코스튬 장착/해제
+    lobby.C2S_EquipCostume c2s_equip_costume = 24;                               //클라 -> 서버 코스튬 장착 요청
+    lobby.S2C_EquipCostumeResult s2c_equip_costume_result = 25;                  //서버 -> 클라 코스튬 장착 결과
+
+	    //==========================인게임 영역(101~)============================
+		//인게임 - 입장
+	ingame.C2S_JoinGame c2s_join_game = 101;                                            //클라 -> 인게임 서버 - 로비에서 받은 정보로 접속
+	ingame.S2C_JoinGameResult s2c_join_game_result = 102;                               //서버 -> 클라 입장 결과 - 월드 상태 및 초기 데이터
+
+		//인게임 - 이동
+	ingame.C2S_PlayerMove c2s_player_move = 103;                                        //클라 -> 인게임 서버 플레이어 이동 요청
+	ingame.S2C_PlayerMoveNotification s2c_player_move_notification = 104;               //서버 -> 클라 플레이어 이동 알림
+
+		//인게임 - 공격
+	ingame.C2S_PlayerAttack c2s_player_attack = 105;                                    //클라 -> 인게임 서버 플레이어 공격 요청
+    ingame.S2C_PlayerAttackResult s2c_player_attack_result = 106;                       //서버 -> 클라 플레이어 공격 결과
+	ingame.S2C_AttackHitNotification s2c_attack_hit_notification = 107;                 //서버 -> 클라 피격 알림
+
+		//인게임 - 사망관리
+	ingame.S2C_PlayerDeathNotification s2c_player_death_notification = 108;             //서버 -> 클라 사망 알림
+
+		//인게임 - 게임 상태
+	ingame.S2C_GameState s2c_game_state = 109;                                          //서버 -> 클라 게임 상태 동기화
+
+		//인게임 - 유전자 시스템
+	ingame.C2S_GeneAcquired c2s_gene_acquired = 110;                                    //클라 -> 서버 유전자 획득
+	ingame.S2C_GeneAcquiredResult s2c_gene_acquired_result = 111;                       //서버 -> 클라 유전자 획득 결과
+	ingame.C2S_EquipGene c2s_equip_gene = 112;                                          //클라 -> 서버 유전자 장착/해제
+	ingame.S2C_GeneEquipResult s2c_gene_equip_result = 113;                             //서버 -> 클라 유전자 장착 결과
+
+		//인게임 - 거인 변환
+	ingame.C2S_TransformGiant c2s_transform_giant = 114;                                //클라 -> 서버 거인 변환 요청
+	ingame.S2C_TransformResult s2c_transform_result = 115;                              //서버 -> 클라 거인 변환 결과
+
+		//인게임 - 왕관
+	ingame.S2C_CrownNotification s2c_crown_notification = 116;                          //서버 -> 클라 왕관 획득 알림 - 거인 처치 후 기여도 1위
+	ingame.S2C_CrownDropNotification s2c_crown_drop_notification = 117;                 //서버 -> 클라 왕관 드롭 - 보유자 사망 시 위치 알림
+	ingame.C2S_PickupCrown c2s_pickup_crown = 118;                                      //클라 -> 서버 왕관 줍기 - 드롭된 왕관 획득 시도
+    ingame.S2C_CrownPickupResult s2c_crown_pickup_result = 119;                         //서버 -> 클라 줍기 결과 - 획득 성공 여부
+
+		//인게임 - 히든스킬
+	ingame.C2S_HiddenSkill c2s_hidden_skill = 120;                                      //클라 -> 서버 히든 스킬 사용 요청
+	ingame.S2C_HiddenSkillResult s2c_hidden_skill_result = 121;                         //서버 -> 클라 히든 스킬 사용 결과
+
+		//인게임 - 기여도 시스템
+	ingame.S2C_GiantKillContributionResult s2c_giant_kill_contribution_result = 122;    //서버 -> 클라 거인 처치 기여도 - 최종 기여도 집계
+
+		//인게임 - 게임종료
+	ingame.S2C_GameEnd s2c_game_end = 123;                                              //서버 -> 클라 게임 종료 - 최종 결과 및 보상 정보
 	}
+
 }

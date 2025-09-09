@@ -7,16 +7,21 @@ message C2S_EnterLobby {
 }
 
 //서버 -> 클라 : 로비 입장 응답
-
 message S2C_EnterLobby{
 	bool success = 1;
 	string message = 2;
+	int32 gold = 3; //보유 골드
 }
 
 //서버 -> 클라 : 로비 유저 리스트 갱신
-
 message S2C_LobbyUserList{
 	repeated string users = 1; //현재 로비에 있는 유저 ID 목록
+}
+//로비에 다른 유저 정보(파티용)
+message LobbyUser{
+	string user_id = 1;
+	string nickname = 2;
+	bool is_ready = 3; //파티 기능 추가시 필요
 }
 
 //클라 -> 서버 : 게임 시작 요청
@@ -26,7 +31,122 @@ message C2S_GameStart{
 
 //서버 -> 클라 : 게임 시작 응답
 message S2C_GameStart{
-	bool success = 1; //게임 시작 성공 여부
-	string room_id =2; //성공 시 생성/참여할 방 ID
-	string message = 3; //응답 결과에 따른 메시지
+	bool success = 1;      //게임 시작 성공 여부
+	string room_id =2;     //성공 시 생성/참여할 방 ID
+	string server_ip = 3;  // 인게임 서버 IP
+	int32 server_port = 4; //인게임 서버 포트
+	string message = 5;    //응답 결과에 따른 메시지
+}
+
+//클라 -> 서버 : 상점 아이템 목록 요청
+message C2S_ShopRequest{
+	string user_id = 1;
+}
+
+//서버 -> 클라 : 상점 아이템 목록
+message S2C_ShopResponse {
+	message ShopItem{
+		string item_id = 1;
+		string name = 2;
+		string description = 3;                  //아이템 설명
+		int32 price = 4;
+		ItemType item_type = 5;
+		ItemTier min_tier = 6;                   //최소등급
+		ItemTier max_tier = 7;                   //최대등급
+		map<int32, float> tier_probabilities = 8;//등급별 확률
+	}
+	repeated ShopItem items = 1;
+}
+
+//클라 -> 서버 : 아이템 구매 요청
+message C2S_BuyItem{
+	string user_id = 1;
+	string item_id = 2;
+	int32 quantity = 3; //구매 수량
+}
+
+//서버 -> 클라 : 아이템 구매 결과
+message S2C_BuyResult{
+	bool success = 1;
+	string item_id = 2;
+	int32 quantity = 3;       //구매 수량
+	int32 remaining_gold = 4; //구매 후 남은 골드
+	string message = 5;
+}
+
+//클라 -> 서버 : 랜덤박스 구매 및 오픈 요청
+message C2S_BuyAndOpenRandomBox{
+	string user_id = 1;
+	string box_id = 2; //구매할 랜덤박스 아이템 ID
+	int32 quantity = 3;     //구매 수량 (1 or 10)
+}
+
+//서버 -> 클라 : 랜덤박스 오픈 결과
+message S2C_BuyAndOpenRandomBoxResult{
+	bool success = 1;
+	string box_id = 2;
+	int32 quantity = 3;
+	int32 total_price = 4;          //총 구매 가격
+	int32 remaining_gold = 5;       //구매 후 남은 골드
+	repeated BoxReward rewards = 6; //박스 오픈 후 획득한 보상들
+	string message = 7;
+}
+message BoxReward{
+	string item_id = 1;
+	string name = 2;
+	ItemTier tier = 3; //아이템 등급
+	int32 quantity = 4;//조각형 아이템일 경우 n개씩 획득
+	bool is_new = 5;   //새로 획득한 아이템인지
+}
+//클라 -> 서버 : 인벤토리 요청
+message C2S_InventoryRequest{
+	string user_id = 1;
+}
+
+//서버 -> 클라 : 인벤토리 응답
+message S2C_InventoryResponse{
+	message InventoryItem{
+		string item_id = 1;
+		string name = 2;
+		ItemType item_type = 3;
+		ItemTier tier = 4;
+		int32 quantity = 5;   //보유 개수
+		bool is_equipped = 6; //장착 여부
+	}
+	repeated InventoryItem items = 1;
+}
+
+//클라 -> 서버 : 코스튬 장착 요청
+message C2S_EquipCostume{
+	string user_id = 1;
+	string costume_id = 2; //장착할 코스튬 ID
+	bool equip = 3;        //true: 장착, false: 해제
+}
+
+//서버 -> 클라 : 코스튬 장착 결과
+message S2C_EquipCostumeResult{
+	bool success = 1;
+	string costume_id = 2;
+	bool is_equipped = 3;
+	string message = 4;
+}
+
+
+
+//==========Enum===========
+
+//상점 아이템 타입
+enum ItemType{
+	ITEM_UNKNOWN = 0;
+	ITEM_RANDOM_BOX = 1; //확률형 코스튬 획득 가능
+	ITEM_COSTUME = 2;    //확정 구매 코스튬
+}
+
+enum ItemTier{
+	TIER_UNKNOWN = 0;
+	TIER_NORMAL = 1;    //노말
+	TIER_RARE = 2;      //레어
+	TIER_EPIC = 3;      //에픽
+	TIER_UNIQUE = 4;    //유니크
+	TIER_LEGENDARY = 5; //레전더리
 }

@@ -3,8 +3,33 @@ syntax = "proto3";
 package ingame;
 
 
+//클라 -> 서버 : 인게임 입장
+message C2S_JoinGame{
+	string user_id = 1;
+	string room_id = 2;
+}
+
+//서버 -> 클라 : 인게임 입장 결과
+message S2C_JoinGameResult{
+	bool success = 1;
+	PlayerRaceState initial_state = 2;
+	GameWorldState world_state = 3; //현재 월드 상태
+	string message =4;
+}
+
+//월드 상태 정보
+message GameWorldState{
+	int32 current_phase = 1;
+	int32 phase_time_remaining = 2;
+	int32 human_count = 3;
+	int32 giane_count = 4;
+	int32 monster_count = 5;
+
+}
+
+
 //좌표
-message Positions {
+message Vector2 {
 	float x = 1;
 	float y = 2;
 }
@@ -23,18 +48,18 @@ message PlayerRaceState{
 	RaceType current_race = 2;            //현재 종족 상태
 	map<int32,int32> gene_inventory = 3;  //<GeneType,count> 보유한 유전자(최대치n개)
 	repeated GeneType equipped_genes = 4; //장착된 유전자 (최대차 5개 정도)
-	bool transform_giant = 5;             //진화 가능 여부 (장착된 유전자가 정확하게 5개인 경우에만 진화 가능)
-	GiantStats giant_stats = 6;           //거인 스탯(거인으로 진화한 경우에만 유효한 스탯)ㄴ
+	bool can_transform = 5;               //진화 가능 여부 (장착된 유전자가 정확하게 5개인 경우에만 진화 가능)
+	GiantStats giant_stats = 6;           //거인 스탯(거인으로 진화한 경우에만 유효한 스탯)
 	int32 current_hp = 7;                 //현재 체력
 	int32 max_hp = 8;                     //최대 체력
 }
 
 //클라 -> 서버 : 거인 변환 요청
-message C2S_Transform {
+message C2S_TransformGiant {
 	string user_id = 1;
 }
 //서버 -> 클라 : 거인 변환 결과
-message S2C_Transform {
+message S2C_TransformResult {
 	string user_id = 1;
 	bool success = 2;         //변환 성공 여부
 	RaceType new_race = 3;    //변환 후 플레이어의 새 종족 타입
@@ -45,49 +70,49 @@ message S2C_Transform {
 //클라 -> 서버 : 플레이어 이동
 message C2S_PlayerMove {
 	string user_id = 1;
-    Positions position = 2; // x,y 값
-	float dir = 3; //방향 (0~360)
+    Vector2 position = 2; // x,y 값
+	float dir = 3;        //방향 (0~360)
 }
 
 //서버 -> 클라 : 플레이어 이동 브로드캐스트
-message S2C_PlayerMove{
+message S2C_PlayerMoveNotification{
 	string user_id = 1;
-	Positions position = 2;
+	Vector2 position = 2;
 	float dir = 3;
 }
 
 //클라 -> 서버 : 플레이어 공격 요청 (논타겟)
 message C2S_PlayerAttack {
 	string user_id = 1;
-	AttackType attack_type = 2;    //Enum으로 공격 타입 구분 (일반유저 or 거인)
-	Positions attack_dir = 3;      //공격 방향 벡터 (정규화된 값)
-	Positions attack_position = 4; //공격 시작 위치
+	AttackType attack_type = 2;        //Enum으로 공격 타입 구분 (일반유저 or 거인)
+	Vector2 attack_direction = 3;      //공격 방향 벡터 (정규화된 값)
+	Vector2 attack_position = 4;       //공격 시작 위치
 }
 
 //서버 -> 클라 : 공격 결과
-message S2C_PlayerAttack {
+message S2C_PlayerAttackResult {
 	string user_id = 1;
 	AttackType attack_type = 2;
-	Positions attack_position = 3;      //공격 발생 위치
-	Positions attack_dir = 4;           //공격 방향
+	Vector2 attack_position = 3;        //공격 발생 위치
+	Vector2 attack_direction = 4;       //공격 방향
 	float attack_range = 5;             //공격 범위
-	int32 damage = 6;                   //총 데미지
+	int32 total_damage = 6;             //총 데미지
 	repeated string hit_targets = 7;    //맞은 대상 ID 목록
 }
 
 //서버 -> 클라 : 피격 알림
-message S2C_AttackHit {
+message S2C_AttackHitNotification {
 	string attacker_id =1;
 	string target_id = 2;
 	int32 damage = 3;
-	Positions hit_position = 4; //피격 위치
+	Vector2 hit_position = 4; //피격 위치
 }
 
 //서버 -> 클라 : 사망 알림
-message S2C_PlayerDeath {
+message S2C_PlayerDeathNotification {
 	string player_id = 1;
 	string killer_id = 2;
-	DeathType death_noti = 3; //사망 이유
+	DeathType death_notification = 3; //사망 이유
 
 }
 
@@ -95,15 +120,16 @@ message S2C_PlayerDeath {
 message S2C_GameState {
   message PlayerState {
     string user_id = 1;
-    Positions position = 2;
-    float dir = 3;
+    Vector2 position = 2;
+    float direction = 3;
     int32 current_hp = 4;
 	int32 max_hp = 5;
+	RaceType current_race = 6; //현재 종족 정보
   }
 
   message MonsterState {
 	string monster_id =1;
-	Positions position = 2;
+	Vector2 position = 2;
 	int32 current_hp = 3;
 	int32 max_hp =4;
 	MonsterType monster_type =5;     //몬스터 종류 (기본필드몹, 히든유전자보유몹, 플레이어가 소환한 몬스터)
@@ -114,22 +140,24 @@ message S2C_GameState {
   int32 current_phase = 4;           //현재 페이즈
 }
 
+
+
 //클라 -> 서버 : 유전자 획득 알림
 message C2S_GeneAcquired{
 	string user_id = 1;
 	GeneType gene_type = 2;
-	string source = 3; // "레벨업", "몬스터 드랍", "거인 드랍?"
+	string source = 3; // "레벨업", "몬스터 드랍", "거인 드랍"
 }
 
 
 
 //서버 -> 클라 : 유전자 획득 결과
-message S2C_GeneAcquired {
+message S2C_GeneAcquiredResult {
 	string user_id = 1;
 	GeneType gene_type = 2;
-	int32 new_count = 3;
-	int32 total_genes = 4;
-	bool is_hidden = 5;
+	int32 new_count = 3;        //해당 유전자 실시간 개수
+	int32 total_gene_count = 4; //총 유전자 보유량
+	bool can_transform = 5;     //진화 가능 여부 업데이트
 	string message = 6;
 }
 
@@ -147,14 +175,87 @@ message S2C_GeneEquipResult {
     string user_id = 1;
     bool success = 2;
     repeated GeneType equipped_genes = 3;
-    string message = 4;
+	bool can_transform = 4; //진화 가능 여부 다시체크 (유전자를 획득하고 4개만착용한 경우에는 진화 불가)
+    string message = 5;
 }
 //서버 -> 클라 : 왕관 획득 알림
-//클라 -> 서버 : 히든 유전자 능력 사용
-//서버 -> 클라 : 히든 유전자 능력 결과
-//서버 -> 클라 : 히든 유전자 자동 발동
-//서버 -> 클라 : 게임 종료
+message S2C_CrownNotification{
+	string user_id = 1;         //왕관을 획득한 유저
+	string giant_id = 2;        //처치당한 유저
+	int32 countdown = 3;        //거인 변환까지 남은 시간
+}
+//서버 -> 클라 : 왕관 드롭 알림
+message S2C_CrownDropNotification{
+	Vector2 position = 1; //왕관 드롭 위치
+	string giant_id = 2;  //처치한 거인 ID
+	int32 countdown = 3;  //왕관 유효 시간
+}
 
+
+//클라 -> 서버 : 왕관 획득 시도
+message C2S_PickupCrown {
+	string user_id = 1;
+	Vector2 crown_position = 2;
+}
+
+//서버 -> 클라 : 왕관 획득 결과
+message S2C_CrownPickupResult{
+	string user_id = 1;
+	bool success = 2;
+	int32 countdown = 3;
+	string message = 4;
+}
+
+//서버 -> 클라 : 기여도 업데이트
+message S2C_DamageContribution{
+	string user_id = 1;
+	string giant_id = 2;          //공격 대상(거인)
+	int32 damage_dealt = 3;       //가한 데미지
+	int32 total_contribution = 4; //총 기여도
+}
+//서버 -> 클라 : 괴수 처치 시 기여도 결과
+message S2C_GiantKillContributionResult{
+	string giant_id = 1;
+	message Contribution{
+		string user_id = 1;
+		int32 damage = 2;
+		float percentage = 3; //기여도 퍼센트
+	}
+	repeated Contribution contributions = 2;
+	string crown_winner = 3;  //왕관 획득 유저
+}
+
+//클라 -> 서버 : 히든 유전자 능력 자동 발동
+message C2S_HiddenSkill{
+	string user_id = 1;
+	GeneType skill_type = 2;      //해당 유전자에 맞는 스킬사용
+	Vector2 cursor_position = 3;  //마우스 위치
+}
+
+//서버 -> 클라 : 히든 유전자 능력 결과
+message S2C_HiddenSkillResult{
+	string user_id = 1;
+	GeneType skill_type = 2; //해당 유전자에 맞는 스킬사용
+	bool success = 3;
+	string message = 4;
+}
+
+//서버 -> 클라 : 게임 종료
+message S2C_GameEnd{
+	message PlayerResult {
+		string user_id = 1;
+		string nickname = 2;     //UI표시용 닉네임
+		int32 final_score = 3;   //최종 스코어
+		int32 gold_earned = 4;   //획득 골드 (스코어 / n)
+		RaceType final_race = 5; //최종 종족
+		int32 player_killed = 6; //처치한 플레이어 수 (거인일 경우)
+		int32 monster_killed = 7;//처치한 몬스터 수 (인간일 경우: 업적용)
+		int32 survival_time = 8; //생존 시간 : 업적용
+	}
+	repeated PlayerResult results= 1;
+}
+
+//==============Enum==============
 
 //플레이어 종족 상태 (인간 OR 거인)
 enum RaceType {
@@ -183,13 +284,13 @@ enum GeneType {
 	HIDDEN_REGENERATION_GENE = 8; //체력재생
 	HIDDEN_SUMMONER_GENE = 9;     //몬스터 소환
 	HIDDEN_FLASH_GENE = 10;       //점멸
-
 }
+
 //플레이어 공격 타입
 enum AttackType {
-  UNKNOWN_ATTACK = 0;
-  NORMAL_ATTACK = 1;    // 일반 유저 공격
-  GIANT_ATTACK = 2;     // 거인 공격
+    UNKNOWN_ATTACK = 0;
+    NORMAL_ATTACK = 1;    // 일반 유저 공격
+    GIANT_ATTACK = 2;     // 거인 공격
 }
 
 //몬스터 타입
@@ -207,3 +308,4 @@ enum DeathType{
 	DEATH_BY_MONSTER = 2; //AI한테 죽을 경우
 	DEATH_BY_GIANT = 3;   //거인한테 죽을 경우
 }
+
