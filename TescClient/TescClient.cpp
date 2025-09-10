@@ -4,7 +4,7 @@
 #include <vector>
 #include <boost/asio.hpp>
 #include "center.pb.h"
-
+#include "ingame.pb.h"
 using namespace std;
 namespace net = boost::asio;
 using tcp = net::ip::tcp;
@@ -98,10 +98,9 @@ private:
 		else if (pkt.has_s2c_game_start()) {
 			cout << "[GAME START] " << pkt.s2c_game_start().message() << endl;
 		}
-		else if (pkt.has_s2c_player_move()) {
-			cout << "[MOVE] " << pkt.s2c_player_move().user_id()
-				<< " -> (" << pkt.s2c_player_move().x()
-				<< "," << pkt.s2c_player_move().y() << ")" << endl;
+		else if (pkt.has_s2c_player_move_notification()) {
+			cout << "[MOVE] " << pkt.s2c_player_move_notification().user_id()
+				<< " -> (" << pkt.s2c_player_move_notification().position() << ")" << endl;
 		}
 		else {
 			cout << "[UNKNOWN PACKET]" << endl;

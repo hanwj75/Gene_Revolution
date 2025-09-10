@@ -127,8 +127,10 @@ class GamePacket final : public ::google::protobuf::Message
     return *internal_default_instance();
   }
   enum PayloadCase {
-    kC2SLogin = 1,
-    kS2CLogin = 2,
+    kC2SRegister = 1,
+    kS2CRegisterResult = 2,
+    kC2SLogin = 3,
+    kS2CLoginResult = 4,
     kC2SEnterLobby = 11,
     kS2CEnterLobby = 12,
     kC2SGameStart = 13,
@@ -260,8 +262,10 @@ class GamePacket final : public ::google::protobuf::Message
 
   // accessors -------------------------------------------------------
   enum : int {
-    kC2SLoginFieldNumber = 1,
-    kS2CLoginFieldNumber = 2,
+    kC2SRegisterFieldNumber = 1,
+    kS2CRegisterResultFieldNumber = 2,
+    kC2SLoginFieldNumber = 3,
+    kS2CLoginResultFieldNumber = 4,
     kC2SEnterLobbyFieldNumber = 11,
     kS2CEnterLobbyFieldNumber = 12,
     kC2SGameStartFieldNumber = 13,
@@ -301,7 +305,45 @@ class GamePacket final : public ::google::protobuf::Message
     kS2CGiantKillContributionResultFieldNumber = 122,
     kS2CGameEndFieldNumber = 123,
   };
-  // .auth.C2S_Login c2s_login = 1;
+  // .auth.C2S_Register c2s_register = 1;
+  bool has_c2s_register() const;
+  private:
+  bool _internal_has_c2s_register() const;
+
+  public:
+  void clear_c2s_register() ;
+  const ::auth::C2S_Register& c2s_register() const;
+  PROTOBUF_NODISCARD ::auth::C2S_Register* release_c2s_register();
+  ::auth::C2S_Register* mutable_c2s_register();
+  void set_allocated_c2s_register(::auth::C2S_Register* value);
+  void unsafe_arena_set_allocated_c2s_register(::auth::C2S_Register* value);
+  ::auth::C2S_Register* unsafe_arena_release_c2s_register();
+
+  private:
+  const ::auth::C2S_Register& _internal_c2s_register() const;
+  ::auth::C2S_Register* _internal_mutable_c2s_register();
+
+  public:
+  // .auth.S2C_RegisterResult s2c_register_result = 2;
+  bool has_s2c_register_result() const;
+  private:
+  bool _internal_has_s2c_register_result() const;
+
+  public:
+  void clear_s2c_register_result() ;
+  const ::auth::S2C_RegisterResult& s2c_register_result() const;
+  PROTOBUF_NODISCARD ::auth::S2C_RegisterResult* release_s2c_register_result();
+  ::auth::S2C_RegisterResult* mutable_s2c_register_result();
+  void set_allocated_s2c_register_result(::auth::S2C_RegisterResult* value);
+  void unsafe_arena_set_allocated_s2c_register_result(::auth::S2C_RegisterResult* value);
+  ::auth::S2C_RegisterResult* unsafe_arena_release_s2c_register_result();
+
+  private:
+  const ::auth::S2C_RegisterResult& _internal_s2c_register_result() const;
+  ::auth::S2C_RegisterResult* _internal_mutable_s2c_register_result();
+
+  public:
+  // .auth.C2S_Login c2s_login = 3;
   bool has_c2s_login() const;
   private:
   bool _internal_has_c2s_login() const;
@@ -320,23 +362,23 @@ class GamePacket final : public ::google::protobuf::Message
   ::auth::C2S_Login* _internal_mutable_c2s_login();
 
   public:
-  // .auth.S2C_Login s2c_login = 2;
-  bool has_s2c_login() const;
+  // .auth.S2C_LoginResult s2c_login_result = 4;
+  bool has_s2c_login_result() const;
   private:
-  bool _internal_has_s2c_login() const;
+  bool _internal_has_s2c_login_result() const;
 
   public:
-  void clear_s2c_login() ;
-  const ::auth::S2C_Login& s2c_login() const;
-  PROTOBUF_NODISCARD ::auth::S2C_Login* release_s2c_login();
-  ::auth::S2C_Login* mutable_s2c_login();
-  void set_allocated_s2c_login(::auth::S2C_Login* value);
-  void unsafe_arena_set_allocated_s2c_login(::auth::S2C_Login* value);
-  ::auth::S2C_Login* unsafe_arena_release_s2c_login();
+  void clear_s2c_login_result() ;
+  const ::auth::S2C_LoginResult& s2c_login_result() const;
+  PROTOBUF_NODISCARD ::auth::S2C_LoginResult* release_s2c_login_result();
+  ::auth::S2C_LoginResult* mutable_s2c_login_result();
+  void set_allocated_s2c_login_result(::auth::S2C_LoginResult* value);
+  void unsafe_arena_set_allocated_s2c_login_result(::auth::S2C_LoginResult* value);
+  ::auth::S2C_LoginResult* unsafe_arena_release_s2c_login_result();
 
   private:
-  const ::auth::S2C_Login& _internal_s2c_login() const;
-  ::auth::S2C_Login* _internal_mutable_s2c_login();
+  const ::auth::S2C_LoginResult& _internal_s2c_login_result() const;
+  ::auth::S2C_LoginResult* _internal_mutable_s2c_login_result();
 
   public:
   // .lobby.C2S_EnterLobby c2s_enter_lobby = 11;
@@ -1066,8 +1108,10 @@ class GamePacket final : public ::google::protobuf::Message
   // @@protoc_insertion_point(class_scope:center.GamePacket)
  private:
   class _Internal;
+  void set_has_c2s_register();
+  void set_has_s2c_register_result();
   void set_has_c2s_login();
-  void set_has_s2c_login();
+  void set_has_s2c_login_result();
   void set_has_c2s_enter_lobby();
   void set_has_s2c_enter_lobby();
   void set_has_c2s_game_start();
@@ -1110,7 +1154,7 @@ class GamePacket final : public ::google::protobuf::Message
   inline void clear_has_payload();
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      0, 40, 40,
+      0, 42, 42,
       0, 9>
       _table_;
 
@@ -1131,8 +1175,10 @@ class GamePacket final : public ::google::protobuf::Message
     union PayloadUnion {
       constexpr PayloadUnion() : _constinit_{} {}
       ::google::protobuf::internal::ConstantInitialized _constinit_;
+      ::auth::C2S_Register* c2s_register_;
+      ::auth::S2C_RegisterResult* s2c_register_result_;
       ::auth::C2S_Login* c2s_login_;
-      ::auth::S2C_Login* s2c_login_;
+      ::auth::S2C_LoginResult* s2c_login_result_;
       ::lobby::C2S_EnterLobby* c2s_enter_lobby_;
       ::lobby::S2C_EnterLobby* s2c_enter_lobby_;
       ::lobby::C2S_GameStart* c2s_game_start_;
@@ -1196,7 +1242,143 @@ class GamePacket final : public ::google::protobuf::Message
 
 // GamePacket
 
-// .auth.C2S_Login c2s_login = 1;
+// .auth.C2S_Register c2s_register = 1;
+inline bool GamePacket::has_c2s_register() const {
+  return payload_case() == kC2SRegister;
+}
+inline bool GamePacket::_internal_has_c2s_register() const {
+  return payload_case() == kC2SRegister;
+}
+inline void GamePacket::set_has_c2s_register() {
+  _impl_._oneof_case_[0] = kC2SRegister;
+}
+inline ::auth::C2S_Register* GamePacket::release_c2s_register() {
+  // @@protoc_insertion_point(field_release:center.GamePacket.c2s_register)
+  if (payload_case() == kC2SRegister) {
+    clear_has_payload();
+    auto* temp = _impl_.payload_.c2s_register_;
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.payload_.c2s_register_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::auth::C2S_Register& GamePacket::_internal_c2s_register() const {
+  return payload_case() == kC2SRegister ? *_impl_.payload_.c2s_register_ : reinterpret_cast<::auth::C2S_Register&>(::auth::_C2S_Register_default_instance_);
+}
+inline const ::auth::C2S_Register& GamePacket::c2s_register() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:center.GamePacket.c2s_register)
+  return _internal_c2s_register();
+}
+inline ::auth::C2S_Register* GamePacket::unsafe_arena_release_c2s_register() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:center.GamePacket.c2s_register)
+  if (payload_case() == kC2SRegister) {
+    clear_has_payload();
+    auto* temp = _impl_.payload_.c2s_register_;
+    _impl_.payload_.c2s_register_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void GamePacket::unsafe_arena_set_allocated_c2s_register(::auth::C2S_Register* value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_payload();
+  if (value) {
+    set_has_c2s_register();
+    _impl_.payload_.c2s_register_ = value;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:center.GamePacket.c2s_register)
+}
+inline ::auth::C2S_Register* GamePacket::_internal_mutable_c2s_register() {
+  if (payload_case() != kC2SRegister) {
+    clear_payload();
+    set_has_c2s_register();
+    _impl_.payload_.c2s_register_ =
+        ::google::protobuf::Message::DefaultConstruct<::auth::C2S_Register>(GetArena());
+  }
+  return _impl_.payload_.c2s_register_;
+}
+inline ::auth::C2S_Register* GamePacket::mutable_c2s_register() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::auth::C2S_Register* _msg = _internal_mutable_c2s_register();
+  // @@protoc_insertion_point(field_mutable:center.GamePacket.c2s_register)
+  return _msg;
+}
+
+// .auth.S2C_RegisterResult s2c_register_result = 2;
+inline bool GamePacket::has_s2c_register_result() const {
+  return payload_case() == kS2CRegisterResult;
+}
+inline bool GamePacket::_internal_has_s2c_register_result() const {
+  return payload_case() == kS2CRegisterResult;
+}
+inline void GamePacket::set_has_s2c_register_result() {
+  _impl_._oneof_case_[0] = kS2CRegisterResult;
+}
+inline ::auth::S2C_RegisterResult* GamePacket::release_s2c_register_result() {
+  // @@protoc_insertion_point(field_release:center.GamePacket.s2c_register_result)
+  if (payload_case() == kS2CRegisterResult) {
+    clear_has_payload();
+    auto* temp = _impl_.payload_.s2c_register_result_;
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.payload_.s2c_register_result_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::auth::S2C_RegisterResult& GamePacket::_internal_s2c_register_result() const {
+  return payload_case() == kS2CRegisterResult ? *_impl_.payload_.s2c_register_result_ : reinterpret_cast<::auth::S2C_RegisterResult&>(::auth::_S2C_RegisterResult_default_instance_);
+}
+inline const ::auth::S2C_RegisterResult& GamePacket::s2c_register_result() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:center.GamePacket.s2c_register_result)
+  return _internal_s2c_register_result();
+}
+inline ::auth::S2C_RegisterResult* GamePacket::unsafe_arena_release_s2c_register_result() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:center.GamePacket.s2c_register_result)
+  if (payload_case() == kS2CRegisterResult) {
+    clear_has_payload();
+    auto* temp = _impl_.payload_.s2c_register_result_;
+    _impl_.payload_.s2c_register_result_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void GamePacket::unsafe_arena_set_allocated_s2c_register_result(::auth::S2C_RegisterResult* value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_payload();
+  if (value) {
+    set_has_s2c_register_result();
+    _impl_.payload_.s2c_register_result_ = value;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:center.GamePacket.s2c_register_result)
+}
+inline ::auth::S2C_RegisterResult* GamePacket::_internal_mutable_s2c_register_result() {
+  if (payload_case() != kS2CRegisterResult) {
+    clear_payload();
+    set_has_s2c_register_result();
+    _impl_.payload_.s2c_register_result_ =
+        ::google::protobuf::Message::DefaultConstruct<::auth::S2C_RegisterResult>(GetArena());
+  }
+  return _impl_.payload_.s2c_register_result_;
+}
+inline ::auth::S2C_RegisterResult* GamePacket::mutable_s2c_register_result() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::auth::S2C_RegisterResult* _msg = _internal_mutable_s2c_register_result();
+  // @@protoc_insertion_point(field_mutable:center.GamePacket.s2c_register_result)
+  return _msg;
+}
+
+// .auth.C2S_Login c2s_login = 3;
 inline bool GamePacket::has_c2s_login() const {
   return payload_case() == kC2SLogin;
 }
@@ -1264,71 +1446,71 @@ inline ::auth::C2S_Login* GamePacket::mutable_c2s_login() ABSL_ATTRIBUTE_LIFETIM
   return _msg;
 }
 
-// .auth.S2C_Login s2c_login = 2;
-inline bool GamePacket::has_s2c_login() const {
-  return payload_case() == kS2CLogin;
+// .auth.S2C_LoginResult s2c_login_result = 4;
+inline bool GamePacket::has_s2c_login_result() const {
+  return payload_case() == kS2CLoginResult;
 }
-inline bool GamePacket::_internal_has_s2c_login() const {
-  return payload_case() == kS2CLogin;
+inline bool GamePacket::_internal_has_s2c_login_result() const {
+  return payload_case() == kS2CLoginResult;
 }
-inline void GamePacket::set_has_s2c_login() {
-  _impl_._oneof_case_[0] = kS2CLogin;
+inline void GamePacket::set_has_s2c_login_result() {
+  _impl_._oneof_case_[0] = kS2CLoginResult;
 }
-inline ::auth::S2C_Login* GamePacket::release_s2c_login() {
-  // @@protoc_insertion_point(field_release:center.GamePacket.s2c_login)
-  if (payload_case() == kS2CLogin) {
+inline ::auth::S2C_LoginResult* GamePacket::release_s2c_login_result() {
+  // @@protoc_insertion_point(field_release:center.GamePacket.s2c_login_result)
+  if (payload_case() == kS2CLoginResult) {
     clear_has_payload();
-    auto* temp = _impl_.payload_.s2c_login_;
+    auto* temp = _impl_.payload_.s2c_login_result_;
     if (GetArena() != nullptr) {
       temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
     }
-    _impl_.payload_.s2c_login_ = nullptr;
+    _impl_.payload_.s2c_login_result_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline const ::auth::S2C_Login& GamePacket::_internal_s2c_login() const {
-  return payload_case() == kS2CLogin ? *_impl_.payload_.s2c_login_ : reinterpret_cast<::auth::S2C_Login&>(::auth::_S2C_Login_default_instance_);
+inline const ::auth::S2C_LoginResult& GamePacket::_internal_s2c_login_result() const {
+  return payload_case() == kS2CLoginResult ? *_impl_.payload_.s2c_login_result_ : reinterpret_cast<::auth::S2C_LoginResult&>(::auth::_S2C_LoginResult_default_instance_);
 }
-inline const ::auth::S2C_Login& GamePacket::s2c_login() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  // @@protoc_insertion_point(field_get:center.GamePacket.s2c_login)
-  return _internal_s2c_login();
+inline const ::auth::S2C_LoginResult& GamePacket::s2c_login_result() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:center.GamePacket.s2c_login_result)
+  return _internal_s2c_login_result();
 }
-inline ::auth::S2C_Login* GamePacket::unsafe_arena_release_s2c_login() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:center.GamePacket.s2c_login)
-  if (payload_case() == kS2CLogin) {
+inline ::auth::S2C_LoginResult* GamePacket::unsafe_arena_release_s2c_login_result() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:center.GamePacket.s2c_login_result)
+  if (payload_case() == kS2CLoginResult) {
     clear_has_payload();
-    auto* temp = _impl_.payload_.s2c_login_;
-    _impl_.payload_.s2c_login_ = nullptr;
+    auto* temp = _impl_.payload_.s2c_login_result_;
+    _impl_.payload_.s2c_login_result_ = nullptr;
     return temp;
   } else {
     return nullptr;
   }
 }
-inline void GamePacket::unsafe_arena_set_allocated_s2c_login(::auth::S2C_Login* value) {
+inline void GamePacket::unsafe_arena_set_allocated_s2c_login_result(::auth::S2C_LoginResult* value) {
   // We rely on the oneof clear method to free the earlier contents
   // of this oneof. We can directly use the pointer we're given to
   // set the new value.
   clear_payload();
   if (value) {
-    set_has_s2c_login();
-    _impl_.payload_.s2c_login_ = value;
+    set_has_s2c_login_result();
+    _impl_.payload_.s2c_login_result_ = value;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:center.GamePacket.s2c_login)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:center.GamePacket.s2c_login_result)
 }
-inline ::auth::S2C_Login* GamePacket::_internal_mutable_s2c_login() {
-  if (payload_case() != kS2CLogin) {
+inline ::auth::S2C_LoginResult* GamePacket::_internal_mutable_s2c_login_result() {
+  if (payload_case() != kS2CLoginResult) {
     clear_payload();
-    set_has_s2c_login();
-    _impl_.payload_.s2c_login_ =
-        ::google::protobuf::Message::DefaultConstruct<::auth::S2C_Login>(GetArena());
+    set_has_s2c_login_result();
+    _impl_.payload_.s2c_login_result_ =
+        ::google::protobuf::Message::DefaultConstruct<::auth::S2C_LoginResult>(GetArena());
   }
-  return _impl_.payload_.s2c_login_;
+  return _impl_.payload_.s2c_login_result_;
 }
-inline ::auth::S2C_Login* GamePacket::mutable_s2c_login() ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  ::auth::S2C_Login* _msg = _internal_mutable_s2c_login();
-  // @@protoc_insertion_point(field_mutable:center.GamePacket.s2c_login)
+inline ::auth::S2C_LoginResult* GamePacket::mutable_s2c_login_result() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::auth::S2C_LoginResult* _msg = _internal_mutable_s2c_login_result();
+  // @@protoc_insertion_point(field_mutable:center.GamePacket.s2c_login_result)
   return _msg;
 }
 

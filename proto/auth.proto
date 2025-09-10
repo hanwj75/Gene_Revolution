@@ -1,15 +1,37 @@
 syntax = "proto3";
 package auth;
 
-//클라이언트 -> 로그인/로비 서버 로그인 요청
-message C2S_Login{
-	string user_id =1; //유저 아이디
-	string nickname = 2;//유저 닉네임
-	string password = 3; // 비밀번호
+
+//클라 -> 서버 : 회원가입 요청 (일반/소셜 통합)
+message C2S_Register{
+	string user_id = 1; //일반: 입력한 아이디 / 소셜: provider에서 발급된 uid
+	string password = 2;//일반 계정일 때만 사용
+	string nickname = 3;//유저가 입력한 닉네임
+	string provider = 4;//일반: "local" , 소셜 : "google", "kakao", "naver"
+	string token = 5;   //소셜일 때만 사용 (access token)
 }
-//서버 -> 클라이언트 로그인 응답
-message S2C_Login{
-	bool success = 1;//로그인 성공 여부
-	string user_id = 2;//성공 시 발급/반환되는 유저 ID
-	string message = 3;//응답 결과에 따른 메시지
+
+
+//서버 -> 클라 : 회원가입 응답
+message S2C_RegisterResult{
+	bool success = 1;
+	string user_id = 2;  //등록된 유저 ID
+	string nickname = 3; //등록된 닉네임
+	string message = 4;
+}
+
+//클라 -> 서버 : 로그인 요청 (일반/소셜 통합)
+message C2S_Login{
+	string user_id = 1;  // 일반: 입력한 아이디 / 소셜: provider에서 발급된 uid
+	string password = 2; // 일반 계정일 때만 사용
+	string provider = 3; // "local", "google", "kakao", "naver"
+	string token = 4;    // 소셜일 때만 사용 (access token)
+}
+
+//서버 -> 클라 : 로그인 응답
+message S2C_LoginResult{
+	bool success = 1;
+	string user_id = 2;
+	string nickname = 3;
+	string message = 4;
 }

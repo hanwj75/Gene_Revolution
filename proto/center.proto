@@ -7,17 +7,18 @@ import "lobby.proto";
 import "ingame.proto";
 
 //클라 <-> 서버 모든 패킷의 최상위 메시지
-
 message GamePacket {
 	oneof payload {
 
 		//==========================인증 영역(1~10)==============================
-	auth.C2S_Login c2s_login = 1;                                          //클라 -> 로그인/로비 서버 로그인 요청
-	auth.S2C_Login s2c_login = 2;                                          //서버 -> 클라 로그인 응답
+	auth.C2S_Register c2s_register = 1;                                          //클라 -> 서버 : 일반/소셜 통합 회원가입 요청
+	auth.S2C_RegisterResult s2c_register_result = 2;                             //서버 -> 클라 : 회원가입 응답
+	auth.C2S_Login c2s_login = 3;                                                //클라 -> 서버 : 일반/소셜 통합 로그인 요청
+	auth.S2C_LoginResult s2c_login_result = 4;                                   //서버 -> 클라 : 로그인 응답
 
 		//==========================로비 영역(11~100)============================
 		//로비 - 입장
-		lobby.C2S_EnterLobby c2s_enter_lobby = 11;                               //클라 -> 로비 서버 로비 입장 요청
+	lobby.C2S_EnterLobby c2s_enter_lobby = 11;                                   //클라 -> 로비 서버 로비 입장 요청
 	lobby.S2C_EnterLobby s2c_enter_lobby = 12;                                   //서버 -> 클라 로비 입장 응답
 
 		//로비 - 게임시작

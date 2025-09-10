@@ -107,6 +107,8 @@ const ::uint32_t
         ::_pbi::kInvalidFieldOffsetTag,
         ::_pbi::kInvalidFieldOffsetTag,
         ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
         PROTOBUF_FIELD_OFFSET(::center::GamePacket, _impl_.payload_),
 };
 
@@ -120,67 +122,69 @@ static const ::_pb::Message* const file_default_instances[] = {
 const char descriptor_table_protodef_center_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
     "\n\014center.proto\022\006center\032\nauth.proto\032\013lobb"
-    "y.proto\032\014ingame.proto\"\305\022\n\nGamePacket\022$\n\t"
-    "c2s_login\030\001 \001(\0132\017.auth.C2S_LoginH\000\022$\n\ts2"
-    "c_login\030\002 \001(\0132\017.auth.S2C_LoginH\000\0220\n\017c2s_"
-    "enter_lobby\030\013 \001(\0132\025.lobby.C2S_EnterLobby"
-    "H\000\0220\n\017s2c_enter_lobby\030\014 \001(\0132\025.lobby.S2C_"
-    "EnterLobbyH\000\022.\n\016c2s_game_start\030\r \001(\0132\024.l"
-    "obby.C2S_GameStartH\000\022.\n\016s2c_game_start\030\016"
-    " \001(\0132\024.lobby.S2C_GameStartH\000\0227\n\023s2c_lobb"
-    "y_user_list\030\017 \001(\0132\030.lobby.S2C_LobbyUserL"
-    "istH\000\0222\n\020c2s_shop_request\030\020 \001(\0132\026.lobby."
-    "C2S_ShopRequestH\000\0224\n\021s2c_shpe_response\030\021"
-    " \001(\0132\027.lobby.S2C_ShopResponseH\000\022*\n\014c2s_b"
-    "uy_item\030\022 \001(\0132\022.lobby.C2S_BuyItemH\000\022.\n\016s"
-    "2c_buy_result\030\023 \001(\0132\024.lobby.S2C_BuyResul"
-    "tH\000\022E\n\033c2s_buy_and_open_random_box\030\024 \001(\013"
-    "2\036.lobby.C2S_BuyAndOpenRandomBoxH\000\022R\n\"s2"
-    "c_buy_and_open_random_box_result\030\025 \001(\0132$"
-    ".lobby.S2C_BuyAndOpenRandomBoxResultH\000\022<"
-    "\n\025c2s_inventory_request\030\026 \001(\0132\033.lobby.C2"
-    "S_InventoryRequestH\000\022>\n\026s2c_inventory_re"
-    "sponse\030\027 \001(\0132\034.lobby.S2C_InventoryRespon"
-    "seH\000\0224\n\021c2s_equip_costume\030\030 \001(\0132\027.lobby."
-    "C2S_EquipCostumeH\000\022A\n\030s2c_equip_costume_"
-    "result\030\031 \001(\0132\035.lobby.S2C_EquipCostumeRes"
-    "ultH\000\022-\n\rc2s_join_game\030e \001(\0132\024.ingame.C2"
-    "S_JoinGameH\000\022:\n\024s2c_join_game_result\030f \001"
-    "(\0132\032.ingame.S2C_JoinGameResultH\000\0221\n\017c2s_"
-    "player_move\030g \001(\0132\026.ingame.C2S_PlayerMov"
-    "eH\000\022J\n\034s2c_player_move_notification\030h \001("
-    "\0132\".ingame.S2C_PlayerMoveNotificationH\000\022"
-    "5\n\021c2s_player_attack\030i \001(\0132\030.ingame.C2S_"
-    "PlayerAttackH\000\022B\n\030s2c_player_attack_resu"
-    "lt\030j \001(\0132\036.ingame.S2C_PlayerAttackResult"
-    "H\000\022H\n\033s2c_attack_hit_notification\030k \001(\0132"
-    "!.ingame.S2C_AttackHitNotificationH\000\022L\n\035"
-    "s2c_player_death_notification\030l \001(\0132#.in"
-    "game.S2C_PlayerDeathNotificationH\000\022/\n\016s2"
-    "c_game_state\030m \001(\0132\025.ingame.S2C_GameStat"
-    "eH\000\0225\n\021c2s_gene_acquired\030n \001(\0132\030.ingame."
-    "C2S_GeneAcquiredH\000\022B\n\030s2c_gene_acquired_"
-    "result\030o \001(\0132\036.ingame.S2C_GeneAcquiredRe"
-    "sultH\000\022/\n\016c2s_equip_gene\030p \001(\0132\025.ingame."
-    "C2S_EquipGeneH\000\022<\n\025s2c_gene_equip_result"
-    "\030q \001(\0132\033.ingame.S2C_GeneEquipResultH\000\0229\n"
-    "\023c2s_transform_giant\030r \001(\0132\032.ingame.C2S_"
-    "TransformGiantH\000\022;\n\024s2c_transform_result"
-    "\030s \001(\0132\033.ingame.S2C_TransformResultH\000\022\?\n"
-    "\026s2c_crown_notification\030t \001(\0132\035.ingame.S"
-    "2C_CrownNotificationH\000\022H\n\033s2c_crown_drop"
-    "_notification\030u \001(\0132!.ingame.S2C_CrownDr"
-    "opNotificationH\000\0223\n\020c2s_pickup_crown\030v \001"
-    "(\0132\027.ingame.C2S_PickupCrownH\000\022@\n\027s2c_cro"
-    "wn_pickup_result\030w \001(\0132\035.ingame.S2C_Crow"
-    "nPickupResultH\000\0223\n\020c2s_hidden_skill\030x \001("
-    "\0132\027.ingame.C2S_HiddenSkillH\000\022@\n\027s2c_hidd"
-    "en_skill_result\030y \001(\0132\035.ingame.S2C_Hidde"
-    "nSkillResultH\000\022U\n\"s2c_giant_kill_contrib"
-    "ution_result\030z \001(\0132\'.ingame.S2C_GiantKil"
-    "lContributionResultH\000\022+\n\014s2c_game_end\030{ "
-    "\001(\0132\023.ingame.S2C_GameEndH\000B\t\n\007payloadb\006p"
-    "roto3"
+    "y.proto\032\014ingame.proto\"\267\023\n\nGamePacket\022*\n\014"
+    "c2s_register\030\001 \001(\0132\022.auth.C2S_RegisterH\000"
+    "\0227\n\023s2c_register_result\030\002 \001(\0132\030.auth.S2C"
+    "_RegisterResultH\000\022$\n\tc2s_login\030\003 \001(\0132\017.a"
+    "uth.C2S_LoginH\000\0221\n\020s2c_login_result\030\004 \001("
+    "\0132\025.auth.S2C_LoginResultH\000\0220\n\017c2s_enter_"
+    "lobby\030\013 \001(\0132\025.lobby.C2S_EnterLobbyH\000\0220\n\017"
+    "s2c_enter_lobby\030\014 \001(\0132\025.lobby.S2C_EnterL"
+    "obbyH\000\022.\n\016c2s_game_start\030\r \001(\0132\024.lobby.C"
+    "2S_GameStartH\000\022.\n\016s2c_game_start\030\016 \001(\0132\024"
+    ".lobby.S2C_GameStartH\000\0227\n\023s2c_lobby_user"
+    "_list\030\017 \001(\0132\030.lobby.S2C_LobbyUserListH\000\022"
+    "2\n\020c2s_shop_request\030\020 \001(\0132\026.lobby.C2S_Sh"
+    "opRequestH\000\0224\n\021s2c_shpe_response\030\021 \001(\0132\027"
+    ".lobby.S2C_ShopResponseH\000\022*\n\014c2s_buy_ite"
+    "m\030\022 \001(\0132\022.lobby.C2S_BuyItemH\000\022.\n\016s2c_buy"
+    "_result\030\023 \001(\0132\024.lobby.S2C_BuyResultH\000\022E\n"
+    "\033c2s_buy_and_open_random_box\030\024 \001(\0132\036.lob"
+    "by.C2S_BuyAndOpenRandomBoxH\000\022R\n\"s2c_buy_"
+    "and_open_random_box_result\030\025 \001(\0132$.lobby"
+    ".S2C_BuyAndOpenRandomBoxResultH\000\022<\n\025c2s_"
+    "inventory_request\030\026 \001(\0132\033.lobby.C2S_Inve"
+    "ntoryRequestH\000\022>\n\026s2c_inventory_response"
+    "\030\027 \001(\0132\034.lobby.S2C_InventoryResponseH\000\0224"
+    "\n\021c2s_equip_costume\030\030 \001(\0132\027.lobby.C2S_Eq"
+    "uipCostumeH\000\022A\n\030s2c_equip_costume_result"
+    "\030\031 \001(\0132\035.lobby.S2C_EquipCostumeResultH\000\022"
+    "-\n\rc2s_join_game\030e \001(\0132\024.ingame.C2S_Join"
+    "GameH\000\022:\n\024s2c_join_game_result\030f \001(\0132\032.i"
+    "ngame.S2C_JoinGameResultH\000\0221\n\017c2s_player"
+    "_move\030g \001(\0132\026.ingame.C2S_PlayerMoveH\000\022J\n"
+    "\034s2c_player_move_notification\030h \001(\0132\".in"
+    "game.S2C_PlayerMoveNotificationH\000\0225\n\021c2s"
+    "_player_attack\030i \001(\0132\030.ingame.C2S_Player"
+    "AttackH\000\022B\n\030s2c_player_attack_result\030j \001"
+    "(\0132\036.ingame.S2C_PlayerAttackResultH\000\022H\n\033"
+    "s2c_attack_hit_notification\030k \001(\0132!.inga"
+    "me.S2C_AttackHitNotificationH\000\022L\n\035s2c_pl"
+    "ayer_death_notification\030l \001(\0132#.ingame.S"
+    "2C_PlayerDeathNotificationH\000\022/\n\016s2c_game"
+    "_state\030m \001(\0132\025.ingame.S2C_GameStateH\000\0225\n"
+    "\021c2s_gene_acquired\030n \001(\0132\030.ingame.C2S_Ge"
+    "neAcquiredH\000\022B\n\030s2c_gene_acquired_result"
+    "\030o \001(\0132\036.ingame.S2C_GeneAcquiredResultH\000"
+    "\022/\n\016c2s_equip_gene\030p \001(\0132\025.ingame.C2S_Eq"
+    "uipGeneH\000\022<\n\025s2c_gene_equip_result\030q \001(\013"
+    "2\033.ingame.S2C_GeneEquipResultH\000\0229\n\023c2s_t"
+    "ransform_giant\030r \001(\0132\032.ingame.C2S_Transf"
+    "ormGiantH\000\022;\n\024s2c_transform_result\030s \001(\013"
+    "2\033.ingame.S2C_TransformResultH\000\022\?\n\026s2c_c"
+    "rown_notification\030t \001(\0132\035.ingame.S2C_Cro"
+    "wnNotificationH\000\022H\n\033s2c_crown_drop_notif"
+    "ication\030u \001(\0132!.ingame.S2C_CrownDropNoti"
+    "ficationH\000\0223\n\020c2s_pickup_crown\030v \001(\0132\027.i"
+    "ngame.C2S_PickupCrownH\000\022@\n\027s2c_crown_pic"
+    "kup_result\030w \001(\0132\035.ingame.S2C_CrownPicku"
+    "pResultH\000\0223\n\020c2s_hidden_skill\030x \001(\0132\027.in"
+    "game.C2S_HiddenSkillH\000\022@\n\027s2c_hidden_ski"
+    "ll_result\030y \001(\0132\035.ingame.S2C_HiddenSkill"
+    "ResultH\000\022U\n\"s2c_giant_kill_contribution_"
+    "result\030z \001(\0132\'.ingame.S2C_GiantKillContr"
+    "ibutionResultH\000\022+\n\014s2c_game_end\030{ \001(\0132\023."
+    "ingame.S2C_GameEndH\000B\t\n\007payloadb\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_center_2eproto_deps[3] =
     {
@@ -192,7 +196,7 @@ static ::absl::once_flag descriptor_table_center_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_center_2eproto = {
     false,
     false,
-    2445,
+    2559,
     descriptor_table_protodef_center_2eproto,
     "center.proto",
     &descriptor_table_center_2eproto_once,
@@ -214,6 +218,54 @@ class GamePacket::_Internal {
       PROTOBUF_FIELD_OFFSET(::center::GamePacket, _impl_._oneof_case_);
 };
 
+void GamePacket::set_allocated_c2s_register(::auth::C2S_Register* c2s_register) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (c2s_register) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(c2s_register)->GetArena();
+    if (message_arena != submessage_arena) {
+      c2s_register = ::google::protobuf::internal::GetOwnedMessage(message_arena, c2s_register, submessage_arena);
+    }
+    set_has_c2s_register();
+    _impl_.payload_.c2s_register_ = c2s_register;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.c2s_register)
+}
+void GamePacket::clear_c2s_register() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kC2SRegister) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.c2s_register_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_register_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_register_result(::auth::S2C_RegisterResult* s2c_register_result) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_register_result) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_register_result)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_register_result = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_register_result, submessage_arena);
+    }
+    set_has_s2c_register_result();
+    _impl_.payload_.s2c_register_result_ = s2c_register_result;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_register_result)
+}
+void GamePacket::clear_s2c_register_result() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CRegisterResult) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_register_result_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_register_result_);
+    }
+    clear_has_payload();
+  }
+}
 void GamePacket::set_allocated_c2s_login(::auth::C2S_Login* c2s_login) {
   ::google::protobuf::Arena* message_arena = GetArena();
   clear_payload();
@@ -238,26 +290,26 @@ void GamePacket::clear_c2s_login() {
     clear_has_payload();
   }
 }
-void GamePacket::set_allocated_s2c_login(::auth::S2C_Login* s2c_login) {
+void GamePacket::set_allocated_s2c_login_result(::auth::S2C_LoginResult* s2c_login_result) {
   ::google::protobuf::Arena* message_arena = GetArena();
   clear_payload();
-  if (s2c_login) {
-    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_login)->GetArena();
+  if (s2c_login_result) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_login_result)->GetArena();
     if (message_arena != submessage_arena) {
-      s2c_login = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_login, submessage_arena);
+      s2c_login_result = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_login_result, submessage_arena);
     }
-    set_has_s2c_login();
-    _impl_.payload_.s2c_login_ = s2c_login;
+    set_has_s2c_login_result();
+    _impl_.payload_.s2c_login_result_ = s2c_login_result;
   }
-  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_login)
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_login_result)
 }
-void GamePacket::clear_s2c_login() {
+void GamePacket::clear_s2c_login_result() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
-  if (payload_case() == kS2CLogin) {
+  if (payload_case() == kS2CLoginResult) {
     if (GetArena() == nullptr) {
-      delete _impl_.payload_.s2c_login_;
+      delete _impl_.payload_.s2c_login_result_;
     } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
-      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_login_);
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_login_result_);
     }
     clear_has_payload();
   }
@@ -1206,11 +1258,17 @@ GamePacket::GamePacket(
   switch (payload_case()) {
     case PAYLOAD_NOT_SET:
       break;
+      case kC2SRegister:
+        _impl_.payload_.c2s_register_ = ::google::protobuf::Message::CopyConstruct<::auth::C2S_Register>(arena, *from._impl_.payload_.c2s_register_);
+        break;
+      case kS2CRegisterResult:
+        _impl_.payload_.s2c_register_result_ = ::google::protobuf::Message::CopyConstruct<::auth::S2C_RegisterResult>(arena, *from._impl_.payload_.s2c_register_result_);
+        break;
       case kC2SLogin:
         _impl_.payload_.c2s_login_ = ::google::protobuf::Message::CopyConstruct<::auth::C2S_Login>(arena, *from._impl_.payload_.c2s_login_);
         break;
-      case kS2CLogin:
-        _impl_.payload_.s2c_login_ = ::google::protobuf::Message::CopyConstruct<::auth::S2C_Login>(arena, *from._impl_.payload_.s2c_login_);
+      case kS2CLoginResult:
+        _impl_.payload_.s2c_login_result_ = ::google::protobuf::Message::CopyConstruct<::auth::S2C_LoginResult>(arena, *from._impl_.payload_.s2c_login_result_);
         break;
       case kC2SEnterLobby:
         _impl_.payload_.c2s_enter_lobby_ = ::google::protobuf::Message::CopyConstruct<::lobby::C2S_EnterLobby>(arena, *from._impl_.payload_.c2s_enter_lobby_);
@@ -1358,6 +1416,22 @@ void GamePacket::clear_payload() {
 // @@protoc_insertion_point(one_of_clear_start:center.GamePacket)
   ::google::protobuf::internal::TSanWrite(&_impl_);
   switch (payload_case()) {
+    case kC2SRegister: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.c2s_register_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.c2s_register_);
+      }
+      break;
+    }
+    case kS2CRegisterResult: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_register_result_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_register_result_);
+      }
+      break;
+    }
     case kC2SLogin: {
       if (GetArena() == nullptr) {
         delete _impl_.payload_.c2s_login_;
@@ -1366,11 +1440,11 @@ void GamePacket::clear_payload() {
       }
       break;
     }
-    case kS2CLogin: {
+    case kS2CLoginResult: {
       if (GetArena() == nullptr) {
-        delete _impl_.payload_.s2c_login_;
+        delete _impl_.payload_.s2c_login_result_;
       } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
-        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_login_);
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_login_result_);
       }
       break;
     }
@@ -1722,16 +1796,16 @@ const ::google::protobuf::internal::ClassData* GamePacket::GetClassData() const 
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 40, 40, 0, 9> GamePacket::_table_ = {
+const ::_pbi::TcParseTable<0, 42, 42, 0, 9> GamePacket::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
     123, 0,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
-    4261413884,  // skipmap
+    4261413872,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    40,  // num_field_entries
-    40,  // num_aux_entries
+    42,  // num_field_entries
+    42,  // num_aux_entries
     offsetof(decltype(_table_), aux_entries),
     _class_data_.base(),
     nullptr,  // post_loop_handler
@@ -1743,132 +1817,140 @@ const ::_pbi::TcParseTable<0, 40, 40, 0, 9> GamePacket::_table_ = {
     {::_pbi::TcParser::MiniParse, {}},
   }}, {{
     101, 0, 2,
-    0, 17, 65408, 33,
+    0, 19, 65408, 35,
     65535, 65535
   }}, {{
-    // .auth.C2S_Login c2s_login = 1;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_login_), _Internal::kOneofCaseOffset + 0, 0,
+    // .auth.C2S_Register c2s_register = 1;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_register_), _Internal::kOneofCaseOffset + 0, 0,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .auth.S2C_Login s2c_login = 2;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_login_), _Internal::kOneofCaseOffset + 0, 1,
+    // .auth.S2C_RegisterResult s2c_register_result = 2;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_register_result_), _Internal::kOneofCaseOffset + 0, 1,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .auth.C2S_Login c2s_login = 3;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_login_), _Internal::kOneofCaseOffset + 0, 2,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .auth.S2C_LoginResult s2c_login_result = 4;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_login_result_), _Internal::kOneofCaseOffset + 0, 3,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.C2S_EnterLobby c2s_enter_lobby = 11;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_enter_lobby_), _Internal::kOneofCaseOffset + 0, 2,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_enter_lobby_), _Internal::kOneofCaseOffset + 0, 4,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.S2C_EnterLobby s2c_enter_lobby = 12;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_enter_lobby_), _Internal::kOneofCaseOffset + 0, 3,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_enter_lobby_), _Internal::kOneofCaseOffset + 0, 5,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.C2S_GameStart c2s_game_start = 13;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_game_start_), _Internal::kOneofCaseOffset + 0, 4,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_game_start_), _Internal::kOneofCaseOffset + 0, 6,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.S2C_GameStart s2c_game_start = 14;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_game_start_), _Internal::kOneofCaseOffset + 0, 5,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_game_start_), _Internal::kOneofCaseOffset + 0, 7,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.S2C_LobbyUserList s2c_lobby_user_list = 15;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_lobby_user_list_), _Internal::kOneofCaseOffset + 0, 6,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_lobby_user_list_), _Internal::kOneofCaseOffset + 0, 8,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.C2S_ShopRequest c2s_shop_request = 16;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_shop_request_), _Internal::kOneofCaseOffset + 0, 7,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_shop_request_), _Internal::kOneofCaseOffset + 0, 9,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.S2C_ShopResponse s2c_shpe_response = 17;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_shpe_response_), _Internal::kOneofCaseOffset + 0, 8,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_shpe_response_), _Internal::kOneofCaseOffset + 0, 10,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.C2S_BuyItem c2s_buy_item = 18;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_buy_item_), _Internal::kOneofCaseOffset + 0, 9,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_buy_item_), _Internal::kOneofCaseOffset + 0, 11,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.S2C_BuyResult s2c_buy_result = 19;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_buy_result_), _Internal::kOneofCaseOffset + 0, 10,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_buy_result_), _Internal::kOneofCaseOffset + 0, 12,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.C2S_BuyAndOpenRandomBox c2s_buy_and_open_random_box = 20;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_buy_and_open_random_box_), _Internal::kOneofCaseOffset + 0, 11,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_buy_and_open_random_box_), _Internal::kOneofCaseOffset + 0, 13,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.S2C_BuyAndOpenRandomBoxResult s2c_buy_and_open_random_box_result = 21;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_buy_and_open_random_box_result_), _Internal::kOneofCaseOffset + 0, 12,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_buy_and_open_random_box_result_), _Internal::kOneofCaseOffset + 0, 14,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.C2S_InventoryRequest c2s_inventory_request = 22;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_inventory_request_), _Internal::kOneofCaseOffset + 0, 13,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_inventory_request_), _Internal::kOneofCaseOffset + 0, 15,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.S2C_InventoryResponse s2c_inventory_response = 23;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_inventory_response_), _Internal::kOneofCaseOffset + 0, 14,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_inventory_response_), _Internal::kOneofCaseOffset + 0, 16,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.C2S_EquipCostume c2s_equip_costume = 24;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_equip_costume_), _Internal::kOneofCaseOffset + 0, 15,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_equip_costume_), _Internal::kOneofCaseOffset + 0, 17,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .lobby.S2C_EquipCostumeResult s2c_equip_costume_result = 25;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_equip_costume_result_), _Internal::kOneofCaseOffset + 0, 16,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_equip_costume_result_), _Internal::kOneofCaseOffset + 0, 18,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.C2S_JoinGame c2s_join_game = 101;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_join_game_), _Internal::kOneofCaseOffset + 0, 17,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_join_game_), _Internal::kOneofCaseOffset + 0, 19,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_JoinGameResult s2c_join_game_result = 102;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_join_game_result_), _Internal::kOneofCaseOffset + 0, 18,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_join_game_result_), _Internal::kOneofCaseOffset + 0, 20,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.C2S_PlayerMove c2s_player_move = 103;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_player_move_), _Internal::kOneofCaseOffset + 0, 19,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_player_move_), _Internal::kOneofCaseOffset + 0, 21,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_PlayerMoveNotification s2c_player_move_notification = 104;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_player_move_notification_), _Internal::kOneofCaseOffset + 0, 20,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_player_move_notification_), _Internal::kOneofCaseOffset + 0, 22,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.C2S_PlayerAttack c2s_player_attack = 105;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_player_attack_), _Internal::kOneofCaseOffset + 0, 21,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_player_attack_), _Internal::kOneofCaseOffset + 0, 23,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_PlayerAttackResult s2c_player_attack_result = 106;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_player_attack_result_), _Internal::kOneofCaseOffset + 0, 22,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_player_attack_result_), _Internal::kOneofCaseOffset + 0, 24,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_AttackHitNotification s2c_attack_hit_notification = 107;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_attack_hit_notification_), _Internal::kOneofCaseOffset + 0, 23,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_attack_hit_notification_), _Internal::kOneofCaseOffset + 0, 25,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_PlayerDeathNotification s2c_player_death_notification = 108;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_player_death_notification_), _Internal::kOneofCaseOffset + 0, 24,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_player_death_notification_), _Internal::kOneofCaseOffset + 0, 26,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_GameState s2c_game_state = 109;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_game_state_), _Internal::kOneofCaseOffset + 0, 25,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_game_state_), _Internal::kOneofCaseOffset + 0, 27,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.C2S_GeneAcquired c2s_gene_acquired = 110;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_gene_acquired_), _Internal::kOneofCaseOffset + 0, 26,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_gene_acquired_), _Internal::kOneofCaseOffset + 0, 28,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_GeneAcquiredResult s2c_gene_acquired_result = 111;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_gene_acquired_result_), _Internal::kOneofCaseOffset + 0, 27,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_gene_acquired_result_), _Internal::kOneofCaseOffset + 0, 29,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.C2S_EquipGene c2s_equip_gene = 112;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_equip_gene_), _Internal::kOneofCaseOffset + 0, 28,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_equip_gene_), _Internal::kOneofCaseOffset + 0, 30,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_GeneEquipResult s2c_gene_equip_result = 113;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_gene_equip_result_), _Internal::kOneofCaseOffset + 0, 29,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_gene_equip_result_), _Internal::kOneofCaseOffset + 0, 31,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.C2S_TransformGiant c2s_transform_giant = 114;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_transform_giant_), _Internal::kOneofCaseOffset + 0, 30,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_transform_giant_), _Internal::kOneofCaseOffset + 0, 32,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_TransformResult s2c_transform_result = 115;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_transform_result_), _Internal::kOneofCaseOffset + 0, 31,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_transform_result_), _Internal::kOneofCaseOffset + 0, 33,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_CrownNotification s2c_crown_notification = 116;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_crown_notification_), _Internal::kOneofCaseOffset + 0, 32,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_crown_notification_), _Internal::kOneofCaseOffset + 0, 34,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_CrownDropNotification s2c_crown_drop_notification = 117;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_crown_drop_notification_), _Internal::kOneofCaseOffset + 0, 33,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_crown_drop_notification_), _Internal::kOneofCaseOffset + 0, 35,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.C2S_PickupCrown c2s_pickup_crown = 118;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_pickup_crown_), _Internal::kOneofCaseOffset + 0, 34,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_pickup_crown_), _Internal::kOneofCaseOffset + 0, 36,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_CrownPickupResult s2c_crown_pickup_result = 119;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_crown_pickup_result_), _Internal::kOneofCaseOffset + 0, 35,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_crown_pickup_result_), _Internal::kOneofCaseOffset + 0, 37,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.C2S_HiddenSkill c2s_hidden_skill = 120;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_hidden_skill_), _Internal::kOneofCaseOffset + 0, 36,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.c2s_hidden_skill_), _Internal::kOneofCaseOffset + 0, 38,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_HiddenSkillResult s2c_hidden_skill_result = 121;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_hidden_skill_result_), _Internal::kOneofCaseOffset + 0, 37,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_hidden_skill_result_), _Internal::kOneofCaseOffset + 0, 39,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_GiantKillContributionResult s2c_giant_kill_contribution_result = 122;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_giant_kill_contribution_result_), _Internal::kOneofCaseOffset + 0, 38,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_giant_kill_contribution_result_), _Internal::kOneofCaseOffset + 0, 40,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     // .ingame.S2C_GameEnd s2c_game_end = 123;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_game_end_), _Internal::kOneofCaseOffset + 0, 39,
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_game_end_), _Internal::kOneofCaseOffset + 0, 41,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
+    {::_pbi::TcParser::GetTable<::auth::C2S_Register>()},
+    {::_pbi::TcParser::GetTable<::auth::S2C_RegisterResult>()},
     {::_pbi::TcParser::GetTable<::auth::C2S_Login>()},
-    {::_pbi::TcParser::GetTable<::auth::S2C_Login>()},
+    {::_pbi::TcParser::GetTable<::auth::S2C_LoginResult>()},
     {::_pbi::TcParser::GetTable<::lobby::C2S_EnterLobby>()},
     {::_pbi::TcParser::GetTable<::lobby::S2C_EnterLobby>()},
     {::_pbi::TcParser::GetTable<::lobby::C2S_GameStart>()},
@@ -1938,15 +2020,27 @@ PROTOBUF_NOINLINE void GamePacket::Clear() {
           (void)cached_has_bits;
 
           switch (this_.payload_case()) {
-            case kC2SLogin: {
+            case kC2SRegister: {
               target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                  1, *this_._impl_.payload_.c2s_login_, this_._impl_.payload_.c2s_login_->GetCachedSize(), target,
+                  1, *this_._impl_.payload_.c2s_register_, this_._impl_.payload_.c2s_register_->GetCachedSize(), target,
                   stream);
               break;
             }
-            case kS2CLogin: {
+            case kS2CRegisterResult: {
               target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                  2, *this_._impl_.payload_.s2c_login_, this_._impl_.payload_.s2c_login_->GetCachedSize(), target,
+                  2, *this_._impl_.payload_.s2c_register_result_, this_._impl_.payload_.s2c_register_result_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kC2SLogin: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  3, *this_._impl_.payload_.c2s_login_, this_._impl_.payload_.c2s_login_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CLoginResult: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  4, *this_._impl_.payload_.s2c_login_result_, this_._impl_.payload_.s2c_login_result_->GetCachedSize(), target,
                   stream);
               break;
             }
@@ -2205,16 +2299,28 @@ PROTOBUF_NOINLINE void GamePacket::Clear() {
           (void)cached_has_bits;
 
           switch (this_.payload_case()) {
-            // .auth.C2S_Login c2s_login = 1;
+            // .auth.C2S_Register c2s_register = 1;
+            case kC2SRegister: {
+              total_size += 1 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_register_);
+              break;
+            }
+            // .auth.S2C_RegisterResult s2c_register_result = 2;
+            case kS2CRegisterResult: {
+              total_size += 1 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_register_result_);
+              break;
+            }
+            // .auth.C2S_Login c2s_login = 3;
             case kC2SLogin: {
               total_size += 1 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.c2s_login_);
               break;
             }
-            // .auth.S2C_Login s2c_login = 2;
-            case kS2CLogin: {
+            // .auth.S2C_LoginResult s2c_login_result = 4;
+            case kS2CLoginResult: {
               total_size += 1 +
-                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_login_);
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_login_result_);
               break;
             }
             // .lobby.C2S_EnterLobby c2s_enter_lobby = 11;
@@ -2473,6 +2579,24 @@ void GamePacket::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goog
     }
 
     switch (oneof_from_case) {
+      case kC2SRegister: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.c2s_register_ =
+              ::google::protobuf::Message::CopyConstruct<::auth::C2S_Register>(arena, *from._impl_.payload_.c2s_register_);
+        } else {
+          _this->_impl_.payload_.c2s_register_->MergeFrom(from._internal_c2s_register());
+        }
+        break;
+      }
+      case kS2CRegisterResult: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_register_result_ =
+              ::google::protobuf::Message::CopyConstruct<::auth::S2C_RegisterResult>(arena, *from._impl_.payload_.s2c_register_result_);
+        } else {
+          _this->_impl_.payload_.s2c_register_result_->MergeFrom(from._internal_s2c_register_result());
+        }
+        break;
+      }
       case kC2SLogin: {
         if (oneof_needs_init) {
           _this->_impl_.payload_.c2s_login_ =
@@ -2482,12 +2606,12 @@ void GamePacket::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goog
         }
         break;
       }
-      case kS2CLogin: {
+      case kS2CLoginResult: {
         if (oneof_needs_init) {
-          _this->_impl_.payload_.s2c_login_ =
-              ::google::protobuf::Message::CopyConstruct<::auth::S2C_Login>(arena, *from._impl_.payload_.s2c_login_);
+          _this->_impl_.payload_.s2c_login_result_ =
+              ::google::protobuf::Message::CopyConstruct<::auth::S2C_LoginResult>(arena, *from._impl_.payload_.s2c_login_result_);
         } else {
-          _this->_impl_.payload_.s2c_login_->MergeFrom(from._internal_s2c_login());
+          _this->_impl_.payload_.s2c_login_result_->MergeFrom(from._internal_s2c_login_result());
         }
         break;
       }
