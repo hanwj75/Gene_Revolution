@@ -109,6 +109,8 @@ const ::uint32_t
         ::_pbi::kInvalidFieldOffsetTag,
         ::_pbi::kInvalidFieldOffsetTag,
         ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
+        ::_pbi::kInvalidFieldOffsetTag,
         PROTOBUF_FIELD_OFFSET(::center::GamePacket, _impl_.payload_),
 };
 
@@ -122,7 +124,7 @@ static const ::_pb::Message* const file_default_instances[] = {
 const char descriptor_table_protodef_center_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
     "\n\014center.proto\022\006center\032\nauth.proto\032\013lobb"
-    "y.proto\032\014ingame.proto\"\267\023\n\nGamePacket\022*\n\014"
+    "y.proto\032\014ingame.proto\"\236\024\n\nGamePacket\022*\n\014"
     "c2s_register\030\001 \001(\0132\022.auth.C2S_RegisterH\000"
     "\0227\n\023s2c_register_result\030\002 \001(\0132\030.auth.S2C"
     "_RegisterResultH\000\022$\n\tc2s_login\030\003 \001(\0132\017.a"
@@ -183,8 +185,11 @@ const char descriptor_table_protodef_center_2eproto[] ABSL_ATTRIBUTE_SECTION_VAR
     "ll_result\030y \001(\0132\035.ingame.S2C_HiddenSkill"
     "ResultH\000\022U\n\"s2c_giant_kill_contribution_"
     "result\030z \001(\0132\'.ingame.S2C_GiantKillContr"
-    "ibutionResultH\000\022+\n\014s2c_game_end\030{ \001(\0132\023."
-    "ingame.S2C_GameEndH\000B\t\n\007payloadb\006proto3"
+    "ibutionResultH\000\0223\n\020s2c_score_update\030{ \001("
+    "\0132\027.ingame.S2C_ScoreUpdateH\000\0220\n\016s2c_scor"
+    "eboard\030| \001(\0132\026.ingame.S2C_ScoreboardH\000\022+"
+    "\n\014s2c_game_end\030} \001(\0132\023.ingame.S2C_GameEn"
+    "dH\000B\t\n\007payloadb\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_center_2eproto_deps[3] =
     {
@@ -196,7 +201,7 @@ static ::absl::once_flag descriptor_table_center_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_center_2eproto = {
     false,
     false,
-    2559,
+    2662,
     descriptor_table_protodef_center_2eproto,
     "center.proto",
     &descriptor_table_center_2eproto_once,
@@ -1202,6 +1207,54 @@ void GamePacket::clear_s2c_giant_kill_contribution_result() {
     clear_has_payload();
   }
 }
+void GamePacket::set_allocated_s2c_score_update(::ingame::S2C_ScoreUpdate* s2c_score_update) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_score_update) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_score_update)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_score_update = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_score_update, submessage_arena);
+    }
+    set_has_s2c_score_update();
+    _impl_.payload_.s2c_score_update_ = s2c_score_update;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_score_update)
+}
+void GamePacket::clear_s2c_score_update() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CScoreUpdate) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_score_update_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_score_update_);
+    }
+    clear_has_payload();
+  }
+}
+void GamePacket::set_allocated_s2c_scoreboard(::ingame::S2C_Scoreboard* s2c_scoreboard) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_payload();
+  if (s2c_scoreboard) {
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(s2c_scoreboard)->GetArena();
+    if (message_arena != submessage_arena) {
+      s2c_scoreboard = ::google::protobuf::internal::GetOwnedMessage(message_arena, s2c_scoreboard, submessage_arena);
+    }
+    set_has_s2c_scoreboard();
+    _impl_.payload_.s2c_scoreboard_ = s2c_scoreboard;
+  }
+  // @@protoc_insertion_point(field_set_allocated:center.GamePacket.s2c_scoreboard)
+}
+void GamePacket::clear_s2c_scoreboard() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (payload_case() == kS2CScoreboard) {
+    if (GetArena() == nullptr) {
+      delete _impl_.payload_.s2c_scoreboard_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_scoreboard_);
+    }
+    clear_has_payload();
+  }
+}
 void GamePacket::set_allocated_s2c_game_end(::ingame::S2C_GameEnd* s2c_game_end) {
   ::google::protobuf::Arena* message_arena = GetArena();
   clear_payload();
@@ -1380,6 +1433,12 @@ GamePacket::GamePacket(
         break;
       case kS2CGiantKillContributionResult:
         _impl_.payload_.s2c_giant_kill_contribution_result_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_GiantKillContributionResult>(arena, *from._impl_.payload_.s2c_giant_kill_contribution_result_);
+        break;
+      case kS2CScoreUpdate:
+        _impl_.payload_.s2c_score_update_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_ScoreUpdate>(arena, *from._impl_.payload_.s2c_score_update_);
+        break;
+      case kS2CScoreboard:
+        _impl_.payload_.s2c_scoreboard_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_Scoreboard>(arena, *from._impl_.payload_.s2c_scoreboard_);
         break;
       case kS2CGameEnd:
         _impl_.payload_.s2c_game_end_ = ::google::protobuf::Message::CopyConstruct<::ingame::S2C_GameEnd>(arena, *from._impl_.payload_.s2c_game_end_);
@@ -1744,6 +1803,22 @@ void GamePacket::clear_payload() {
       }
       break;
     }
+    case kS2CScoreUpdate: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_score_update_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_score_update_);
+      }
+      break;
+    }
+    case kS2CScoreboard: {
+      if (GetArena() == nullptr) {
+        delete _impl_.payload_.s2c_scoreboard_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.payload_.s2c_scoreboard_);
+      }
+      break;
+    }
     case kS2CGameEnd: {
       if (GetArena() == nullptr) {
         delete _impl_.payload_.s2c_game_end_;
@@ -1796,16 +1871,16 @@ const ::google::protobuf::internal::ClassData* GamePacket::GetClassData() const 
   return _class_data_.base();
 }
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
-const ::_pbi::TcParseTable<0, 42, 42, 0, 9> GamePacket::_table_ = {
+const ::_pbi::TcParseTable<0, 44, 44, 0, 9> GamePacket::_table_ = {
   {
     0,  // no _has_bits_
     0, // no _extensions_
-    123, 0,  // max_field_number, fast_idx_mask
+    125, 0,  // max_field_number, fast_idx_mask
     offsetof(decltype(_table_), field_lookup_table),
     4261413872,  // skipmap
     offsetof(decltype(_table_), field_entries),
-    42,  // num_field_entries
-    42,  // num_aux_entries
+    44,  // num_field_entries
+    44,  // num_aux_entries
     offsetof(decltype(_table_), aux_entries),
     _class_data_.base(),
     nullptr,  // post_loop_handler
@@ -1817,7 +1892,7 @@ const ::_pbi::TcParseTable<0, 42, 42, 0, 9> GamePacket::_table_ = {
     {::_pbi::TcParser::MiniParse, {}},
   }}, {{
     101, 0, 2,
-    0, 19, 65408, 35,
+    0, 19, 65024, 35,
     65535, 65535
   }}, {{
     // .auth.C2S_Register c2s_register = 1;
@@ -1943,8 +2018,14 @@ const ::_pbi::TcParseTable<0, 42, 42, 0, 9> GamePacket::_table_ = {
     // .ingame.S2C_GiantKillContributionResult s2c_giant_kill_contribution_result = 122;
     {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_giant_kill_contribution_result_), _Internal::kOneofCaseOffset + 0, 40,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
-    // .ingame.S2C_GameEnd s2c_game_end = 123;
-    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_game_end_), _Internal::kOneofCaseOffset + 0, 41,
+    // .ingame.S2C_ScoreUpdate s2c_score_update = 123;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_score_update_), _Internal::kOneofCaseOffset + 0, 41,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_Scoreboard s2c_scoreboard = 124;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_scoreboard_), _Internal::kOneofCaseOffset + 0, 42,
+    (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+    // .ingame.S2C_GameEnd s2c_game_end = 125;
+    {PROTOBUF_FIELD_OFFSET(GamePacket, _impl_.payload_.s2c_game_end_), _Internal::kOneofCaseOffset + 0, 43,
     (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
   }}, {{
     {::_pbi::TcParser::GetTable<::auth::C2S_Register>()},
@@ -1988,6 +2069,8 @@ const ::_pbi::TcParseTable<0, 42, 42, 0, 9> GamePacket::_table_ = {
     {::_pbi::TcParser::GetTable<::ingame::C2S_HiddenSkill>()},
     {::_pbi::TcParser::GetTable<::ingame::S2C_HiddenSkillResult>()},
     {::_pbi::TcParser::GetTable<::ingame::S2C_GiantKillContributionResult>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_ScoreUpdate>()},
+    {::_pbi::TcParser::GetTable<::ingame::S2C_Scoreboard>()},
     {::_pbi::TcParser::GetTable<::ingame::S2C_GameEnd>()},
   }}, {{
   }},
@@ -2266,9 +2349,21 @@ PROTOBUF_NOINLINE void GamePacket::Clear() {
                   stream);
               break;
             }
+            case kS2CScoreUpdate: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  123, *this_._impl_.payload_.s2c_score_update_, this_._impl_.payload_.s2c_score_update_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
+            case kS2CScoreboard: {
+              target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+                  124, *this_._impl_.payload_.s2c_scoreboard_, this_._impl_.payload_.s2c_scoreboard_->GetCachedSize(), target,
+                  stream);
+              break;
+            }
             case kS2CGameEnd: {
               target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
-                  123, *this_._impl_.payload_.s2c_game_end_, this_._impl_.payload_.s2c_game_end_->GetCachedSize(), target,
+                  125, *this_._impl_.payload_.s2c_game_end_, this_._impl_.payload_.s2c_game_end_->GetCachedSize(), target,
                   stream);
               break;
             }
@@ -2545,7 +2640,19 @@ PROTOBUF_NOINLINE void GamePacket::Clear() {
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_giant_kill_contribution_result_);
               break;
             }
-            // .ingame.S2C_GameEnd s2c_game_end = 123;
+            // .ingame.S2C_ScoreUpdate s2c_score_update = 123;
+            case kS2CScoreUpdate: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_score_update_);
+              break;
+            }
+            // .ingame.S2C_Scoreboard s2c_scoreboard = 124;
+            case kS2CScoreboard: {
+              total_size += 2 +
+                            ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_scoreboard_);
+              break;
+            }
+            // .ingame.S2C_GameEnd s2c_game_end = 125;
             case kS2CGameEnd: {
               total_size += 2 +
                             ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.payload_.s2c_game_end_);
@@ -2945,6 +3052,24 @@ void GamePacket::MergeImpl(::google::protobuf::MessageLite& to_msg, const ::goog
               ::google::protobuf::Message::CopyConstruct<::ingame::S2C_GiantKillContributionResult>(arena, *from._impl_.payload_.s2c_giant_kill_contribution_result_);
         } else {
           _this->_impl_.payload_.s2c_giant_kill_contribution_result_->MergeFrom(from._internal_s2c_giant_kill_contribution_result());
+        }
+        break;
+      }
+      case kS2CScoreUpdate: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_score_update_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_ScoreUpdate>(arena, *from._impl_.payload_.s2c_score_update_);
+        } else {
+          _this->_impl_.payload_.s2c_score_update_->MergeFrom(from._internal_s2c_score_update());
+        }
+        break;
+      }
+      case kS2CScoreboard: {
+        if (oneof_needs_init) {
+          _this->_impl_.payload_.s2c_scoreboard_ =
+              ::google::protobuf::Message::CopyConstruct<::ingame::S2C_Scoreboard>(arena, *from._impl_.payload_.s2c_scoreboard_);
+        } else {
+          _this->_impl_.payload_.s2c_scoreboard_->MergeFrom(from._internal_s2c_scoreboard());
         }
         break;
       }

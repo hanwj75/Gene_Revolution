@@ -168,7 +168,9 @@ class GamePacket final : public ::google::protobuf::Message
     kC2SHiddenSkill = 120,
     kS2CHiddenSkillResult = 121,
     kS2CGiantKillContributionResult = 122,
-    kS2CGameEnd = 123,
+    kS2CScoreUpdate = 123,
+    kS2CScoreboard = 124,
+    kS2CGameEnd = 125,
     PAYLOAD_NOT_SET = 0,
   };
   static inline const GamePacket* internal_default_instance() {
@@ -303,7 +305,9 @@ class GamePacket final : public ::google::protobuf::Message
     kC2SHiddenSkillFieldNumber = 120,
     kS2CHiddenSkillResultFieldNumber = 121,
     kS2CGiantKillContributionResultFieldNumber = 122,
-    kS2CGameEndFieldNumber = 123,
+    kS2CScoreUpdateFieldNumber = 123,
+    kS2CScoreboardFieldNumber = 124,
+    kS2CGameEndFieldNumber = 125,
   };
   // .auth.C2S_Register c2s_register = 1;
   bool has_c2s_register() const;
@@ -1084,7 +1088,45 @@ class GamePacket final : public ::google::protobuf::Message
   ::ingame::S2C_GiantKillContributionResult* _internal_mutable_s2c_giant_kill_contribution_result();
 
   public:
-  // .ingame.S2C_GameEnd s2c_game_end = 123;
+  // .ingame.S2C_ScoreUpdate s2c_score_update = 123;
+  bool has_s2c_score_update() const;
+  private:
+  bool _internal_has_s2c_score_update() const;
+
+  public:
+  void clear_s2c_score_update() ;
+  const ::ingame::S2C_ScoreUpdate& s2c_score_update() const;
+  PROTOBUF_NODISCARD ::ingame::S2C_ScoreUpdate* release_s2c_score_update();
+  ::ingame::S2C_ScoreUpdate* mutable_s2c_score_update();
+  void set_allocated_s2c_score_update(::ingame::S2C_ScoreUpdate* value);
+  void unsafe_arena_set_allocated_s2c_score_update(::ingame::S2C_ScoreUpdate* value);
+  ::ingame::S2C_ScoreUpdate* unsafe_arena_release_s2c_score_update();
+
+  private:
+  const ::ingame::S2C_ScoreUpdate& _internal_s2c_score_update() const;
+  ::ingame::S2C_ScoreUpdate* _internal_mutable_s2c_score_update();
+
+  public:
+  // .ingame.S2C_Scoreboard s2c_scoreboard = 124;
+  bool has_s2c_scoreboard() const;
+  private:
+  bool _internal_has_s2c_scoreboard() const;
+
+  public:
+  void clear_s2c_scoreboard() ;
+  const ::ingame::S2C_Scoreboard& s2c_scoreboard() const;
+  PROTOBUF_NODISCARD ::ingame::S2C_Scoreboard* release_s2c_scoreboard();
+  ::ingame::S2C_Scoreboard* mutable_s2c_scoreboard();
+  void set_allocated_s2c_scoreboard(::ingame::S2C_Scoreboard* value);
+  void unsafe_arena_set_allocated_s2c_scoreboard(::ingame::S2C_Scoreboard* value);
+  ::ingame::S2C_Scoreboard* unsafe_arena_release_s2c_scoreboard();
+
+  private:
+  const ::ingame::S2C_Scoreboard& _internal_s2c_scoreboard() const;
+  ::ingame::S2C_Scoreboard* _internal_mutable_s2c_scoreboard();
+
+  public:
+  // .ingame.S2C_GameEnd s2c_game_end = 125;
   bool has_s2c_game_end() const;
   private:
   bool _internal_has_s2c_game_end() const;
@@ -1149,12 +1191,14 @@ class GamePacket final : public ::google::protobuf::Message
   void set_has_c2s_hidden_skill();
   void set_has_s2c_hidden_skill_result();
   void set_has_s2c_giant_kill_contribution_result();
+  void set_has_s2c_score_update();
+  void set_has_s2c_scoreboard();
   void set_has_s2c_game_end();
   inline bool has_payload() const;
   inline void clear_has_payload();
   friend class ::google::protobuf::internal::TcParser;
   static const ::google::protobuf::internal::TcParseTable<
-      0, 42, 42,
+      0, 44, 44,
       0, 9>
       _table_;
 
@@ -1216,6 +1260,8 @@ class GamePacket final : public ::google::protobuf::Message
       ::ingame::C2S_HiddenSkill* c2s_hidden_skill_;
       ::ingame::S2C_HiddenSkillResult* s2c_hidden_skill_result_;
       ::ingame::S2C_GiantKillContributionResult* s2c_giant_kill_contribution_result_;
+      ::ingame::S2C_ScoreUpdate* s2c_score_update_;
+      ::ingame::S2C_Scoreboard* s2c_scoreboard_;
       ::ingame::S2C_GameEnd* s2c_game_end_;
     } payload_;
     ::google::protobuf::internal::CachedSize _cached_size_;
@@ -4030,7 +4076,143 @@ inline ::ingame::S2C_GiantKillContributionResult* GamePacket::mutable_s2c_giant_
   return _msg;
 }
 
-// .ingame.S2C_GameEnd s2c_game_end = 123;
+// .ingame.S2C_ScoreUpdate s2c_score_update = 123;
+inline bool GamePacket::has_s2c_score_update() const {
+  return payload_case() == kS2CScoreUpdate;
+}
+inline bool GamePacket::_internal_has_s2c_score_update() const {
+  return payload_case() == kS2CScoreUpdate;
+}
+inline void GamePacket::set_has_s2c_score_update() {
+  _impl_._oneof_case_[0] = kS2CScoreUpdate;
+}
+inline ::ingame::S2C_ScoreUpdate* GamePacket::release_s2c_score_update() {
+  // @@protoc_insertion_point(field_release:center.GamePacket.s2c_score_update)
+  if (payload_case() == kS2CScoreUpdate) {
+    clear_has_payload();
+    auto* temp = _impl_.payload_.s2c_score_update_;
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.payload_.s2c_score_update_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::ingame::S2C_ScoreUpdate& GamePacket::_internal_s2c_score_update() const {
+  return payload_case() == kS2CScoreUpdate ? *_impl_.payload_.s2c_score_update_ : reinterpret_cast<::ingame::S2C_ScoreUpdate&>(::ingame::_S2C_ScoreUpdate_default_instance_);
+}
+inline const ::ingame::S2C_ScoreUpdate& GamePacket::s2c_score_update() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:center.GamePacket.s2c_score_update)
+  return _internal_s2c_score_update();
+}
+inline ::ingame::S2C_ScoreUpdate* GamePacket::unsafe_arena_release_s2c_score_update() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:center.GamePacket.s2c_score_update)
+  if (payload_case() == kS2CScoreUpdate) {
+    clear_has_payload();
+    auto* temp = _impl_.payload_.s2c_score_update_;
+    _impl_.payload_.s2c_score_update_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void GamePacket::unsafe_arena_set_allocated_s2c_score_update(::ingame::S2C_ScoreUpdate* value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_payload();
+  if (value) {
+    set_has_s2c_score_update();
+    _impl_.payload_.s2c_score_update_ = value;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:center.GamePacket.s2c_score_update)
+}
+inline ::ingame::S2C_ScoreUpdate* GamePacket::_internal_mutable_s2c_score_update() {
+  if (payload_case() != kS2CScoreUpdate) {
+    clear_payload();
+    set_has_s2c_score_update();
+    _impl_.payload_.s2c_score_update_ =
+        ::google::protobuf::Message::DefaultConstruct<::ingame::S2C_ScoreUpdate>(GetArena());
+  }
+  return _impl_.payload_.s2c_score_update_;
+}
+inline ::ingame::S2C_ScoreUpdate* GamePacket::mutable_s2c_score_update() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::ingame::S2C_ScoreUpdate* _msg = _internal_mutable_s2c_score_update();
+  // @@protoc_insertion_point(field_mutable:center.GamePacket.s2c_score_update)
+  return _msg;
+}
+
+// .ingame.S2C_Scoreboard s2c_scoreboard = 124;
+inline bool GamePacket::has_s2c_scoreboard() const {
+  return payload_case() == kS2CScoreboard;
+}
+inline bool GamePacket::_internal_has_s2c_scoreboard() const {
+  return payload_case() == kS2CScoreboard;
+}
+inline void GamePacket::set_has_s2c_scoreboard() {
+  _impl_._oneof_case_[0] = kS2CScoreboard;
+}
+inline ::ingame::S2C_Scoreboard* GamePacket::release_s2c_scoreboard() {
+  // @@protoc_insertion_point(field_release:center.GamePacket.s2c_scoreboard)
+  if (payload_case() == kS2CScoreboard) {
+    clear_has_payload();
+    auto* temp = _impl_.payload_.s2c_scoreboard_;
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.payload_.s2c_scoreboard_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::ingame::S2C_Scoreboard& GamePacket::_internal_s2c_scoreboard() const {
+  return payload_case() == kS2CScoreboard ? *_impl_.payload_.s2c_scoreboard_ : reinterpret_cast<::ingame::S2C_Scoreboard&>(::ingame::_S2C_Scoreboard_default_instance_);
+}
+inline const ::ingame::S2C_Scoreboard& GamePacket::s2c_scoreboard() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:center.GamePacket.s2c_scoreboard)
+  return _internal_s2c_scoreboard();
+}
+inline ::ingame::S2C_Scoreboard* GamePacket::unsafe_arena_release_s2c_scoreboard() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:center.GamePacket.s2c_scoreboard)
+  if (payload_case() == kS2CScoreboard) {
+    clear_has_payload();
+    auto* temp = _impl_.payload_.s2c_scoreboard_;
+    _impl_.payload_.s2c_scoreboard_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void GamePacket::unsafe_arena_set_allocated_s2c_scoreboard(::ingame::S2C_Scoreboard* value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_payload();
+  if (value) {
+    set_has_s2c_scoreboard();
+    _impl_.payload_.s2c_scoreboard_ = value;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:center.GamePacket.s2c_scoreboard)
+}
+inline ::ingame::S2C_Scoreboard* GamePacket::_internal_mutable_s2c_scoreboard() {
+  if (payload_case() != kS2CScoreboard) {
+    clear_payload();
+    set_has_s2c_scoreboard();
+    _impl_.payload_.s2c_scoreboard_ =
+        ::google::protobuf::Message::DefaultConstruct<::ingame::S2C_Scoreboard>(GetArena());
+  }
+  return _impl_.payload_.s2c_scoreboard_;
+}
+inline ::ingame::S2C_Scoreboard* GamePacket::mutable_s2c_scoreboard() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::ingame::S2C_Scoreboard* _msg = _internal_mutable_s2c_scoreboard();
+  // @@protoc_insertion_point(field_mutable:center.GamePacket.s2c_scoreboard)
+  return _msg;
+}
+
+// .ingame.S2C_GameEnd s2c_game_end = 125;
 inline bool GamePacket::has_s2c_game_end() const {
   return payload_case() == kS2CGameEnd;
 }

@@ -149,6 +149,15 @@ extern S2C_PlayerDeathNotificationDefaultTypeInternal _S2C_PlayerDeathNotificati
 class S2C_PlayerMoveNotification;
 struct S2C_PlayerMoveNotificationDefaultTypeInternal;
 extern S2C_PlayerMoveNotificationDefaultTypeInternal _S2C_PlayerMoveNotification_default_instance_;
+class S2C_ScoreUpdate;
+struct S2C_ScoreUpdateDefaultTypeInternal;
+extern S2C_ScoreUpdateDefaultTypeInternal _S2C_ScoreUpdate_default_instance_;
+class S2C_Scoreboard;
+struct S2C_ScoreboardDefaultTypeInternal;
+extern S2C_ScoreboardDefaultTypeInternal _S2C_Scoreboard_default_instance_;
+class S2C_Scoreboard_ScoreEntry;
+struct S2C_Scoreboard_ScoreEntryDefaultTypeInternal;
+extern S2C_Scoreboard_ScoreEntryDefaultTypeInternal _S2C_Scoreboard_ScoreEntry_default_instance_;
 class S2C_TransformResult;
 struct S2C_TransformResultDefaultTypeInternal;
 extern S2C_TransformResultDefaultTypeInternal _S2C_TransformResult_default_instance_;
@@ -346,6 +355,42 @@ inline const std::string& DeathType_Name(DeathType value) {
 inline bool DeathType_Parse(absl::string_view name, DeathType* value) {
   return ::google::protobuf::internal::ParseNamedEnum<DeathType>(
       DeathType_descriptor(), name, value);
+}
+enum ScoreUpdateType : int {
+  SCORE_UNKNOWN = 0,
+  SCORE_MONSTER_KILL = 1,
+  SCORE_GIANT_KILL = 2,
+  SCORE_PLAYER_KILL = 3,
+  SCORE_SURVIVAL = 4,
+  ScoreUpdateType_INT_MIN_SENTINEL_DO_NOT_USE_ =
+      std::numeric_limits<::int32_t>::min(),
+  ScoreUpdateType_INT_MAX_SENTINEL_DO_NOT_USE_ =
+      std::numeric_limits<::int32_t>::max(),
+};
+
+bool ScoreUpdateType_IsValid(int value);
+extern const uint32_t ScoreUpdateType_internal_data_[];
+constexpr ScoreUpdateType ScoreUpdateType_MIN = static_cast<ScoreUpdateType>(0);
+constexpr ScoreUpdateType ScoreUpdateType_MAX = static_cast<ScoreUpdateType>(4);
+constexpr int ScoreUpdateType_ARRAYSIZE = 4 + 1;
+const ::google::protobuf::EnumDescriptor*
+ScoreUpdateType_descriptor();
+template <typename T>
+const std::string& ScoreUpdateType_Name(T value) {
+  static_assert(std::is_same<T, ScoreUpdateType>::value ||
+                    std::is_integral<T>::value,
+                "Incorrect type passed to ScoreUpdateType_Name().");
+  return ScoreUpdateType_Name(static_cast<ScoreUpdateType>(value));
+}
+template <>
+inline const std::string& ScoreUpdateType_Name(ScoreUpdateType value) {
+  return ::google::protobuf::internal::NameOfDenseEnum<ScoreUpdateType_descriptor,
+                                                 0, 4>(
+      static_cast<int>(value));
+}
+inline bool ScoreUpdateType_Parse(absl::string_view name, ScoreUpdateType* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<ScoreUpdateType>(
+      ScoreUpdateType_descriptor(), name, value);
 }
 
 // ===================================================================
@@ -547,6 +592,476 @@ class Vector2 final : public ::google::protobuf::Message
                           const Vector2& from_msg);
     float x_;
     float y_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_ingame_2eproto;
+};
+// -------------------------------------------------------------------
+
+class S2C_Scoreboard_ScoreEntry final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:ingame.S2C_Scoreboard.ScoreEntry) */ {
+ public:
+  inline S2C_Scoreboard_ScoreEntry() : S2C_Scoreboard_ScoreEntry(nullptr) {}
+  ~S2C_Scoreboard_ScoreEntry() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(S2C_Scoreboard_ScoreEntry* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_Scoreboard_ScoreEntry));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_Scoreboard_ScoreEntry(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline S2C_Scoreboard_ScoreEntry(const S2C_Scoreboard_ScoreEntry& from) : S2C_Scoreboard_ScoreEntry(nullptr, from) {}
+  inline S2C_Scoreboard_ScoreEntry(S2C_Scoreboard_ScoreEntry&& from) noexcept
+      : S2C_Scoreboard_ScoreEntry(nullptr, std::move(from)) {}
+  inline S2C_Scoreboard_ScoreEntry& operator=(const S2C_Scoreboard_ScoreEntry& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline S2C_Scoreboard_ScoreEntry& operator=(S2C_Scoreboard_ScoreEntry&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const S2C_Scoreboard_ScoreEntry& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const S2C_Scoreboard_ScoreEntry* internal_default_instance() {
+    return reinterpret_cast<const S2C_Scoreboard_ScoreEntry*>(
+        &_S2C_Scoreboard_ScoreEntry_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 32;
+  friend void swap(S2C_Scoreboard_ScoreEntry& a, S2C_Scoreboard_ScoreEntry& b) { a.Swap(&b); }
+  inline void Swap(S2C_Scoreboard_ScoreEntry* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(S2C_Scoreboard_ScoreEntry* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  S2C_Scoreboard_ScoreEntry* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<S2C_Scoreboard_ScoreEntry>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const S2C_Scoreboard_ScoreEntry& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const S2C_Scoreboard_ScoreEntry& from) { S2C_Scoreboard_ScoreEntry::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(S2C_Scoreboard_ScoreEntry* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "ingame.S2C_Scoreboard.ScoreEntry"; }
+
+ protected:
+  explicit S2C_Scoreboard_ScoreEntry(::google::protobuf::Arena* arena);
+  S2C_Scoreboard_ScoreEntry(::google::protobuf::Arena* arena, const S2C_Scoreboard_ScoreEntry& from);
+  S2C_Scoreboard_ScoreEntry(::google::protobuf::Arena* arena, S2C_Scoreboard_ScoreEntry&& from) noexcept
+      : S2C_Scoreboard_ScoreEntry(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kNicknameFieldNumber = 2,
+    kScoreFieldNumber = 3,
+    kRaceFieldNumber = 4,
+  };
+  // string user_id = 1;
+  void clear_user_id() ;
+  const std::string& user_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* value);
+
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(
+      const std::string& value);
+  std::string* _internal_mutable_user_id();
+
+  public:
+  // string nickname = 2;
+  void clear_nickname() ;
+  const std::string& nickname() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_nickname(Arg_&& arg, Args_... args);
+  std::string* mutable_nickname();
+  PROTOBUF_NODISCARD std::string* release_nickname();
+  void set_allocated_nickname(std::string* value);
+
+  private:
+  const std::string& _internal_nickname() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_nickname(
+      const std::string& value);
+  std::string* _internal_mutable_nickname();
+
+  public:
+  // int32 score = 3;
+  void clear_score() ;
+  ::int32_t score() const;
+  void set_score(::int32_t value);
+
+  private:
+  ::int32_t _internal_score() const;
+  void _internal_set_score(::int32_t value);
+
+  public:
+  // .ingame.RaceType race = 4;
+  void clear_race() ;
+  ::ingame::RaceType race() const;
+  void set_race(::ingame::RaceType value);
+
+  private:
+  ::ingame::RaceType _internal_race() const;
+  void _internal_set_race(::ingame::RaceType value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:ingame.S2C_Scoreboard.ScoreEntry)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 4, 0,
+      56, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const S2C_Scoreboard_ScoreEntry& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::google::protobuf::internal::ArenaStringPtr nickname_;
+    ::int32_t score_;
+    int race_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_ingame_2eproto;
+};
+// -------------------------------------------------------------------
+
+class S2C_ScoreUpdate final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:ingame.S2C_ScoreUpdate) */ {
+ public:
+  inline S2C_ScoreUpdate() : S2C_ScoreUpdate(nullptr) {}
+  ~S2C_ScoreUpdate() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(S2C_ScoreUpdate* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_ScoreUpdate));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_ScoreUpdate(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline S2C_ScoreUpdate(const S2C_ScoreUpdate& from) : S2C_ScoreUpdate(nullptr, from) {}
+  inline S2C_ScoreUpdate(S2C_ScoreUpdate&& from) noexcept
+      : S2C_ScoreUpdate(nullptr, std::move(from)) {}
+  inline S2C_ScoreUpdate& operator=(const S2C_ScoreUpdate& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline S2C_ScoreUpdate& operator=(S2C_ScoreUpdate&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const S2C_ScoreUpdate& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const S2C_ScoreUpdate* internal_default_instance() {
+    return reinterpret_cast<const S2C_ScoreUpdate*>(
+        &_S2C_ScoreUpdate_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 31;
+  friend void swap(S2C_ScoreUpdate& a, S2C_ScoreUpdate& b) { a.Swap(&b); }
+  inline void Swap(S2C_ScoreUpdate* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(S2C_ScoreUpdate* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  S2C_ScoreUpdate* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<S2C_ScoreUpdate>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const S2C_ScoreUpdate& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const S2C_ScoreUpdate& from) { S2C_ScoreUpdate::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(S2C_ScoreUpdate* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "ingame.S2C_ScoreUpdate"; }
+
+ protected:
+  explicit S2C_ScoreUpdate(::google::protobuf::Arena* arena);
+  S2C_ScoreUpdate(::google::protobuf::Arena* arena, const S2C_ScoreUpdate& from);
+  S2C_ScoreUpdate(::google::protobuf::Arena* arena, S2C_ScoreUpdate&& from) noexcept
+      : S2C_ScoreUpdate(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kUserIdFieldNumber = 1,
+    kNewScoreFieldNumber = 2,
+    kScoreTypeFieldNumber = 3,
+    kPointsAddedFieldNumber = 4,
+  };
+  // string user_id = 1;
+  void clear_user_id() ;
+  const std::string& user_id() const;
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_user_id(Arg_&& arg, Args_... args);
+  std::string* mutable_user_id();
+  PROTOBUF_NODISCARD std::string* release_user_id();
+  void set_allocated_user_id(std::string* value);
+
+  private:
+  const std::string& _internal_user_id() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_user_id(
+      const std::string& value);
+  std::string* _internal_mutable_user_id();
+
+  public:
+  // int32 new_score = 2;
+  void clear_new_score() ;
+  ::int32_t new_score() const;
+  void set_new_score(::int32_t value);
+
+  private:
+  ::int32_t _internal_new_score() const;
+  void _internal_set_new_score(::int32_t value);
+
+  public:
+  // .ingame.ScoreUpdateType score_type = 3;
+  void clear_score_type() ;
+  ::ingame::ScoreUpdateType score_type() const;
+  void set_score_type(::ingame::ScoreUpdateType value);
+
+  private:
+  ::ingame::ScoreUpdateType _internal_score_type() const;
+  void _internal_set_score_type(::ingame::ScoreUpdateType value);
+
+  public:
+  // int32 points_added = 4;
+  void clear_points_added() ;
+  ::int32_t points_added() const;
+  void set_points_added(::int32_t value);
+
+  private:
+  ::int32_t _internal_points_added() const;
+  void _internal_set_points_added(::int32_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:ingame.S2C_ScoreUpdate)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      2, 4, 0,
+      38, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const S2C_ScoreUpdate& from_msg);
+    ::google::protobuf::internal::ArenaStringPtr user_id_;
+    ::int32_t new_score_;
+    int score_type_;
+    ::int32_t points_added_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -1820,7 +2335,7 @@ class S2C_GameEnd_PlayerResult final : public ::google::protobuf::Message
     return reinterpret_cast<const S2C_GameEnd_PlayerResult*>(
         &_S2C_GameEnd_PlayerResult_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 31;
+  static constexpr int kIndexInFileMessages = 34;
   friend void swap(S2C_GameEnd_PlayerResult& a, S2C_GameEnd_PlayerResult& b) { a.Swap(&b); }
   inline void Swap(S2C_GameEnd_PlayerResult* other) {
     if (other == this) return;
@@ -4388,6 +4903,216 @@ class S2C_TransformResult final : public ::google::protobuf::Message
 };
 // -------------------------------------------------------------------
 
+class S2C_Scoreboard final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:ingame.S2C_Scoreboard) */ {
+ public:
+  inline S2C_Scoreboard() : S2C_Scoreboard(nullptr) {}
+  ~S2C_Scoreboard() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(S2C_Scoreboard* msg, std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(S2C_Scoreboard));
+  }
+#endif
+
+  template <typename = void>
+  explicit PROTOBUF_CONSTEXPR S2C_Scoreboard(
+      ::google::protobuf::internal::ConstantInitialized);
+
+  inline S2C_Scoreboard(const S2C_Scoreboard& from) : S2C_Scoreboard(nullptr, from) {}
+  inline S2C_Scoreboard(S2C_Scoreboard&& from) noexcept
+      : S2C_Scoreboard(nullptr, std::move(from)) {}
+  inline S2C_Scoreboard& operator=(const S2C_Scoreboard& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline S2C_Scoreboard& operator=(S2C_Scoreboard&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields()
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::google::protobuf::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::google::protobuf::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const S2C_Scoreboard& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const S2C_Scoreboard* internal_default_instance() {
+    return reinterpret_cast<const S2C_Scoreboard*>(
+        &_S2C_Scoreboard_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages = 33;
+  friend void swap(S2C_Scoreboard& a, S2C_Scoreboard& b) { a.Swap(&b); }
+  inline void Swap(S2C_Scoreboard* other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(S2C_Scoreboard* other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  S2C_Scoreboard* New(::google::protobuf::Arena* arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<S2C_Scoreboard>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const S2C_Scoreboard& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const S2C_Scoreboard& from) { S2C_Scoreboard::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(
+      ::google::protobuf::MessageLite& to_msg,
+      const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  static ::uint8_t* _InternalSerialize(
+      const MessageLite& msg, ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream);
+
+  public:
+  ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  ::size_t ByteSizeLong() const final;
+  ::uint8_t* _InternalSerialize(
+      ::uint8_t* target,
+      ::google::protobuf::io::EpsCopyOutputStream* stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  int GetCachedSize() const { return _impl_._cached_size_.Get(); }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(S2C_Scoreboard* other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(
+      ::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "ingame.S2C_Scoreboard"; }
+
+ protected:
+  explicit S2C_Scoreboard(::google::protobuf::Arena* arena);
+  S2C_Scoreboard(::google::protobuf::Arena* arena, const S2C_Scoreboard& from);
+  S2C_Scoreboard(::google::protobuf::Arena* arena, S2C_Scoreboard&& from) noexcept
+      : S2C_Scoreboard(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* GetClassData() const PROTOBUF_FINAL;
+  static void* PlacementNew_(const void*, void* mem,
+                             ::google::protobuf::Arena* arena);
+  static constexpr auto InternalNewImpl_();
+  static const ::google::protobuf::internal::ClassDataFull _class_data_;
+
+ public:
+  ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+  using ScoreEntry = S2C_Scoreboard_ScoreEntry;
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kEntriesFieldNumber = 1,
+    kUpdateTimeFieldNumber = 2,
+  };
+  // repeated .ingame.S2C_Scoreboard.ScoreEntry entries = 1;
+  int entries_size() const;
+  private:
+  int _internal_entries_size() const;
+
+  public:
+  void clear_entries() ;
+  ::ingame::S2C_Scoreboard_ScoreEntry* mutable_entries(int index);
+  ::google::protobuf::RepeatedPtrField<::ingame::S2C_Scoreboard_ScoreEntry>* mutable_entries();
+
+  private:
+  const ::google::protobuf::RepeatedPtrField<::ingame::S2C_Scoreboard_ScoreEntry>& _internal_entries() const;
+  ::google::protobuf::RepeatedPtrField<::ingame::S2C_Scoreboard_ScoreEntry>* _internal_mutable_entries();
+  public:
+  const ::ingame::S2C_Scoreboard_ScoreEntry& entries(int index) const;
+  ::ingame::S2C_Scoreboard_ScoreEntry* add_entries();
+  const ::google::protobuf::RepeatedPtrField<::ingame::S2C_Scoreboard_ScoreEntry>& entries() const;
+  // int32 update_time = 2;
+  void clear_update_time() ;
+  ::int32_t update_time() const;
+  void set_update_time(::int32_t value);
+
+  private:
+  ::int32_t _internal_update_time() const;
+  void _internal_set_update_time(::int32_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:ingame.S2C_Scoreboard)
+ private:
+  class _Internal;
+  friend class ::google::protobuf::internal::TcParser;
+  static const ::google::protobuf::internal::TcParseTable<
+      1, 2, 1,
+      0, 2>
+      _table_;
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(
+        ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena);
+    inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                          ::google::protobuf::Arena* arena, const Impl_& from,
+                          const S2C_Scoreboard& from_msg);
+    ::google::protobuf::RepeatedPtrField< ::ingame::S2C_Scoreboard_ScoreEntry > entries_;
+    ::int32_t update_time_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_ingame_2eproto;
+};
+// -------------------------------------------------------------------
+
 class S2C_PlayerMoveNotification final : public ::google::protobuf::Message
 /* @@protoc_insertion_point(class_definition:ingame.S2C_PlayerMoveNotification) */ {
  public:
@@ -5710,7 +6435,7 @@ class S2C_GameEnd final : public ::google::protobuf::Message
     return reinterpret_cast<const S2C_GameEnd*>(
         &_S2C_GameEnd_default_instance_);
   }
-  static constexpr int kIndexInFileMessages = 32;
+  static constexpr int kIndexInFileMessages = 35;
   friend void swap(S2C_GameEnd& a, S2C_GameEnd& b) { a.Swap(&b); }
   inline void Swap(S2C_GameEnd* other) {
     if (other == this) return;
@@ -13095,6 +13820,343 @@ inline void S2C_HiddenSkillResult::set_allocated_message(std::string* value) {
 
 // -------------------------------------------------------------------
 
+// S2C_ScoreUpdate
+
+// string user_id = 1;
+inline void S2C_ScoreUpdate::clear_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.ClearToEmpty();
+}
+inline const std::string& S2C_ScoreUpdate::user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:ingame.S2C_ScoreUpdate.user_id)
+  return _internal_user_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_ScoreUpdate::set_user_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:ingame.S2C_ScoreUpdate.user_id)
+}
+inline std::string* S2C_ScoreUpdate::mutable_user_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:ingame.S2C_ScoreUpdate.user_id)
+  return _s;
+}
+inline const std::string& S2C_ScoreUpdate::_internal_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.user_id_.Get();
+}
+inline void S2C_ScoreUpdate::_internal_set_user_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(value, GetArena());
+}
+inline std::string* S2C_ScoreUpdate::_internal_mutable_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.user_id_.Mutable( GetArena());
+}
+inline std::string* S2C_ScoreUpdate::release_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:ingame.S2C_ScoreUpdate.user_id)
+  return _impl_.user_id_.Release();
+}
+inline void S2C_ScoreUpdate::set_allocated_user_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:ingame.S2C_ScoreUpdate.user_id)
+}
+
+// int32 new_score = 2;
+inline void S2C_ScoreUpdate::clear_new_score() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.new_score_ = 0;
+}
+inline ::int32_t S2C_ScoreUpdate::new_score() const {
+  // @@protoc_insertion_point(field_get:ingame.S2C_ScoreUpdate.new_score)
+  return _internal_new_score();
+}
+inline void S2C_ScoreUpdate::set_new_score(::int32_t value) {
+  _internal_set_new_score(value);
+  // @@protoc_insertion_point(field_set:ingame.S2C_ScoreUpdate.new_score)
+}
+inline ::int32_t S2C_ScoreUpdate::_internal_new_score() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.new_score_;
+}
+inline void S2C_ScoreUpdate::_internal_set_new_score(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.new_score_ = value;
+}
+
+// .ingame.ScoreUpdateType score_type = 3;
+inline void S2C_ScoreUpdate::clear_score_type() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.score_type_ = 0;
+}
+inline ::ingame::ScoreUpdateType S2C_ScoreUpdate::score_type() const {
+  // @@protoc_insertion_point(field_get:ingame.S2C_ScoreUpdate.score_type)
+  return _internal_score_type();
+}
+inline void S2C_ScoreUpdate::set_score_type(::ingame::ScoreUpdateType value) {
+  _internal_set_score_type(value);
+  // @@protoc_insertion_point(field_set:ingame.S2C_ScoreUpdate.score_type)
+}
+inline ::ingame::ScoreUpdateType S2C_ScoreUpdate::_internal_score_type() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return static_cast<::ingame::ScoreUpdateType>(_impl_.score_type_);
+}
+inline void S2C_ScoreUpdate::_internal_set_score_type(::ingame::ScoreUpdateType value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.score_type_ = value;
+}
+
+// int32 points_added = 4;
+inline void S2C_ScoreUpdate::clear_points_added() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.points_added_ = 0;
+}
+inline ::int32_t S2C_ScoreUpdate::points_added() const {
+  // @@protoc_insertion_point(field_get:ingame.S2C_ScoreUpdate.points_added)
+  return _internal_points_added();
+}
+inline void S2C_ScoreUpdate::set_points_added(::int32_t value) {
+  _internal_set_points_added(value);
+  // @@protoc_insertion_point(field_set:ingame.S2C_ScoreUpdate.points_added)
+}
+inline ::int32_t S2C_ScoreUpdate::_internal_points_added() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.points_added_;
+}
+inline void S2C_ScoreUpdate::_internal_set_points_added(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.points_added_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// S2C_Scoreboard_ScoreEntry
+
+// string user_id = 1;
+inline void S2C_Scoreboard_ScoreEntry::clear_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.ClearToEmpty();
+}
+inline const std::string& S2C_Scoreboard_ScoreEntry::user_id() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:ingame.S2C_Scoreboard.ScoreEntry.user_id)
+  return _internal_user_id();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_Scoreboard_ScoreEntry::set_user_id(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:ingame.S2C_Scoreboard.ScoreEntry.user_id)
+}
+inline std::string* S2C_Scoreboard_ScoreEntry::mutable_user_id() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_user_id();
+  // @@protoc_insertion_point(field_mutable:ingame.S2C_Scoreboard.ScoreEntry.user_id)
+  return _s;
+}
+inline const std::string& S2C_Scoreboard_ScoreEntry::_internal_user_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.user_id_.Get();
+}
+inline void S2C_Scoreboard_ScoreEntry::_internal_set_user_id(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.Set(value, GetArena());
+}
+inline std::string* S2C_Scoreboard_ScoreEntry::_internal_mutable_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.user_id_.Mutable( GetArena());
+}
+inline std::string* S2C_Scoreboard_ScoreEntry::release_user_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:ingame.S2C_Scoreboard.ScoreEntry.user_id)
+  return _impl_.user_id_.Release();
+}
+inline void S2C_Scoreboard_ScoreEntry::set_allocated_user_id(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.user_id_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.user_id_.IsDefault()) {
+    _impl_.user_id_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:ingame.S2C_Scoreboard.ScoreEntry.user_id)
+}
+
+// string nickname = 2;
+inline void S2C_Scoreboard_ScoreEntry::clear_nickname() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nickname_.ClearToEmpty();
+}
+inline const std::string& S2C_Scoreboard_ScoreEntry::nickname() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:ingame.S2C_Scoreboard.ScoreEntry.nickname)
+  return _internal_nickname();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void S2C_Scoreboard_ScoreEntry::set_nickname(Arg_&& arg,
+                                                     Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nickname_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:ingame.S2C_Scoreboard.ScoreEntry.nickname)
+}
+inline std::string* S2C_Scoreboard_ScoreEntry::mutable_nickname() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  std::string* _s = _internal_mutable_nickname();
+  // @@protoc_insertion_point(field_mutable:ingame.S2C_Scoreboard.ScoreEntry.nickname)
+  return _s;
+}
+inline const std::string& S2C_Scoreboard_ScoreEntry::_internal_nickname() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.nickname_.Get();
+}
+inline void S2C_Scoreboard_ScoreEntry::_internal_set_nickname(const std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nickname_.Set(value, GetArena());
+}
+inline std::string* S2C_Scoreboard_ScoreEntry::_internal_mutable_nickname() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.nickname_.Mutable( GetArena());
+}
+inline std::string* S2C_Scoreboard_ScoreEntry::release_nickname() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:ingame.S2C_Scoreboard.ScoreEntry.nickname)
+  return _impl_.nickname_.Release();
+}
+inline void S2C_Scoreboard_ScoreEntry::set_allocated_nickname(std::string* value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.nickname_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.nickname_.IsDefault()) {
+    _impl_.nickname_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:ingame.S2C_Scoreboard.ScoreEntry.nickname)
+}
+
+// int32 score = 3;
+inline void S2C_Scoreboard_ScoreEntry::clear_score() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.score_ = 0;
+}
+inline ::int32_t S2C_Scoreboard_ScoreEntry::score() const {
+  // @@protoc_insertion_point(field_get:ingame.S2C_Scoreboard.ScoreEntry.score)
+  return _internal_score();
+}
+inline void S2C_Scoreboard_ScoreEntry::set_score(::int32_t value) {
+  _internal_set_score(value);
+  // @@protoc_insertion_point(field_set:ingame.S2C_Scoreboard.ScoreEntry.score)
+}
+inline ::int32_t S2C_Scoreboard_ScoreEntry::_internal_score() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.score_;
+}
+inline void S2C_Scoreboard_ScoreEntry::_internal_set_score(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.score_ = value;
+}
+
+// .ingame.RaceType race = 4;
+inline void S2C_Scoreboard_ScoreEntry::clear_race() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.race_ = 0;
+}
+inline ::ingame::RaceType S2C_Scoreboard_ScoreEntry::race() const {
+  // @@protoc_insertion_point(field_get:ingame.S2C_Scoreboard.ScoreEntry.race)
+  return _internal_race();
+}
+inline void S2C_Scoreboard_ScoreEntry::set_race(::ingame::RaceType value) {
+  _internal_set_race(value);
+  // @@protoc_insertion_point(field_set:ingame.S2C_Scoreboard.ScoreEntry.race)
+}
+inline ::ingame::RaceType S2C_Scoreboard_ScoreEntry::_internal_race() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return static_cast<::ingame::RaceType>(_impl_.race_);
+}
+inline void S2C_Scoreboard_ScoreEntry::_internal_set_race(::ingame::RaceType value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.race_ = value;
+}
+
+// -------------------------------------------------------------------
+
+// S2C_Scoreboard
+
+// repeated .ingame.S2C_Scoreboard.ScoreEntry entries = 1;
+inline int S2C_Scoreboard::_internal_entries_size() const {
+  return _internal_entries().size();
+}
+inline int S2C_Scoreboard::entries_size() const {
+  return _internal_entries_size();
+}
+inline void S2C_Scoreboard::clear_entries() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.entries_.Clear();
+}
+inline ::ingame::S2C_Scoreboard_ScoreEntry* S2C_Scoreboard::mutable_entries(int index)
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable:ingame.S2C_Scoreboard.entries)
+  return _internal_mutable_entries()->Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField<::ingame::S2C_Scoreboard_ScoreEntry>* S2C_Scoreboard::mutable_entries()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_mutable_list:ingame.S2C_Scoreboard.entries)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _internal_mutable_entries();
+}
+inline const ::ingame::S2C_Scoreboard_ScoreEntry& S2C_Scoreboard::entries(int index) const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:ingame.S2C_Scoreboard.entries)
+  return _internal_entries().Get(index);
+}
+inline ::ingame::S2C_Scoreboard_ScoreEntry* S2C_Scoreboard::add_entries() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::ingame::S2C_Scoreboard_ScoreEntry* _add = _internal_mutable_entries()->Add();
+  // @@protoc_insertion_point(field_add:ingame.S2C_Scoreboard.entries)
+  return _add;
+}
+inline const ::google::protobuf::RepeatedPtrField<::ingame::S2C_Scoreboard_ScoreEntry>& S2C_Scoreboard::entries() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_list:ingame.S2C_Scoreboard.entries)
+  return _internal_entries();
+}
+inline const ::google::protobuf::RepeatedPtrField<::ingame::S2C_Scoreboard_ScoreEntry>&
+S2C_Scoreboard::_internal_entries() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.entries_;
+}
+inline ::google::protobuf::RepeatedPtrField<::ingame::S2C_Scoreboard_ScoreEntry>*
+S2C_Scoreboard::_internal_mutable_entries() {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return &_impl_.entries_;
+}
+
+// int32 update_time = 2;
+inline void S2C_Scoreboard::clear_update_time() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.update_time_ = 0;
+}
+inline ::int32_t S2C_Scoreboard::update_time() const {
+  // @@protoc_insertion_point(field_get:ingame.S2C_Scoreboard.update_time)
+  return _internal_update_time();
+}
+inline void S2C_Scoreboard::set_update_time(::int32_t value) {
+  _internal_set_update_time(value);
+  // @@protoc_insertion_point(field_set:ingame.S2C_Scoreboard.update_time)
+}
+inline ::int32_t S2C_Scoreboard::_internal_update_time() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.update_time_;
+}
+inline void S2C_Scoreboard::_internal_set_update_time(::int32_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.update_time_ = value;
+}
+
+// -------------------------------------------------------------------
+
 // S2C_GameEnd_PlayerResult
 
 // string user_id = 1;
@@ -13418,6 +14480,12 @@ struct is_proto_enum<::ingame::DeathType> : std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor<::ingame::DeathType>() {
   return ::ingame::DeathType_descriptor();
+}
+template <>
+struct is_proto_enum<::ingame::ScoreUpdateType> : std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor<::ingame::ScoreUpdateType>() {
+  return ::ingame::ScoreUpdateType_descriptor();
 }
 
 }  // namespace protobuf

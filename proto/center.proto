@@ -87,8 +87,12 @@ message GamePacket {
 		//인게임 - 기여도 시스템
 	ingame.S2C_GiantKillContributionResult s2c_giant_kill_contribution_result = 122;    //서버 -> 클라 거인 처치 기여도 - 최종 기여도 집계
 
+		//인게임 - 스코어 업데이트
+	ingame.S2C_ScoreUpdate s2c_score_update = 123;                                      //서버 -> 클라 스코어 업데이트
+	ingame.S2C_Scoreboard s2c_scoreboard = 124;                                         //서버 -> 클라 전체 스코어 보드
+
 		//인게임 - 게임종료
-	ingame.S2C_GameEnd s2c_game_end = 123;                                              //서버 -> 클라 게임 종료 - 최종 결과 및 보상 정보
+	ingame.S2C_GameEnd s2c_game_end = 125;                                              //서버 -> 클라 게임 종료 - 최종 결과 및 보상 정보
 	}
 
 }

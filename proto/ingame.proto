@@ -240,6 +240,26 @@ message S2C_HiddenSkillResult{
 	string message = 4;
 }
 
+//서버 -> 클라 : 실시간 스코어 업데이트
+message S2C_ScoreUpdate{
+	string user_id = 1;
+	int32 new_score = 2;            //현재 총 스코어 (기존점수 + 새오 얻은 점수)
+	ScoreUpdateType score_type = 3; //스코어 증가 이유
+	int32 points_added = 4;         //이번에 추가된 점수
+}
+
+//서버 -> 클라 : 전체 스코어 보드
+message S2C_Scoreboard{
+	message ScoreEntry{
+		string user_id = 1;
+		string nickname = 2;
+		int32 score = 3;
+		RaceType race = 4;
+	}
+	repeated ScoreEntry entries = 1;
+	int32 update_time = 2;          //업데이트 시간
+}
+
 //서버 -> 클라 : 게임 종료
 message S2C_GameEnd{
 	message PlayerResult {
@@ -309,3 +329,11 @@ enum DeathType{
 	DEATH_BY_GIANT = 3;   //거인한테 죽을 경우
 }
 
+//스코어 증가 타입
+enum ScoreUpdateType{
+	SCORE_UNKNOWN = 0;
+	SCORE_MONSTER_KILL = 1; //일반 몬스터 처치
+	SCORE_GIANT_KILL = 2;   //거인 AI or 거인 플레이어 처리
+	SCORE_PLAYER_KILL = 3;  //거인 -> 일반 유저 처치
+	SCORE_SURVIVAL =4;      //생존 시간당 증가
+}
