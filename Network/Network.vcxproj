@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5cc8cad9-b38c-4788-ad51-c188486f6398}</ProjectGuid>
-    <RootNamespace>LobbyServer</RootNamespace>
+    <ProjectGuid>{4a3664ed-df80-4a69-b43b-972825a83e6c}</ProjectGuid>
+    <RootNamespace>Network</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -70,9 +70,6 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)Network;$(IncludePath)</IncludePath>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -105,11 +102,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>:\dev\vcpkg\installed\x64-windows\include;$(SolutionDir)ProtoCompile\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\vcpkg\installed\x64-windows\include;$(SolutionDir)ProtoCompile\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\dev\vcpkg\installed\x64-windows\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libprotobufd.lib;libprotobuf-lited.lib;libprotobuf.lib;libprotobuf-lite.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -131,20 +130,19 @@
     <ClCompile Include="..\ProtoCompile\center.pb.cc" />
     <ClCompile Include="..\ProtoCompile\ingame.pb.cc" />
     <ClCompile Include="..\ProtoCompile\lobby.pb.cc" />
-    <ClCompile Include="LobbyServer.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Packet.cpp" />
+    <ClCompile Include="TcpServer.cpp" />
+    <ClCompile Include="TcpSession.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ProtoCompile\auth.pb.h" />
     <ClInclude Include="..\ProtoCompile\center.pb.h" />
     <ClInclude Include="..\ProtoCompile\ingame.pb.h" />
     <ClInclude Include="..\ProtoCompile\lobby.pb.h" />
-    <ClInclude Include="Lobbyserver.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Network\Network.vcxproj">
-      <Project>{4a3664ed-df80-4a69-b43b-972825a83e6c}</Project>
-    </ProjectReference>
+    <ClInclude Include="Packet.h" />
+    <ClInclude Include="PacketHandler.h" />
+    <ClInclude Include="TcpServer.h" />
+    <ClInclude Include="TcpSession.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

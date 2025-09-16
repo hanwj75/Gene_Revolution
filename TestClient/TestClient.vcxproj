@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{50565301-b132-44df-a27a-4c54847505ff}</ProjectGuid>
-    <RootNamespace>TescClient</RootNamespace>
+    <ProjectGuid>{6e25a649-57d5-47d6-8f7e-25b171a12a0e}</ProjectGuid>
+    <RootNamespace>TestClient</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -102,7 +102,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\proto</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -124,17 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\proto\auth.pb.cc" />
-    <ClCompile Include="..\proto\center.pb.cc" />
-    <ClCompile Include="..\proto\ingame.pb.cc" />
-    <ClCompile Include="..\proto\lobby.pb.cc" />
-    <ClCompile Include="TescClient.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\proto\auth.pb.h" />
-    <ClInclude Include="..\proto\center.pb.h" />
-    <ClInclude Include="..\proto\ingame.pb.h" />
-    <ClInclude Include="..\proto\lobby.pb.h" />
+    <ClCompile Include="TestClient.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

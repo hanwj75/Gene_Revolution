@@ -15,34 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TescClient.cpp">
+    <ClCompile Include="TestClient.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\proto\lobby.pb.cc">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\proto\ingame.pb.cc">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\proto\center.pb.cc">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\proto\auth.pb.cc">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\proto\auth.pb.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="..\proto\lobby.pb.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="..\proto\ingame.pb.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="..\proto\center.pb.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

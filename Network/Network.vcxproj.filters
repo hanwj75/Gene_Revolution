@@ -15,6 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Packet.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpServer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TcpSession.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="..\ProtoCompile\auth.pb.cc">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -27,14 +36,17 @@
     <ClCompile Include="..\ProtoCompile\lobby.pb.cc">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="LobbyServer.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TcpSession.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TcpServer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
     <ClInclude Include="..\ProtoCompile\auth.pb.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -47,7 +59,7 @@
     <ClInclude Include="..\ProtoCompile\lobby.pb.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Lobbyserver.h">
+    <ClInclude Include="PacketHandler.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
