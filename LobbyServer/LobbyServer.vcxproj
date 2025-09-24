@@ -128,7 +128,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\ProtoCompile\auth.pb.cc" />
-    <ClCompile Include="..\ProtoCompile\center.pb.cc" />
     <ClCompile Include="..\ProtoCompile\ingame.pb.cc" />
     <ClCompile Include="..\ProtoCompile\lobby.pb.cc" />
     <ClCompile Include="LobbyServer.cpp" />
@@ -136,7 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\ProtoCompile\auth.pb.h" />
-    <ClInclude Include="..\ProtoCompile\center.pb.h" />
     <ClInclude Include="..\ProtoCompile\ingame.pb.h" />
     <ClInclude Include="..\ProtoCompile\lobby.pb.h" />
     <ClInclude Include="Lobbyserver.h" />

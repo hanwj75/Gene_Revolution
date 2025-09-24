@@ -102,6 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)ProtoCompile;$(SolutionDir)Network</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,7 +124,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\ProtoCompile\auth.pb.cc" />
+    <ClCompile Include="..\ProtoCompile\ingame.pb.cc" />
+    <ClCompile Include="..\ProtoCompile\lobby.pb.cc" />
     <ClCompile Include="TestClient.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ProtoCompile\auth.pb.h" />
+    <ClInclude Include="..\ProtoCompile\ingame.pb.h" />
+    <ClInclude Include="..\ProtoCompile\lobby.pb.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Network\Network.vcxproj">
+      <Project>{4a3664ed-df80-4a69-b43b-972825a83e6c}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

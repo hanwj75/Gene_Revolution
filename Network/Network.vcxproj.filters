@@ -27,13 +27,13 @@
     <ClCompile Include="..\ProtoCompile\auth.pb.cc">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\ProtoCompile\center.pb.cc">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="..\ProtoCompile\ingame.pb.cc">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="..\ProtoCompile\lobby.pb.cc">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ProtoCompile\center.pb.cc">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,9 +50,6 @@
     <ClInclude Include="..\ProtoCompile\auth.pb.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="..\ProtoCompile\center.pb.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="..\ProtoCompile\ingame.pb.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -60,6 +57,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="PacketHandler.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ProtoCompile\center.pb.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

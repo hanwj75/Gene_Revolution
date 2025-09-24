@@ -6,6 +6,94 @@ import "auth.proto";
 import "lobby.proto";
 import "ingame.proto";
 
+
+enum MessageId {
+	UNKNOWN_MSG_ID = 0;
+		//==========================인증 영역(1~10)=============================
+	C2S_REGISTER = 1;
+	S2C_REGISTER_RESULT = 2;
+	C2S_LOGIN  = 3;
+	S2C_LOGIN_RESULT = 4;
+
+		//==========================로비 영역(11~100)===========================
+		//로비 - 입장
+	C2S_ENTER_LOBBY = 11;
+	S2C_ENTER_LOBBY = 12;
+
+		//로비 - 게임시작
+	C2S_GAME_START  = 13;
+	S2C_GAME_START = 14;
+
+		//로비 - 다른 유저 리스트
+	S2C_LOBBY_USER_LIST  = 15;
+
+		//로비 - 상점
+	C2S_SHOP_REQUEST = 16;
+	S2C_SHOP_RESPONSE   = 17;
+	C2S_BUY_ITEM  = 18;
+	S2C_BUY_RESULT = 19;
+	C2S_BUY_AND_OPEN_RANDOM_BOX = 20;
+    S2C_BUY_AND_OPEN_RANDOM_BOX_RESULT = 21;
+
+		//로비 - 인벤토리
+    C2S_INVENTORY_REQUEST = 22;
+    S2C_INVENTORY_RESPONSE = 23;
+
+		//로비 - 코스튬 장착/해제
+    C2S_EQUIP_COSTUME = 24;
+    S2C_EQUIP_COSTUME_RESULT = 25;
+
+	    //==========================인게임 영역(101~)============================
+		//인게임 - 입장
+	C2S_JOIN_GAME = 101;
+	S2C_JOIN_GAME_RESULT = 102;
+
+		//인게임 - 이동
+	C2S_PLAYER_MOVE = 103;
+	S2C_PLAYER_MOVE_NOTIFICATION = 104;
+
+		//인게임 - 공격
+	C2S_PLAYER_ATTACK = 105;
+    S2C_PLAYER_ATTACK_RESULT = 106;
+	S2C_ATTACK_HIT_NOTIFICATION = 107;
+
+		//인게임 - 사망관리
+	S2C_PLAYER_DEATH_NOTIFICATION = 108;
+
+		//인게임 - 게임 상태
+	S2C_GAME_STATE = 109;
+
+		//인게임 - 유전자 시스템
+	C2S_GENE_ACQUIRED  = 110;
+	S2C_GENE_ACQUIRED_RESULT = 111;
+	C2S_EQUIP_GENE = 112;
+	S2C_GENE_EQUIP_RESULT = 113;
+
+		//인게임 - 거인 변환
+	C2S_TRANSFORM_GIANT = 114;
+	S2C_TRANSFORM_RESULT = 115;
+
+		//인게임 - 왕관
+	S2C_CROWN_NOTIFICATION = 116;
+	S2C_CROWN_DROP_NOTIFICATION = 117;
+	C2S_PICKUP_CROWN = 118;
+    S2C_CROWN_PICKUP_RESULT  = 119;
+
+		//인게임 - 히든스킬
+	C2S_HIDDEN_SKILL = 120;
+	S2C_HIDDEN_SKILL_RESULT = 121;
+
+		//인게임 - 기여도 시스템
+	S2C_GIANT_KILL_CONTRIBUTION_RESULT = 122;
+
+		//인게임 - 스코어 업데이트
+	S2C_SCORE_UPDATE = 123;
+	S2C_SCOREBOARD = 124;
+
+		//인게임 - 게임종료
+	S2C_GAME_END = 125;
+}
+
 //클라 <-> 서버 모든 패킷의 최상위 메시지
 message GamePacket {
 	oneof payload {
@@ -30,7 +118,7 @@ message GamePacket {
 
 		//로비 - 상점
 	lobby.C2S_ShopRequest c2s_shop_request = 16;                                 //클라 -> 서버 상접 목록 요청
-	lobby.S2C_ShopResponse s2c_shpe_response = 17;                               //서버 -> 클라 상점 목록 응답
+	lobby.S2C_ShopResponse s2c_shop_response = 17;                               //서버 -> 클라 상점 목록 응답
 	lobby.C2S_BuyItem c2s_buy_item = 18;                                         //클라 -> 서버 아이템 구매 요청
 	lobby.S2C_BuyResult s2c_buy_result = 19;                                     //서버 -> 클라 아이템 구매 결과
 	lobby.C2S_BuyAndOpenRandomBox c2s_buy_and_open_random_box = 20;              //클라 -> 서버 랜덤박스 구매 및 오픈 요청
